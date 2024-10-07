@@ -1,0 +1,37 @@
+def calculate_n_fasta_lines(line: str, fasta_line_length) -> int:
+    """
+    Additional function for plain_to_fasta function
+    """
+    line_length = len(line)
+    n_fasta_lines = line_length // fasta_line_length
+    if line_length % fasta_line_length == 0:
+        extra_line = 0
+    else:
+        extra_line = line_length - (fasta_line_length * n_fasta_lines)
+    return n_fasta_lines, extra_line
+
+
+def plain_to_fasta(file: str, 
+                   fasta_line_length: int = 80, 
+                   uppercase: bool = False) -> None:
+    """
+    Converts plain file to .fa format
+    """
+    with open(file, "r") as infile:
+        with open(file.replace("_plain", ""), "w") as outfile:
+            for line in infile:
+                line = line.strip()
+                if line.startswith(">"):
+                    header = line
+                else:
+                    if uppercase:
+                        line = line.upper()
+                    n_fasta_lines, extra_line = calculate_n_fasta_lines(line, fasta_line_length)
+                
+            outfile.write(header + "\n")
+            if n_fasta_lines == 0:
+                outfile.write(line + "\n")
+            else:
+                for n_fasta_line in range(n_fasta_lines):
+                    outfile.write(line[n_fasta_line * fasta_line_length : (n_fasta_line+1) * fasta_line_length] + "\n")
+                outfile.write(line[-extra_line:] + "\n")
