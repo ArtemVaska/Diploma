@@ -1,4 +1,5 @@
 import Bio.Blast
+import pandas as pd
 
 
 def extract_target_range(hit: Bio.Blast.Hit) -> list:
@@ -57,3 +58,33 @@ def check_strands(hit: Bio.Blast.Hit) -> (int, int):
         1 if hsp.coordinates[0][0] <= hsp.coordinates[0][-1] else 2
     )
     return query_strand, target_strand
+
+
+def update_df(df: pd.DataFrame, blast_record: Bio.Blast.Record) -> pd.DataFrame:
+    """
+    Adds additional columns to the dataframe (Acc, Strand, Start, Stop) based on blast_record
+
+    :param df:
+    :param blast_record:
+    :return: updated dataframe
+    """
+    df["Acc"] = [acc.split("|")[-2] for acc in list(df.index)]
+
+    strands = []
+    starts = []
+    stops = []
+
+    for hit_id in df.index:
+        hit = blast_record[hit_id]
+        query_strand, target_strand = check_strands(hit)
+        strands.append(target_strand)
+
+        start, stop = extract_target_range(hit)
+        starts.append(start)
+        stops.append(stop)
+
+    df["Strand"] = strands
+    df["Start"] = starts
+    df["Stop"] = stops
+
+    return df
