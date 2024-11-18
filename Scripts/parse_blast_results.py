@@ -40,14 +40,16 @@ def calculate_qc(blast_record: Bio.Blast.Record) -> dict:
     return qcs
 
 
-def check_strands(hsp: Bio.Blast.HSP) -> (int, int):
+def check_strands(hit: Bio.Blast.Hit) -> (int, int):
     """
     Checks the strand of the target sequence
     Additional function for update_df
 
-    :param hsp:
+    :param hit:
     :return:
     """
+    hsp = hit[0]
+
     query_strand = (
         1 if hsp.coordinates[1][0] <= hsp.coordinates[1][-1] else 2
     )
