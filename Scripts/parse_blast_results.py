@@ -30,7 +30,7 @@ def calculate_qc(blast_record: Bio.Blast.Record) -> dict:
     qcs = {}
 
     for hit in blast_record:
-        target_id = hit.target.id.split("|")[-2]  # only genbank Acc.
+        target_id = hit.target.id
         query_total_range = 0
         for hsp in hit:
             query_total_range += int(hsp.coordinates[1][-1]) - int(hsp.coordinates[1][0])
@@ -38,3 +38,20 @@ def calculate_qc(blast_record: Bio.Blast.Record) -> dict:
         qcs[target_id] = round(qc, 4)
 
     return qcs
+
+
+def check_strands(hsp: Bio.Blast.HSP) -> (int, int):
+    """
+    Checks the strand of the target sequence
+    Additional function for update_df
+
+    :param hsp:
+    :return:
+    """
+    query_strand = (
+        1 if hsp.coordinates[1][0] <= hsp.coordinates[1][-1] else 2
+    )
+    target_strand = (
+        1 if hsp.coordinates[0][0] <= hsp.coordinates[0][-1] else 2
+    )
+    return query_strand, target_strand
