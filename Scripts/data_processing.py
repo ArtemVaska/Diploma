@@ -6,7 +6,7 @@ import numpy as np
 from sklearn.cluster import DBSCAN
 from Bio import Entrez
 
-Entrez.email = "artem_vasilev_01@list.ru"
+Entrez.email = "artemvaskaa@gmail.com"
 
 
 def cluster_analysis(qcs: dict, qc_threshold=0.1) -> pd.DataFrame:
@@ -77,4 +77,3 @@ def save_seqs(folder: str, df: pd.DataFrame,
             acc, strand, seq_start, seq_stop = line.Acc, line.Strand, line.Start, line.Stop
             time.sleep(1)
             save_seq(save_dir, folder, subfolder, acc, strand, seq_start, seq_stop)
-            
