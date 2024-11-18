@@ -19,23 +19,6 @@ def extract_target_range(hit: Bio.Blast.Hit) -> list:
     return target_range
 
 
-def extract_target_id(hit: Bio.Blast.Hit) -> str:
-    """
-    Extracts target id in hit. Additional func for calculate_qc
-
-    :param hit:
-    :return:
-    """
-    full_target_id = hit.target.id
-    id_type = full_target_id.split("|")[0]
-    if "gi" not in id_type:
-        split_target_id = full_target_id.split("|")[1]
-    else:
-        split_target_id = full_target_id.split("|")[3]
-
-    return split_target_id
-
-
 def calculate_qc(blast_record: Bio.Blast.Record) -> dict:
     """
     Calculates query coverage for every hit in blast_record
@@ -47,8 +30,7 @@ def calculate_qc(blast_record: Bio.Blast.Record) -> dict:
     qcs = {}
 
     for hit in blast_record:
-        # target_id = extract_target_id(hit)  # possible formatting (only Acc.)
-        target_id = hit.target.id
+        target_id = hit.target.id.split("|")[-2]  # only genbank Acc.
         query_total_range = 0
         for hsp in hit:
             query_total_range += int(hsp.coordinates[1][-1]) - int(hsp.coordinates[1][0])
