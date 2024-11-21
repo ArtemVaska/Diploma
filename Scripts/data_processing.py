@@ -9,10 +9,11 @@ from Bio import Entrez
 Entrez.email = "artemvaskaa@gmail.com"
 
 
-def cluster_analysis(qcs: dict, qc_threshold=0.1) -> pd.DataFrame:
+def cluster_analysis(qcs: dict, qc_threshold=0.1, eps=0.04) -> pd.DataFrame:
     """
     Performs cluster analysis based on QC
 
+    :param eps:
     :param qcs:
     :param qc_threshold:
     :return: table with Acc., QC, Cluster
@@ -20,7 +21,7 @@ def cluster_analysis(qcs: dict, qc_threshold=0.1) -> pd.DataFrame:
     qcs_filtered = {acc: qc for acc, qc in qcs.items() if qc > qc_threshold}
     qcs_values = list(qcs_filtered.values())
 
-    dbscan = DBSCAN(eps=0.04, min_samples=1)  # TODO eps automate calculate
+    dbscan = DBSCAN(eps=eps, min_samples=1)  # TODO eps automate calculate
     clustering = dbscan.fit(np.asarray(qcs_values).reshape(-1, 1))
     labels = clustering.labels_
 
@@ -75,5 +76,6 @@ def save_seqs(folder: str, df: pd.DataFrame,
         for hit in subset_df.index:
             line = df.loc[hit]
             acc, strand, seq_start, seq_stop = line.Acc, line.Strand, line.Start, line.Stop
-            time.sleep(1)
-            save_seq(save_dir, folder, subfolder, acc, strand, seq_start, seq_stop)
+            if seq_stop - seq_start >= 10_000:  #FIXME
+                time.sleep(1)
+                save_seq(save_dir, folder, subfolder, acc, strand, seq_start, seq_stop)

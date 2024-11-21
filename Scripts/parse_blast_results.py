@@ -1,8 +1,9 @@
+import time
 import Bio.Blast
 import pandas as pd
 
 
-def extract_target_range(hit: Bio.Blast.Hit) -> list:
+def extract_target_range(hit: Bio.Blast.Hit) -> tuple:
     """
     Extracts hit range in target
 
@@ -15,9 +16,15 @@ def extract_target_range(hit: Bio.Blast.Hit) -> list:
         target_range_list.append(int(hsp.coordinates[0][0]))
         target_range_list.append(int(hsp.coordinates[0][-1]))
 
-    target_range = [min(target_range_list), max(target_range_list)]
+    start, stop = min(target_range_list), max(target_range_list)
+    if (stop - start) > 40000:
+        print("Target range cannot be calculated automatically. Please enter coordinates manually from the list below:")
+        time.sleep(0.5)
+        print(sorted(target_range_list))
+        time.sleep(0.5)
+        start, stop = [int(coord) for coord in input("Enter start and stop coordinates' indices separated by space: ").split()]
 
-    return target_range
+    return start, stop
 
 
 def calculate_qc(blast_record: Bio.Blast.Record) -> dict:
