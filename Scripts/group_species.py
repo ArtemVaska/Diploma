@@ -1,6 +1,9 @@
 import os
 import shutil
 
+import pandas as pd
+import numpy as np
+
 
 def extract_species_names(dir_name: str, folder_name: str) -> dict:
     """
@@ -48,9 +51,10 @@ def extract_unique_species(species_dict: dict, subfolder_name: str) -> list:
     return unique_species
 
 
-def group_species(folder_name: str, new_folder_name: str, dir_name: str = "../Sequences") -> None:
+def group_species(folder_name: str, new_folder_name: str, qcs_df: pd.DataFrame, dir_name: str = "../Sequences") -> None:
     """
-    Groups species from specified folder by species names to the new specified folder
+    Groups species from specified folder by species names to the new specified folder.
+    Also adds new column to qcs_df with species_name
 
     :param folder_name:
     :param new_folder_name:
@@ -58,6 +62,7 @@ def group_species(folder_name: str, new_folder_name: str, dir_name: str = "../Se
     :return:
     """
     species_dict = extract_species_names(dir_name, folder_name)
+    qcs_df["Species_name"] = ""
 
     for subfolder in species_dict:
         unique_species = extract_unique_species(species_dict, subfolder)
@@ -70,6 +75,9 @@ def group_species(folder_name: str, new_folder_name: str, dir_name: str = "../Se
             for species_name_acc in species_dict[subfolder]:
                 species_name = "_".join(species_name_acc.split("_")[:2])
                 if species_name == species:
-                    file_name = f"{species_name_acc.split("_")[-1]}.fa"
+                    acc = species_name_acc.split("_")[-1]
+                    qcs_df.loc[qcs_df["Acc"] == acc, "Species_name"] = species_name
+
+                    file_name = f"{acc}.fa"
                     file_to_copy = os.path.join(dir_name, folder_name, subfolder, file_name)
                     shutil.copy(file_to_copy, species_path)
