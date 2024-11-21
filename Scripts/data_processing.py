@@ -58,7 +58,7 @@ def save_seq(save_dir: str, folder: str, subfolder: str, acc: str, strand: int, 
 
 
 def save_seqs(folder: str, df: pd.DataFrame,
-              save_dir: str = "/home/artemvaska/Master_degree/Diploma/Sequences") -> None:
+              save_dir: str = "../Sequences") -> None:
     """
     Saves sequences from dataframe
 
