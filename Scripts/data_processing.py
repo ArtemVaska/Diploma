@@ -9,26 +9,55 @@ from Bio import Entrez
 Entrez.email = "artemvaskaa@gmail.com"
 
 
-def cluster_analysis(qcs: dict, qc_threshold=0.1, eps=0.04) -> pd.DataFrame:
+def cluster_analysis_preview(df: pd.DataFrame) -> None:
     """
-    Performs cluster analysis based on QC
+    Prints preview cluster analysis (DBSCAN) based on QC
 
+    :param df: dataframe with parameters for analysis
+    """
+    qcs_values = df.QC.values.tolist()
+
+    for eps in range(1, 11):
+        df_copy = df.copy()
+        eps = eps / 100  # to get 0.01 etc.
+        dbscan = DBSCAN(eps=eps, min_samples=1)
+        clustering = dbscan.fit(np.asarray(qcs_values).reshape(-1, 1))
+        labels = clustering.labels_
+
+        n_clusters = len(np.unique(labels))
+        df_copy["Cluster"] = labels
+
+        qcs_range_dict = {}
+        for cluster in range(n_clusters):
+            qc_min, qc_max = (float(df_copy[df_copy["Cluster"] == cluster].QC.min()),
+                              float(df_copy[df_copy["Cluster"] == cluster].QC.max()))
+            qcs_range_dict[cluster] = qc_min, qc_max
+
+        print(f"eps: {eps}, n_clusters: {n_clusters}")
+        for cluster, qcs_range in sorted(qcs_range_dict.items(), key=lambda value:value[1]):
+            items_in_cluster = len(df_copy[df_copy["Cluster"] == cluster])
+            print(f"cluster: {cluster}, qcs_range: {qcs_range}, items_in_cluster: {items_in_cluster}")
+        print()  # empty space for separator
+
+
+def cluster_analysis(df: pd.DataFrame, eps: float) -> pd.DataFrame:
+    """
+    Performs cluster analysis (DBSCAN) based on defined eps
+
+    :param df:
     :param eps:
-    :param qcs:
-    :param qc_threshold:
-    :return: table with Acc., QC, Cluster
+    :return: table updated with clusters
     """
-    qcs_filtered = {acc: qc for acc, qc in qcs.items() if qc > qc_threshold}
-    qcs_values = list(qcs_filtered.values())
+    qcs_values = df.QC.values.tolist()
 
-    dbscan = DBSCAN(eps=eps, min_samples=1)  # TODO eps automate calculate
+    dbscan = DBSCAN(eps=eps, min_samples=1)
     clustering = dbscan.fit(np.asarray(qcs_values).reshape(-1, 1))
     labels = clustering.labels_
 
-    qcs_df = pd.DataFrame.from_dict(qcs_filtered, orient="index", columns=["QC"])
-    qcs_df["Cluster"] = labels
+    df_copy = df.copy()
+    df_copy["Cluster"] = labels
 
-    return qcs_df
+    return df_copy
 
 
 def save_seq(save_dir: str, folder: str, subfolder: str, acc: str, strand: int, seq_start: int, seq_stop: int) -> None:

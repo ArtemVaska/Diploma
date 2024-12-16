@@ -3,6 +3,19 @@ import Bio.Blast
 import pandas as pd
 
 
+def filter_df(df, qc_threshold=0.1) -> pd.DataFrame:
+    """
+    Filters dataframe based on QS threshold
+
+    :param df:
+    :param qc_threshold:
+    :return: filtered dataframe based on qc_threshold
+    """
+    df_filtered = df.query("QC >= @qc_threshold")
+
+    return df_filtered
+
+
 def extract_target_range(hit: Bio.Blast.Hit) -> tuple:
     """
     Extracts hit range in target
