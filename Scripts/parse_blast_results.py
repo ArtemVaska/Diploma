@@ -27,12 +27,12 @@ def extract_target_range(hit: Bio.Blast.Hit) -> tuple:
     return start, stop
 
 
-def calculate_qc(blast_record: Bio.Blast.Record) -> dict:
+def calculate_qc(blast_record: Bio.Blast.Record) -> pd.DataFrame:
     """
-    Calculates query coverage for every hit in blast_record
+    Calculates query coverage for every hit in blast_record and creates table
 
     :param blast_record:
-    :return: dict target.id:QC
+    :return: table target.id, QC
     """
     query_length = len(blast_record.query)
     qcs = {}
@@ -45,7 +45,9 @@ def calculate_qc(blast_record: Bio.Blast.Record) -> dict:
         qc = query_total_range / query_length
         qcs[target_id] = round(qc, 4)
 
-    return qcs
+    qcs_df = pd.DataFrame.from_dict(qcs, orient="index", columns=["QC"])
+
+    return qcs_df
 
 
 def check_strands(hit: Bio.Blast.Hit) -> (int, int):
