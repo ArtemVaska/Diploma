@@ -51,18 +51,19 @@ def extract_unique_species(species_dict: dict, subfolder_name: str) -> list:
     return unique_species
 
 
-def group_species(folder_name: str, new_folder_name: str, qcs_df: pd.DataFrame, dir_name: str = "../Sequences") -> None:
+def group_species(df: pd.DataFrame, folder_name: str, new_folder_name: str, dir_name: str = "../Sequences") -> None:
     """
     Groups species from specified folder by species names to the new specified folder.
-    Also adds new column to qcs_df with species_name
+    Also adds new column to df with species_name
 
+    :param df:
     :param folder_name:
     :param new_folder_name:
     :param dir_name:
     :return:
     """
     species_dict = extract_species_names(dir_name, folder_name)
-    qcs_df["Species_name"] = ""
+    df["Species_name"] = ""
 
     for subfolder in species_dict:
         unique_species = extract_unique_species(species_dict, subfolder)
@@ -76,7 +77,7 @@ def group_species(folder_name: str, new_folder_name: str, qcs_df: pd.DataFrame, 
                 species_name = "_".join(species_name_acc.split("_")[:2])
                 if species_name == species:
                     acc = species_name_acc.split("_")[-1]
-                    qcs_df.loc[qcs_df["Acc"] == acc, "Species_name"] = species_name
+                    df.loc[df["Acc"] == acc, "Species_name"] = species_name
 
                     file_name = f"{acc}.fa"
                     file_to_copy = os.path.join(dir_name, folder_name, subfolder, file_name)
@@ -102,7 +103,8 @@ def create_cluster_subfolder_name(df: pd.DataFrame, cluster: int) -> str:
 def group_species_genome_coverage(df: pd.DataFrame, folder_name: str, new_folder_name: str,
                                   dir_name: str = "../Sequences", ) -> None:
     """
-    Groups species from folder to a new folder by genome coverage based on provided dataframe
+    Groups species from folder to a new folder by genome coverage based on provided dataframe.
+    Also renames filenames for convenience
 
     :param df:
     :param folder_name:

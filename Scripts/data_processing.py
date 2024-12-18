@@ -86,13 +86,13 @@ def save_seq(save_dir: str, folder: str, subfolder: str, acc: str, strand: int, 
         outfile.write(seq)
 
 
-def save_seqs(folder: str, df: pd.DataFrame,
+def save_seqs(df: pd.DataFrame, folder: str,
               save_dir: str = "../Sequences") -> None:
     """
     Saves sequences from dataframe
 
-    :param folder:
     :param df:
+    :param folder:
     :param save_dir:
     :return:
     """
@@ -165,7 +165,7 @@ def add_genome_coverages(genome_coverages: list, df: pd.DataFrame) -> pd.DataFra
 
 def select_max_ids(df: pd.DataFrame) -> pd.DataFrame:
     """
-    Updates dataframe with maximum genome coverage accessions
+    Updates dataframe with maximum genome coverage accessions - deletes duplicated species
 
     :param df:
     :return:
