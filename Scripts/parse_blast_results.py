@@ -3,15 +3,17 @@ import Bio.Blast
 import pandas as pd
 
 
-def filter_df(df, qc_threshold=0.1) -> pd.DataFrame:
+def filter_df(df, qc_threshold=0.1, range_threshold=10000) -> pd.DataFrame:
     """
-    Filters dataframe based on QS threshold
+    Filters dataframe based on QC and range threshold
 
     :param df:
     :param qc_threshold:
+    :param range_threshold:
     :return: filtered dataframe based on qc_threshold
     """
     df_filtered = df.query("QC >= @qc_threshold")
+    df_filtered = df_filtered.query("Stop - Start > @range_threshold")
 
     return df_filtered
 

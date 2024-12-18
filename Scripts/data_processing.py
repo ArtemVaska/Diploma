@@ -106,5 +106,92 @@ def save_seqs(folder: str, df: pd.DataFrame,
             line = df.loc[hit]
             acc, strand, seq_start, seq_stop = line.Acc, line.Strand, line.Start, line.Stop
             if seq_stop - seq_start >= 10_000:  #FIXME
-                time.sleep(1)
+                time.sleep(0.333333334)
                 save_seq(save_dir, folder, subfolder, acc, strand, seq_start, seq_stop)
+
+
+def extract_genome_coverage(acc: str) -> str:
+    """
+    Extracts genome coverage with Entrez.efetch using accession number from NCBI.
+    Additional function for extract_genome_coverages
+
+    :param acc:
+    :return:
+    """
+    with Entrez.efetch(db="nucleotide", id=acc, rettype="gb", retmode="text") as handle:
+        genbank_data = handle.read()
+
+    try:
+        genome_coverage = [line for line in genbank_data.split("\n") if "Genome Coverage" in line][0]
+    except IndexError:
+        genome_coverage = "            Genome Coverage        :: 0x"
+
+    return genome_coverage
+
+
+def extract_genome_coverages(df: pd.DataFrame) -> list:
+    """
+    Extracts genome coverages for Acc column in the provided dataframe
+
+    :param df:
+    :return:
+    """
+    accessions = df.Acc.values.tolist()
+    genome_coverages = []
+
+    for acc in accessions:
+        time.sleep(0.333333334)
+        genome_coverage = extract_genome_coverage(acc)
+        genome_coverages.append(genome_coverage)
+
+    return genome_coverages
+
+
+def add_genome_coverages(genome_coverages: list, df: pd.DataFrame) -> pd.DataFrame:
+    """
+    Adds genome coverages to the provided dataframe parsing coverages to float format
+
+    :param genome_coverages:
+    :param df:
+    :return:
+    """
+    for i in range(len(genome_coverages)):
+        genome_coverages[i] = float(genome_coverages[i].split(":: ")[-1].split("x")[0])
+
+    df["Genome_Coverage"] = genome_coverages
+
+    return df
+
+
+def select_max_ids(df: pd.DataFrame) -> pd.DataFrame:
+    """
+    Updates dataframe with maximum genome coverage accessions
+
+    :param df:
+    :return:
+    """
+    n_clusters = df.Cluster.nunique()
+    max_ids = []
+
+    for cluster in range(n_clusters):
+        cluster_species = df[df["Cluster"] == cluster].Species_name.unique().tolist()
+        for species in cluster_species:
+            species_max_genome_coverage = df.query("Cluster == @cluster & Species_name == @species").Genome_Coverage.idxmax()
+            max_ids.append(species_max_genome_coverage)
+
+    df = df.loc[max_ids]
+
+    return df
+
+
+def filter_genome_coverages(df: pd.DataFrame, genome_coverage_threshold: int = 50) -> pd.DataFrame:
+    """
+    Filters genome coverages based on genome coverage threshold
+
+    :param df:
+    :param genome_coverage_threshold:
+    :return:
+    """
+    df = df[df["Genome_Coverage"] >= genome_coverage_threshold]
+
+    return df
