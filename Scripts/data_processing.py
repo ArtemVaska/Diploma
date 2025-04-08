@@ -86,6 +86,51 @@ def save_seq(save_dir: str, folder: str, subfolder: str, acc: str, strand: int, 
         outfile.write(seq)
 
 
+def save_single_seq(save_dir, filename: str,
+                    acc: str, strand: int, seq_start: int, seq_stop: int) -> None:
+    """
+    Saves single sequence obtained with Entrez.efetch in the specified folder
+
+    :param save_dir:
+    :param filename:
+    :param acc:
+    :param strand:
+    :param seq_start:
+    :param seq_stop:
+    :return:
+    """
+
+    if not os.path.exists(save_dir):
+        os.makedirs(save_dir)
+
+    with open(f"{save_dir}/{filename}.fa", "w") as outfile:
+        seq = Entrez.efetch(db="nucleotide", id=acc, strand=strand, seq_start=seq_start, seq_stop=seq_stop,
+                            rettype="fasta").read()
+        outfile.write(seq)
+
+
+def find_stop_codons(seq: str, frame_shift: int = 0,
+                     stop_codons: tuple = ("TAA", "TAG", "TGA"),
+                     sep: str = "-") -> None:
+    """
+    Finds stop codons in given sequence
+
+    :param seq:
+    :param frame_shift:
+    :param stop_codons:
+    :param sep:
+    :return:
+    """
+    seq_list = []
+    for i_nt in range(frame_shift, len(seq), 3):
+        codon = seq[i_nt:i_nt+3]
+        seq_list.append(codon)
+        if codon in stop_codons:
+            print(f"Found STOP-codon at {i_nt-frame_shift} position") #FIXME
+            break
+    print(f"{sep}".join(seq_list))
+
+
 def save_seqs(df: pd.DataFrame, folder: str,
               save_dir: str = "../Sequences") -> None:
     """
