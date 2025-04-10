@@ -5,6 +5,7 @@ import numpy as np
 
 from sklearn.cluster import DBSCAN
 from Bio import Entrez
+from Bio.Seq import Seq
 
 Entrez.email = "artemvaskaa@gmail.com"
 
@@ -142,11 +143,13 @@ def find_codon(seq: str, which: str, frame_shift: int = 0,
     return codon_pos
 
 
-def choose_best_frameshift(seq: str) -> list:
+def choose_best_frameshift(seq: str, translate: bool = False) -> str | list:
     """
-    Chooses best frameshifts for start and stop codons of given sequence based on total sequence length
+    Chooses best frameshifts for start and stop codons of given sequence based on total sequence length.
+    Also slices mRNA by found codon positions and translates to protein sequence if translate flag is True.
 
     :param seq:
+    :param translate:
     :return:
     """
     codons = {}
@@ -160,7 +163,6 @@ def choose_best_frameshift(seq: str) -> list:
         stop_codon = find_codon(seq[start_codon:], which="stop")
         codons[frame_shift].append(start_codon + stop_codon + 3)
 
-    # print
     for key, value in codons.items():
         print(f"Frameshift {key}: Start: {value[0]}, Stop: {value[1]}, Length: {value[1]-value[0]}")
 
@@ -171,6 +173,12 @@ def choose_best_frameshift(seq: str) -> list:
         if length > max_length:
             max_length = length
             best_variant = variant
+
+    if translate:
+        start_pos, stop_pos = codons[best_variant][0], codons[best_variant][1]
+        sliced_seq = seq[start_pos:stop_pos]
+        protein = str(Seq(sliced_seq).translate())
+        return protein
 
     return codons[best_variant]
 
