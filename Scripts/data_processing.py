@@ -111,6 +111,17 @@ def save_single_seq(save_dir, filename: str,
 
 def find_codon(seq: str, which: str, frame_shift: int = 0,
                sep: str = "-", print_seq: bool = False) -> int:
+    """
+    Finds start or stop codon position of given sequence.
+    Additional function for choose_best_frameshift
+
+    :param seq:
+    :param which:
+    :param frame_shift:
+    :param sep:
+    :param print_seq:
+    :return:
+    """
     codons = {
         "start": ["ATG"],
         "stop": ["TAA", "TAG", "TGA"]
@@ -132,7 +143,12 @@ def find_codon(seq: str, which: str, frame_shift: int = 0,
 
 
 def choose_best_frameshift(seq: str) -> list:
+    """
+    Chooses best frameshifts for start and stop codons of given sequence based on total sequence length
 
+    :param seq:
+    :return:
+    """
     start_codons = {}
     stop_codons = {}
 
