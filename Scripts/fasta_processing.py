@@ -55,3 +55,20 @@ def read_fasta(file: str) -> dict:
                 seq.append(line)
     seqs[header] = "".join(seq)
     return seqs
+
+
+def read_single_fasta(file: str) -> str:
+    """
+    Reads fasta-file with 1 sequence
+
+    :param file: path to file
+    :return: sequence
+    """
+    seq_list = []
+    with open(file) as infile:
+        for line in infile:
+            line = line.strip()
+            if not line.startswith(">"):
+                seq_list.append(line)
+    seq_str = "".join(seq_list)
+    return seq_str
