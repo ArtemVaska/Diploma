@@ -149,34 +149,30 @@ def choose_best_frameshift(seq: str) -> list:
     :param seq:
     :return:
     """
-    start_codons = {}
-    stop_codons = {}
+    codons = {}
 
     for frame_shift in range(0, 3):
         start_codon = find_codon(seq, which="start", frame_shift=frame_shift)
-        start_codons[frame_shift] = start_codon + frame_shift  # !!! важный момент
+        codons[frame_shift] = [start_codon + frame_shift]  # !!! важный момент
 
-    i = 0
-    for start_codon in start_codons.values():
-        for frame_shift in range(0, 3):
-            i += 1
-            stop_codon = find_codon(seq[start_codon:], which="stop", frame_shift=frame_shift)
-            total_shift = start_codon + stop_codon+ frame_shift + 3
-            seq_slice_len = len(seq[start_codon:total_shift])
-            stop_codons[i] = [start_codon, total_shift, seq_slice_len]
+    for frame_shift in range(0, 3):
+        start_codon = codons[frame_shift][0]
+        stop_codon = find_codon(seq[start_codon:], which="stop")
+        codons[frame_shift].append(start_codon + stop_codon + 3)
 
     # print
-    for key, value in stop_codons.items():
-        print(f"Variant {key}: START: {value[0]}, STOP: {value[1]}, LEN: {value[2]}")
+    for key, value in codons.items():
+        print(f"Frameshift {key}: Start: {value[0]}, Stop: {value[1]}, Length: {value[1]-value[0]}")
 
     max_length = 0
     best_variant = 1
-    for variant, (start, stop, length) in stop_codons.items():
+    for variant, (start, stop) in codons.items():
+        length = stop - start + 1
         if length > max_length:
             max_length = length
             best_variant = variant
 
-    return stop_codons[best_variant]
+    return codons[best_variant]
 
 
 def save_seqs(df: pd.DataFrame, folder: str,
