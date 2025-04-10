@@ -72,3 +72,36 @@ def read_single_fasta(file: str) -> str:
                 seq_list.append(line)
     seq_str = "".join(seq_list)
     return seq_str
+
+
+def dict_align_to_fasta(dict_align: dict, filename: str) -> None:
+    """
+    Creates multiline fasta file with seqs for next alignment.
+
+    :param dict_align:
+    :param filename:
+    :return:
+    """
+    with open(filename, "w") as outfile:
+        for header, seq in dict_align.items():
+            outfile.write(">" + header + "\n")
+            outfile.write(seq + "\n")
+
+
+def exons_to_cds_plain(infilename: str,
+                       outfilename: str,
+                       header: str):
+    """
+    Converts exons.fa to CDS oneline fasta
+    """
+    seq = []
+    with open(infilename, "r") as infile:
+        with open(outfilename, "w") as outfile:
+            outfile.write(">" + header + "\n")
+            for line in infile:
+                line = line.strip()
+                if line.startswith(">"):
+                    continue
+                else:
+                    seq.append(line)
+            outfile.write("".join(seq))
