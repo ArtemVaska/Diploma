@@ -34,7 +34,7 @@ def cluster_analysis_preview(df: pd.DataFrame) -> None:
             qcs_range_dict[cluster] = qc_min, qc_max
 
         print(f"eps: {eps}, n_clusters: {n_clusters}")
-        for cluster, qcs_range in sorted(qcs_range_dict.items(), key=lambda value:value[1]):
+        for cluster, qcs_range in sorted(qcs_range_dict.items(), key=lambda value: value[1]):
             items_in_cluster = len(df_copy[df_copy["Cluster"] == cluster])
             print(f"cluster: {cluster}, qcs_range: {qcs_range}, items_in_cluster: {items_in_cluster}")
         print()  # empty space for separator
@@ -111,7 +111,7 @@ def save_single_seq(save_dir, filename: str,
 
 def find_stop_codons(seq: str, frame_shift: int = 0,
                      stop_codons: tuple = ("TAA", "TAG", "TGA"),
-                     sep: str = "-") -> None:
+                     sep: str = "-", print_seq: bool = False) -> None:
     """
     Finds stop codons in given sequence
 
@@ -119,16 +119,21 @@ def find_stop_codons(seq: str, frame_shift: int = 0,
     :param frame_shift:
     :param stop_codons:
     :param sep:
+    :param print_seq:
     :return:
     """
     seq_list = []
     for i_nt in range(frame_shift, len(seq), 3):
-        codon = seq[i_nt:i_nt+3]
+        codon = seq[i_nt:i_nt + 3]
         seq_list.append(codon)
         if codon in stop_codons:
-            print(f"Found STOP-codon at {i_nt-frame_shift} position") #FIXME
+            if i_nt + 3 == len(seq):
+                print(f"STOP codon found at the END of sequence")
+                break
+            print(f"Stop codon found at {i_nt - frame_shift} position")  # FIXME
             break
-    print(f"{sep}".join(seq_list))
+    if print_seq:
+        print(f"{sep}".join(seq_list))
 
 
 def save_seqs(df: pd.DataFrame, folder: str,
@@ -150,7 +155,7 @@ def save_seqs(df: pd.DataFrame, folder: str,
         for hit in subset_df.index:
             line = df.loc[hit]
             acc, strand, seq_start, seq_stop = line.Acc, line.Strand, line.Start, line.Stop
-            if seq_stop - seq_start >= 10_000:  #FIXME
+            if seq_stop - seq_start >= 10_000:  # FIXME
                 time.sleep(0.333333334)
                 save_seq(save_dir, folder, subfolder, acc, strand, seq_start, seq_stop)
 
@@ -221,7 +226,8 @@ def select_max_ids(df: pd.DataFrame) -> pd.DataFrame:
     for cluster in range(n_clusters):
         cluster_species = df[df["Cluster"] == cluster].Species_name.unique().tolist()
         for species in cluster_species:
-            species_max_genome_coverage = df.query("Cluster == @cluster & Species_name == @species").Genome_Coverage.idxmax()
+            species_max_genome_coverage = df.query(
+                "Cluster == @cluster & Species_name == @species").Genome_Coverage.idxmax()
             max_ids.append(species_max_genome_coverage)
 
     df = df.loc[max_ids]
