@@ -109,31 +109,58 @@ def save_single_seq(save_dir, filename: str,
         outfile.write(seq)
 
 
-def find_stop_codons(seq: str, frame_shift: int = 0,
-                     stop_codons: tuple = ("TAA", "TAG", "TGA"),
-                     sep: str = "-", print_seq: bool = False) -> None:
-    """
-    Finds stop codons in given sequence
-
-    :param seq:
-    :param frame_shift:
-    :param stop_codons:
-    :param sep:
-    :param print_seq:
-    :return:
-    """
+def find_codon(seq: str, which: str, frame_shift: int = 0,
+               sep: str = "-", print_seq: bool = False) -> int:
+    codons = {
+        "start": ["ATG"],
+        "stop": ["TAA", "TAG", "TGA"]
+    }
     seq_list = []
+    codon_pos = None
+
     for i_nt in range(frame_shift, len(seq), 3):
         codon = seq[i_nt:i_nt + 3]
         seq_list.append(codon)
-        if codon in stop_codons:
-            if i_nt + 3 == len(seq):
-                print(f"STOP codon found at the END of sequence")
-                break
-            print(f"Stop codon found at {i_nt - frame_shift} position")  # FIXME
+        if codon in codons[which]:
+            codon_pos = i_nt - frame_shift
             break
+
     if print_seq:
         print(f"{sep}".join(seq_list))
+
+    return codon_pos
+
+
+def choose_best_frameshift(seq: str) -> list:
+
+    start_codons = {}
+    stop_codons = {}
+
+    for frame_shift in range(0, 3):
+        start_codon = find_codon(seq, which="start", frame_shift=frame_shift)
+        start_codons[frame_shift] = start_codon + frame_shift  # !!! важный момент
+
+    i = 0
+    for start_codon in start_codons.values():
+        for frame_shift in range(0, 3):
+            i += 1
+            stop_codon = find_codon(seq[start_codon:], which="stop", frame_shift=frame_shift)
+            total_shift = start_codon + stop_codon+ frame_shift + 3
+            seq_slice_len = len(seq[start_codon:total_shift])
+            stop_codons[i] = [start_codon, total_shift, seq_slice_len]
+
+    # print
+    for key, value in stop_codons.items():
+        print(f"Variant {key}: START: {value[0]}, STOP: {value[1]}, LEN: {value[2]}")
+
+    max_length = 0
+    best_variant = 1
+    for variant, (start, stop, length) in stop_codons.items():
+        if length > max_length:
+            max_length = length
+            best_variant = variant
+
+    return stop_codons[best_variant]
 
 
 def save_seqs(df: pd.DataFrame, folder: str,
