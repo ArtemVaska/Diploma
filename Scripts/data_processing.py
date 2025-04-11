@@ -4,8 +4,10 @@ import pandas as pd
 import numpy as np
 
 from sklearn.cluster import DBSCAN
-from Bio import Entrez
+from Bio import Entrez, SeqIO
 from Bio.Seq import Seq
+
+from fasta_processing import read_single_fasta
 
 Entrez.email = "artemvaskaa@gmail.com"
 
@@ -293,3 +295,66 @@ def filter_genome_coverages(df: pd.DataFrame, genome_coverage_threshold: int = 5
     df = df[df["Genome_Coverage"] >= genome_coverage_threshold]
 
     return df
+
+
+def download_transcripts_by_geneid(gene_id: str, org_name: str, max_results: int = 5) -> str:
+    """
+    Downloads XM_... mRNA transcripts from Entrez via GeneID to the specified folder.
+    Additional function for save_subset_df_transcripts.
+
+    :param gene_id:
+    :param org_name:
+    :param max_results:
+    :return:
+    """
+    # Step 1: Search for the GeneID and get linked mRNA nucleotide IDs
+    # search_term = f"{gene_id}[GeneID]"  # Search query using GeneID
+    search_term = f"{gene_id}[GeneID]"
+    handle = Entrez.esearch(db="nucleotide", term=search_term,  idtype="acc", retmax=max_results)
+    search_results = Entrez.read(handle)
+    handle.close()
+
+    # Get list of Nucleotide IDs (mRNA sequences)
+    ids = []
+    for acc in search_results["IdList"]:
+        if "XM_" in acc:
+            ids.append(acc)
+    print(f"Found {len(ids)} XM_mRNA sequences for GeneID {gene_id}.")
+
+    save_path = f"../References/{org_name}"
+    if not os.path.exists(save_path):
+        os.makedirs(save_path)
+
+    # Step 2: Fetch the nucleotide sequences (mRNA) from NCBI
+    seq_records = []
+    for seq_id in ids:
+        fetch_handle = Entrez.efetch(db="nucleotide", id=seq_id, rettype="fasta", retmode="text")
+        seq_record = SeqIO.read(fetch_handle, "fasta")
+        seq_records.append(seq_record.id)
+        fetch_handle.close()
+
+        filename = f"{seq_record.id}.fasta"
+        with open(f"{save_path}/{filename}", "w") as out_file:
+            SeqIO.write(seq_record, out_file, "fasta")
+        print(f"Saved transcript to {save_path}/{filename}")
+
+    return seq_records[0]
+
+
+def save_subset_df_transcripts(df: pd.DataFrame) -> dict:
+    """
+    Saves mRNA transripts by given GeneID.
+
+    :param df: pd.DataFrame
+    :return: dict org_name:seq
+    """
+    seq_dict = {}
+
+    for index, row in df.iterrows():
+        folder_name = row["org_name"].lower().replace(" ", "_")
+        filename = download_transcripts_by_geneid(str(row["gene_id"]), folder_name, max_results=3)
+        print()
+        seq = read_single_fasta(f"../References/{folder_name}/{filename}.fasta")
+        seq_dict[folder_name] = seq
+
+    return seq_dict
