@@ -15,8 +15,9 @@ def telegram_logger(chat_id: int) -> Callable:
         def wrapper(*args, **kwargs):
             start = time.time()
             try:
-                func(*args, **kwargs)
+                result = func(*args, **kwargs)
             except Exception as error:
+                result = None
                 message = f"Function `{func.__name__}` failed with an exception:\n\n`{type(error).__name__}: {error}`"
             else:
                 end = time.time()
@@ -32,6 +33,7 @@ def telegram_logger(chat_id: int) -> Callable:
 
             requests.post(tg_url + os.getenv("TG_API_TOKEN") + "/sendMessage",
                           params={"chat_id": chat_id, "parse_mode": "MarkdownV2", "text": message})
+            return result
 
         return wrapper
 
