@@ -46,14 +46,20 @@ def read_fasta(file: str) -> dict:
     """
     seqs = {}
     seq = []
+    header = None
     with open(file) as infile:
         for line in infile:
             line = line.strip()
             if line.startswith(">"):
-                header = line[1:]
+                if header is None:
+                    header = line[1:]
+                else:
+                    seqs[header] = "".join(seq)
+                    header = line[1:]
+                    seq = []
             else:
                 seq.append(line)
-    seqs[header] = "".join(seq)
+        seqs[header] = "".join(seq)
     return seqs
 
 
