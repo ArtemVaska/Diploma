@@ -28,7 +28,7 @@ def download_gene_gb(org_names: list) -> None:
         with open(f"../Datasets/{org_name}/ncbi_dataset/data/gene.gb", "w") as outfile:
             outfile.write(stream.read())
 
-        print(f"{org_name}.gb has been downloaded")
+        print(f"{org_name} gene.gb has been downloaded")
 
         time.sleep(0.333333334)
 
@@ -60,4 +60,4 @@ def create_exons(exon_ranges: dict) -> None:
         with open(f"../Datasets/{org_name}/ncbi_dataset/data/exons.fa", "w") as outfile:
             for exon_i, exon_range in exon_ranges[org_name].items():
                 outfile.write(f">{exon_i}\n{gene_seq[exon_range[0]:exon_range[1]]}\n")
-        print(f"{org_name} exons has been created")
+        print(f"{org_name} exons.fa has been created")
