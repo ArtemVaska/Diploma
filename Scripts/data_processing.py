@@ -6,6 +6,7 @@ import numpy as np
 from sklearn.cluster import DBSCAN
 from Bio import Entrez, SeqIO
 from Bio.Seq import Seq
+from subprocess import DEVNULL, STDOUT, check_call
 
 from fasta_processing import read_single_fasta
 
@@ -358,3 +359,28 @@ def save_subset_df_transcripts(df: pd.DataFrame) -> dict:
         seq_dict[folder_name] = seq
 
     return seq_dict
+
+
+def download_subset_df_datasets(df: pd.DataFrame) -> None:
+    """
+    Downloads gene, rna and protein for every GeneID in the provided dataframe
+    via ncbi-datasets-cli.
+
+    :param df: Pandas DataFrame
+    :return: None
+    """
+
+    for index, row in df.iterrows():
+        gene_id = str(row["gene_id"])
+        org_name = row["org_name"].lower().replace(" ", "_")
+        shell_commands = [
+            ["datasets", "download", "gene", "gene-id", gene_id,
+             "--include", "gene,rna,protein",
+             "--filename", f"../Datasets/{org_name}.zip"],
+            ["unzip", f"../Datasets/{org_name}.zip",
+             "-d", f"../Datasets/{org_name}"],
+            ["rm", "-r", f"../Datasets/{org_name}.zip"]
+        ]
+        for command in shell_commands:
+            check_call(command, stdout=DEVNULL, stderr=STDOUT)
+        print(f"Files for {org_name} downloaded successfully")
