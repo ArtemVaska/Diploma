@@ -375,7 +375,7 @@ def download_subset_df_datasets(df: pd.DataFrame) -> None:
         org_name = row["org_name"].lower().replace(" ", "_")
         shell_commands = [
             ["datasets", "download", "gene", "gene-id", gene_id,
-             "--include", "gene,rna,protein",
+             "--include", "gene,cds,rna,protein",
              "--filename", f"../Datasets/{org_name}.zip"],
             ["unzip", f"../Datasets/{org_name}.zip",
              "-d", f"../Datasets/{org_name}"],
