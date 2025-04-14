@@ -381,16 +381,22 @@ def dict_align_create(org_names: list, align_type: str) -> dict:
     return dict_align
 
 
-def analyze_exons(org_name: str) -> pd.DataFrame:
-    path = f"../Datasets/{org_name}/ncbi_dataset/data"
-    exons = read_fasta(f"{path}/{org_name}_exons.fa")
+def analyze_exons(path: str) -> pd.DataFrame:
+    exons = read_fasta(path)
 
+    # >0:0-183
+    ranges = []
+    for header in exons.keys():
+        coords = header.split(":")[1]
+        ranges.append(coords)
+    
     lengths = [len(seq) for seq in exons.values()]
     seqs = exons.values()
 
     df = pd.DataFrame(
         {
             "length": lengths,
+            "coords": ranges,
             "sequence": seqs,
         }
     )
