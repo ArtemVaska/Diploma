@@ -7,6 +7,7 @@ from Bio import Entrez, SeqIO
 from Bio.Seq import Seq
 from sklearn.cluster import DBSCAN
 
+from Scripts.fasta_processing import plain_to_fasta
 from fasta_processing import read_fasta, read_single_fasta
 
 Entrez.email = "artemvaskaa@gmail.com"
@@ -417,7 +418,8 @@ def concat_2_exons(df: pd.DataFrame, org_name: str, indices: list):
 
 
 def create_cassette(phyla: str, org_name: str, df_exons: pd.DataFrame, exons_i: list) -> dict:
-    gene_fna = read_single_fasta(f"../Datasets/{phyla}/{org_name}/ncbi_dataset/data/gene.fna")
+    path = f"../Datasets/{phyla}/{org_name}/ncbi_dataset/data"
+    gene_fna = read_single_fasta(f"{path}/gene.fna")
 
     exon_0 = df_exons.loc[exons_i[0]]
     exon_1 = df_exons.loc[exons_i[1]]
@@ -431,9 +433,20 @@ def create_cassette(phyla: str, org_name: str, df_exons: pd.DataFrame, exons_i: 
         ">cassette": cassette,
         f">{exons_i[1]}:{exon_1.coords}": exon_1.sequence,
     }
-    with open(f"../Datasets/{phyla}/{org_name}/ncbi_dataset/data/cassette.fa", "w") as outfile:
+    with open(f"{path}/cassette.fa", "w") as outfile:
         for header, seq in cassette_dict.items():
             outfile.write(f"{header}\n"
                           f"{seq}\n")
+
+    with open(f"{path}/cds.fna") as infile:
+        line = infile.readline()
+        cds_header = line.rstrip()
+    cds = read_single_fasta(f"{path}/cds.fna")
+    cds_cassette = cds.replace(f"{exon_0.sequence}{exon_1.sequence}",
+                               f"{exon_0.sequence}{cassette}{exon_1.sequence}")
+    with open(f"{path}/cds_cassette_plain.fa", "w") as outfile:
+        outfile.write(f"{cds_header} [+cassette_intron]\n")
+        outfile.write(f"{cds_cassette}\n")
+    plain_to_fasta(f"{path}/cds_cassette_plain.fa", 70)
 
     return cassette_dict
