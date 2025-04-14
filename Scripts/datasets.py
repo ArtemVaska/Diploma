@@ -159,7 +159,8 @@ def create_exons(phyla: str, exon_ranges: dict) -> None:
         gene_seq = read_single_fasta(f"../Datasets/{phyla}/{org_name}/ncbi_dataset/data/gene.fna")
         with open(f"../Datasets/{phyla}/{org_name}/ncbi_dataset/data/exons.fa", "w") as outfile:
             for exon_i, exon_range in exon_ranges[org_name].items():
-                outfile.write(f">{exon_i}\n{gene_seq[exon_range[0]:exon_range[1]]}\n")
+                outfile.write(f">{exon_i}:{exon_range[0]}-{exon_range[1]}\n"
+                              f"{gene_seq[exon_range[0]:exon_range[1]]}\n")
         print(f"Exons for {phyla}/{org_name} created successfully")
 
 
