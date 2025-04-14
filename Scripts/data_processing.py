@@ -7,7 +7,7 @@ from Bio import Entrez, SeqIO
 from Bio.Seq import Seq
 from sklearn.cluster import DBSCAN
 
-from fasta_processing import read_single_fasta
+from fasta_processing import read_fasta, read_single_fasta
 
 Entrez.email = "artemvaskaa@gmail.com"
 
@@ -358,3 +358,53 @@ def save_subset_df_transcripts(df: pd.DataFrame) -> dict:
         seq_dict[folder_name] = seq
 
     return seq_dict
+
+
+def dict_align_create(org_names: list, align_type: str) -> dict:
+    align_types = ["gene", "rna", "protein"]
+    if align_type not in align_types:
+        raise ValueError(f"Unknown alignment type: {align_type}")
+    else:
+        match align_type:
+            case "gene":
+                ext = "fna"
+            case "rna":
+                ext = "fna"
+            case "protein":
+                ext = "faa"
+
+    filename = f"{align_type}.{ext}"
+    dict_align = {}
+    for org_name in org_names:
+        dict_align[f"{org_name}"] = read_single_fasta(f"../Datasets/{org_name}/ncbi_dataset/data/{filename}")
+
+    return dict_align
+
+
+def analyze_exons(org_name: str) -> pd.DataFrame:
+    path = f"../Datasets/{org_name}/ncbi_dataset/data"
+    exons = read_fasta(f"{path}/{org_name}_exons.fa")
+
+    lengths = [len(seq) for seq in exons.values()]
+    seqs = exons.values()
+
+    df = pd.DataFrame(
+        {
+            "length": lengths,
+            "sequence": seqs,
+        }
+    )
+    return df
+
+
+def concat_2_exons(df: pd.DataFrame, org_name: str, indices: list):
+    path = f"../Datasets/{org_name}/ncbi_dataset/data/"
+
+    seq_0 = df.iloc[indices[0]].sequence
+    seq_1 = df.iloc[indices[1]].sequence
+
+    filename = f"{org_name}_{indices[0]}-{len(seq_0)}-{indices[1]}_{len(seq_1)}.fa"
+
+    with open(f"{path}/{filename}", "w") as handle:
+        handle.write(f">{org_name}\n")
+        handle.write(f"{''.join([seq_0, seq_1])}\n")
