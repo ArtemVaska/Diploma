@@ -389,7 +389,7 @@ def analyze_exons(path: str) -> pd.DataFrame:
     for header in exons.keys():
         coords = header.split(":")[1]
         ranges.append(coords)
-    
+
     lengths = [len(seq) for seq in exons.values()]
     seqs = exons.values()
 
@@ -414,3 +414,26 @@ def concat_2_exons(df: pd.DataFrame, org_name: str, indices: list):
     with open(f"{path}/{filename}", "w") as handle:
         handle.write(f">{org_name}\n")
         handle.write(f"{''.join([seq_0, seq_1])}\n")
+
+
+def create_cassette(phyla: str, org_name: str, df_exons: pd.DataFrame, exons_i: list) -> dict:
+    gene_fna = read_single_fasta(f"../Datasets/{phyla}/{org_name}/ncbi_dataset/data/gene.fna")
+
+    exon_0 = df_exons.loc[exons_i[0]]
+    exon_1 = df_exons.loc[exons_i[1]]
+
+    cassette_start = int(exon_0.coords.split("-")[1]) + 1
+    cassette_end = int(exon_1.coords.split("-")[0])
+    cassette = gene_fna[cassette_start:cassette_end]
+
+    cassette_dict = {
+        f">{exons_i[0]}:{exon_0.coords}": exon_0.sequence,
+        ">cassette": cassette,
+        f">{exons_i[1]}:{exon_1.coords}": exon_1.sequence,
+    }
+    with open(f"../Datasets/{phyla}/{org_name}/ncbi_dataset/data/cassette.fa", "w") as outfile:
+        for header, seq in cassette_dict.items():
+            outfile.write(f"{header}\n"
+                          f"{seq}\n")
+
+    return cassette_dict
