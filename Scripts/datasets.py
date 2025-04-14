@@ -61,9 +61,9 @@ def download_subset_df_datasets(df: pd.DataFrame, phyla: str = "") -> list:
             os.mkdir(f"../Datasets/{phyla}")
 
     org_names = []
-    for index, row in df.iterrows():
+    for i, (index, row) in enumerate(df.iterrows()):
         gene_id = str(row["gene_id"])
-        org_name = row["org_name"].lower().replace(" ", "_")
+        org_name = row["org_name"].lower().replace(" ", "_") + f"_{i}"
         shell_commands = [
             ["datasets", "download", "gene", "gene-id", gene_id,
              "--include", "gene,cds,rna,protein",
@@ -163,6 +163,7 @@ def create_exons(phyla: str, exon_ranges: dict) -> None:
         print(f"Exons for {phyla}/{org_name} created successfully")
 
 
+@telegram_logger(chat_id=611478740)
 def download_all_files_ncbi(df: pd.DataFrame,
                             phyla_taxids: dict,
                             phylas: list,
