@@ -13,7 +13,7 @@ Entrez.email = "artemvaskaa@gmail.com"
 
 
 @telegram_logger(chat_id=611478740)
-def select_phyla(df: pd.DataFrame, phylas: list) -> dict:
+def select_phyla(df: pd.DataFrame, phylas: list, taxids: list = None) -> (dict, list):
     """
     Selects all taxon_id from the table that match the given phylas.
 
@@ -25,11 +25,16 @@ def select_phyla(df: pd.DataFrame, phylas: list) -> dict:
     for phyla in phylas:
         phyla_taxids[phyla] = []
 
+    if taxids is not None:
+        df = df.loc[taxids]
+
+    taxids_error = []
     for index, row in df.iterrows():
         try:
             stream = Entrez.efetch(db="Taxonomy", id=str(index), retmode="xml")
         except urllib.error.HTTPError:
             print(f"ERROR taxid: {index}, {row['org_name']}")
+            taxids_error.append(index)
             continue
         records = Entrez.read(stream)
         for phyla in phylas:
@@ -37,7 +42,7 @@ def select_phyla(df: pd.DataFrame, phylas: list) -> dict:
                 phyla_taxids[phyla].append(index)
                 print(f"{phyla}: {index}, {row['org_name']}")
         time.sleep(0.333333334)
-    return phyla_taxids
+    return phyla_taxids, taxids_error
 
 
 def download_subset_df_datasets(df: pd.DataFrame, phyla: str = "") -> list:
@@ -186,3 +191,4 @@ def download_all_files_ncbi(df: pd.DataFrame,
         download_gene_gb(phyla, org_names)
         exon_ranges = parse_exon_ranges(phyla, org_names, feature_type)
         create_exons(phyla, exon_ranges)
+        print()
