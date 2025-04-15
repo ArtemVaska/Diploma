@@ -361,8 +361,8 @@ def save_subset_df_transcripts(df: pd.DataFrame) -> dict:
     return seq_dict
 
 
-def dict_align_create(org_names: list, align_type: str) -> dict:
-    align_types = ["gene", "rna", "protein"]
+def dict_align_create(phyla: str, org_names: list, align_type: str) -> dict:
+    align_types = ["gene", "rna", "protein", "cds", "cassette", "cds_cassette"]
     if align_type not in align_types:
         raise ValueError(f"Unknown alignment type: {align_type}")
     else:
@@ -373,11 +373,17 @@ def dict_align_create(org_names: list, align_type: str) -> dict:
                 ext = "fna"
             case "protein":
                 ext = "faa"
+            case "cds":
+                ext = "fna"
+            case "cassette":
+                ext = "fa"
+            case "cds_cassette":
+                ext = "fa"
 
     filename = f"{align_type}.{ext}"
     dict_align = {}
     for org_name in org_names:
-        dict_align[f"{org_name}"] = read_single_fasta(f"../Datasets/{org_name}/ncbi_dataset/data/{filename}")
+        dict_align[f"{org_name}"] = read_single_fasta(f"../Datasets/{phyla}/{org_name}/ncbi_dataset/data/{filename}")
 
     return dict_align
 
