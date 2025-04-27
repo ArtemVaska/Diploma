@@ -13,6 +13,30 @@ Entrez.email = "artemvaskaa@gmail.com"
 
 
 @telegram_logger(chat_id=611478740)
+def select_all_phylas(df: pd.DataFrame) -> (dict, list):
+    """
+    Fetches taxonomy info for every taxon ID in the table.
+
+    :param df: pd.DataFrame
+    :return: dict, list
+    """
+    phylas = {}
+
+    taxids_error = []
+    for index, row in df.iterrows():
+        try:
+            stream = Entrez.efetch(db="Taxonomy", id=str(index), retmode="xml")
+        except urllib.error.HTTPError:
+            print(f"ERROR taxid: {index}, {row['org_name']}")
+            taxids_error.append(index)
+            continue
+        records = Entrez.read(stream)
+        phylas[index] = records[0]["Lineage"]
+        time.sleep(0.333333334)
+    return phylas, taxids_error
+
+
+@telegram_logger(chat_id=611478740)
 def select_phyla(df: pd.DataFrame, phylas: list, taxids: list = None) -> (dict, list):
     """
     Selects all taxon_id from the table that match the given phylas.
