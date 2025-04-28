@@ -1,7 +1,7 @@
 import os
 import time
 import urllib.error
-from subprocess import check_call, DEVNULL, STDOUT
+from subprocess import check_call, DEVNULL, STDOUT, CalledProcessError
 
 import pandas as pd
 from Bio import Entrez, SeqIO
@@ -31,7 +31,7 @@ def select_all_phylas(df: pd.DataFrame) -> (dict, list):
             taxids_error.append(index)
             continue
         records = Entrez.read(stream)
-        phylas[index] = records[0]["Lineage"]
+        phylas[index] = f"{records[0]['Lineage']}; {records[0]['ScientificName']}"
         time.sleep(0.333333334)
     return phylas, taxids_error
 
@@ -87,7 +87,7 @@ def download_subset_df_datasets(df: pd.DataFrame, phyla: str = "") -> list:
     org_names = []
     for i, (index, row) in enumerate(df.iterrows()):
         gene_id = str(row["gene_id"])
-        org_name = row["org_name"].lower().replace(" ", "_") + f"_{i}"
+        org_name = row["org_name"].lower().replace(" ", "_").replace("/", "_").replace("-", "_") + f"_{i}"
         shell_commands = [
             ["datasets", "download", "gene", "gene-id", gene_id,
              "--include", "gene,cds,rna,protein",
@@ -97,7 +97,11 @@ def download_subset_df_datasets(df: pd.DataFrame, phyla: str = "") -> list:
             ["rm", "-r", f"../Datasets/{phyla}{org_name}.zip"]
         ]
         for command in shell_commands:
-            check_call(command, stdout=DEVNULL, stderr=STDOUT)
+            try:
+                check_call(command, stdout=DEVNULL, stderr=STDOUT)
+            except CalledProcessError:
+                print(f"ERROR command: {command}")
+                continue
         print(f"Gene, mRNA, protein for {phyla}{org_name} downloaded successfully")
         org_names.append(org_name)
     return org_names
@@ -114,13 +118,15 @@ def download_gene_gb(phyla: str, org_names: list) -> None:
     """
     # Obtain mRNA Accession and ranges of the gene
     for org_name in org_names:
-        with open(f"../Datasets/{phyla}/{org_name}/ncbi_dataset/data/gene.fna") as infile:
-            line = infile.readline().rstrip()
-            gene_acc = line.split(":")[0][1:]
-            gene_ranges = line.split()[0].split(":")[1]
-            gene_range_1 = gene_ranges.split("-")[0]
-            gene_range_2 = gene_ranges.split("-")[1]
-
+        try:
+            with open(f"../Datasets/{phyla}/{org_name}/ncbi_dataset/data/gene.fna") as infile:
+                line = infile.readline().rstrip()
+                gene_acc = line.split(":")[0][1:]
+                gene_ranges = line.split()[0].split(":")[1]
+                gene_range_1 = gene_ranges.split("-")[0]
+                gene_range_2 = gene_ranges.split("-")[1]
+        except FileNotFoundError:
+            continue
         if "c" in gene_range_1:
             gene_range_1 = gene_range_1.replace("c", "")
             strand = 2
@@ -158,7 +164,10 @@ def parse_exon_ranges(phyla: str, org_names: list, feature_type: str = "mRNA") -
 
     for org_name in org_names:
         exons_range = {}
-        records = SeqIO.parse(f"../Datasets/{phyla}/{org_name}/ncbi_dataset/data/gene.gb", "genbank")
+        try:
+            records = SeqIO.parse(f"../Datasets/{phyla}/{org_name}/ncbi_dataset/data/gene.gb", "genbank")
+        except FileNotFoundError:
+            continue
         for record in records:
             for feature in record.features:
                 if feature.type == feature_type:

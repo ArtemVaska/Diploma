@@ -10,7 +10,10 @@ def build_tree(paths):
     """
     root = {}
     for path in paths:
-        parts = [p.strip() for p in path.split(";") if p.strip()]
+        try:
+            parts = [p.strip() for p in path.split(";") if p.strip()]
+        except AttributeError as e:
+            print(path)
         current = root
         for part in parts:
             if part not in current:
