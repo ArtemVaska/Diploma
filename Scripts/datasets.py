@@ -163,18 +163,16 @@ def parse_exon_ranges(phyla: str, org_names: list, feature_type: str = "mRNA") -
         raise Exception(f"Feature type {feature_type} is not supported")
 
     for org_name in org_names:
-        exons_range = {}
         try:
             records = SeqIO.parse(f"../Datasets/{phyla}/{org_name}/ncbi_dataset/data/gene.gb", "genbank")
         except FileNotFoundError:
             continue
         for record in records:
-            for feature in record.features:
-                if feature.type == feature_type:
-                    for part_i, part in enumerate(feature.location.parts):
-                        start, end = int(part.start), int(part.end)
-                        exons_range[part_i] = [start, end]
-        exons_dict[org_name] = exons_range
+            mrnas = [feature for feature in record.features if feature.type == "mRNA"]
+            parts = {
+                i: [int(part.start), int(part.end)] for i, part in enumerate(mrnas[0].location.parts)
+            }
+        exons_dict[org_name] = parts
 
     return exons_dict
 
@@ -203,7 +201,7 @@ def download_all_files_ncbi(df: pd.DataFrame,
                             phylas: list,
                             feature_type: str = "mRNA") -> None:
     """
-    Downloads gene.fna, rna.fna, protein.faa, gene.gb and exons.fa
+    Downloads gene.fna, rna.fna, protein.faa and gene.gb
     for every GeneID in the provided dataframe of selected phylas.
 
     :param df:
@@ -212,7 +210,7 @@ def download_all_files_ncbi(df: pd.DataFrame,
     :param feature_type:
     :return:
     """
-    feature_types = ["mRNA", "CDS"]
+    feature_types = ["mRNA"]
     if feature_type not in feature_types:
         raise Exception(f"Feature type {feature_type} is not supported")
 
