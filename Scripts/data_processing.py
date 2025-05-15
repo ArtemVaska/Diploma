@@ -423,6 +423,23 @@ def concat_2_exons(df: pd.DataFrame, org_name: str, indices: list):
         handle.write(f"{''.join([seq_0, seq_1])}\n")
 
 
+def concat_cassette(cassette_dict: dict, concat_type: str) -> str | None:
+    """
+    Concatenates 2 exons from conservative cassette or a conservative cassette from dict to a single string.
+    :param cassette_dict:
+    :param concat_type:
+    :return:
+    """
+    match concat_type:
+        case "i":
+            return "".join([seq for header, seq in cassette_dict.items() if header == 'cassette'])
+        case "ee":
+            return "".join([seq for header, seq in cassette_dict.items() if header != 'cassette'])
+        case "eie":
+            return "".join([seq for header, seq in cassette_dict.items()])
+    return None
+
+
 def create_cassette(phyla: str, org_name: str, df_exons: pd.DataFrame, exons_i: list) -> dict:
     path = f"../Datasets/{phyla}/{org_name}/ncbi_dataset/data"
     gene_fna = read_single_fasta(f"{path}/gene.fna")
