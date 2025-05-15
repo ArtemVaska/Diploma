@@ -452,13 +452,13 @@ def create_cassette(phyla: str, org_name: str, df_exons: pd.DataFrame, exons_i: 
     cassette = gene_fna[cassette_start:cassette_end]
 
     cassette_dict = {
-        f">{exons_i[0]}:{exon_0.coords}": exon_0.sequence,
-        ">cassette": cassette,
-        f">{exons_i[1]}:{exon_1.coords}": exon_1.sequence,
+        f"{exons_i[0]}:{exon_0.coords}": exon_0.sequence,
+        "cassette": cassette,
+        f"{exons_i[1]}:{exon_1.coords}": exon_1.sequence,
     }
     with open(f"{path}/cassette.fa", "w") as outfile:
         for header, seq in cassette_dict.items():
-            outfile.write(f"{header}\n"
+            outfile.write(f">{header}\n"
                           f"{seq}\n")
 
     with open(f"{path}/cds.fna") as infile:
