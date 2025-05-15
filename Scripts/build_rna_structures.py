@@ -46,9 +46,9 @@ def run_rnafold(fasta_path: Path) -> None:
         organism_dir: Path = output_root / seq_id
         organism_dir.mkdir(parents=True, exist_ok=True)
 
-        # Run RNAfold and save structure
+        # Run RNAfold to get structure only, suppressing rna.ps
         result = subprocess.run(
-            ["RNAfold", "--noLP"],
+            ["RNAfold", "--noLP", "--noPS"],
             input=sequence.strip(),
             capture_output=True,
             text=True
@@ -58,7 +58,7 @@ def run_rnafold(fasta_path: Path) -> None:
         with open(fold_file, "w") as f:
             f.write(result.stdout)
 
-        # Generate dot plot
+        # Generate dot plot (rna.ps will be created here)
         subprocess.run(
             ["RNAfold", "-p", "-d2", "--noLP"],
             input=sequence.strip(),
