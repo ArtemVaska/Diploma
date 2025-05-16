@@ -473,3 +473,39 @@ def create_cassette(phyla: str, org_name: str, df_exons: pd.DataFrame, exons_i: 
     plain_to_fasta(f"{path}/cds_cassette_plain.fa", 70)
 
     return cassette_dict
+
+
+def dict_align_info_analyze(dict_align_info: dict, feature: str) -> (pd.DataFrame, dict):
+    dict_align = {}
+    rows = []
+
+    for phyla, org_names in dict_align_info.items():
+        dict_align[phyla] = dict_align_create(phyla, org_names, feature)
+
+    for phyla, org_name_seq in dict_align.items():
+        for org_name, seq in org_name_seq.items():
+            stop_codon_pos = find_codon(seq, which="stop")
+            cassette_intron = read_fasta(f"../Datasets/{phyla}/{org_name}/ncbi_dataset/data/cassette.fa")["cassette"]
+            cassette_intron_start = seq.find(cassette_intron)
+            rows.append(
+                {
+                    "phylum": phyla,
+                    "org_name": org_name,
+                    "stop_codon_pos": stop_codon_pos,
+                    "equal_to_cds": stop_codon_pos + 3 == len(seq),
+                    "cassette_start": cassette_intron_start,
+                    "intron_len_to_stop_codon": stop_codon_pos - cassette_intron_start,
+                }
+            )
+    df = pd.DataFrame(rows)
+
+    # formatted org_name for dict_align
+    new_dict = {}
+    for phyla, org_name_seq in dict_align.items():
+        new_subdict = {}
+        for org_name, seq in org_name_seq.items():
+            formatted_name = "_".join(org_name.split("_")[:-1]).capitalize()
+            new_subdict[formatted_name] = seq
+        new_dict[phyla] = new_subdict
+
+    return df, new_dict
