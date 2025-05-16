@@ -225,3 +225,17 @@ def download_all_files_ncbi(df: pd.DataFrame,
         exon_ranges = parse_exon_ranges(phyla, org_names, feature_type)
         create_exons(phyla, exon_ranges)
         print()
+
+
+def check_transcript_count(phylas: list):
+    message = False
+    for phyla in phylas:
+        for org_name in os.listdir(f"../Datasets/{phyla}"):
+            with open(f"../Datasets/{phyla}/{org_name}/ncbi_dataset/data/cds.fna") as infile:
+                lines = "".join(infile.readlines())
+                transcript_count = lines.count(">")
+                if transcript_count > 1:
+                    message = True
+                    print(f"{phyla}/{org_name}: {transcript_count} transcripts")
+    if message:
+        print(f"\nDelete other transcripts from cds.fna, protein.faa and rna.fna")
