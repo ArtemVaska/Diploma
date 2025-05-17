@@ -55,4 +55,5 @@ def run_maxentscan(phylum: str, org_names: list) -> pd.DataFrame:
             df["org_name"] = df["org_name"].apply(
                 lambda name: name.rsplit("_", 1)[0].capitalize()
             )
+            df.to_csv(f"{site_path}/{phylum}/result.tsv", sep="\t", index=False)
     return df
