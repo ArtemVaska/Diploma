@@ -96,7 +96,7 @@ def run_rnafold_with_highlight(
                 coords = find_intron_coordinates(full_seq, intron_sequences[seq_id])
                 if coords:
                     start, end = coords
-                    highlight_cmd = ["--pre", f"{start} {end} 8 GREEN omark"]
+                    highlight_cmd = ["--pre", f"{start} {end} 8 10 10 0 omark"]
                     with open(f"{organism_dir}/{fold_type}.fold") as infile:
                         subprocess.run(
                             ["RNAplot"] + highlight_cmd,
