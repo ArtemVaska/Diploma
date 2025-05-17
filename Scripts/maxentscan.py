@@ -9,7 +9,7 @@ from fasta_processing import read_single_fasta, read_fasta
 def run_maxentscan(phylum: str, org_names: list) -> pd.DataFrame:
     prefix = "../Datasets"
     postfix = "ncbi_dataset/data"
-    site_path = "../maxentscan"
+    site_path = "../maxentscan_output"
 
     rows = []
     for org_name in org_names:
@@ -56,4 +56,77 @@ def run_maxentscan(phylum: str, org_names: list) -> pd.DataFrame:
                 lambda name: name.rsplit("_", 1)[0].capitalize()
             )
             df.to_csv(f"{site_path}/{phylum}/result.tsv", sep="\t", index=False)
+    return df
+
+
+def run_maxentscan_all_introns(phylum: str, org_name: str) -> pd.DataFrame:
+    full_seq = read_single_fasta(f"../Datasets/{phylum}/{org_name}/ncbi_dataset/data/gene.fna")
+    exons_dict = read_fasta(f"../Datasets/{phylum}/{org_name}/ncbi_dataset/data/exons.fa")
+
+    # Creating list of exons and exons_coords for introns parsing
+    exons = []
+    exons_coords = []
+    for key, exon_seq in exons_dict.items():
+        _, exon_coords = key.split(":")
+        exons.append(exon_seq)
+        exons_coords.append([int(coord) for coord in exon_coords.split("-")])
+
+    # Creates list of introns from parsed coords
+    introns = []
+    for intron_i in range(len(exons_coords)-1):
+        intron_seq = full_seq[exons_coords[intron_i][1] : exons_coords[intron_i+1][0]]
+        introns.append(intron_seq)
+
+    # Creates lists of donors and acceptors for maxentscan processing
+    donors = []
+    acceptors = []
+
+    for i in range(len(exons)-1):
+        donor = exons[i][-3:] + introns[i][:6]
+        acceptor = introns[i][-20:] + exons[i+1][:3]
+        donors.append(donor)
+        acceptors.append(acceptor)
+
+    # Saves donors and acceptors to files
+    dir_path = f"../maxentscan_output/{phylum}_full_gene/{org_name}"
+    if not os.path.exists(dir_path):
+        os.makedirs(dir_path, exist_ok=True)
+
+    with open(f"{dir_path}/donors.fa", "w") as outfile:
+        for donor in donors:
+            outfile.write(f"{donor}\n")
+
+    with open(f"{dir_path}/acceptors.fa", "w") as outfile:
+        for acceptor in acceptors:
+            outfile.write(f"{acceptor}\n")
+
+    # Runs maxentscan
+    result = subprocess.run(
+        ["maxentscan_score5.pl"] + [f"{dir_path}/donors.fa"],
+        capture_output=True,
+    )
+    lines_donors = result.stdout.decode("utf-8").strip().split("\n")
+    lines_donors_parsed = [score.split("\t") for score in lines_donors]
+
+    result = subprocess.run(
+        ["maxentscan_score3.pl"] + [f"{dir_path}/acceptors.fa"],
+        capture_output=True,
+    )
+    lines_acceptors = result.stdout.decode("utf-8").strip().split("\n")
+    lines_acceptors_parsed = [score.split("\t") for score in lines_acceptors]
+
+    # Creates pd.DataFrame with results
+    rows = []
+    for (donor_seq, donor_score), (acceptor_seq, acceptor_score) in zip(lines_donors_parsed, lines_acceptors_parsed):
+        rows.append(
+            {
+                "donor_seq": donor_seq,
+                "donor_score": donor_score,
+                "acceptor_score": acceptor_score,
+                "acceptor_seq": acceptor_seq,
+            }
+        )
+    df = pd.DataFrame(rows)
+    df.to_csv(f"{dir_path}/result.tsv", sep="\t", index=False)
+
     return df
