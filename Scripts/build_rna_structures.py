@@ -3,6 +3,8 @@ from pathlib import Path
 import argparse
 import sys
 
+from tg_logger import telegram_logger
+
 
 def read_fasta(file_path: Path) -> dict:
     sequences = {}
@@ -24,6 +26,7 @@ def find_intron_coordinates(full_seq: str, intron_seq: str) -> tuple[int, int] |
     return (start + 1, start + len(intron_seq))  # 1-based inclusive
 
 
+@telegram_logger(chat_id=611478740)
 def run_rnafold_with_highlight(
     fasta_path: Path,
     paint_path: Path | None = None,
