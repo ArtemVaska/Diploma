@@ -2,6 +2,8 @@ import os
 import subprocess
 
 import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
 
 from fasta_processing import read_single_fasta, read_fasta
 
@@ -130,3 +132,21 @@ def run_maxentscan_all_introns(phylum: str, org_name: str) -> pd.DataFrame:
     df.to_csv(f"{dir_path}/result.tsv", sep="\t", index=False)
 
     return df
+
+
+def maxentscan_boxplot(phylum: str, df: pd.DataFrame):
+    plt.figure(figsize=(8, 6))
+
+    # Boxplot без hue, чтобы всё было по центру
+    sns.boxplot(data=df, x="site_type", y="maxentscore",
+                hue="site_type", palette="Set2", legend=False)
+
+    # Добавляем точки поверх боксплота, строго по центру каждой категории
+    sns.stripplot(data=df, x="site_type", y="maxentscore",
+                  color="black", size=6, jitter=False, marker="o", edgecolor="white", linewidth=0.5)
+
+    plt.title(f"MaxEntScore по сайтам сплайсинга у {phylum}", fontsize=14)
+    plt.ylabel("MaxEntScore")
+    plt.xlabel("Тип сайта")
+    plt.tight_layout()
+    plt.show()
