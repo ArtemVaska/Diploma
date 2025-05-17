@@ -509,3 +509,11 @@ def dict_align_info_analyze(dict_align_info: dict, feature: str) -> (pd.DataFram
         new_dict[phyla] = new_subdict
 
     return df, new_dict
+
+
+def dict_align_update_keys(dict_align: dict):
+    new_org_names = []
+    for org_name, seq in dict_align.items():
+        new_org_names.append("_".join(org_name.split("_")[:-1]).capitalize())
+    new_dict_align = dict(zip(new_org_names, dict_align.values()))
+    return new_dict_align
