@@ -49,66 +49,71 @@ def run_rnafold_with_highlight(
         organism_dir = output_root / seq_id
         organism_dir.mkdir(parents=True, exist_ok=True)
 
-        # Run RNAfold without .ps output
+        # Run RNAfold (creates only dot.ps)
         result = subprocess.run(
-            ["RNAfold", "--noLP", "--noPS"],
+            ["RNAfold", "-p", "-d2", "--noLP", "--noPS"],
             input=full_seq.strip(),
+            cwd=organism_dir,
             capture_output=True,
             text=True
         )
         lines = result.stdout.strip().splitlines()
-        if len(lines) < 2:
+        if len(lines) < 5:
             print(f"⚠️ Error: RNAfold failed for {seq_id}")
             continue
 
-        structure_line = lines[1]
-        structure, energy = structure_line.rsplit(' ', 1)
-
-        fold_file = organism_dir / f"{seq_id}.fold"
+        # Save result to .fold file
+        fold_file = organism_dir / f"all.fold"
         with open(fold_file, "w") as f:
-            f.write(f"{full_seq}\n{structure} {energy}\n")
+            for line in lines:
+                f.write(f"{line.strip()}\n") # delete space in line-5
 
-        # Generate dot plot
-        subprocess.run(
-            ["RNAfold", "-p", "-d2", "--noLP"],
-            input=full_seq.strip(),
-            cwd=organism_dir,
-            text=True
-        )
-        rna_ps = organism_dir / "rna.ps"
-        if rna_ps.exists():
-            rna_ps.rename(organism_dir / f"{seq_id}_dotplot.ps")
+        # Create .fold files and plots for mfe and centroid
+        for fold_type in ["mfe", "centroid"]:
+            match fold_type:
+                case "mfe":
+                    fold_line = lines[1]
+                case "centroid":
+                    fold_line = lines[3]
+            with open(f"{organism_dir}/{fold_type}.fold", "w") as f:
+                f.write(f"{full_seq}\n{fold_line}")
 
-        dot_ps = organism_dir / "dot.ps"
-        if dot_ps.exists():
-            dot_ps.rename(organism_dir / f"{seq_id}_dot.ps")
+            with open(f"{organism_dir}/{fold_type}.fold") as infile:
+                subprocess.run(
+                    ["RNAplot"],
+                    stdin=infile,
+                    cwd=organism_dir,
+                )
+            rna_eps = organism_dir / "rna.eps"
+            if rna_eps.exists():
+                rna_eps.rename(organism_dir / f"{fold_type}_rna.eps")
 
-        # Run RNAplot with intron highlighting if available
-        if seq_id in intron_sequences:
-            coords = find_intron_coordinates(full_seq, intron_sequences[seq_id])
-            if coords:
-                start, end = coords
-                highlight_cmd = ["--pre", f"{start} {end} 8 GREEN omark"]
-                with open(fold_file) as infile:
-                    subprocess.run(
-                        ["RNAplot"] + highlight_cmd,
-                        stdin=infile,
-                        cwd=organism_dir,
-                    )
-                highlight_eps = organism_dir / "rna.eps"
-                if highlight_eps.exists():
-                    highlight_eps.rename(organism_dir / f"{seq_id}_highlight.eps")
+            # Run RNAplot with intron highlighting if available
+            if seq_id in intron_sequences:
+                coords = find_intron_coordinates(full_seq, intron_sequences[seq_id])
+                if coords:
+                    start, end = coords
+                    highlight_cmd = ["--pre", f"{start} {end} 8 GREEN omark"]
+                    with open(f"{organism_dir}/{fold_type}.fold") as infile:
+                        subprocess.run(
+                            ["RNAplot"] + highlight_cmd,
+                            stdin=infile,
+                            cwd=organism_dir,
+                        )
+                    highlight_eps = organism_dir / "rna.eps"
+                    if highlight_eps.exists():
+                        highlight_eps.rename(organism_dir / f"{fold_type}_highlight.eps")
+                    else:
+                        print(f"⚠️ Highlight file not created for {seq_id}")
                 else:
-                    print(f"⚠️ Highlight file not created for {seq_id}")
-            else:
-                print(f"⚠️ Warning: intron not found in {seq_id}. Skipping highlight.")
+                    print(f"⚠️ Warning: intron not found in {seq_id}. Skipping highlight")
 
-        print(f"✔ Done: {seq_id}")
+        print(f"✔ Done: {seq_id}\n")
 
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Run RNAfold with intron highlighting")
-    parser.add_argument("-input", "--input", type=str, required=True, help="FASTA with full exon-intron sequences")
+    parser.add_argument("--input", type=str, required=True, help="FASTA with full exon-intron sequences")
     parser.add_argument("--paint", type=str, required=False, help="FASTA with intron sequences to highlight")
     parser.add_argument("--output", type=str, required=False, help="Directory to store output files")
     return parser.parse_args()
