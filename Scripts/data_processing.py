@@ -447,7 +447,7 @@ def create_cassette(phyla: str, org_name: str, df_exons: pd.DataFrame, exons_i: 
     exon_0 = df_exons.loc[exons_i[0]]
     exon_1 = df_exons.loc[exons_i[1]]
 
-    cassette_start = int(exon_0.coords.split("-")[1]) + 1
+    cassette_start = int(exon_0.coords.split("-")[1])
     cassette_end = int(exon_1.coords.split("-")[0])
     cassette = gene_fna[cassette_start:cassette_end]
 
