@@ -494,7 +494,8 @@ def dict_align_info_analyze(dict_align_info: dict, feature: str) -> (pd.DataFram
                     "stop_codon_pos": stop_codon_pos,
                     "equal_to_cds": stop_codon_pos + 3 == len(seq),
                     "cassette_start": cassette_intron_start,
-                    "intron_len_to_stop_codon": stop_codon_pos - cassette_intron_start,
+                    "length_to_stop_codon": stop_codon_pos - cassette_intron_start,
+                    "intron_length": len(cassette_intron)
                 }
             )
     df = pd.DataFrame(rows)
@@ -517,3 +518,29 @@ def dict_align_update_keys(dict_align: dict):
         new_org_names.append("_".join(org_name.split("_")[:-1]).capitalize())
     new_dict_align = dict(zip(new_org_names, dict_align.values()))
     return new_dict_align
+
+
+def obtain_data(phylum: str, org_name: str) -> dict:
+    prefix = "../Datasets"
+    postfix = "ncbi_dataset/data"
+    file_path = f"{prefix}/{phylum}/{org_name}/{postfix}"
+
+    gene = read_single_fasta(f"{file_path}/gene.fna")
+    cds = read_single_fasta(f"{file_path}/cds.fna")
+    protein = read_single_fasta(f"{file_path}/protein.faa")
+
+    cds_cassette = read_single_fasta(f"{file_path}/cds_cassette.fa")
+    stop_codon_pos = find_codon(cds_cassette, which="stop")
+    cds_cassette_sliced = cds_cassette[:stop_codon_pos + 3]
+    protein_sliced = str(Seq(cds_cassette_sliced).translate())
+
+    data = {
+        "gene": gene,
+        "cds": cds,
+        "cds_cassette": cds_cassette,
+        "cds_cassette_sliced": cds_cassette_sliced,
+        "protein": protein,
+        "protein_sliced": protein_sliced,
+    }
+
+    return data
