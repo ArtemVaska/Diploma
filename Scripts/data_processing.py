@@ -21,7 +21,7 @@ def cluster_analysis_preview(df: pd.DataFrame) -> None:
     """
     qcs_values = df.QC.values.tolist()
 
-    for eps in range(1, 11):
+    for eps in range(1, 21):
         df_copy = df.copy()
         eps = eps / 100  # to get 0.01 etc.
         dbscan = DBSCAN(eps=eps, min_samples=1)
@@ -187,13 +187,14 @@ def choose_best_frameshift(seq: str, translate: bool = False) -> str | list:
 
 
 def save_seqs(df: pd.DataFrame, folder: str,
-              save_dir: str = "../Sequences") -> None:
+              save_dir: str = "../Sequences", seq_length_threshold: int = 10_000) -> None:
     """
     Saves sequences from dataframe
 
     :param df:
     :param folder:
     :param save_dir:
+    :param seq_length_threshold:
     :return:
     """
     for cluster in range(len(df.Cluster.unique())):
@@ -205,7 +206,7 @@ def save_seqs(df: pd.DataFrame, folder: str,
         for hit in subset_df.index:
             line = df.loc[hit]
             acc, strand, seq_start, seq_stop = line.Acc, line.Strand, line.Start, line.Stop
-            if seq_stop - seq_start >= 10_000:  # FIXME
+            if seq_stop - seq_start >= seq_length_threshold:
                 time.sleep(0.333333334)
                 save_seq(save_dir, folder, subfolder, acc, strand, seq_start, seq_stop)
 
