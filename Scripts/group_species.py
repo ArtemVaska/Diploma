@@ -24,8 +24,8 @@ def extract_species_names(dir_name: str, folder_name: str) -> dict:
             acc = file.replace(".fa", "")
             with open(os.path.join(subfolder_path, file), "r") as infile:
                 for line in infile:
-                    species_name = "_".join(line.split()[1:3])
-                    species_name_acc = "_".join([species_name, acc])
+                    species_name = "_".join(line.split(",")[0].split()[1:])
+                    species_name_acc = f"{species_name}_{acc}"
                     species_list.append(species_name_acc)
                     break
         species_dict[subfolder] = species_list
@@ -44,7 +44,7 @@ def extract_unique_species(species_dict: dict, subfolder_name: str) -> list:
     """
     unique_species = []
     for species_name_acc in species_dict[subfolder_name]:
-        species_name = "_".join(species_name_acc.split("_")[:2])
+        species_name = "_".join(species_name_acc.split("_")[:-1])
         if species_name not in unique_species:
             unique_species.append(species_name)
 
@@ -74,7 +74,7 @@ def group_species(df: pd.DataFrame, folder_name: str, new_folder_name: str, dir_
                 os.makedirs(species_path)
 
             for species_name_acc in species_dict[subfolder]:
-                species_name = "_".join(species_name_acc.split("_")[:2])
+                species_name = "_".join(species_name_acc.split("_")[:-1])
                 if species_name == species:
                     acc = species_name_acc.split("_")[-1]
                     df.loc[df["Acc"] == acc, "Species_name"] = species_name
