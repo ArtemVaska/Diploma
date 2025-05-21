@@ -12,7 +12,7 @@ def calculate_n_fasta_lines(line: str, fasta_line_length) -> (int, int):
 
 
 def plain_to_fasta(file: str,
-                   fasta_line_length: int = 80,
+                   fasta_line_length: int = 70,
                    uppercase: bool = False) -> None:
     """
     Converts plain file to .fa format
@@ -92,6 +92,21 @@ def dict_align_to_fasta(dict_align: dict, filename: str) -> None:
         for header, seq in dict_align.items():
             outfile.write(">" + header + "\n")
             outfile.write(seq + "\n")
+
+
+def dict_align_to_fasta_upd(dict_align: dict, filename: str) -> None:
+    """
+    Creates multiline fasta file with seqs for next alignment.
+    Works with alignment dict created by dict_align_info_analyze function
+
+    :param dict_align:
+    :param filename:
+    :return:
+    """
+    with open(filename, "w") as outfile:
+        for phylum, org_name_seq in dict_align.items():
+            for header, seq in dict_align[phylum].items():
+                outfile.write(f">{phylum}-{header}\n{seq}\n")
 
 
 def exons_to_cds_plain(infilename: str,
