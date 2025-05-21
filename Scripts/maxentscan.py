@@ -18,6 +18,7 @@ def run_maxentscan(phylum: str, org_names: list) -> pd.DataFrame:
         path_file = f"{prefix}/{phylum}/{org_name}/{postfix}"
         sequence = read_single_fasta(f"{path_file}/cds_cassette.fa")
         intron = read_fasta(f"{path_file}/cassette.fa")["cassette"]
+        print(f">{org_name.rsplit("_", 1)[0].capitalize()}\n{intron}")
 
         # exon 3 | 6 intron ... intron 20 | 3 exon
         donor_site = sequence[sequence.find(intron) - 3:sequence.find(intron) + 6]  # 9, 5'
@@ -78,6 +79,8 @@ def run_maxentscan_all_introns(phylum: str, org_name: str) -> pd.DataFrame:
     for intron_i in range(len(exons_coords)-1):
         intron_seq = full_seq[exons_coords[intron_i][1] : exons_coords[intron_i+1][0]]
         introns.append(intron_seq)
+
+    print(f"{org_name}: {[len(intron) for intron in introns]}")
 
     # Creates lists of donors and acceptors for maxentscan processing
     donors = []
