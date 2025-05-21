@@ -45,6 +45,7 @@ def extract_target_range(hit: Bio.Blast.Hit) -> tuple:
 def calculate_qc(blast_record: Bio.Blast.Record) -> pd.DataFrame:
     """
     Calculates query coverage for every hit in blast_record and creates table
+    Если итоговый QC > 1, то это значит, что выровненные области перекрываются между собой.
 
     :param blast_record:
     :return: table target.id, QC
