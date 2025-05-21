@@ -6,7 +6,7 @@ from subprocess import check_call, DEVNULL, STDOUT, CalledProcessError
 import pandas as pd
 from Bio import Entrez, SeqIO
 
-from fasta_processing import read_single_fasta
+from fasta_processing import read_single_fasta, plain_to_fasta, read_fasta
 from tg_logger import telegram_logger
 
 Entrez.email = "artemvaskaa@gmail.com"
@@ -229,6 +229,7 @@ def download_all_files_ncbi(df: pd.DataFrame,
 
 def check_transcript_count(phylas: list):
     message = False
+    species_to_update = []
     for phyla in phylas:
         for org_name in os.listdir(f"../Datasets/{phyla}"):
             with open(f"../Datasets/{phyla}/{org_name}/ncbi_dataset/data/cds.fna") as infile:
@@ -236,6 +237,65 @@ def check_transcript_count(phylas: list):
                 transcript_count = lines.count(">")
                 if transcript_count > 1:
                     message = True
+                    species_to_update.append(f"{phyla}/{org_name}")
                     print(f"{phyla}/{org_name}: {transcript_count} transcripts")
     if message:
-        print(f"\nDelete other transcripts from cds.fna, protein.faa and rna.fna")
+        print(f"\nDelete other transcripts from cds.fna, protein.faa and rna.fna"
+              f"\nAlso check gene.fna !!!")
+
+    return species_to_update
+
+
+def obtain_data_gcpr(phylum: str, org_name: str) -> dict:
+    prefix = "../Datasets"
+    postfix = "ncbi_dataset/data"
+    file_path = f"{prefix}/{phylum}/{org_name}/{postfix}"
+
+    gene = read_fasta(f"{file_path}/gene.fna")
+    cds = read_fasta(f"{file_path}/cds.fna")
+    protein = read_fasta(f"{file_path}/protein.faa")
+    rna = read_fasta(f"{file_path}/rna.fna")
+
+    data = {
+        "gene": gene,
+        "cds": cds,
+        "protein": protein,
+        "rna": rna,
+    }
+
+    return data
+
+def leave_only_first_key(data: dict) -> dict:
+
+    for data_type, value in data.items():
+        data_subset = data[data_type]
+        first_key = next(iter(data_subset))
+        data[data_type] = {first_key: data_subset[first_key]}
+
+    return data
+
+
+def update_data_for_species(phylum_species_list: list) -> None:
+    for phylum_species in phylum_species_list:
+        phylum, org_name = phylum_species.split("/")
+        data = obtain_data_gcpr(phylum, org_name)
+        data_upd = leave_only_first_key(data)
+
+        file_path = f"../Datasets/{phylum}/{org_name}/ncbi_dataset/data"
+        for data_type, value in data_upd.items():
+            match data_type:
+                case "gene":
+                    continue
+                case "cds":
+                    filename = "cds"
+                    ext = "fna"
+                case "protein":
+                    filename = "protein"
+                    ext = "faa"
+                case "rna":
+                    filename = "rna"
+                    ext = "fna"
+            with open(f"{file_path}/{filename}_plain.{ext}", "w") as outfile:
+                for header, seq in value.items():
+                    outfile.write(f">{header}\n{seq}\n")
+            plain_to_fasta(f"{file_path}/{filename}_plain.{ext}")
