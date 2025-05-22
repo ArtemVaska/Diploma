@@ -123,6 +123,7 @@ def add_org_name_gene_location(df: pd.DataFrame) -> pd.DataFrame:
     gene_location_list = []
     gene_len_list = []
 
+    protein_ids_to_delete = []
     for protein_id in df.protein_id:
         df_subset = df[df["protein_id"] == protein_id]
         gene_id = df_subset.gene_id.iloc[0]
@@ -133,21 +134,23 @@ def add_org_name_gene_location(df: pd.DataFrame) -> pd.DataFrame:
             record = SeqIO.read(handle, "genbank")
 
         genes = [f for f in record.features if f.type == "gene"]
-        for gene in genes:
-            if locus_tag in gene.qualifiers["locus_tag"]:
-                org_name = [f for f in record.features if f.type == "source"][0].qualifiers["organism"][0]
-                org_name_list.append(org_name)
-                # + 1 -> Entrez 1-based
-                gene_location = {
-                    "start": int(gene.location.start)+1,
-                    "end": int(gene.location.end),
-                    "strand": 1 if gene.location.strand == 1 else 2,
-                }
-                gene_location_list.append(gene_location)
-                gene_len_list.append(int(gene.location.end) - int(gene.location.start))
-                break  # чтобы сохранялся только первый ген и не было переизбытка значений
+        if genes:
+            for gene in genes:
+                if locus_tag in gene.qualifiers["locus_tag"]:
+                    org_name = [f for f in record.features if f.type == "source"][0].qualifiers["organism"][0]
+                    org_name_list.append(org_name)
+                    # + 1 -> Entrez 1-based
+                    gene_location = {
+                        "start": int(gene.location.start)+1,
+                        "end": int(gene.location.end),
+                        "strand": 1 if gene.location.strand == 1 else 2,
+                    }
+                    gene_location_list.append(gene_location)
+                    gene_len_list.append(int(gene.location.end) - int(gene.location.start))
+        else:
+            protein_ids_to_delete.append(protein_id)
 
-
+    df = df[~df["protein_id"].isin(protein_ids_to_delete)].copy()
     df["org_name"] = org_name_list
     df["gene_location"] = gene_location_list
     df["gene_len"] = gene_len_list
