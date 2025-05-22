@@ -1,6 +1,13 @@
+import os
+import time
 from typing import Any, List, Dict
+
+from Bio import Entrez, SeqIO
 from Bio.Blast import NCBIXML
 import pandas as pd
+
+from fasta_processing import plain_to_fasta
+
 
 def extract_accession(hit_id: str) -> str:
     return hit_id.rsplit("|", 2)[-2] if "|" in hit_id else hit_id
@@ -54,18 +61,19 @@ def parse_psiblast_xml(xml_path: str, max_len: int = 5000) -> pd.DataFrame:
         per_ident = round(identities / alignment_len, 2) if alignment_len else 0.0
 
         hits.append({
-            "Hit_id": alignment.hit_id,
-            "Acc": extract_accession(alignment.hit_id),
-            "QC": qc,
-            "Per_Ident": per_ident,
-            "Start": sbjct_start,
-            "End": sbjct_end,
-            "Sbjct_Len": sbjct_end - sbjct_start + 1,
+            "hit_id": alignment.hit_id,
+            "protein_id": extract_accession(alignment.hit_id),
+            "qc": qc,
+            "per_ident": per_ident,
+            "sbjct_start": sbjct_start,
+            "sbjct_end": sbjct_end,
+            "sbjct_len": sbjct_end - sbjct_start + 1,
+            "query_len": query_len,
         })
 
     df = pd.DataFrame(hits)
     if not df.empty:
-        df.set_index("Hit_id", inplace=True)
+        df.set_index("hit_id", inplace=True)
     return df
 
 
@@ -81,9 +89,154 @@ def filter_psiblast_hits(
     df = df.copy()
 
     filtered_df = df[
-        (df["QC"] >= min_qc) &
-        (df["Per_Ident"] >= min_ident) &
-        (df["Sbjct_Len"] >= min_sbjct_len)
+        (df["qc"] >= min_qc) &
+        (df["per_ident"] >= min_ident) &
+        (df["sbjct_len"] >= min_sbjct_len)
     ]
 
     return filtered_df
+
+
+def add_gene_id_locus_tag(df: pd.DataFrame) -> pd.DataFrame:
+    gene_id_list = []
+    locus_tag_list = []
+
+    for protein_id in df.protein_id:
+        time.sleep(0.333333334)
+        with Entrez.efetch(db="protein", id=protein_id, rettype="gb", retmode="text") as handle:
+            record = SeqIO.read(handle, "genbank")
+        gene_id = record.annotations["db_source"].split()[-1]
+        for feature in record.features:
+            if "locus_tag" in feature.qualifiers.keys():
+                locus_tag = feature.qualifiers["locus_tag"][0]
+                gene_id_list.append(gene_id)
+                locus_tag_list.append(locus_tag)
+
+    df["gene_id"] = gene_id_list
+    df["locus_tag"] = locus_tag_list
+
+    return df
+
+
+def add_org_name_gene_location(df: pd.DataFrame) -> pd.DataFrame:
+    org_name_list = []
+    gene_location_list = []
+    gene_len_list = []
+
+    for protein_id in df.protein_id:
+        df_subset = df[df["protein_id"] == protein_id]
+        gene_id = df_subset.gene_id.iloc[0]
+        locus_tag = df_subset.locus_tag.iloc[0]
+
+        time.sleep(0.333333334)
+        with Entrez.efetch(db="nucleotide", id=gene_id, rettype="gb", retmode="text") as handle:
+            record = SeqIO.read(handle, "genbank")
+
+        org_name = [f for f in record.features if f.type == "source"][0].qualifiers["organism"][0]
+
+        genes = [f for f in record.features if f.type == "gene"]
+        for gene in genes:
+            if locus_tag in gene.qualifiers["locus_tag"]:
+                org_name_list.append(org_name)
+                # + 1 -> Entrez 1-based
+                gene_location = {
+                    "start": int(gene.location.start)+1,
+                    "end": int(gene.location.end),
+                    "strand": 1 if gene.location.strand == 1 else 2,
+                }
+                gene_location_list.append(gene_location)
+                gene_len_list.append(int(gene.location.end) - int(gene.location.start))
+
+
+    df["org_name"] = org_name_list
+    df["gene_location"] = gene_location_list
+    df["gene_len"] = gene_len_list
+
+    return df
+
+
+def add_cds_location(df: pd.DataFrame) -> pd.DataFrame:
+    cds_location_list = []
+
+    for protein_id in df.protein_id:
+        df_subset = df[df["protein_id"] == protein_id]
+        gene_id = df_subset.gene_id.iloc[0]
+        start = df_subset.gene_location.iloc[0]["start"]
+        end = df_subset.gene_location.iloc[0]["end"]
+        strand = df_subset.gene_location.iloc[0]["strand"]
+
+        time.sleep(0.333333334)
+        with Entrez.efetch(db="nucleotide", id=gene_id, rettype="gb", retmode="text",
+                           seq_start=start, seq_stop=end, strand=strand) as handle:
+            record = SeqIO.read(handle, "genbank")
+
+        cds = [f for f in record.features if f.type == "CDS"]
+        cds_location = [
+            {
+                "start": int(part.start)+1,
+                "end": int(part.end),
+                "strand": part.strand
+            } for part in cds[0].location.parts
+        ]
+        cds_location_list.append(cds_location)
+
+    df["cds_location"] = cds_location_list
+
+    return df
+
+
+def update_df(df: pd.DataFrame) -> pd.DataFrame:
+    df = add_gene_id_locus_tag(df)
+    df = add_org_name_gene_location(df)
+    df = add_cds_location(df)
+    return df
+
+
+def save_genes(df, dir: str = "../Sequences_protein_id") -> None:
+    for protein_id in df.protein_id:
+        df_subset = df[df["protein_id"] == protein_id]
+        gene_id = df_subset.gene_id.iloc[0]
+        gene_location = df_subset.gene_location.iloc[0]
+        start, end, strand = gene_location["start"], gene_location["end"], gene_location["strand"]
+
+        os.makedirs(f"{dir}/{protein_id}", exist_ok=True)
+
+        time.sleep(0.333333334)
+        with Entrez.efetch(db="nucleotide", id=gene_id, rettype="fasta", retmode="text",
+                           seq_start=start, seq_stop=end, strand=strand) as handle:
+            with open(f"{dir}/{protein_id}/gene.fna", "w") as outfile:
+                outfile.write(handle.read())
+
+
+def save_cdss_exons(df, dir: str = "../Sequences_protein_id") -> None:
+    for protein_id in df.protein_id:
+        df_subset = df[df["protein_id"] == protein_id]
+        org_name = df_subset.org_name.iloc[0]
+        gene_id = df_subset.gene_id.iloc[0]
+        cds_location = df_subset.cds_location.iloc[0]
+
+        os.makedirs(f"{dir}/{protein_id}", exist_ok=True)
+
+        cds = ""
+        exons_dict = {}
+        for i, exon_location in enumerate(cds_location):
+            start, end, strand = exon_location["start"], exon_location["end"], exon_location["strand"]
+
+            time.sleep(0.333333334)
+            with Entrez.efetch(db="nucleotide", id=gene_id, rettype="fasta", retmode="text",
+                               seq_start=start, seq_stop=end, strand=strand) as handle:
+                record = SeqIO.read(handle, "fasta")
+
+                exon_seq = str(record.seq)
+                cds += exon_seq
+                exons_dict[f">{i}:{start}:{end}"] = exon_seq
+
+        with open(f"{dir}/{protein_id}/cds_plain.fna", "w") as outfile:
+            outfile.write(f">{org_name}\n{cds}\n")
+        plain_to_fasta(f"{dir}/{protein_id}/cds_plain.fna")
+
+        with open(f"{dir}/{protein_id}/exons.fa", "w") as outfile:
+            for header, exon_seq in exons_dict.items():
+                outfile.write(f">{header}\n{exon_seq}\n")
+
+
