@@ -132,11 +132,10 @@ def add_org_name_gene_location(df: pd.DataFrame) -> pd.DataFrame:
         with Entrez.efetch(db="nucleotide", id=gene_id, rettype="gb", retmode="text") as handle:
             record = SeqIO.read(handle, "genbank")
 
-        org_name = [f for f in record.features if f.type == "source"][0].qualifiers["organism"][0]
-
         genes = [f for f in record.features if f.type == "gene"]
         for gene in genes:
             if locus_tag in gene.qualifiers["locus_tag"]:
+                org_name = [f for f in record.features if f.type == "source"][0].qualifiers["organism"][0]
                 org_name_list.append(org_name)
                 # + 1 -> Entrez 1-based
                 gene_location = {
@@ -146,6 +145,7 @@ def add_org_name_gene_location(df: pd.DataFrame) -> pd.DataFrame:
                 }
                 gene_location_list.append(gene_location)
                 gene_len_list.append(int(gene.location.end) - int(gene.location.start))
+                break  # чтобы сохранялся только первый ген и не было переизбытка значений
 
 
     df["org_name"] = org_name_list
