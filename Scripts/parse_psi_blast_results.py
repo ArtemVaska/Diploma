@@ -240,3 +240,11 @@ def save_cdss_exons(df, dir: str = "../Sequences_protein_id") -> None:
                 outfile.write(f">{header}\n{exon_seq}\n")
 
 
+def save_proteins(df, dir: str = "../Sequences_protein_id") -> None:
+    for protein_id in df.protein_id:
+        os.makedirs(f"{dir}/{protein_id}", exist_ok=True)
+
+        time.sleep(0.333333334)
+        with Entrez.efetch(db="protein", id=protein_id, rettype="fasta", retmode="text") as handle:
+            with open(f"{dir}/{protein_id}/protein.faa", "w") as outfile:
+                outfile.write(handle.read())
