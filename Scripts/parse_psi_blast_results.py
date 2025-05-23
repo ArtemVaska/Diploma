@@ -6,11 +6,14 @@ from Bio import Entrez, SeqIO
 from Bio.Blast import NCBIXML
 import pandas as pd
 
-from fasta_processing import plain_to_fasta
+from data_processing import find_codon
+from fasta_processing import plain_to_fasta, read_single_fasta, read_fasta
+from tg_logger import telegram_logger
 
 
 def extract_accession(hit_id: str) -> str:
     return hit_id.rsplit("|", 2)[-2] if "|" in hit_id else hit_id
+
 
 def merge_intervals(intervals: List[tuple[int, int]]) -> List[tuple[int, int]]:
     """Объединяет перекрывающиеся интервалы."""
@@ -25,6 +28,7 @@ def merge_intervals(intervals: List[tuple[int, int]]) -> List[tuple[int, int]]:
         else:
             merged.append(current)
     return merged
+
 
 def parse_psiblast_xml(xml_path: str, max_len: int = 5000) -> pd.DataFrame:
     with open(xml_path) as f:
@@ -78,10 +82,10 @@ def parse_psiblast_xml(xml_path: str, max_len: int = 5000) -> pd.DataFrame:
 
 
 def filter_psiblast_hits(
-    df: pd.DataFrame,
-    min_qc: float = 0.8,
-    min_ident: float = 0.8,
-    min_sbjct_len: int = 500
+        df: pd.DataFrame,
+        min_qc: float = 0.8,
+        min_ident: float = 0.8,
+        min_sbjct_len: int = 500
 ) -> pd.DataFrame:
     if df.empty:
         return df
@@ -92,7 +96,7 @@ def filter_psiblast_hits(
         (df["qc"] >= min_qc) &
         (df["per_ident"] >= min_ident) &
         (df["sbjct_len"] >= min_sbjct_len)
-    ]
+        ]
 
     return filtered_df
 
@@ -118,12 +122,13 @@ def add_gene_id_locus_tag(df: pd.DataFrame) -> pd.DataFrame:
     return df
 
 
-def add_org_name_gene_location(df: pd.DataFrame) -> pd.DataFrame:
+def add_org_name_gene_cds_location(df: pd.DataFrame) -> pd.DataFrame:
     org_name_list = []
     gene_location_list = []
     gene_len_list = []
-
+    cds_location_list = []
     protein_ids_to_delete = []
+
     for protein_id in df.protein_id:
         df_subset = df[df["protein_id"] == protein_id]
         gene_id = df_subset.gene_id.iloc[0]
@@ -133,20 +138,34 @@ def add_org_name_gene_location(df: pd.DataFrame) -> pd.DataFrame:
         with Entrez.efetch(db="nucleotide", id=gene_id, rettype="gb", retmode="text") as handle:
             record = SeqIO.read(handle, "genbank")
 
-        genes = [f for f in record.features if f.type == "gene"]
+        org_name = [f for f in record.features if f.type == "source"][0].qualifiers["organism"][0].replace(
+            " ", "_")
+
+        features_with_locus_tag = [f for f in record.features if "locus_tag" in f.qualifiers]
+        features_locus_tag = [f for f in features_with_locus_tag if locus_tag in f.qualifiers["locus_tag"]]
+        genes = [f for f in features_locus_tag if f.type == "gene"]
         if genes:
-            for gene in genes:
-                if locus_tag in gene.qualifiers["locus_tag"]:
-                    org_name = [f for f in record.features if f.type == "source"][0].qualifiers["organism"][0]
-                    org_name_list.append(org_name)
-                    # + 1 -> Entrez 1-based
-                    gene_location = {
-                        "start": int(gene.location.start)+1,
-                        "end": int(gene.location.end),
-                        "strand": 1 if gene.location.strand == 1 else 2,
-                    }
-                    gene_location_list.append(gene_location)
-                    gene_len_list.append(int(gene.location.end) - int(gene.location.start))
+            org_name_list.append(org_name)
+            gene = genes[0]
+            cds = [f for f in features_locus_tag if f.type == "CDS"][0]
+
+            # + 1 -> Entrez 1-based
+            gene_location = {
+                "start": int(gene.location.start) + 1,
+                "end": int(gene.location.end),
+                "strand": 1 if gene.location.strand == 1 else 2,
+            }
+            gene_location_list.append(gene_location)
+            gene_len_list.append(int(gene.location.end) - int(gene.location.start))
+
+            cds_location = [
+                {
+                    "start": int(part.start) + 1,
+                    "end": int(part.end),
+                    "strand": 1 if part.strand == 1 else 2,
+                } for part in cds.location.parts
+            ]
+            cds_location_list.append(cds_location)
         else:
             protein_ids_to_delete.append(protein_id)
 
@@ -154,44 +173,15 @@ def add_org_name_gene_location(df: pd.DataFrame) -> pd.DataFrame:
     df["org_name"] = org_name_list
     df["gene_location"] = gene_location_list
     df["gene_len"] = gene_len_list
-
-    return df
-
-
-def add_cds_location(df: pd.DataFrame) -> pd.DataFrame:
-    cds_location_list = []
-
-    for protein_id in df.protein_id:
-        df_subset = df[df["protein_id"] == protein_id]
-        gene_id = df_subset.gene_id.iloc[0]
-        start = df_subset.gene_location.iloc[0]["start"]
-        end = df_subset.gene_location.iloc[0]["end"]
-        strand = df_subset.gene_location.iloc[0]["strand"]
-
-        time.sleep(0.333333334)
-        with Entrez.efetch(db="nucleotide", id=gene_id, rettype="gb", retmode="text",
-                           seq_start=start, seq_stop=end, strand=strand) as handle:
-            record = SeqIO.read(handle, "genbank")
-
-        cds = [f for f in record.features if f.type == "CDS"]
-        cds_location = [
-            {
-                "start": int(part.start)+1,
-                "end": int(part.end),
-                "strand": part.strand
-            } for part in cds[0].location.parts
-        ]
-        cds_location_list.append(cds_location)
-
     df["cds_location"] = cds_location_list
 
     return df
 
 
+@telegram_logger(chat_id=611478740)
 def update_df(df: pd.DataFrame) -> pd.DataFrame:
     df = add_gene_id_locus_tag(df)
-    df = add_org_name_gene_location(df)
-    df = add_cds_location(df)
+    df = add_org_name_gene_cds_location(df)
     return df
 
 
@@ -232,7 +222,7 @@ def save_cdss_exons(df, dir: str = "../Sequences_protein_id") -> None:
 
                 exon_seq = str(record.seq)
                 cds += exon_seq
-                exons_dict[f">{i}:{start}:{end}"] = exon_seq
+                exons_dict[f">{i}:{start}-{end}"] = exon_seq
 
         with open(f"{dir}/{protein_id}/cds_plain.fna", "w") as outfile:
             outfile.write(f">{org_name}\n{cds}\n")
@@ -240,7 +230,7 @@ def save_cdss_exons(df, dir: str = "../Sequences_protein_id") -> None:
 
         with open(f"{dir}/{protein_id}/exons.fa", "w") as outfile:
             for header, exon_seq in exons_dict.items():
-                outfile.write(f">{header}\n{exon_seq}\n")
+                outfile.write(f"{header}\n{exon_seq}\n")
 
 
 def save_proteins(df, dir: str = "../Sequences_protein_id") -> None:
@@ -251,3 +241,119 @@ def save_proteins(df, dir: str = "../Sequences_protein_id") -> None:
         with Entrez.efetch(db="protein", id=protein_id, rettype="fasta", retmode="text") as handle:
             with open(f"{dir}/{protein_id}/protein.faa", "w") as outfile:
                 outfile.write(handle.read())
+
+
+@telegram_logger(chat_id=611478740)
+def save_files(df: pd.DataFrame, dir: str = "../Sequences_protein_id") -> None:
+    save_genes(df, dir)
+    save_cdss_exons(df, dir)
+    save_proteins(df, dir)
+
+
+def create_cassette(path: str, df_exons: pd.DataFrame, exons_i: list) -> dict:
+    gene = read_single_fasta(f"{path}/gene.fna")
+
+    exon_110 = df_exons.loc[exons_i[0]]
+    exon_37 = df_exons.loc[exons_i[1]]
+
+    cassette_start = gene.find(exon_110["sequence"]) + len(exon_110["sequence"])
+    cassette_end = gene.find(exon_37["sequence"])
+    cassette_intron = gene[cassette_start:cassette_end]
+
+    cassette_dict = {
+        f"{exons_i[0]}:{exon_110.coords}": exon_110.sequence,
+        "cassette_intron": cassette_intron,
+        f"{exons_i[1]}:{exon_37.coords}": exon_37.sequence,
+    }
+    with open(f"{path}/cassette.fa", "w") as outfile:
+        for header, seq in cassette_dict.items():
+            outfile.write(f">{header}\n"
+                          f"{seq}\n")
+
+    with open(f"{path}/cds.fna") as infile:
+        line = infile.readline()
+        cds_header = line.rstrip()
+    cds = read_single_fasta(f"{path}/cds.fna")
+    cds_cassette = cds.replace(f"{exon_110.sequence}{exon_37.sequence}",
+                               f"{exon_110.sequence}{cassette_intron}{exon_37.sequence}")
+    with open(f"{path}/cds_cassette_plain.fa", "w") as outfile:
+        outfile.write(f"{cds_header} [+cassette_intron]\n")
+        outfile.write(f"{cds_cassette}\n")
+    plain_to_fasta(f"{path}/cds_cassette_plain.fa", 70)
+
+    return cassette_dict
+
+
+def concat_cassette(cassette_dict: dict, concat_type: str) -> str | None:
+    match concat_type:
+        case "i":
+            return "".join([seq for header, seq in cassette_dict.items() if header == 'cassette_intron'])
+        case "ee":
+            return "".join([seq for header, seq in cassette_dict.items() if header != 'cassette_intron'])
+        case "eie":
+            return "".join([seq for header, seq in cassette_dict.items()])
+    return None
+
+
+def create_many_cassettes(dir: str, data: dict) -> dict:
+    introns = {}
+    for protein_id_org_name, (df, exons_i) in data.items():
+        protein_id = protein_id_org_name.split("_")[-1]
+        cassette = create_cassette(f"{dir}/{protein_id}", df, exons_i=exons_i)
+        introns[protein_id_org_name] = concat_cassette(cassette, "i")
+    return introns
+
+
+def dict_align_create(df: pd.DataFrame, align_type: str) -> dict:
+    align_types = ["gene", "rna", "protein", "cds", "cassette", "cds_cassette"]
+    if align_type not in align_types:
+        raise ValueError(f"Unknown alignment type: {align_type}")
+    else:
+        match align_type:
+            case "gene":
+                ext = "fna"
+            case "rna":
+                ext = "fna"
+            case "protein":
+                ext = "faa"
+            case "cds":
+                ext = "fna"
+            case "cassette":
+                ext = "fa"
+            case "cds_cassette":
+                ext = "fa"
+
+    filename = f"{align_type}.{ext}"
+    dict_align = {}
+
+    for protein_id in df.protein_id:
+        df_subset = df[df["protein_id"] == protein_id]
+        org_name = df_subset.org_name.iloc[0]
+        dict_align[f"{org_name}_{protein_id}"] = read_single_fasta(f"../Sequences_protein_id/{protein_id}/{filename}")
+
+    return dict_align
+
+
+def dict_align_info_analyze(df: pd.DataFrame, feature: str) -> (pd.DataFrame, dict):
+    rows = []
+    dict_align = dict_align_create(df, feature)
+
+    for org_name_protein_id, cds_seq in dict_align.items():
+        protein_id = org_name_protein_id.split("_")[-1]
+        stop_codon_pos = find_codon(cds_seq, which="stop")
+        cassette_intron = read_fasta(f"../Sequences_protein_id/{protein_id}/cassette.fa")["cassette_intron"]
+        cassette_intron_start = cds_seq.find(cassette_intron)
+        rows.append(
+            {
+                "org_name_protein_id": org_name_protein_id,
+                "stop_codon_pos": stop_codon_pos,
+                "equal_to_cds": stop_codon_pos + 3 == len(cds_seq),
+                "cassette_intron_start": cassette_intron_start,
+                "intron_length_to_stop_codon": stop_codon_pos - cassette_intron_start,
+                "intron_length": len(cassette_intron)
+            }
+        )
+    df = pd.DataFrame(rows)
+
+    return df, dict_align
+
