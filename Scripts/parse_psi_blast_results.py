@@ -114,7 +114,10 @@ def add_gene_id_locus_tag(df: pd.DataFrame) -> pd.DataFrame:
 
         if gene_id.startswith("XM"):
             cds_feature = [f for f in record.features if f.type == "CDS"][0]
-            locus_tag = cds_feature.qualifiers["gene"][0]
+            try:
+                locus_tag = cds_feature.qualifiers["locus_tag"][0]
+            except KeyError:
+                locus_tag = cds_feature.qualifiers["gene"][0]
         else:
             for feature in record.features:
                 if "locus_tag" in feature.qualifiers.keys():
@@ -158,13 +161,10 @@ def obtain_gene_cds_location_locus_tag(record: SeqIO.SeqRecord, locus_tag: str):
     return gene_location, gene_len, cds_location
 
 
-def obtain_gene_cds_location_xm(record: SeqIO.SeqRecord):
-    gene = [f for f in record.features if f.type == "gene"][0]
-    gene_loc = gene.qualifiers["gene"][0]
-
-    # здесь по XM достаем Gene Accession, из которого и будем доставать координаты
+def obtain_gene_cds_location_xm(record: SeqIO.SeqRecord, locus_tag: str):
+    # по XM достаем Gene Accession, из которого и будем доставать координаты
     time.sleep(0.333333334)
-    with Entrez.efetch(db="gene", id=gene_loc, retmode="xml") as handle:
+    with Entrez.efetch(db="gene", id=locus_tag, retmode="xml") as handle:
         record = Entrez.read(handle)
 
     gene_acc = record[0]["Entrezgene_locus"][0]["Gene-commentary_accession"]
@@ -179,11 +179,18 @@ def obtain_gene_cds_location_xm(record: SeqIO.SeqRecord):
                        seq_start=start, seq_stop=end, strand=strand,
                        rettype="gb", retmode="text") as handle:
         record = SeqIO.read(handle, "genbank")
-
-    gene = [f for f in record.features if f.type == "gene"][0]
     cds = [f for f in record.features if f.type == "CDS"][0]
 
-    gene_location, gene_len, cds_location = parse_location(gene, cds)
+    gene_location = {"start": start, "end": end, "strand": strand}
+    gene_len = end - start + 1
+
+    cds_location = [
+        {
+            "start": int(part.start) + 1,
+            "end": int(part.end),
+            "strand": 1 if part.strand == 1 else 2,
+        } for part in cds.location.parts
+    ]
 
     return gene_acc, gene_location, gene_len, cds_location
 
@@ -194,6 +201,7 @@ def add_org_name_gene_cds_location(df: pd.DataFrame) -> pd.DataFrame:
     gene_len_list = []
     gene_id_list = []
     cds_location_list = []
+    protein_id_delete_list = []
 
     for protein_id in df.protein_id:
         df_subset = df[df["protein_id"] == protein_id]
@@ -204,24 +212,36 @@ def add_org_name_gene_cds_location(df: pd.DataFrame) -> pd.DataFrame:
         with Entrez.efetch(db="nucleotide", id=gene_id, rettype="gb", retmode="text") as handle:
             record = SeqIO.read(handle, "genbank")
 
-        org_name = [f for f in record.features if f.type == "source"][0].qualifiers["organism"][0].replace(
-            " ", "_")
-        org_name_list.append(org_name)
-
         if gene_id.startswith("XM"):
-            # здесь обновляем gene_id, потому что координаты будут доставать через Gene Accession
-            gene_id, gene_location, gene_len, cds_location = obtain_gene_cds_location_xm(record)
+            # обновляем gene_id, т.к. координаты для XM будут доставать через Gene Accession
+            try:
+                gene_id, gene_location, gene_len, cds_location = obtain_gene_cds_location_xm(record, locus_tag)
+                # добавляем org_name только если получилось извлечь координаты
+                org_name = [f for f in record.features if f.type == "source"][0].qualifiers["organism"][0].replace(
+                    " ", "_")
+                org_name_list.append(org_name)
+            except KeyError:
+                print(f"KeyError: ProteinID {protein_id} GeneID {gene_id} -> skipping...")
+                protein_id_delete_list.append(protein_id)
+                continue
         else:
             try:
                 gene_location, gene_len, cds_location = obtain_gene_cds_location_locus_tag(record, locus_tag)
+                # добавляем org_name только если получилось извлечь координаты
+                org_name = [f for f in record.features if f.type == "source"][0].qualifiers["organism"][0].replace(
+                    " ", "_")
+                org_name_list.append(org_name)
             except IndexError:
-                print(f"IndexError: {gene_id}")
+                print(f"IndexError: ProteinID {protein_id} GeneID not found -> skipping...")
+                protein_id_delete_list.append(protein_id)
+                continue
 
         gene_id_list.append(gene_id)
         gene_location_list.append(gene_location)
         gene_len_list.append(gene_len)
         cds_location_list.append(cds_location)
 
+    df = df[~df["protein_id"].isin(protein_id_delete_list)].copy()
     df["gene_id"] = gene_id_list
     df["org_name"] = org_name_list
     df["gene_location"] = gene_location_list
@@ -231,9 +251,11 @@ def add_org_name_gene_cds_location(df: pd.DataFrame) -> pd.DataFrame:
     return df
 
 
+@telegram_logger(chat_id=611478740)
 def update_df(df: pd.DataFrame) -> pd.DataFrame:
     df = add_gene_id_locus_tag(df)
     df = add_org_name_gene_cds_location(df)
+    df["protein_id"] = df["protein_id"].str.replace("_", "")  # если XP в начале -> загрузка файлов
     return df
 
 
@@ -295,7 +317,7 @@ def save_proteins(df, dir: str = "../Sequences_protein_id") -> None:
                 outfile.write(handle.read())
 
 
-@telegram_logger(chat_id=611478740)
+# @telegram_logger(chat_id=611478740)
 def save_files(df: pd.DataFrame, dir: str = "../Sequences_protein_id") -> None:
     save_genes(df, dir)
     save_cdss_exons(df, dir)
