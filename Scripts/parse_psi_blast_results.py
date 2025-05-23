@@ -4,6 +4,8 @@ from typing import Any, List, Dict
 
 from Bio import Entrez, SeqIO
 from Bio.Blast import NCBIXML
+from Bio.SeqFeature import SeqFeature
+
 import pandas as pd
 
 from data_processing import find_codon
@@ -109,11 +111,16 @@ def add_gene_id_locus_tag(df: pd.DataFrame) -> pd.DataFrame:
         with Entrez.efetch(db="protein", id=protein_id, rettype="gb", retmode="text") as handle:
             record = SeqIO.read(handle, "genbank")
         gene_id = record.annotations["db_source"].split()[-1]
-        for feature in record.features:
-            if "locus_tag" in feature.qualifiers.keys():
-                locus_tag = feature.qualifiers["locus_tag"][0]
-                gene_id_list.append(gene_id)
-                locus_tag_list.append(locus_tag)
+
+        if gene_id.startswith("XM"):
+            cds_feature = [f for f in record.features if f.type == "CDS"][0]
+            locus_tag = cds_feature.qualifiers["gene"][0]
+        else:
+            for feature in record.features:
+                if "locus_tag" in feature.qualifiers.keys():
+                    locus_tag = feature.qualifiers["locus_tag"][0]
+        gene_id_list.append(gene_id)
+        locus_tag_list.append(locus_tag)
 
     df["gene_id"] = gene_id_list
     df["locus_tag"] = locus_tag_list
@@ -121,12 +128,72 @@ def add_gene_id_locus_tag(df: pd.DataFrame) -> pd.DataFrame:
     return df
 
 
+def parse_location(gene: SeqFeature, cds: SeqFeature):
+    gene_location = {
+        "start": int(gene.location.start) + 1,
+        "end": int(gene.location.end),
+        "strand": 1 if gene.location.strand == 1 else 2,
+    }
+    gene_len = int(gene.location.end) - int(gene.location.start)
+
+    cds_location = [
+        {
+            "start": int(part.start) + 1,
+            "end": int(part.end),
+            "strand": 1 if part.strand == 1 else 2,
+        } for part in cds.location.parts
+    ]
+    return gene_location, gene_len, cds_location
+
+
+def obtain_gene_cds_location_locus_tag(record: SeqIO.SeqRecord, locus_tag: str):
+    features_with_locus_tag = [f for f in record.features if "locus_tag" in f.qualifiers]
+    features_locus_tag = [f for f in features_with_locus_tag if locus_tag in f.qualifiers["locus_tag"]]
+
+    gene = [f for f in features_locus_tag if f.type == "gene"][0]
+    cds = [f for f in features_locus_tag if f.type == "CDS"][0]
+
+    gene_location, gene_len, cds_location = parse_location(gene, cds)
+
+    return gene_location, gene_len, cds_location
+
+
+def obtain_gene_cds_location_xm(record: SeqIO.SeqRecord):
+    gene = [f for f in record.features if f.type == "gene"][0]
+    gene_loc = gene.qualifiers["gene"][0]
+
+    # здесь по XM достаем Gene Accession, из которого и будем доставать координаты
+    time.sleep(0.333333334)
+    with Entrez.efetch(db="gene", id=gene_loc, retmode="xml") as handle:
+        record = Entrez.read(handle)
+
+    gene_acc = record[0]["Entrezgene_locus"][0]["Gene-commentary_accession"]
+    seq_interval = record[0]["Entrezgene_locus"][0]["Gene-commentary_seqs"][0]["Seq-loc_int"]["Seq-interval"]
+    start = int(seq_interval["Seq-interval_from"]) + 1
+    end = int(seq_interval["Seq-interval_to"]) + 1
+    strand = 1 if seq_interval["Seq-interval_strand"]["Na-strand"].attributes["value"] == "plus" else 2
+
+    # по найденному Accession достаем координаты для gene и cds
+    time.sleep(0.333333334)
+    with Entrez.efetch(db="nucleotide", id=gene_acc, idtype="acc",
+                       seq_start=start, seq_stop=end, strand=strand,
+                       rettype="gb", retmode="text") as handle:
+        record = SeqIO.read(handle, "genbank")
+
+    gene = [f for f in record.features if f.type == "gene"][0]
+    cds = [f for f in record.features if f.type == "CDS"][0]
+
+    gene_location, gene_len, cds_location = parse_location(gene, cds)
+
+    return gene_acc, gene_location, gene_len, cds_location
+
+
 def add_org_name_gene_cds_location(df: pd.DataFrame) -> pd.DataFrame:
     org_name_list = []
     gene_location_list = []
     gene_len_list = []
+    gene_id_list = []
     cds_location_list = []
-    protein_ids_to_delete = []
 
     for protein_id in df.protein_id:
         df_subset = df[df["protein_id"] == protein_id]
@@ -139,36 +206,23 @@ def add_org_name_gene_cds_location(df: pd.DataFrame) -> pd.DataFrame:
 
         org_name = [f for f in record.features if f.type == "source"][0].qualifiers["organism"][0].replace(
             " ", "_")
+        org_name_list.append(org_name)
 
-        features_with_locus_tag = [f for f in record.features if "locus_tag" in f.qualifiers]
-        features_locus_tag = [f for f in features_with_locus_tag if locus_tag in f.qualifiers["locus_tag"]]
-        genes = [f for f in features_locus_tag if f.type == "gene"]
-        if genes:
-            org_name_list.append(org_name)
-            gene = genes[0]
-            cds = [f for f in features_locus_tag if f.type == "CDS"][0]
-
-            # + 1 -> Entrez 1-based
-            gene_location = {
-                "start": int(gene.location.start) + 1,
-                "end": int(gene.location.end),
-                "strand": 1 if gene.location.strand == 1 else 2,
-            }
-            gene_location_list.append(gene_location)
-            gene_len_list.append(int(gene.location.end) - int(gene.location.start))
-
-            cds_location = [
-                {
-                    "start": int(part.start) + 1,
-                    "end": int(part.end),
-                    "strand": 1 if part.strand == 1 else 2,
-                } for part in cds.location.parts
-            ]
-            cds_location_list.append(cds_location)
+        if gene_id.startswith("XM"):
+            # здесь обновляем gene_id, потому что координаты будут доставать через Gene Accession
+            gene_id, gene_location, gene_len, cds_location = obtain_gene_cds_location_xm(record)
         else:
-            protein_ids_to_delete.append(protein_id)
+            try:
+                gene_location, gene_len, cds_location = obtain_gene_cds_location_locus_tag(record, locus_tag)
+            except IndexError:
+                print(f"IndexError: {gene_id}")
 
-    df = df[~df["protein_id"].isin(protein_ids_to_delete)].copy()
+        gene_id_list.append(gene_id)
+        gene_location_list.append(gene_location)
+        gene_len_list.append(gene_len)
+        cds_location_list.append(cds_location)
+
+    df["gene_id"] = gene_id_list
     df["org_name"] = org_name_list
     df["gene_location"] = gene_location_list
     df["gene_len"] = gene_len_list
@@ -177,7 +231,6 @@ def add_org_name_gene_cds_location(df: pd.DataFrame) -> pd.DataFrame:
     return df
 
 
-@telegram_logger(chat_id=611478740)
 def update_df(df: pd.DataFrame) -> pd.DataFrame:
     df = add_gene_id_locus_tag(df)
     df = add_org_name_gene_cds_location(df)
