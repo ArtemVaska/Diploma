@@ -16,7 +16,6 @@ def extract_accession(hit_id: str) -> str:
 
 
 def merge_intervals(intervals: List[tuple[int, int]]) -> List[tuple[int, int]]:
-    """Объединяет перекрывающиеся интервалы."""
     if not intervals:
         return []
     intervals.sort()
@@ -38,7 +37,7 @@ def parse_psiblast_xml(xml_path: str, max_len: int = 5000) -> pd.DataFrame:
             return pd.DataFrame()  # Если файл пуст
 
     query_len = record.query_length
-    hits = []  # type: List[Dict[str, Any]]
+    hits = []
 
     for alignment in record.alignments:
         hsps = [hsp for hsp in alignment.hsps if hsp.align_length <= max_len]
@@ -304,7 +303,7 @@ def create_many_cassettes(dir: str, data: dict) -> dict:
     return introns
 
 
-def dict_align_create(df: pd.DataFrame, align_type: str) -> dict:
+def dict_align_create(df: pd.DataFrame, align_type: str, dir: str = "../Sequences_protein_id") -> dict:
     align_types = ["gene", "rna", "protein", "cds", "cassette", "cds_cassette"]
     if align_type not in align_types:
         raise ValueError(f"Unknown alignment type: {align_type}")
@@ -329,19 +328,20 @@ def dict_align_create(df: pd.DataFrame, align_type: str) -> dict:
     for protein_id in df.protein_id:
         df_subset = df[df["protein_id"] == protein_id]
         org_name = df_subset.org_name.iloc[0]
-        dict_align[f"{org_name}_{protein_id}"] = read_single_fasta(f"../Sequences_protein_id/{protein_id}/{filename}")
+        dict_align[f"{org_name}_{protein_id}"] = read_single_fasta(f"{dir}/{protein_id}/{filename}")
 
     return dict_align
 
 
-def dict_align_info_analyze(df: pd.DataFrame, feature: str) -> (pd.DataFrame, dict):
+def dict_align_info_analyze(df: pd.DataFrame, feature: str, dir: str = "../Sequences_protein_id") -> (pd.DataFrame,
+                                                                                                      dict):
     rows = []
-    dict_align = dict_align_create(df, feature)
+    dict_align = dict_align_create(df, feature, dir)
 
     for org_name_protein_id, cds_seq in dict_align.items():
         protein_id = org_name_protein_id.split("_")[-1]
         stop_codon_pos = find_codon(cds_seq, which="stop")
-        cassette_intron = read_fasta(f"../Sequences_protein_id/{protein_id}/cassette.fa")["cassette_intron"]
+        cassette_intron = read_fasta(f"{dir}/{protein_id}/cassette.fa")["cassette_intron"]
         cassette_intron_start = cds_seq.find(cassette_intron)
         rows.append(
             {
@@ -356,4 +356,3 @@ def dict_align_info_analyze(df: pd.DataFrame, feature: str) -> (pd.DataFrame, di
     df = pd.DataFrame(rows)
 
     return df, dict_align
-
