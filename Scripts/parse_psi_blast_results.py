@@ -213,8 +213,8 @@ def add_org_name_gene_cds_location(df: pd.DataFrame) -> pd.DataFrame:
             record = SeqIO.read(handle, "genbank")
 
         if gene_id.startswith("XM"):
-            # обновляем gene_id, т.к. координаты для XM будут доставать через Gene Accession
             try:
+                # обновляем gene_id для дальнейшего скачивания
                 gene_id, gene_location, gene_len, cds_location = obtain_gene_cds_location_xm(record, locus_tag)
                 # добавляем org_name только если получилось извлечь координаты
                 org_name = [f for f in record.features if f.type == "source"][0].qualifiers["organism"][0].replace(
@@ -255,7 +255,6 @@ def add_org_name_gene_cds_location(df: pd.DataFrame) -> pd.DataFrame:
 def update_df(df: pd.DataFrame) -> pd.DataFrame:
     df = add_gene_id_locus_tag(df)
     df = add_org_name_gene_cds_location(df)
-    df["protein_id"] = df["protein_id"].str.replace("_", "")  # если XP в начале -> загрузка файлов
     return df
 
 
@@ -289,14 +288,18 @@ def save_cdss_exons(df, dir: str = "../Sequences_protein_id") -> None:
         for i, exon_location in enumerate(cds_location):
             start, end, strand = exon_location["start"], exon_location["end"], exon_location["strand"]
 
-            time.sleep(0.333333334)
-            with Entrez.efetch(db="nucleotide", id=gene_id, rettype="fasta", retmode="text",
-                               seq_start=start, seq_stop=end, strand=strand) as handle:
-                record = SeqIO.read(handle, "fasta")
-
+            if protein_id.startswith("XP"):
+                gene = read_single_fasta(f"{dir}/{protein_id}/gene.fna")
+                exon_seq = gene[start-1:end]
+            else:
+                time.sleep(0.333333334)
+                with Entrez.efetch(db="nucleotide", id=gene_id, rettype="fasta", retmode="text",
+                                   seq_start=start, seq_stop=end, strand=strand) as handle:
+                    record = SeqIO.read(handle, "fasta")
                 exon_seq = str(record.seq)
-                cds += exon_seq
-                exons_dict[f">{i}:{start}-{end}"] = exon_seq
+
+            cds += exon_seq
+            exons_dict[f">{i}:{start}-{end}"] = exon_seq
 
         with open(f"{dir}/{protein_id}/cds_plain.fna", "w") as outfile:
             outfile.write(f">{org_name}\n{cds}\n")
@@ -317,7 +320,7 @@ def save_proteins(df, dir: str = "../Sequences_protein_id") -> None:
                 outfile.write(handle.read())
 
 
-# @telegram_logger(chat_id=611478740)
+@telegram_logger(chat_id=611478740)
 def save_files(df: pd.DataFrame, dir: str = "../Sequences_protein_id") -> None:
     save_genes(df, dir)
     save_cdss_exons(df, dir)
@@ -372,7 +375,7 @@ def concat_cassette(cassette_dict: dict, concat_type: str) -> str | None:
 def create_many_cassettes(dir: str, data: dict) -> dict:
     introns = {}
     for protein_id_org_name, (df, exons_i) in data.items():
-        protein_id = protein_id_org_name.split("_")[-1]
+        protein_id = protein_id_org_name.split("__")[-1]
         cassette = create_cassette(f"{dir}/{protein_id}", df, exons_i=exons_i)
         introns[protein_id_org_name] = concat_cassette(cassette, "i")
     return introns
@@ -403,7 +406,7 @@ def dict_align_create(df: pd.DataFrame, align_type: str, dir: str = "../Sequence
     for protein_id in df.protein_id:
         df_subset = df[df["protein_id"] == protein_id]
         org_name = df_subset.org_name.iloc[0]
-        dict_align[f"{org_name}_{protein_id}"] = read_single_fasta(f"{dir}/{protein_id}/{filename}")
+        dict_align[f"{org_name}__{protein_id}"] = read_single_fasta(f"{dir}/{protein_id}/{filename}")
 
     return dict_align
 
@@ -412,10 +415,22 @@ def dict_align_info_analyze(df: pd.DataFrame, feature: str, dir: str = "../Seque
                                                                                                       dict):
     rows = []
     dict_align = dict_align_create(df, feature, dir)
+    org_name_protein_id_to_delete = []
 
     for org_name_protein_id, cds_seq in dict_align.items():
-        protein_id = org_name_protein_id.split("_")[-1]
+        protein_id = org_name_protein_id.split("__")[-1]
+
+        start_codon_pos = find_codon(cds_seq, which="start")
+        if start_codon_pos != 0:
+            print(f"{org_name_protein_id}: start codon not in the beginning of sequence")
+            org_name_protein_id_to_delete.append(org_name_protein_id)
+            continue
+
         stop_codon_pos = find_codon(cds_seq, which="stop")
+        if stop_codon_pos is None:
+            print(f"{org_name_protein_id}: no stop codon found")
+            org_name_protein_id_to_delete.append(org_name_protein_id)
+            continue
         cassette_intron = read_fasta(f"{dir}/{protein_id}/cassette.fa")["cassette_intron"]
         cassette_intron_start = cds_seq.find(cassette_intron)
         rows.append(
@@ -428,6 +443,8 @@ def dict_align_info_analyze(df: pd.DataFrame, feature: str, dir: str = "../Seque
                 "intron_length": len(cassette_intron)
             }
         )
+    for org_name_protein_id in org_name_protein_id_to_delete:
+        del dict_align[org_name_protein_id]
     df = pd.DataFrame(rows)
 
     return df, dict_align
