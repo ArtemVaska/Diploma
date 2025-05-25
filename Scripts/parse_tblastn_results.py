@@ -64,7 +64,8 @@ def parse_tblastn_xml(xml_path: str) -> pd.DataFrame:
                     "Acc": acc,
                     "Start": start,
                     "End": end,
-                    "Strand": strand
+                    "Strand": strand,
+                    "Length": end-start+1,
                 })
 
     return pd.DataFrame(records, index=indices)
@@ -123,5 +124,11 @@ def fix_anomalous_hits(df: pd.DataFrame, xml_path: str, max_len: int = 10000) ->
                 updated.loc[index, "End"] = end
                 updated.loc[index, "Strand"] = strand
                 updated.loc[index, "Acc"] = extract_accession(index)
+                updated.loc[index, "Length"] = end-start+1
 
     return updated
+
+
+def filter_hits(df: pd.DataFrame, min_qc: float = 0.0, max_len: int = 10000) -> pd.DataFrame:
+    return df[(df["QC"] >= min_qc) & ((df["End"] - df["Start"]) <= max_len)]
+
