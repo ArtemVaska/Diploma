@@ -159,12 +159,14 @@ def choose_best_frameshift(seq: str, translate: bool = False) -> str | list:
 
     for frame_shift in range(0, 3):
         start_codon = find_codon(seq, which="start", frame_shift=frame_shift)
-        codons[frame_shift] = [start_codon + frame_shift]  # !!! важный момент
+        if start_codon:
+            codons[frame_shift] = [start_codon + frame_shift]  # !!! важный момент
 
-    for frame_shift in range(0, 3):
+    for frame_shift in codons.keys():
         start_codon = codons[frame_shift][0]
         stop_codon = find_codon(seq[start_codon:], which="stop")
-        codons[frame_shift].append(start_codon + stop_codon + 3)
+        if stop_codon:
+            codons[frame_shift].append(start_codon + stop_codon + 3)
 
     for key, value in codons.items():
         print(f"Frameshift {key}: Start: {value[0]}, Stop: {value[1]}, Length: {value[1] - value[0]}")
@@ -205,10 +207,10 @@ def save_seqs(df: pd.DataFrame, folder: str,
 
         for hit in subset_df.index:
             line = df.loc[hit]
-            acc, strand, seq_start, seq_stop = line.Acc, line.Strand, line.Start, line.Stop
-            if seq_stop - seq_start >= seq_length_threshold:
+            acc, strand, seq_start, seq_end = line.Acc, line.Strand, line.Start, line.End
+            if seq_end - seq_start >= seq_length_threshold:
                 time.sleep(0.333333334)
-                save_seq(save_dir, folder, subfolder, acc, strand, seq_start, seq_stop)
+                save_seq(save_dir, folder, subfolder, acc, strand, seq_start, seq_end)
 
 
 def extract_genome_coverage(acc: str) -> str:
