@@ -285,7 +285,8 @@ def update_data_for_species(phylum_species_list: list) -> None:
         for data_type, value in data_upd.items():
             match data_type:
                 case "gene":
-                    continue
+                    filename = "gene"
+                    ext = "fna"
                 case "cds":
                     filename = "cds"
                     ext = "fna"
