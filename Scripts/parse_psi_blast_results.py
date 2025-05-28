@@ -411,7 +411,7 @@ def dict_align_create(df: pd.DataFrame, align_type: str, dir: str = "../Sequence
     return dict_align
 
 
-def dict_align_info_analyze(df: pd.DataFrame, feature: str, dir: str = "../Sequences_protein_id") -> (pd.DataFrame,
+def dict_align_info_analyze(df: pd.DataFrame, sub_phylum: str, feature: str, dir: str = "../Sequences_protein_id") -> (pd.DataFrame,
                                                                                                       dict):
     rows = []
     dict_align = dict_align_create(df, feature, dir)
@@ -437,6 +437,7 @@ def dict_align_info_analyze(df: pd.DataFrame, feature: str, dir: str = "../Seque
         cassette_intron_start = cds_seq.find(cassette_intron)
         rows.append(
             {
+                "sub_phylum": sub_phylum,
                 "org_name_protein_id": org_name_protein_id,
                 "stop_codon_pos": stop_codon_pos,
                 "equal_to_cds": stop_codon_pos + 3 == len(cds_seq),
