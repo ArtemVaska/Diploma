@@ -445,6 +445,7 @@ def dict_align_info_analyze(df: pd.DataFrame, sub_phylum: str, feature: str, dir
                 "intron_length_to_stop_codon": stop_codon_pos - cassette_intron_start,
                 "intron_length": len(cassette_intron),
                 "first_exon_length": len(first_exon),
+                "source": "psi_blast",
             }
         )
     for org_name_protein_id in org_name_protein_id_to_delete:

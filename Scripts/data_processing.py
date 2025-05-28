@@ -505,6 +505,7 @@ def dict_align_info_analyze(dict_align_info: dict, feature: str) -> (pd.DataFram
                     "intron_length_to_stop_codon": stop_codon_pos - cassette_intron_start,
                     "intron_length": len(cassette_intron),
                     "first_exon_length": len(first_exon),
+                    "source": "datasets",
                 }
             )
     df = pd.DataFrame(rows)
