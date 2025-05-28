@@ -447,7 +447,10 @@ def create_cassette(phyla: str, org_name: str, df_exons: pd.DataFrame, exons_i: 
     path = f"../Datasets/{phyla}/{org_name}/ncbi_dataset/data"
     gene_fna = read_single_fasta(f"{path}/gene.fna")
 
-    exon_0 = df_exons.loc[exons_i[0]]
+    try:
+        exon_0 = df_exons.loc[exons_i[0]]
+    except KeyError:
+        print(f"No exon found for {phyla}/{org_name}")
     exon_1 = df_exons.loc[exons_i[1]]
 
     cassette_start = int(exon_0.coords.split("-")[1])
@@ -488,20 +491,25 @@ def dict_align_info_analyze(dict_align_info: dict, feature: str) -> (pd.DataFram
     for phyla, org_name_seq in dict_align.items():
         for org_name, seq in org_name_seq.items():
             stop_codon_pos = find_codon(seq, which="stop")
-            cassette_intron = read_fasta(f"../Datasets/{phyla}/{org_name}/ncbi_dataset/data/cassette.fa")["cassette"]
+            cassette_dict = read_fasta(f"../Datasets/{phyla}/{org_name}/ncbi_dataset/data/cassette.fa")
+            first_exon = cassette_dict[next(iter(cassette_dict))]
+            cassette_intron = cassette_dict["cassette"]
             cassette_intron_start = seq.find(cassette_intron)
             rows.append(
                 {
-                    "phylum": phyla,
-                    "org_name": org_name,
+                    "sub_phylum": phyla,
+                    "org_name_protein_id": org_name,
                     "stop_codon_pos": stop_codon_pos,
                     "equal_to_cds": stop_codon_pos + 3 == len(seq),
-                    "cassette_start": cassette_intron_start,
-                    "length_to_stop_codon": stop_codon_pos - cassette_intron_start,
-                    "intron_length": len(cassette_intron)
+                    "cassette_intron_start": cassette_intron_start,
+                    "intron_length_to_stop_codon": stop_codon_pos - cassette_intron_start,
+                    "intron_length": len(cassette_intron),
+                    "first_exon_length": len(first_exon),
                 }
             )
     df = pd.DataFrame(rows)
+    org_name_upd = df["org_name_protein_id"].apply(lambda x: x.rsplit("_", 1)[0].capitalize())
+    df.insert(2, "org_name", org_name_upd)
 
     # formatted org_name for dict_align
     new_dict = {}

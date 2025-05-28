@@ -431,7 +431,9 @@ def dict_align_info_analyze(df: pd.DataFrame, feature: str, dir: str = "../Seque
             print(f"{org_name_protein_id}: no stop codon found")
             org_name_protein_id_to_delete.append(org_name_protein_id)
             continue
-        cassette_intron = read_fasta(f"{dir}/{protein_id}/cassette.fa")["cassette_intron"]
+        cassette_dict = read_fasta(f"{dir}/{protein_id}/cassette.fa")
+        first_exon = cassette_dict[next(iter(cassette_dict))]
+        cassette_intron = cassette_dict["cassette_intron"]
         cassette_intron_start = cds_seq.find(cassette_intron)
         rows.append(
             {
@@ -440,11 +442,15 @@ def dict_align_info_analyze(df: pd.DataFrame, feature: str, dir: str = "../Seque
                 "equal_to_cds": stop_codon_pos + 3 == len(cds_seq),
                 "cassette_intron_start": cassette_intron_start,
                 "intron_length_to_stop_codon": stop_codon_pos - cassette_intron_start,
-                "intron_length": len(cassette_intron)
+                "intron_length": len(cassette_intron),
+                "first_exon_length": len(first_exon),
             }
         )
     for org_name_protein_id in org_name_protein_id_to_delete:
         del dict_align[org_name_protein_id]
     df = pd.DataFrame(rows)
+
+    org_name_upd = df["org_name_protein_id"].apply(lambda x: x.split("__")[0])
+    df.insert(1, "org_name", org_name_upd)
 
     return df, dict_align
