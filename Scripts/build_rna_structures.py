@@ -95,9 +95,15 @@ def run_rnafold_with_highlight(
         organism_dir = output_root / seq_id
         organism_dir.mkdir(parents=True, exist_ok=True)
 
+        # проверка на то, что организм уже обработан
+        fold_file = organism_dir / "mfe.fold"
+        if fold_file.exists():
+            print(f"Files for {seq_id} already exist\n")
+            continue
+
         # Run RNAfold (creates only dot.ps)
         result = subprocess.run(
-            ["RNAfold", "-p", "-d2", "--noLP", "--noPS"],
+            ["RNAfold", "--jobs=16", "-p", "-d2", "--noLP", "--noPS"],
             input=full_seq.strip(),
             cwd=organism_dir,
             capture_output=True,
@@ -126,7 +132,7 @@ def run_rnafold_with_highlight(
 
             with open(f"{organism_dir}/{fold_type}.fold") as infile:
                 subprocess.run(
-                    ["RNAplot"],
+                    ["RNAplot", "--jobs=16"],
                     stdin=infile,
                     cwd=organism_dir,
                 )
@@ -142,7 +148,7 @@ def run_rnafold_with_highlight(
                     highlight_cmd = ["--pre", f"{start} {end} 8 10 10 0 omark"]
                     with open(f"{organism_dir}/{fold_type}.fold") as infile:
                         subprocess.run(
-                            ["RNAplot"] + highlight_cmd,
+                            ["RNAplot", "--jobs=16"] + highlight_cmd,
                             stdin=infile,
                             cwd=organism_dir,
                         )
