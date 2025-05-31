@@ -3,6 +3,7 @@ import subprocess
 import re
 
 import pandas as pd
+from pathlib import Path
 
 from fasta_processing import read_fasta, read_single_fasta
 from tg_logger import telegram_logger
