@@ -1,0 +1,169 @@
+#NEXUS
+begin taxa;
+	dimensions ntax=67;
+	taxlabels
+	'Acanthochromis_polyacanthus|22'
+	'Amphiprion_ocellaris|22'
+	'Anabas_testudineus|22'
+	'Anarrhichthys_ocellatus|22'
+	'Archocentrus_centrarchus|22'
+	'Astatotilapia_calliptera|31'
+	'Astyanax_mexicanus|46'
+	'Betta_splendens|22'
+	'Boleophthalmus_pectinirostris|22'
+	'Carassius_auratus|148'
+	'Chanos_chanos|1'
+	'Clupea_harengus|22'
+	'Colossoma_macropomum|46'
+	'Cottoperca_gobio|16'
+	'Cyprinodon_variegatus|28'
+	'Danio_rerio|1'
+	'Denticeps_clupeoides|7'
+	'Echeneis_naucrates|22'
+	'Electrophorus_electricus|283'
+	'Esox_lucius|22'
+	'Etheostoma_spectabile|97'
+	'Fundulus_heteroclitus|25'
+	'Gadus_morhua|67'
+	'Gouania_willdenowi|37'
+	'Haplochromis_burtoni|31'
+	'Hippocampus_comes|22'
+	'Ictalurus_punctatus|46'
+	'Kryptolebias_marmoratus|22'
+	'Labrus_bergylta|10'
+	'Larimichthys_crocea|22'
+	'Lates_calcarifer|22'
+	'Mastacembelus_armatus|64'
+	'Maylandia_zebra|22'
+	'Monopterus_albus|22'
+	'Myripristis_murdjan|112'
+	'Nothobranchius_furzeri|22'
+	'Notothenia_coriiceps|22'
+	'Oreochromis_aureus|22'
+	'Oreochromis_niloticus|22'
+	'Oryzias_latipes|40'
+	'Oryzias_melastigma|22'
+	'Pangasianodon_hypophthalmus|46'
+	'Paralichthys_olivaceus|22'
+	'Parambassis_ranga|22'
+	'Perca_flavescens|58'
+	'Poecilia_formosa|22'
+	'Poecilia_latipinna|22'
+	'Poecilia_mexicana|22'
+	'Poecilia_reticulata|22'
+	'Pundamilia_nyererei|22'
+	'Puntigrus_tetrazona|25'
+	'Pygocentrus_nattereri|46'
+	'Salarias_fasciatus|22'
+	'Salmo_salar|67'
+	'Sander_lucioperca|22'
+	'Seriola_dumerili|22'
+	'Sinocyclocheilus_anshuiensis|154'
+	'Sinocyclocheilus_grahami|148'
+	'Sinocyclocheilus_rhinocerous|154'
+	'Sparus_aurata|22'
+	'Sphaeramia_orbicularis|43'
+	'Stegastes_partitus|22'
+	'Tachysurus_fulvidraco|46'
+	'Takifugu_rubripes|22'
+	'Xiphophorus_couchianus|22'
+	'Xiphophorus_hellerii|22'
+	'Xiphophorus_maculatus|22'
+;
+end;
+
+begin trees;
+	tree tree_1 = [&R] ('Ictalurus_punctatus|46'[&!color=#00ff00]:0.094606,(((('Chanos_chanos|1'[&!color=#00ff00]:0.490257,(('Denticeps_clupeoides|7'[&!color=#00ff00]:0.567304,'Clupea_harengus|22'[&!color=#00ff00]:0.598851)[&label="99.5/97",!color=#00ff00]:0.098505,((('Danio_rerio|1'[&!color=#00ff00]:0.446219,'Puntigrus_tetrazona|25'[&!color=#00ff00]:0.371547)[&label="100/100",!color=#00ff00]:0.58239,(((((((('Salarias_fasciatus|22'[&!color=#0000ff]:0.281699,'Gouania_willdenowi|37'[&!color=#0000ff]:0.378885)[&label="100/100",!color=#0000ff]:0.071735,(('Stegastes_partitus|22'[&!color=#0000ff]:0.066488,('Acanthochromis_polyacanthus|22'[&!color=#0000ff]:0.033852,'Amphiprion_ocellaris|22'[&!color=#0000ff]:0.025903)[&label="100/100",!color=#0000ff]:0.040311)[&label="100/100",!color=#0000ff]:0.068884,'Parambassis_ranga|22'[&!color=#0000ff]:0.207392)[&label="8.8/67",!color=#0000ff]:0.01289)[&label="36.5/67",!color=#0000ff]:0.007918,(((((((('Poecilia_mexicana|22'[&!color=#0000ff]:0.004874,'Poecilia_formosa|22'[&!color=#0000ff]:8.95E-4)[&label="99.9/100",!color=#0000ff]:0.004982,'Poecilia_latipinna|22'[&!color=#0000ff]:0.005282)[&label="100/100",!color=#0000ff]:0.018069,'Poecilia_reticulata|22'[&!color=#0000ff]:0.014818)[&label="99.9/100",!color=#0000ff]:0.014869,('Xiphophorus_couchianus|22'[&!color=#0000ff]:0.006728,('Xiphophorus_maculatus|22'[&!color=#0000ff]:0.007504,'Xiphophorus_hellerii|22'[&!color=#0000ff]:0.009819)[&label="97.5/100",!color=#0000ff]:0.004619)[&label="100/100",!color=#0000ff]:0.02184)[&label="100/100",!color=#0000ff]:0.085979,('Cyprinodon_variegatus|28'[&!color=#0000ff]:0.173948,'Fundulus_heteroclitus|25'[&!color=#0000ff]:0.150568)[&label="69.8/84",!color=#0000ff]:0.023335)[&label="100/100",!color=#0000ff]:0.199724,('Nothobranchius_furzeri|22'[&!color=#0000ff]:0.272893,'Kryptolebias_marmoratus|22'[&!color=#0000ff]:0.167997)[&label="100/100",!color=#0000ff]:0.051614)[&label="99.2/100",!color=#0000ff]:0.030487,('Oryzias_latipes|40'[&!color=#0000ff]:0.095642,'Oryzias_melastigma|22'[&!color=#0000ff]:0.062546)[&label="100/100",!color=#0000ff]:0.289129)[&label="100/100",!color=#0000ff]:0.05215,(((('Haplochromis_burtoni|31'[&!color=#0000ff]:0.005094,'Pundamilia_nyererei|22'[&!color=#0000ff]:0.002251)[&label="90.6/99",!color=#0000ff]:0.001852,('Maylandia_zebra|22'[&!color=#0000ff]:8.38E-4,'Astatotilapia_calliptera|31'[&!color=#0000ff]:0.001322)[&label="90.9/99",!color=#0000ff]:0.001448)[&label="100/100",!color=#0000ff]:0.019836,('Oreochromis_niloticus|22'[&!color=#0000ff]:0.002989,'Oreochromis_aureus|22'[&!color=#0000ff]:8.67E-4)[&label="99.9/100",!color=#0000ff]:0.009216)[&label="100/100",!color=#0000ff]:0.079006,'Archocentrus_centrarchus|22'[&!color=#0000ff]:0.067086)[&label="100/100",!color=#0000ff]:0.120234)[&label="88.9/79",!color=#0000ff]:0.009624)[&label="100/100",!color=#0000ff]:0.036998,((((('Cottoperca_gobio|16'[&!color=#0000ff]:0.070182,'Notothenia_coriiceps|22'[&!color=#0000ff]:0.155597)[&label="100/100",!color=#0000ff]:0.03003,'Anarrhichthys_ocellatus|22'[&!color=#0000ff]:0.114452)[&label="96.6/100",!color=#0000ff]:0.006111,(('Etheostoma_spectabile|97'[&!color=#0000ff]:0.053762,'Perca_flavescens|58'[&!color=#0000ff]:0.02135)[&label="41.9/98",!color=#0000ff]:0.001043,'Sander_lucioperca|22'[&!color=#0000ff]:0.016469)[&label="100/100",!color=#0000ff]:0.045444)[&label="100/100",!color=#0000ff]:0.02935,(('Takifugu_rubripes|22'[&!color=#0000ff]:0.44315,('Larimichthys_crocea|22'[&!color=#0000ff]:0.108485,'Sparus_aurata|22'[&!color=#0000ff]:0.12973)[&label="86.9/98",!color=#0000ff]:0.012028)[&label="89.5/85",!color=#0000ff]:0.009096,'Labrus_bergylta|10'[&!color=#0000ff]:0.248055)[&label="70.1/81",!color=#0000ff]:0.007816)[&label="99.5/88",!color=#0000ff]:0.009137,(((('Betta_splendens|22'[&!color=#0000ff]:0.191907,'Anabas_testudineus|22'[&!color=#0000ff]:0.099095)[&label="100/100",!color=#0000ff]:0.064446,'Mastacembelus_armatus|64'[&!color=#0000ff]:0.135449)[&label="3.6/60",!color=#0000ff]:0.010433,'Monopterus_albus|22'[&!color=#0000ff]:0.134955)[&label="99.9/100",!color=#0000ff]:0.022825,('Lates_calcarifer|22'[&!color=#0000ff]:0.098061,('Paralichthys_olivaceus|22'[&!color=#0000ff]:0.225503,('Echeneis_naucrates|22'[&!color=#0000ff]:0.159128,'Seriola_dumerili|22'[&!color=#0000ff]:0.049033)[&label="99.4/100",!color=#0000ff]:0.022398)[&label="63.5/93",!color=#0000ff]:0.00601)[&label="100/100",!color=#0000ff]:0.030575)[&label="100/100",!color=#0000ff]:0.012864)[&label="96.7/83",!color=#0000ff]:0.008433)[&label="82.9/81",!color=#0000ff]:0.01203,('Boleophthalmus_pectinirostris|22'[&!color=#0000ff]:0.475428,'Sphaeramia_orbicularis|43'[&!color=#0000ff]:0.183219)[&label="100/100",!color=#0000ff]:0.081386)[&label="69.3/87",!color=#0000ff]:0.016786,'Hippocampus_comes|22'[&!color=#0000ff]:0.480284)[&label="99.7/100",!color=#0000ff]:0.048841,'Myripristis_murdjan|112'[&!color=#0000ff]:0.246244)[&label="63.1/85",!color=#0000ff]:0.044662,'Gadus_morhua|67'[&!color=#0000ff]:0.643794)[&label="100/100",!color=#0000ff]:0.188064)[&label="99.5/100",!color=#0000ff]:0.078009,('Salmo_salar|67'[&!color=#0000ff]:0.1795,'Esox_lucius|22'[&!color=#0000ff]:0.218893)[&label="100/100",!color=#0000ff]:0.459433)[&label="99.2/100",!color=#0000ff]:0.059658)[&label="49.2/83",!color=#0000ff]:0.036232)[&label="96.7/98",!color=#0000ff]:0.07275,(('Sinocyclocheilus_rhinocerous|154'[&!color=#00ff00]:0.011132,'Sinocyclocheilus_anshuiensis|154'[&!color=#00ff00]:0.011875)[&label="100/100",!color=#00ff00]:0.046698,('Carassius_auratus|148'[&!color=#00ff00]:0.068989,'Sinocyclocheilus_grahami|148'[&!color=#00ff00]:0.032165)[&label="99.7/100",!color=#00ff00]:0.03941)[&label="100/100",!color=#00ff00]:0.59049)[&label="100/100",!color=#0000ff]:0.385876,((('Pygocentrus_nattereri|46'[&!color=#00ff00]:0.049061,'Colossoma_macropomum|46'[&!color=#00ff00]:0.029211)[&label="100/100",!color=#00ff00]:0.105638,'Astyanax_mexicanus|46'[&!color=#00ff00]:0.230894)[&label="99.8/100",!color=#00ff00]:0.049152,'Electrophorus_electricus|283'[&!color=#00ff00]:0.201105)[&label="94.7/98",!color=#00ff00]:0.0523)[&label="100/100",!color=#0000ff]:0.186948,'Tachysurus_fulvidraco|46'[&!color=#00ff00]:0.154781)[&label="83.6/94",!color=#0000ff]:0.023006,'Pangasianodon_hypophthalmus|46'[&!color=#00ff00]:0.050926)[&!color=#0000ff];
+end;
+
+begin figtree;
+	set appearance.backgroundColorAttribute="Default";
+	set appearance.backgroundColour=#ffffff;
+	set appearance.branchColorAttribute="User selection";
+	set appearance.branchColorGradient=false;
+	set appearance.branchLineWidth=2.0;
+	set appearance.branchMinLineWidth=0.0;
+	set appearance.branchWidthAttribute="Fixed";
+	set appearance.foregroundColour=#000000;
+	set appearance.hilightingGradient=false;
+	set appearance.selectionColour=#2d3680;
+	set branchLabels.colorAttribute="User selection";
+	set branchLabels.displayAttribute="Branch times";
+	set branchLabels.fontName="aakar";
+	set branchLabels.fontSize=8;
+	set branchLabels.fontStyle=0;
+	set branchLabels.isShown=false;
+	set branchLabels.significantDigits=4;
+	set layout.expansion=0;
+	set layout.layoutType="RECTILINEAR";
+	set layout.zoom=0;
+	set legend.attribute="label";
+	set legend.fontSize=10.0;
+	set legend.isShown=false;
+	set legend.significantDigits=4;
+	set nodeBars.barWidth=4.0;
+	set nodeBars.displayAttribute=null;
+	set nodeBars.isShown=false;
+	set nodeLabels.colorAttribute="User selection";
+	set nodeLabels.displayAttribute="Node ages";
+	set nodeLabels.fontName="aakar";
+	set nodeLabels.fontSize=8;
+	set nodeLabels.fontStyle=0;
+	set nodeLabels.isShown=false;
+	set nodeLabels.significantDigits=4;
+	set nodeShapeExternal.colourAttribute="User selection";
+	set nodeShapeExternal.isShown=false;
+	set nodeShapeExternal.minSize=10.0;
+	set nodeShapeExternal.scaleType=Width;
+	set nodeShapeExternal.shapeType=Circle;
+	set nodeShapeExternal.size=4.0;
+	set nodeShapeExternal.sizeAttribute="Fixed";
+	set nodeShapeInternal.colourAttribute="User selection";
+	set nodeShapeInternal.isShown=false;
+	set nodeShapeInternal.minSize=10.0;
+	set nodeShapeInternal.scaleType=Width;
+	set nodeShapeInternal.shapeType=Circle;
+	set nodeShapeInternal.size=4.0;
+	set nodeShapeInternal.sizeAttribute="Fixed";
+	set polarLayout.alignTipLabels=false;
+	set polarLayout.angularRange=0;
+	set polarLayout.rootAngle=0;
+	set polarLayout.rootLength=100;
+	set polarLayout.showRoot=true;
+	set radialLayout.spread=0.0;
+	set rectilinearLayout.alignTipLabels=false;
+	set rectilinearLayout.curvature=0;
+	set rectilinearLayout.rootLength=100;
+	set scale.offsetAge=0.0;
+	set scale.rootAge=1.0;
+	set scale.scaleFactor=1.0;
+	set scale.scaleRoot=false;
+	set scaleAxis.automaticScale=true;
+	set scaleAxis.fontSize=8.0;
+	set scaleAxis.isShown=false;
+	set scaleAxis.lineWidth=1.0;
+	set scaleAxis.majorTicks=1.0;
+	set scaleAxis.minorTicks=0.5;
+	set scaleAxis.origin=0.0;
+	set scaleAxis.reverseAxis=false;
+	set scaleAxis.showGrid=true;
+	set scaleBar.automaticScale=true;
+	set scaleBar.fontSize=18.0;
+	set scaleBar.isShown=true;
+	set scaleBar.lineWidth=1.0;
+	set scaleBar.scaleRange=0.2;
+	set tipLabels.colorAttribute="User selection";
+	set tipLabels.displayAttribute="Names";
+	set tipLabels.fontName="aakar";
+	set tipLabels.fontSize=18;
+	set tipLabels.fontStyle=0;
+	set tipLabels.isShown=true;
+	set tipLabels.significantDigits=4;
+	set trees.order=false;
+	set trees.orderType="increasing";
+	set trees.rooting=false;
+	set trees.rootingType="User Selection";
+	set trees.transform=false;
+	set trees.transformType="cladogram";
+end;
+

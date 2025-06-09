@@ -1,0 +1,477 @@
+IQ-TREE 2.4.0 built Feb 12 2025
+
+Input file name: Alignment/Actinopterygii/Actinopterygii_cds_cassette_motif.aln
+Type of analysis: ModelFinder + tree reconstruction + ultrafast bootstrap (1000 replicates)
+Random seed number: 12345
+
+REFERENCES
+----------
+
+To cite IQ-TREE please use:
+
+Bui Quang Minh, Heiko A. Schmidt, Olga Chernomor, Dominik Schrempf,
+Michael D. Woodhams, Arndt von Haeseler, and Robert Lanfear (2020)
+IQ-TREE 2: New models and efficient methods for phylogenetic inference
+in the genomic era. Mol. Biol. Evol., in press.
+https://doi.org/10.1093/molbev/msaa015
+
+To cite ModelFinder please use: 
+
+Subha Kalyaanamoorthy, Bui Quang Minh, Thomas KF Wong, Arndt von Haeseler,
+and Lars S Jermiin (2017) ModelFinder: Fast model selection for
+accurate phylogenetic estimates. Nature Methods, 14:587–589.
+https://doi.org/10.1038/nmeth.4285
+
+Since you used ultrafast bootstrap (UFBoot) please also cite: 
+
+Diep Thi Hoang, Olga Chernomor, Arndt von Haeseler, Bui Quang Minh,
+and Le Sy Vinh (2018) UFBoot2: Improving the ultrafast bootstrap
+approximation. Mol. Biol. Evol., 35:518–522.
+https://doi.org/10.1093/molbev/msx281
+
+SEQUENCE ALIGNMENT
+------------------
+
+Input data: 67 sequences with 13941 nucleotide sites
+Number of constant sites: 6139 (= 44.0356% of all sites)
+Number of invariant (constant or ambiguous constant) sites: 6139 (= 44.0356% of all sites)
+Number of parsimony informative sites: 5572
+Number of distinct site patterns: 8095
+
+ModelFinder
+-----------
+
+Best-fit model according to BIC: TVM+F+I+R4
+
+List of models sorted by BIC scores: 
+
+Model                  LogL         AIC      w-AIC        AICc     w-AICc         BIC      w-BIC
+TVM+F+I+R4      -170960.853  342211.706 -   0.0059  342214.776 -  0.00619  343305.382 +    0.499
+GTR+F+I+R4      -170956.156  342204.311 +    0.238  342207.423 +    0.245  343305.529 +    0.463
+TVM+F+R5        -170959.236  342210.473 -   0.0109  342213.585 -   0.0112  343311.691 -   0.0213
+GTR+F+R5        -170954.759  342203.519 +    0.354  342206.673 +    0.356  343312.279 -   0.0159
+GTR+F+R4        -170968.491  342226.982 - 2.84e-06  342230.051 - 2.98e-06  343320.658 -  0.00024
+GTR+F+I+R5      -170954.301  342204.601 +    0.206  342207.799 +    0.203  343320.904 - 0.000213
+TIM2+F+I+R4     -170976.634  342241.269 - 2.24e-09  342244.296 - 2.41e-09  343327.402 - 8.25e-06
+TPM2u+F+I+R4    -170981.783  342249.565 - 3.54e-11  342252.550 - 3.88e-11  343328.156 - 5.66e-06
+GTR+F+R6        -170953.401  342204.803 +    0.186  342208.044 +    0.179  343328.649 - 4.42e-06
+TIM2+F+R5       -170974.150  342238.301 -  9.9e-09  342241.370 - 1.04e-08  343331.976 - 8.38e-07
+TPM2u+F+R5      -170979.198  342246.396 - 1.73e-10  342249.423 - 1.86e-10  343332.529 - 6.36e-07
+TPM3u+F+I+R4    -171000.065  342286.130 - 4.07e-19  342289.115 - 4.46e-19  343364.720 -  6.5e-14
+TIM3+F+I+R4     -170995.783  342279.566 - 1.08e-17  342282.593 - 1.16e-17  343365.699 - 3.98e-14
+TPM3u+F+R5      -170997.050  342282.100 - 3.05e-18  342285.127 - 3.28e-18  343368.233 - 1.12e-14
+TIM3+F+R5       -170993.146  342276.291 - 5.57e-17  342279.360 - 5.85e-17  343369.967 - 4.72e-15
+TN+F+I+R4       -171016.080  342318.161 - 4.51e-26  342321.146 - 4.94e-26  343396.751 -  7.2e-21
+HKY+F+I+R4      -171020.996  342325.992 - 8.99e-28  342328.936 - 1.01e-27  343397.040 - 6.23e-21
+TN+F+R5         -171012.818  342313.635 - 4.33e-25  342316.662 - 4.65e-25  343399.768 - 1.59e-21
+HKY+F+R5        -171017.620  342321.239 - 9.68e-27  342324.224 - 1.06e-26  343399.829 - 1.55e-21
+TIM+F+I+R4      -171015.477  342318.954 - 3.03e-26  342321.981 - 3.25e-26  343405.087 - 1.12e-22
+K3Pu+F+I+R4     -171020.282  342326.564 - 6.75e-28  342329.549 -  7.4e-28  343405.154 - 1.08e-22
+GTR+F+I+R3      -171016.336  342320.672 - 1.29e-26  342323.699 - 1.38e-26  343406.804 - 4.73e-23
+K3Pu+F+R5       -171016.866  342321.731 - 7.57e-27  342324.758 - 8.12e-27  343407.864 - 2.78e-23
+TIM+F+R5        -171012.218  342314.436 -  2.9e-25  342317.505 - 3.05e-25  343408.111 - 2.46e-23
+GTR+F+R3        -171118.042  342522.085 - 2.36e-70  342525.070 - 2.58e-70  343600.675 - 3.77e-65
+GTR+F+I+G4      -171165.356  342612.711 - 4.94e-90  342615.613 - 5.64e-90  343676.216 - 1.49e-81
+TVMe+I+R4       -171295.832  342875.665 - 3.92e-147  342878.608 - 4.39e-147  343946.713 - 2.72e-140
+TVMe+R5         -171295.488  342876.976 - 2.04e-147  342879.961 - 2.23e-147  343955.566 - 3.25e-142
+SYM+I+R4        -171295.678  342877.357 - 1.68e-147  342880.342 - 1.85e-147  343955.947 - 2.69e-142
+SYM+R5          -171295.720  342879.439 - 5.94e-148  342882.466 - 6.38e-148  343965.572 - 2.19e-144
+TPM2+I+R4       -171395.396  343070.792 - 1.67e-189  343073.653 - 1.95e-189  344126.755 - 2.18e-179
+TPM2+R5         -171394.815  343071.630 - 1.1e-189  343074.532 - 1.25e-189  344135.136 - 3.31e-181
+TIM2e+I+R4      -171395.253  343072.506 - 7.08e-190  343075.408 - 8.09e-190  344136.011 - 2.13e-181
+TIM2e+R5        -171394.763  343073.525 - 4.25e-190  343076.469 - 4.76e-190  344144.573 - 2.95e-183
+TPM3+I+R4       -171434.421  343148.842 - 1.88e-206  343151.703 - 2.19e-206  344204.804 - 2.46e-196
+TPM3+R5         -171432.569  343147.138 - 4.41e-206  343150.040 - 5.03e-206  344210.643 - 1.33e-197
+TIM3e+I+R4      -171434.180  343150.360 - 8.8e-207  343153.262 - 1.01e-206  344213.865 - 2.65e-198
+TIM3e+R5        -171432.749  343149.498 - 1.35e-206  343152.441 - 1.52e-206  344220.545 - 9.39e-200
+GTR+F+I+R2      -171483.847  343251.694 - 8.71e-229  343254.637 - 9.75e-229  344322.742 - 6.04e-222
+K2P+I+R4        -171533.180  343344.361 - 6.57e-249  343347.181 - 7.82e-249  344392.781 - 3.74e-237
+K3P+I+R4        -171528.947  343337.895 - 1.67e-247  343340.755 - 1.94e-247  344393.857 - 2.18e-237
+K2P+R5          -171531.486  343342.971 - 1.32e-248  343345.832 - 1.54e-248  344398.934 - 1.72e-238
+K3P+R5          -171527.210  343336.419 - 3.49e-247  343339.321 - 3.98e-247  344399.924 - 1.05e-238
+TNe+I+R4        -171532.894  343345.787 - 3.22e-249  343348.648 - 3.76e-249  344401.750 - 4.22e-239
+TIMe+I+R4       -171528.728  343339.457 - 7.63e-248  343342.359 - 8.72e-248  344402.962 - 2.3e-239
+TNe+R5          -171531.252  343344.503 - 6.12e-249  343347.405 - 6.99e-249  344408.008 - 1.84e-240
+TIMe+R5         -171527.101  343338.203 - 1.43e-247  343341.146 - 1.6e-247  344409.251 - 9.91e-241
+GTR+F+G4        -171626.342  343532.684 - 8.39e-290  343535.544 - 9.79e-290  344588.646 - 1.1e-279
+GTR+F+R2        -172058.567  344399.134 -        0  344402.036 -        0  345462.639 -        0
+GTR+F+I         -174562.746  349405.491 -        0  349408.352 -        0  350461.454 -        0
+F81+F+I+R4      -174934.697  350151.394 -        0  350154.296 -        0  351214.900 -        0
+F81+F+R5        -174932.886  350149.773 -        0  350152.716 -        0  351220.821 -        0
+JC+I+R4         -175328.270  350932.540 -        0  350935.319 -        0  351973.417 -        0
+JC+R5           -175327.117  350932.235 -        0  350935.055 -        0  351980.655 -        0
+GTR+F           -178586.204  357450.407 -        0  357453.227 -        0  358498.827 -        0
+
+AIC, w-AIC   : Akaike information criterion scores and weights.
+AICc, w-AICc : Corrected AIC scores and weights.
+BIC, w-BIC   : Bayesian information criterion scores and weights.
+
+Plus signs denote the 95% confidence sets.
+Minus signs denote significant exclusion.
+
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: TVM+F+I+R4
+
+Rate parameter R:
+
+  A-C: 1.0509
+  A-G: 3.1488
+  A-T: 1.2011
+  C-G: 0.8490
+  C-T: 3.1488
+  G-T: 1.0000
+
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.276
+  pi(C) = 0.2239
+  pi(G) = 0.2311
+  pi(T) = 0.269
+
+Rate matrix Q:
+
+  A   -0.9883    0.1808    0.5592    0.2483
+  C    0.2229    -1.024    0.1508    0.6508
+  G    0.6677    0.1461     -1.02    0.2067
+  T    0.2547    0.5418    0.1776   -0.9741
+
+Model of rate heterogeneity: Invar+FreeRate with 4 categories
+Proportion of invariable sites: 0.05589
+Site proportion and rates:  (0.1027,0.09745) (0.2173,0.4895) (0.4394,1.081) (0.1847,2.213)
+
+ Category  Relative_rate  Proportion
+  0         0              0.05589
+  1         0.09745        0.1027
+  2         0.4895         0.2173
+  3         1.081          0.4394
+  4         2.213          0.1847
+
+MAXIMUM LIKELIHOOD TREE
+-----------------------
+
+Log-likelihood of the tree: -170960.0616 (s.e. 1777.3024)
+Unconstrained log-likelihood (without tree): -109008.9652
+Number of free parameters (#branches + #model parameters): 145
+Akaike information criterion (AIC) score: 342210.1232
+Corrected Akaike information criterion (AICc) score: 342213.1924
+Bayesian information criterion (BIC) score: 343303.7987
+
+Total tree length (sum of branch lengths): 15.1993
+Sum of internal branch lengths: 4.8626 (31.9920% of tree length)
+
+NOTE: Tree is UNROOTED although outgroup taxon 'Otomorpha_Ictalurus_punctatus' is drawn at root
+Numbers in parentheses are SH-aLRT support (%) / ultrafast bootstrap support (%)
+
++--Otomorpha_Ictalurus_punctatus
+|
+|                      +--------------Otomorpha_Chanos_chanos
+|                   +--| (96.6/98)
+|                   |  |     +-----------------Otomorpha_Denticeps_clupeoides
+|                   |  |  +--| (99.5/97)
+|                   |  |  |  +------------------Otomorpha_Clupea_harengus
+|                   |  +--| (48.9/80)
+|                   |     |                       +-------------Otomorpha_Danio_rerio
+|                   |     |     +-----------------| (100/100)
+|                   |     |     |                 +----------Otomorpha_Puntigrus_tetrazona
+|                   |     |  +--| (99.5/100)
+|                   |     |  |  |                          +--------Euteleosteomorpha_Salarias_fasciatus
+|                   |     |  |  |                       +--| (100/100)
+|                   |     |  |  |                       |  +-----------Euteleosteomorpha_Gouania_willdenowi
+|                   |     |  |  |                    +--| (36.4/56)
+|                   |     |  |  |                    |  |     +--Euteleosteomorpha_Stegastes_partitus
+|                   |     |  |  |                    |  |  +--| (100/100)
+|                   |     |  |  |                    |  |  |  |  +--Euteleosteomorpha_Acanthochromis_polyacanthus
+|                   |     |  |  |                    |  |  |  +--| (100/100)
+|                   |     |  |  |                    |  |  |     +--Euteleosteomorpha_Amphiprion_ocellaris
+|                   |     |  |  |                    |  +--| (8.6/69)
+|                   |     |  |  |                    |     +-----Euteleosteomorpha_Parambassis_ranga
+|                   |     |  |  |                 +--| (100/100)
+|                   |     |  |  |                 |  |                          +--Euteleosteomorpha_Poecilia_mexicana
+|                   |     |  |  |                 |  |                       +--| (99.9/100)
+|                   |     |  |  |                 |  |                       |  +--Euteleosteomorpha_Poecilia_formosa
+|                   |     |  |  |                 |  |                    +--| (100/100)
+|                   |     |  |  |                 |  |                    |  +--Euteleosteomorpha_Poecilia_latipinna
+|                   |     |  |  |                 |  |                 +--| (99.9/100)
+|                   |     |  |  |                 |  |                 |  +--Euteleosteomorpha_Poecilia_reticulata
+|                   |     |  |  |                 |  |              +--| (100/100)
+|                   |     |  |  |                 |  |              |  |  +--Euteleosteomorpha_Xiphophorus_couchianus
+|                   |     |  |  |                 |  |              |  +--| (100/100)
+|                   |     |  |  |                 |  |              |     |  +--Euteleosteomorpha_Xiphophorus_maculatus
+|                   |     |  |  |                 |  |              |     +--| (97.5/100)
+|                   |     |  |  |                 |  |              |        +--Euteleosteomorpha_Xiphophorus_hellerii
+|                   |     |  |  |                 |  |        +-----| (100/100)
+|                   |     |  |  |                 |  |        |     |  +----Euteleosteomorpha_Cyprinodon_variegatus
+|                   |     |  |  |                 |  |        |     +--| (69.7/85)
+|                   |     |  |  |                 |  |        |        +---Euteleosteomorpha_Fundulus_heteroclitus
+|                   |     |  |  |                 |  |     +--| (99.2/100)
+|                   |     |  |  |                 |  |     |  |  +-------Euteleosteomorpha_Nothobranchius_furzeri
+|                   |     |  |  |                 |  |     |  +--| (100/100)
+|                   |     |  |  |                 |  |     |     +----Euteleosteomorpha_Kryptolebias_marmoratus
+|                   |     |  |  |                 |  |  +--| (100/100)
+|                   |     |  |  |                 |  |  |  |        +--Euteleosteomorpha_Oryzias_latipes
+|                   |     |  |  |                 |  |  |  +--------| (100/100)
+|                   |     |  |  |                 |  |  |           +--Euteleosteomorpha_Oryzias_melastigma
+|                   |     |  |  |                 |  +--| (89/72)
+|                   |     |  |  |                 |     |           +--Euteleosteomorpha_Haplochromis_burtoni
+|                   |     |  |  |                 |     |        +--| (90.6/98)
+|                   |     |  |  |                 |     |        |  +--Euteleosteomorpha_Pundamilia_nyererei
+|                   |     |  |  |                 |     |     +--| (100/100)
+|                   |     |  |  |                 |     |     |  |  +--Euteleosteomorpha_Maylandia_zebra
+|                   |     |  |  |                 |     |     |  +--| (90.9/99)
+|                   |     |  |  |                 |     |     |     +--Euteleosteomorpha_Astatotilapia_calliptera
+|                   |     |  |  |                 |     |  +--| (100/100)
+|                   |     |  |  |                 |     |  |  |  +--Euteleosteomorpha_Oreochromis_niloticus
+|                   |     |  |  |                 |     |  |  +--| (99.9/100)
+|                   |     |  |  |                 |     |  |     +--Euteleosteomorpha_Oreochromis_aureus
+|                   |     |  |  |                 |     +--| (100/100)
+|                   |     |  |  |                 |        +--Euteleosteomorpha_Archocentrus_centrarchus
+|                   |     |  |  |              +--| (82.9/88)
+|                   |     |  |  |              |  |              +--Euteleosteomorpha_Cottoperca_gobio
+|                   |     |  |  |              |  |           +--| (100/100)
+|                   |     |  |  |              |  |           |  +---Euteleosteomorpha_Notothenia_coriiceps
+|                   |     |  |  |              |  |        +--| (96.6/100)
+|                   |     |  |  |              |  |        |  +--Euteleosteomorpha_Anarrhichthys_ocellatus
+|                   |     |  |  |              |  |     +--| (100/100)
+|                   |     |  |  |              |  |     |  |     +--Euteleosteomorpha_Etheostoma_spectabile
+|                   |     |  |  |              |  |     |  |  +--| (41.9/98)
+|                   |     |  |  |              |  |     |  |  |  +--Euteleosteomorpha_Perca_flavescens
+|                   |     |  |  |              |  |     |  +--| (100/100)
+|                   |     |  |  |              |  |     |     +--Euteleosteomorpha_Sander_lucioperca
+|                   |     |  |  |              |  |  +--| (99.5/89)
+|                   |     |  |  |              |  |  |  |     +-------------Euteleosteomorpha_Takifugu_rubripes
+|                   |     |  |  |              |  |  |  |  +--| (89.4/85)
+|                   |     |  |  |              |  |  |  |  |  |  +--Euteleosteomorpha_Larimichthys_crocea
+|                   |     |  |  |              |  |  |  |  |  +--| (86.9/97)
+|                   |     |  |  |              |  |  |  |  |     +---Euteleosteomorpha_Sparus_aurata
+|                   |     |  |  |              |  |  |  +--| (70.4/81)
+|                   |     |  |  |              |  |  |     +------Euteleosteomorpha_Labrus_bergylta
+|                   |     |  |  |              |  +--| (96.7/89)
+|                   |     |  |  |              |     |           +-----Euteleosteomorpha_Betta_splendens
+|                   |     |  |  |              |     |        +--| (100/100)
+|                   |     |  |  |              |     |        |  +--Euteleosteomorpha_Anabas_testudineus
+|                   |     |  |  |              |     |     +--| (3.6/70)
+|                   |     |  |  |              |     |     |  +---Euteleosteomorpha_Mastacembelus_armatus
+|                   |     |  |  |              |     |  +--| (99.9/100)
+|                   |     |  |  |              |     |  |  +---Euteleosteomorpha_Monopterus_albus
+|                   |     |  |  |              |     +--| (100/100)
+|                   |     |  |  |              |        |  +--Euteleosteomorpha_Lates_calcarifer
+|                   |     |  |  |              |        +--| (100/100)
+|                   |     |  |  |              |           |  +------Euteleosteomorpha_Paralichthys_olivaceus
+|                   |     |  |  |              |           +--| (63.1/97)
+|                   |     |  |  |              |              |  +----Euteleosteomorpha_Echeneis_naucrates
+|                   |     |  |  |              |              +--| (99.4/100)
+|                   |     |  |  |              |                 +--Euteleosteomorpha_Seriola_dumerili
+|                   |     |  |  |           +--| (69.6/86)
+|                   |     |  |  |           |  |  +--------------Euteleosteomorpha_Boleophthalmus_pectinirostris
+|                   |     |  |  |           |  +--| (100/100)
+|                   |     |  |  |           |     +----Euteleosteomorpha_Sphaeramia_orbicularis
+|                   |     |  |  |        +--| (99.7/100)
+|                   |     |  |  |        |  +--------------Euteleosteomorpha_Hippocampus_comes
+|                   |     |  |  |     +--| (63.2/88)
+|                   |     |  |  |     |  +------Euteleosteomorpha_Myripristis_murdjan
+|                   |     |  |  +-----| (100/100)
+|                   |     |  |        +-------------------Euteleosteomorpha_Gadus_morhua
+|                   |     +--| (99.2/99)
+|                   |        |             +----Euteleosteomorpha_Salmo_salar
+|                   |        +-------------| (100/100)
+|                   |                      +------Euteleosteomorpha_Esox_lucius
+|       +-----------| (100/100)
+|       |           |                    +--Otomorpha_Sinocyclocheilus_rhinocerous
+|       |           |                 +--| (100/100)
+|       |           |                 |  +--Otomorpha_Sinocyclocheilus_anshuiensis
+|       |           +-----------------| (100/100)
+|       |                             |  +--Otomorpha_Carassius_auratus
+|       |                             +--| (99.7/100)
+|       |                                +--Otomorpha_Sinocyclocheilus_grahami
+|  +----| (100/100)
+|  |    |        +--Otomorpha_Pygocentrus_nattereri
+|  |    |     +--| (100/100)
+|  |    |     |  +--Otomorpha_Colossoma_macropomum
+|  |    |  +--| (99.8/100)
+|  |    |  |  +------Otomorpha_Astyanax_mexicanus
+|  |    +--| (94.7/97)
+|  |       +-----Otomorpha_Electrophorus_electricus
++--| (83.5/95)
+|  +---Otomorpha_Tachysurus_fulvidraco
+|
++--Otomorpha_Pangasianodon_hypophthalmus
+
+Tree in newick format:
+
+(Otomorpha_Ictalurus_punctatus:0.0945896635,((((Otomorpha_Chanos_chanos:0.4901590681,((Otomorpha_Denticeps_clupeoides:0.5671335432,Otomorpha_Clupea_harengus:0.5987251527)99.5/97:0.0986372943,(((Otomorpha_Danio_rerio:0.4461840971,Otomorpha_Puntigrus_tetrazona:0.3714530437)100/100:0.5823371526,((((((((Euteleosteomorpha_Salarias_fasciatus:0.2816587391,Euteleosteomorpha_Gouania_willdenowi:0.3788140062)100/100:0.0717425680,((Euteleosteomorpha_Stegastes_partitus:0.0664739667,(Euteleosteomorpha_Acanthochromis_polyacanthus:0.0338424896,Euteleosteomorpha_Amphiprion_ocellaris:0.0258960897)100/100:0.0403001754)100/100:0.0688739833,Euteleosteomorpha_Parambassis_ranga:0.2073536317)8.6/69:0.0128813202)36.4/56:0.0079126798,((((((((Euteleosteomorpha_Poecilia_mexicana:0.0048739148,Euteleosteomorpha_Poecilia_formosa:0.0008953164)99.9/100:0.0049818279,Euteleosteomorpha_Poecilia_latipinna:0.0052815487)100/100:0.0180643987,Euteleosteomorpha_Poecilia_reticulata:0.0148142986)99.9/100:0.0148662060,(Euteleosteomorpha_Xiphophorus_couchianus:0.0067275949,(Euteleosteomorpha_Xiphophorus_maculatus:0.0075026888,Euteleosteomorpha_Xiphophorus_hellerii:0.0098161829)97.5/100:0.0046177160)100/100:0.0218343477)100/100:0.0859643381,(Euteleosteomorpha_Cyprinodon_variegatus:0.1739245826,Euteleosteomorpha_Fundulus_heteroclitus:0.1505419915)69.7/85:0.0233276571)100/100:0.1996910964,(Euteleosteomorpha_Nothobranchius_furzeri:0.2728189361,Euteleosteomorpha_Kryptolebias_marmoratus:0.1679627751)100/100:0.0515934420)99.2/100:0.0304987035,(Euteleosteomorpha_Oryzias_latipes:0.0956140261,Euteleosteomorpha_Oryzias_melastigma:0.0625397609)100/100:0.2890680789)100/100:0.0521306340,((((Euteleosteomorpha_Haplochromis_burtoni:0.0050938190,Euteleosteomorpha_Pundamilia_nyererei:0.0022511123)90.6/98:0.0018503570,(Euteleosteomorpha_Maylandia_zebra:0.0008379229,Euteleosteomorpha_Astatotilapia_calliptera:0.0013219694)90.9/99:0.0014478208)100/100:0.0198308400,(Euteleosteomorpha_Oreochromis_niloticus:0.0029891550,Euteleosteomorpha_Oreochromis_aureus:0.0008665924)99.9/100:0.0092127451)100/100:0.0789871996,Euteleosteomorpha_Archocentrus_centrarchus:0.0670692971)100/100:0.1202078751)89/72:0.0096239672)100/100:0.0369925230,(((((Euteleosteomorpha_Cottoperca_gobio:0.0701674934,Euteleosteomorpha_Notothenia_coriiceps:0.1555653543)100/100:0.0300218236,Euteleosteomorpha_Anarrhichthys_ocellatus:0.1144264942)96.6/100:0.0061091491,((Euteleosteomorpha_Etheostoma_spectabile:0.0537472510,Euteleosteomorpha_Perca_flavescens:0.0213444853)41.9/98:0.0010428237,Euteleosteomorpha_Sander_lucioperca:0.0164642725)100/100:0.0454309243)100/100:0.0293387726,((Euteleosteomorpha_Takifugu_rubripes:0.4430421595,(Euteleosteomorpha_Larimichthys_crocea:0.1084604618,Euteleosteomorpha_Sparus_aurata:0.1296978693)86.9/97:0.0120249319)89.4/85:0.0090996322,Euteleosteomorpha_Labrus_bergylta:0.2479976301)70.4/81:0.0078150112)99.5/89:0.0091331137,((((Euteleosteomorpha_Betta_splendens:0.1918571071,Euteleosteomorpha_Anabas_testudineus:0.0990659996)100/100:0.0644223836,Euteleosteomorpha_Mastacembelus_armatus:0.1354213395)3.6/70:0.0104279799,Euteleosteomorpha_Monopterus_albus:0.1349207071)99.9/100:0.0228137541,(Euteleosteomorpha_Lates_calcarifer:0.0980380281,(Euteleosteomorpha_Paralichthys_olivaceus:0.2254644697,(Euteleosteomorpha_Echeneis_naucrates:0.1590875622,Euteleosteomorpha_Seriola_dumerili:0.0490229419)99.4/100:0.0223861209)63.1/97:0.0060053843)100/100:0.0305730775)100/100:0.0128619312)96.7/89:0.0084293503)82.9/88:0.0120322896,(Euteleosteomorpha_Boleophthalmus_pectinirostris:0.4753343882,Euteleosteomorpha_Sphaeramia_orbicularis:0.1831761067)100/100:0.0813809710)69.6/86:0.0168010830,Euteleosteomorpha_Hippocampus_comes:0.4801963313)99.7/100:0.0488422996,Euteleosteomorpha_Myripristis_murdjan:0.2461792391)63.2/88:0.0447155341,Euteleosteomorpha_Gadus_morhua:0.6436430528)100/100:0.1880224067)99.5/100:0.0780082972,(Euteleosteomorpha_Salmo_salar:0.1794864314,Euteleosteomorpha_Esox_lucius:0.2188687848)100/100:0.4593588853)99.2/99:0.0596905597)48.9/80:0.0362616965)96.6/98:0.0727985822,((Otomorpha_Sinocyclocheilus_rhinocerous:0.0111297225,Otomorpha_Sinocyclocheilus_anshuiensis:0.0118734526)100/100:0.0466950209,(Otomorpha_Carassius_auratus:0.0689775472,Otomorpha_Sinocyclocheilus_grahami:0.0321589325)99.7/100:0.0394010137)100/100:0.5904002852)100/100:0.3857620946,(((Otomorpha_Pygocentrus_nattereri:0.0490453385,Otomorpha_Colossoma_macropomum:0.0292105586)100/100:0.1056061770,Otomorpha_Astyanax_mexicanus:0.2308725559)99.8/100:0.0491515654,Otomorpha_Electrophorus_electricus:0.2010754074)94.7/97:0.0522793815)100/100:0.1869407861,Otomorpha_Tachysurus_fulvidraco:0.1547550954)83.5/95:0.0229914204,Otomorpha_Pangasianodon_hypophthalmus:0.0509202867);
+
+CONSENSUS TREE
+--------------
+
+Consensus tree is constructed from 1000 bootstrap trees
+Log-likelihood of consensus tree: -170960.061314
+Robinson-Foulds distance between ML tree and consensus tree: 0
+
+Branches with support >0.000000% are kept (extended consensus)
+Branch lengths are optimized by maximum likelihood on original alignment
+Numbers in parentheses are bootstrap supports (%)
+
++--Otomorpha_Ictalurus_punctatus
+|
+|                      +--------------Otomorpha_Chanos_chanos
+|                   +--| (98)
+|                   |  |     +-----------------Otomorpha_Denticeps_clupeoides
+|                   |  |  +--| (97)
+|                   |  |  |  +------------------Otomorpha_Clupea_harengus
+|                   |  +--| (80)
+|                   |     |                       +-------------Otomorpha_Danio_rerio
+|                   |     |     +-----------------| (100)
+|                   |     |     |                 +----------Otomorpha_Puntigrus_tetrazona
+|                   |     |  +--| (100)
+|                   |     |  |  |                          +--------Euteleosteomorpha_Salarias_fasciatus
+|                   |     |  |  |                       +--| (100)
+|                   |     |  |  |                       |  +-----------Euteleosteomorpha_Gouania_willdenowi
+|                   |     |  |  |                    +--| (56)
+|                   |     |  |  |                    |  |     +--Euteleosteomorpha_Stegastes_partitus
+|                   |     |  |  |                    |  |  +--| (100)
+|                   |     |  |  |                    |  |  |  |  +--Euteleosteomorpha_Acanthochromis_polyacanthus
+|                   |     |  |  |                    |  |  |  +--| (100)
+|                   |     |  |  |                    |  |  |     +--Euteleosteomorpha_Amphiprion_ocellaris
+|                   |     |  |  |                    |  +--| (69)
+|                   |     |  |  |                    |     +-----Euteleosteomorpha_Parambassis_ranga
+|                   |     |  |  |                 +--| (100)
+|                   |     |  |  |                 |  |                          +--Euteleosteomorpha_Poecilia_mexicana
+|                   |     |  |  |                 |  |                       +--| (100)
+|                   |     |  |  |                 |  |                       |  +--Euteleosteomorpha_Poecilia_formosa
+|                   |     |  |  |                 |  |                    +--| (100)
+|                   |     |  |  |                 |  |                    |  +--Euteleosteomorpha_Poecilia_latipinna
+|                   |     |  |  |                 |  |                 +--| (100)
+|                   |     |  |  |                 |  |                 |  +--Euteleosteomorpha_Poecilia_reticulata
+|                   |     |  |  |                 |  |              +--| (100)
+|                   |     |  |  |                 |  |              |  |  +--Euteleosteomorpha_Xiphophorus_couchianus
+|                   |     |  |  |                 |  |              |  +--| (100)
+|                   |     |  |  |                 |  |              |     |  +--Euteleosteomorpha_Xiphophorus_maculatus
+|                   |     |  |  |                 |  |              |     +--| (100)
+|                   |     |  |  |                 |  |              |        +--Euteleosteomorpha_Xiphophorus_hellerii
+|                   |     |  |  |                 |  |        +-----| (100)
+|                   |     |  |  |                 |  |        |     |  +----Euteleosteomorpha_Cyprinodon_variegatus
+|                   |     |  |  |                 |  |        |     +--| (85)
+|                   |     |  |  |                 |  |        |        +---Euteleosteomorpha_Fundulus_heteroclitus
+|                   |     |  |  |                 |  |     +--| (100)
+|                   |     |  |  |                 |  |     |  |  +-------Euteleosteomorpha_Nothobranchius_furzeri
+|                   |     |  |  |                 |  |     |  +--| (100)
+|                   |     |  |  |                 |  |     |     +----Euteleosteomorpha_Kryptolebias_marmoratus
+|                   |     |  |  |                 |  |  +--| (100)
+|                   |     |  |  |                 |  |  |  |        +--Euteleosteomorpha_Oryzias_latipes
+|                   |     |  |  |                 |  |  |  +--------| (100)
+|                   |     |  |  |                 |  |  |           +--Euteleosteomorpha_Oryzias_melastigma
+|                   |     |  |  |                 |  +--| (72)
+|                   |     |  |  |                 |     |           +--Euteleosteomorpha_Haplochromis_burtoni
+|                   |     |  |  |                 |     |        +--| (98)
+|                   |     |  |  |                 |     |        |  +--Euteleosteomorpha_Pundamilia_nyererei
+|                   |     |  |  |                 |     |     +--| (100)
+|                   |     |  |  |                 |     |     |  |  +--Euteleosteomorpha_Maylandia_zebra
+|                   |     |  |  |                 |     |     |  +--| (99)
+|                   |     |  |  |                 |     |     |     +--Euteleosteomorpha_Astatotilapia_calliptera
+|                   |     |  |  |                 |     |  +--| (100)
+|                   |     |  |  |                 |     |  |  |  +--Euteleosteomorpha_Oreochromis_niloticus
+|                   |     |  |  |                 |     |  |  +--| (100)
+|                   |     |  |  |                 |     |  |     +--Euteleosteomorpha_Oreochromis_aureus
+|                   |     |  |  |                 |     +--| (100)
+|                   |     |  |  |                 |        +--Euteleosteomorpha_Archocentrus_centrarchus
+|                   |     |  |  |              +--| (88)
+|                   |     |  |  |              |  |              +--Euteleosteomorpha_Cottoperca_gobio
+|                   |     |  |  |              |  |           +--| (100)
+|                   |     |  |  |              |  |           |  +---Euteleosteomorpha_Notothenia_coriiceps
+|                   |     |  |  |              |  |        +--| (100)
+|                   |     |  |  |              |  |        |  +--Euteleosteomorpha_Anarrhichthys_ocellatus
+|                   |     |  |  |              |  |     +--| (100)
+|                   |     |  |  |              |  |     |  |     +--Euteleosteomorpha_Etheostoma_spectabile
+|                   |     |  |  |              |  |     |  |  +--| (98)
+|                   |     |  |  |              |  |     |  |  |  +--Euteleosteomorpha_Perca_flavescens
+|                   |     |  |  |              |  |     |  +--| (100)
+|                   |     |  |  |              |  |     |     +--Euteleosteomorpha_Sander_lucioperca
+|                   |     |  |  |              |  |  +--| (89)
+|                   |     |  |  |              |  |  |  |     +-------------Euteleosteomorpha_Takifugu_rubripes
+|                   |     |  |  |              |  |  |  |  +--| (85)
+|                   |     |  |  |              |  |  |  |  |  |  +--Euteleosteomorpha_Larimichthys_crocea
+|                   |     |  |  |              |  |  |  |  |  +--| (97)
+|                   |     |  |  |              |  |  |  |  |     +---Euteleosteomorpha_Sparus_aurata
+|                   |     |  |  |              |  |  |  +--| (81)
+|                   |     |  |  |              |  |  |     +------Euteleosteomorpha_Labrus_bergylta
+|                   |     |  |  |              |  +--| (89)
+|                   |     |  |  |              |     |           +-----Euteleosteomorpha_Betta_splendens
+|                   |     |  |  |              |     |        +--| (100)
+|                   |     |  |  |              |     |        |  +--Euteleosteomorpha_Anabas_testudineus
+|                   |     |  |  |              |     |     +--| (70)
+|                   |     |  |  |              |     |     |  +---Euteleosteomorpha_Mastacembelus_armatus
+|                   |     |  |  |              |     |  +--| (100)
+|                   |     |  |  |              |     |  |  +---Euteleosteomorpha_Monopterus_albus
+|                   |     |  |  |              |     +--| (100)
+|                   |     |  |  |              |        |  +--Euteleosteomorpha_Lates_calcarifer
+|                   |     |  |  |              |        +--| (100)
+|                   |     |  |  |              |           |  +------Euteleosteomorpha_Paralichthys_olivaceus
+|                   |     |  |  |              |           +--| (97)
+|                   |     |  |  |              |              |  +----Euteleosteomorpha_Echeneis_naucrates
+|                   |     |  |  |              |              +--| (100)
+|                   |     |  |  |              |                 +--Euteleosteomorpha_Seriola_dumerili
+|                   |     |  |  |           +--| (86)
+|                   |     |  |  |           |  |  +--------------Euteleosteomorpha_Boleophthalmus_pectinirostris
+|                   |     |  |  |           |  +--| (100)
+|                   |     |  |  |           |     +----Euteleosteomorpha_Sphaeramia_orbicularis
+|                   |     |  |  |        +--| (100)
+|                   |     |  |  |        |  +--------------Euteleosteomorpha_Hippocampus_comes
+|                   |     |  |  |     +--| (88)
+|                   |     |  |  |     |  +------Euteleosteomorpha_Myripristis_murdjan
+|                   |     |  |  +-----| (100)
+|                   |     |  |        +-------------------Euteleosteomorpha_Gadus_morhua
+|                   |     +--| (99)
+|                   |        |             +----Euteleosteomorpha_Salmo_salar
+|                   |        +-------------| (100)
+|                   |                      +------Euteleosteomorpha_Esox_lucius
+|       +-----------| (100)
+|       |           |                    +--Otomorpha_Sinocyclocheilus_rhinocerous
+|       |           |                 +--| (100)
+|       |           |                 |  +--Otomorpha_Sinocyclocheilus_anshuiensis
+|       |           +-----------------| (100)
+|       |                             |  +--Otomorpha_Carassius_auratus
+|       |                             +--| (100)
+|       |                                +--Otomorpha_Sinocyclocheilus_grahami
+|  +----| (100)
+|  |    |        +--Otomorpha_Pygocentrus_nattereri
+|  |    |     +--| (100)
+|  |    |     |  +--Otomorpha_Colossoma_macropomum
+|  |    |  +--| (100)
+|  |    |  |  +------Otomorpha_Astyanax_mexicanus
+|  |    +--| (97)
+|  |       +-----Otomorpha_Electrophorus_electricus
++--| (95)
+|  +---Otomorpha_Tachysurus_fulvidraco
+|
++--Otomorpha_Pangasianodon_hypophthalmus
+
+
+Consensus tree in newick format: 
+
+(Otomorpha_Ictalurus_punctatus:0.0946014488,((((Otomorpha_Chanos_chanos:0.4902323714,((Otomorpha_Denticeps_clupeoides:0.5672846912,Otomorpha_Clupea_harengus:0.5988987178)97:0.0985140093,(((Otomorpha_Danio_rerio:0.4462463012,Otomorpha_Puntigrus_tetrazona:0.3715561724)100:0.5824144866,((((((((Euteleosteomorpha_Salarias_fasciatus:0.2817343438,Euteleosteomorpha_Gouania_willdenowi:0.3789145951)100:0.0717387236,((Euteleosteomorpha_Stegastes_partitus:0.0664883172,(Euteleosteomorpha_Acanthochromis_polyacanthus:0.0338504350,Euteleosteomorpha_Amphiprion_ocellaris:0.0259008189)100:0.0403084870)100:0.0688888937,Euteleosteomorpha_Parambassis_ranga:0.2074011891)69:0.0128839370)56:0.0079195268,((((((((Euteleosteomorpha_Poecilia_mexicana:0.0048742293,Euteleosteomorpha_Poecilia_formosa:0.0008951041)100:0.0049823071,Euteleosteomorpha_Poecilia_latipinna:0.0052819605)100:0.0180682326,Euteleosteomorpha_Poecilia_reticulata:0.0148170775)100:0.0148712760,(Euteleosteomorpha_Xiphophorus_couchianus:0.0067284313,(Euteleosteomorpha_Xiphophorus_maculatus:0.0075044378,Euteleosteomorpha_Xiphophorus_hellerii:0.0098180953)100:0.0046180610)100:0.0218382157)100:0.0859839472,(Euteleosteomorpha_Cyprinodon_variegatus:0.1739640048,Euteleosteomorpha_Fundulus_heteroclitus:0.1505745320)85:0.0233307496)100:0.1997370345,(Euteleosteomorpha_Nothobranchius_furzeri:0.2728852330,Euteleosteomorpha_Kryptolebias_marmoratus:0.1680005226)100:0.0516041285)100:0.0305179130,(Euteleosteomorpha_Oryzias_latipes:0.0956365054,Euteleosteomorpha_Oryzias_melastigma:0.0625539053)100:0.2891495375)100:0.0521334304,((((Euteleosteomorpha_Haplochromis_burtoni:0.0050938537,Euteleosteomorpha_Pundamilia_nyererei:0.0022497937)98:0.0018518179,(Euteleosteomorpha_Maylandia_zebra:0.0008378078,Euteleosteomorpha_Astatotilapia_calliptera:0.0013211708)99:0.0014488291)100:0.0198345921,(Euteleosteomorpha_Oreochromis_niloticus:0.0029891347,Euteleosteomorpha_Oreochromis_aureus:0.0008666977)100:0.0092146772)100:0.0790043019,Euteleosteomorpha_Archocentrus_centrarchus:0.0670856507)100:0.1202351809)72:0.0096249933)100:0.0370014404,(((((Euteleosteomorpha_Cottoperca_gobio:0.0701822611,Euteleosteomorpha_Notothenia_coriiceps:0.1556013219)100:0.0300322762,Euteleosteomorpha_Anarrhichthys_ocellatus:0.1144528861)100:0.0061112172,((Euteleosteomorpha_Etheostoma_spectabile:0.0537585904,Euteleosteomorpha_Perca_flavescens:0.0213486425)98:0.0010443731,Euteleosteomorpha_Sander_lucioperca:0.0164677315)100:0.0454403709)100:0.0293458206,((Euteleosteomorpha_Takifugu_rubripes:0.4431600152,(Euteleosteomorpha_Larimichthys_crocea:0.1084863981,Euteleosteomorpha_Sparus_aurata:0.1297286673)97:0.0120355780)85:0.0090927294,Euteleosteomorpha_Labrus_bergylta:0.2480563801)81:0.0078194352)89:0.0091365232,((((Euteleosteomorpha_Betta_splendens:0.1919076859,Euteleosteomorpha_Anabas_testudineus:0.0990886313)100:0.0644476354,Euteleosteomorpha_Mastacembelus_armatus:0.1354544062)70:0.0104330410,Euteleosteomorpha_Monopterus_albus:0.1349541364)100:0.0228202348,(Euteleosteomorpha_Lates_calcarifer:0.0980619718,(Euteleosteomorpha_Paralichthys_olivaceus:0.2255175035,(Euteleosteomorpha_Echeneis_naucrates:0.1591289331,Euteleosteomorpha_Seriola_dumerili:0.0490337918)100:0.0223933192)97:0.0060087267)100:0.0305812099)100:0.0128651551)89:0.0084285015)88:0.0120199364,(Euteleosteomorpha_Boleophthalmus_pectinirostris:0.4754684402,Euteleosteomorpha_Sphaeramia_orbicularis:0.1832166633)100:0.0814227693)86:0.0167885180,Euteleosteomorpha_Hippocampus_comes:0.4803324330)100:0.0488377075,Euteleosteomorpha_Myripristis_murdjan:0.2462626752)88:0.0446731278,Euteleosteomorpha_Gadus_morhua:0.6438455395)100:0.1880084634)100:0.0780090436,(Euteleosteomorpha_Salmo_salar:0.1794855062,Euteleosteomorpha_Esox_lucius:0.2189263223)100:0.4594095223)99:0.0596565985)80:0.0362229895)98:0.0727442953,((Otomorpha_Sinocyclocheilus_rhinocerous:0.0111306895,Otomorpha_Sinocyclocheilus_anshuiensis:0.0118747228)100:0.0466647459,(Otomorpha_Carassius_auratus:0.0689842958,Otomorpha_Sinocyclocheilus_grahami:0.0321639381)100:0.0394616536)100:0.5905095914)100:0.3858824518,(((Otomorpha_Pygocentrus_nattereri:0.0490532835,Otomorpha_Colossoma_macropomum:0.0292133948)100:0.1056177583,Otomorpha_Astyanax_mexicanus:0.2309079355)100:0.0491651862,Otomorpha_Electrophorus_electricus:0.2010913994)97:0.0522743235)100:0.1869817915,Otomorpha_Tachysurus_fulvidraco:0.1547889379)95:0.0229892699,Otomorpha_Pangasianodon_hypophthalmus:0.0509247655);
+
+ALISIM COMMAND
+--------------
+To simulate an alignment of the same length as the original alignment, using the tree and model parameters estimated from this analysis, you can use the following command:
+
+--alisim simulated_MSA -t iq_tree/Actinopterygii/Actinopterygii.treefile -m "TVM{1.05089,3.14878,1.2011,0.848967}+F{0.275973,0.223932,0.231114,0.268981}+I{0.0558856}+R4{0.102738,0.0974475,0.217295,0.489509,0.439354,1.08085,0.184726,2.21271}" --length 13941
+
+To mimic the alignment used to produce this analysis, i.e. simulate an alignment of the same length as the original alignment, using the tree and model parameters estimated from this analysis *and* copying the same gap positions as the original alignment, you can use the following command:
+
+iqtree -s Alignment/Actinopterygii/Actinopterygii_cds_cassette_motif.aln --alisim mimicked_MSA
+
+To simulate any number of alignments in either of the two commandlines above, use the --num-alignments options, for example mimic 100 alignments you would use the command line:
+
+iqtree -s Alignment/Actinopterygii/Actinopterygii_cds_cassette_motif.aln --alisim mimicked_MSA --num-alignments 100
+
+For more information on using AliSim, please visit: www.iqtree.org/doc/AliSim
+
+TIME STAMP
+----------
+
+Date and time: Fri May 30 20:22:12 2025
+Total CPU time used: 2666.142437 seconds (0h:44m:26s)
+Total wall-clock time used: 184.3792201 seconds (0h:3m:4s)
+

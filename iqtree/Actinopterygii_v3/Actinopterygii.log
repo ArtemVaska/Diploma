@@ -1,0 +1,269 @@
+IQ-TREE multicore version 2.4.0 for Linux x86 64-bit built Feb 12 2025
+Developed by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor, Heiko Schmidt,
+Dominik Schrempf, Michael Woodhams, Ly Trong Nhan, Thomas Wong
+
+Host:    artemvaska-PC (AVX2, FMA3, 31 GB RAM)
+Command: iqtree -s Alignment/Actinopterygii/Actinopterygii_cds_cassette_motif_v3.aln -pre iqtree/Actinopterygii_v3/Actinopterygii -m MFP -bb 1000 -alrt 1000 -seed 12345 -nt 16
+Seed:    12345 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Wed Jun  4 18:14:23 2025
+Kernel:  AVX+FMA - 16 threads (16 CPU cores detected)
+
+Reading alignment file Alignment/Actinopterygii/Actinopterygii_cds_cassette_motif_v3.aln ... Fasta format detected
+Reading fasta file: done in 0.00744302 secs using 86.28% CPU
+Alignment most likely contains DNA/RNA sequences
+WARNING: 369 sites contain only gaps or ambiguous characters.
+Alignment has 67 sequences with 13941 columns, 8095 distinct patterns
+5572 parsimony-informative, 2230 singleton sites, 6139 constant sites
+                                  Gap/Ambiguity  Composition  p-value
+Analyzing sequences: done in 0.00702964 secs using 1476% CPU
+   1  Ictalurus_punctatus|46             63.63%    passed     20.74%
+   2  Chanos_chanos|1                    60.66%    passed     14.36%
+   3  Sinocyclocheilus_rhinocerous|154   61.55%    failed      0.00%
+   4  Carassius_auratus|148              58.56%    failed      0.00%
+   5  Denticeps_clupeoides|7             67.67%    failed      0.51%
+   6  Pygocentrus_nattereri|46           67.29%    passed      8.53%
+   7  Pangasianodon_hypophthalmus|46     62.15%    failed      0.86%
+   8  Sinocyclocheilus_grahami|148       62.41%    failed      0.00%
+   9  Danio_rerio|1                      60.48%    failed      0.00%
+  10  Electrophorus_electricus|283       65.63%    passed      9.91%
+  11  Tachysurus_fulvidraco|46           61.17%    passed     17.36%
+  12  Sinocyclocheilus_anshuiensis|154   55.94%    failed      0.00%
+  13  Astyanax_mexicanus|46              66.04%    passed     21.41%
+  14  Colossoma_macropomum|46            67.31%    passed      9.65%
+  15  Puntigrus_tetrazona|25             68.81%    failed      0.00%
+  16  Clupea_harengus|22                 63.09%    failed      3.06%
+  17  Salarias_fasciatus|22              58.75%    failed      2.49%
+  18  Poecilia_mexicana|22               69.53%    failed      2.98%
+  19  Xiphophorus_couchianus|22          69.74%    passed     27.60%
+  20  Cottoperca_gobio|16                68.47%    passed     23.79%
+  21  Cyprinodon_variegatus|28           67.84%    passed      8.59%
+  22  Gouania_willdenowi|37              67.59%    passed     63.34%
+  23  Poecilia_reticulata|22             69.40%    failed      3.95%
+  24  Takifugu_rubripes|22               70.68%    passed     47.17%
+  25  Notothenia_coriiceps|22            70.50%    passed     14.24%
+  26  Myripristis_murdjan|112            67.81%    failed      0.88%
+  27  Betta_splendens|22                 69.23%    passed     97.44%
+  28  Etheostoma_spectabile|97           68.00%    passed     52.12%
+  29  Salmo_salar|67                     60.89%    passed      9.13%
+  30  Larimichthys_crocea|22             69.36%    passed     16.98%
+  31  Lates_calcarifer|22                67.28%    passed     22.11%
+  32  Stegastes_partitus|22              65.55%    passed     13.68%
+  33  Fundulus_heteroclitus|25           68.19%    failed      0.04%
+  34  Sparus_aurata|22                   68.73%    failed      2.25%
+  35  Anarrhichthys_ocellatus|22         68.67%    failed      0.03%
+  36  Boleophthalmus_pectinirostris|22   74.17%    failed      0.02%
+  37  Xiphophorus_maculatus|22           70.40%    passed     50.88%
+  38  Anabas_testudineus|22              68.75%    passed     65.75%
+  39  Mastacembelus_armatus|64           69.28%    passed     86.81%
+  40  Acanthochromis_polyacanthus|22     66.29%    passed     98.89%
+  41  Haplochromis_burtoni|31            67.61%    passed     65.79%
+  42  Nothobranchius_furzeri|22          69.41%    passed     99.75%
+  43  Paralichthys_olivaceus|22          63.07%    passed     78.64%
+  44  Maylandia_zebra|22                 67.40%    passed     58.56%
+  45  Labrus_bergylta|10                 66.18%    passed     92.60%
+  46  Parambassis_ranga|22               68.58%    passed     52.50%
+  47  Sander_lucioperca|22               67.69%    passed     79.21%
+  48  Oryzias_latipes|40                 68.95%    passed     87.82%
+  49  Archocentrus_centrarchus|22        67.24%    passed     42.43%
+  50  Esox_lucius|22                     66.10%    failed      0.05%
+  51  Monopterus_albus|22                69.05%    passed     80.37%
+  52  Echeneis_naucrates|22              69.80%    passed     82.75%
+  53  Sphaeramia_orbicularis|43          69.27%    passed     72.37%
+  54  Xiphophorus_hellerii|22            70.22%    passed     45.36%
+  55  Poecilia_latipinna|22              69.36%    failed      2.12%
+  56  Pundamilia_nyererei|22             76.04%    passed     50.44%
+  57  Hippocampus_comes|22               66.43%    passed      9.49%
+  58  Poecilia_formosa|22                69.40%    failed      1.17%
+  59  Oreochromis_niloticus|22           67.29%    passed     39.22%
+  60  Kryptolebias_marmoratus|22         67.38%    passed     31.85%
+  61  Oryzias_melastigma|22              69.82%    passed     51.98%
+  62  Amphiprion_ocellaris|22            66.59%    passed     89.04%
+  63  Seriola_dumerili|22                68.38%    passed     56.77%
+  64  Oreochromis_aureus|22              67.30%    passed     39.84%
+  65  Perca_flavescens|58                68.55%    passed     85.99%
+  66  Gadus_morhua|67                    62.92%    failed      0.00%
+  67  Astatotilapia_calliptera|31        67.36%    passed     58.67%
+WARNING: 67 sequences contain more than 50% gaps/ambiguity
+****  TOTAL                              66.94%  21 sequences failed composition chi2 test (p-value<5%; df=3)
+
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.025 seconds
+Perform fast likelihood tree search using GTR+I+G model...
+Estimate model parameters (epsilon = 5.000)
+Perform nearest neighbor interchange...
+Estimate model parameters (epsilon = 1.000)
+1. Initial log-likelihood: -171166.256
+Optimal log-likelihood: -171165.581
+Rate parameters:  A-C: 1.03622  A-G: 2.97524  A-T: 1.19840  C-G: 0.83428  C-T: 3.29086  G-T: 1.00000
+Base frequencies:  A: 0.276  C: 0.224  G: 0.231  T: 0.269
+Proportion of invariable sites: 0.078
+Gamma shape alpha: 1.787
+Parameters optimization took 1 rounds (0.193 sec)
+Time for fast ML tree search: 3.375 seconds
+
+NOTE: ModelFinder requires 206 MB RAM!
+ModelFinder will test up to 484 DNA models (sample size: 13941 epsilon: 0.100) ...
+ No. Model         -LnL         df  AIC          AICc         BIC
+  1  GTR+F         178586.204   139 357450.407   357453.227   358498.827
+  2  GTR+F+I       174562.746   140 349405.491   349408.352   350461.454
+  3  GTR+F+G4      171626.342   140 343532.684   343535.545   344588.646
+  4  GTR+F+I+G4    171165.356   141 342612.711   342615.613   343676.216
+  5  GTR+F+R2      172058.567   141 344399.134   344402.036   345462.639
+  6  GTR+F+R3      171118.045   143 342522.090   342525.075   343600.681
+  7  GTR+F+R4      170968.489   145 342226.977   342230.047   343320.653
+  8  GTR+F+R5      170954.662   147 342203.323   342206.478   343312.084
+  9  GTR+F+R6      170953.367   149 342204.734   342207.975   343328.580
+ 14  GTR+F+I+R2    171483.847   142 343251.695   343254.638   344322.743
+ 15  GTR+F+I+R3    171016.334   144 342320.668   342323.695   343406.801
+ 16  GTR+F+I+R4    170956.154   146 342204.308   342207.420   343305.527
+ 17  GTR+F+I+R5    170954.320   148 342204.639   342207.837   343320.942
+ 30  SYM+R5        171295.633   144 342879.265   342882.292   343965.398
+ 38  SYM+I+R4      171295.678   143 342877.355   342880.340   343955.946
+ 52  TVM+F+R5      170959.157   146 342210.313   342213.425   343311.531
+ 60  TVM+F+I+R4    170960.853   145 342211.707   342214.776   343305.382
+ 74  TVMe+R5       171295.427   143 342876.853   342879.838   343955.444
+ 82  TVMe+I+R4     171295.832   142 342875.665   342878.608   343946.712
+ 96  TIM3+F+R5     170993.101   145 342276.202   342279.271   343369.877
+104  TIM3+F+I+R4   170995.783   144 342279.566   342282.593   343365.699
+118  TIM3e+R5      171432.708   142 343149.416   343152.360   344220.464
+126  TIM3e+I+R4    171434.180   141 343150.359   343153.261   344213.864
+140  TIM2+F+R5     170974.126   145 342238.251   342241.320   343331.927
+148  TIM2+F+I+R4   170976.634   144 342241.267   342244.294   343327.400
+162  TIM2e+R5      171394.748   142 343073.497   343076.440   344144.545
+170  TIM2e+I+R4    171395.255   141 343072.510   343075.411   344136.015
+184  TIM+F+R5      171012.203   145 342314.407   342317.476   343408.082
+192  TIM+F+I+R4    171015.479   144 342318.958   342321.985   343405.091
+206  TIMe+R5       171527.089   142 343338.178   343341.121   344409.225
+214  TIMe+I+R4     171528.729   141 343339.459   343342.361   344402.964
+228  TPM3u+F+R5    170997.040   144 342282.080   342285.107   343368.213
+236  TPM3u+F+I+R4  171000.066   143 342286.131   342289.116   343364.722
+250  TPM3+R5       171432.564   141 343147.127   343150.029   344210.632
+258  TPM3+I+R4     171434.420   140 343148.841   343151.702   344204.803
+272  TPM2u+F+R5    170979.194   144 342246.389   342249.416   343332.521
+280  TPM2u+F+I+R4  170981.783   143 342249.567   342252.552   343328.157
+294  TPM2+R5       171394.811   141 343071.621   343074.523   344135.126
+302  TPM2+I+R4     171395.396   140 343070.793   343073.654   344126.755
+316  K3Pu+F+R5     171016.863   144 342321.725   342324.752   343407.858
+324  K3Pu+F+I+R4   171020.282   143 342326.565   342329.550   343405.155
+338  K3P+R5        171527.207   141 343336.414   343339.316   344399.919
+346  K3P+I+R4      171528.948   140 343337.895   343340.756   344393.858
+360  TN+F+R5       171012.818   144 342313.636   342316.662   343399.768
+368  TN+F+I+R4     171016.081   143 342318.161   342321.146   343396.752
+382  TNe+R5        171531.249   141 343344.498   343347.400   344408.003
+390  TNe+I+R4      171532.895   140 343345.790   343348.651   344401.753
+404  HKY+F+R5      171017.618   143 342321.236   342324.221   343399.827
+412  HKY+F+I+R4    171020.997   142 342325.993   342328.937   343397.041
+426  K2P+R5        171531.484   140 343342.968   343345.829   344398.930
+434  K2P+I+R4      171533.181   139 343344.362   343347.182   344392.781
+448  F81+F+R5      174932.886   142 350149.772   350152.715   351220.819
+456  F81+F+I+R4    174934.698   141 350151.396   350154.298   351214.901
+470  JC+R5         175327.117   139 350932.234   350935.054   351980.654
+478  JC+I+R4       175328.270   138 350932.541   350935.320   351973.418
+Akaike Information Criterion:           GTR+F+R5
+Corrected Akaike Information Criterion: GTR+F+R5
+Bayesian Information Criterion:         TVM+F+I+R4
+Best-fit model: TVM+F+I+R4 chosen according to BIC
+
+All model information printed to iqtree/Actinopterygii_v3/Actinopterygii.model.gz
+CPU time for ModelFinder: 1668.567 seconds (0h:27m:48s)
+Wall-clock time for ModelFinder: 112.723 seconds (0h:1m:52s)
+Generating 1000 samples for ultrafast bootstrap (seed: 12345)...
+
+NOTE: 101 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -174936.280
+2. Current log-likelihood: -172872.800
+3. Current log-likelihood: -172590.388
+4. Current log-likelihood: -172252.522
+5. Current log-likelihood: -171837.893
+6. Current log-likelihood: -170975.035
+7. Current log-likelihood: -170960.585
+8. Current log-likelihood: -170960.385
+Optimal log-likelihood: -170960.332
+Rate parameters:  A-C: 1.06173  A-G: 3.16271  A-T: 1.20682  C-G: 0.85344  C-T: 3.16271  G-T: 1.00000
+Base frequencies:  A: 0.276  C: 0.224  G: 0.231  T: 0.269
+Proportion of invariable sites: 0.056
+Site proportion and rates:  (0.103,0.097) (0.217,0.489) (0.439,1.079) (0.186,2.210)
+Parameters optimization took 8 rounds (4.165 sec)
+Wrote distance file to... 
+Computing ML distances based on estimated model parameters...
+Calculating distance matrix: done in 0.00549366 secs using 1653% CPU
+Computing ML distances took 0.007147 sec (of wall-clock time) 0.106037 sec (of CPU time)
+Setting up auxiliary I and S matrices: done in 0.000804883 secs
+Computing RapidNJ tree took 0.064202 sec (of wall-clock time) 0.025826 sec (of CPU time)
+Log-likelihood of RapidNJ tree: -171491.883
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 5.758 second
+Computing log-likelihood of 98 initial trees ... 3.618 seconds
+Current best score: -170960.332
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -170960.029
+Iteration 10 / LogL: -170960.135 / Time: 0h:2m:18s
+Iteration 20 / LogL: -171021.765 / Time: 0h:2m:30s
+Finish initializing candidate tree set (3)
+Current best tree score: -170960.029 / CPU time: 33.050
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Iteration 30 / LogL: -170961.374 / Time: 0h:2m:36s (0h:1m:47s left)
+Iteration 40 / LogL: -170960.609 / Time: 0h:2m:42s (0h:1m:17s left)
+Iteration 50 / LogL: -170960.459 / Time: 0h:2m:48s (0h:0m:58s left)
+Log-likelihood cutoff on original alignment: -171016.416
+Iteration 60 / LogL: -170960.358 / Time: 0h:2m:55s (0h:0m:43s left)
+Iteration 70 / LogL: -170960.578 / Time: 0h:3m:2s (0h:0m:31s left)
+Iteration 80 / LogL: -170960.114 / Time: 0h:3m:9s (0h:0m:20s left)
+Iteration 90 / LogL: -170984.746 / Time: 0h:3m:14s (0h:0m:10s left)
+Iteration 100 / LogL: -170960.336 / Time: 0h:3m:21s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -171016.416
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.999
+TREE SEARCH COMPLETED AFTER 102 ITERATIONS / Time: 0h:3m:22s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -170960.029
+Optimal log-likelihood: -170960.025
+Rate parameters:  A-C: 1.06071  A-G: 3.15897  A-T: 1.20483  C-G: 0.85194  C-T: 3.15897  G-T: 1.00000
+Base frequencies:  A: 0.276  C: 0.224  G: 0.231  T: 0.269
+Proportion of invariable sites: 0.056
+Site proportion and rates:  (0.103,0.097) (0.217,0.489) (0.439,1.079) (0.186,2.210)
+Parameters optimization took 1 rounds (0.183 sec)
+BEST SCORE FOUND : -170960.025
+
+Testing tree branches by SH-like aLRT with 1000 replicates...
+1.587 sec.
+Creating bootstrap support values...
+Split supports printed to NEXUS file iqtree/Actinopterygii_v3/Actinopterygii.splits.nex
+Total tree length: 15.202
+
+Total number of iterations: 102
+CPU time used for tree search: 1259.645 sec (0h:20m:59s)
+Wall-clock time used for tree search: 85.126 sec (0h:1m:25s)
+Total CPU time used: 3022.522 sec (0h:50m:22s)
+Total wall-clock time used: 204.384 sec (0h:3m:24s)
+
+Computing bootstrap consensus tree...
+Reading input file iqtree/Actinopterygii_v3/Actinopterygii.splits.nex...
+67 taxa and 206 splits.
+Consensus tree written to iqtree/Actinopterygii_v3/Actinopterygii.contree
+Reading input trees file iqtree/Actinopterygii_v3/Actinopterygii.contree
+Log-likelihood of consensus tree: -170960.025
+
+Analysis results written to: 
+  IQ-TREE report:                iqtree/Actinopterygii_v3/Actinopterygii.iqtree
+  Maximum-likelihood tree:       iqtree/Actinopterygii_v3/Actinopterygii.treefile
+  Likelihood distances:          iqtree/Actinopterygii_v3/Actinopterygii.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          iqtree/Actinopterygii_v3/Actinopterygii.splits.nex
+  Consensus tree:                iqtree/Actinopterygii_v3/Actinopterygii.contree
+  Screen log file:               iqtree/Actinopterygii_v3/Actinopterygii.log
+
+Date and Time: Wed Jun  4 18:17:48 2025

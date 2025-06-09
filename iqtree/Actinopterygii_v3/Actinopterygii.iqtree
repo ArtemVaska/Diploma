@@ -1,0 +1,477 @@
+IQ-TREE 2.4.0 built Feb 12 2025
+
+Input file name: Alignment/Actinopterygii/Actinopterygii_cds_cassette_motif_v3.aln
+Type of analysis: ModelFinder + tree reconstruction + ultrafast bootstrap (1000 replicates)
+Random seed number: 12345
+
+REFERENCES
+----------
+
+To cite IQ-TREE please use:
+
+Bui Quang Minh, Heiko A. Schmidt, Olga Chernomor, Dominik Schrempf,
+Michael D. Woodhams, Arndt von Haeseler, and Robert Lanfear (2020)
+IQ-TREE 2: New models and efficient methods for phylogenetic inference
+in the genomic era. Mol. Biol. Evol., in press.
+https://doi.org/10.1093/molbev/msaa015
+
+To cite ModelFinder please use: 
+
+Subha Kalyaanamoorthy, Bui Quang Minh, Thomas KF Wong, Arndt von Haeseler,
+and Lars S Jermiin (2017) ModelFinder: Fast model selection for
+accurate phylogenetic estimates. Nature Methods, 14:587–589.
+https://doi.org/10.1038/nmeth.4285
+
+Since you used ultrafast bootstrap (UFBoot) please also cite: 
+
+Diep Thi Hoang, Olga Chernomor, Arndt von Haeseler, Bui Quang Minh,
+and Le Sy Vinh (2018) UFBoot2: Improving the ultrafast bootstrap
+approximation. Mol. Biol. Evol., 35:518–522.
+https://doi.org/10.1093/molbev/msx281
+
+SEQUENCE ALIGNMENT
+------------------
+
+Input data: 67 sequences with 13941 nucleotide sites
+Number of constant sites: 6139 (= 44.0356% of all sites)
+Number of invariant (constant or ambiguous constant) sites: 6139 (= 44.0356% of all sites)
+Number of parsimony informative sites: 5572
+Number of distinct site patterns: 8095
+
+ModelFinder
+-----------
+
+Best-fit model according to BIC: TVM+F+I+R4
+
+List of models sorted by BIC scores: 
+
+Model                  LogL         AIC      w-AIC        AICc     w-AICc         BIC      w-BIC
+TVM+F+I+R4      -170960.853  342211.707 -  0.00567  342214.776 -  0.00595  343305.382 +    0.497
+GTR+F+I+R4      -170956.154  342204.308 +    0.229  342207.420 +    0.236  343305.526 +    0.462
+TVM+F+R5        -170959.157  342210.313 -   0.0114  342213.425 -   0.0117  343311.531 -    0.023
+GTR+F+R5        -170954.662  342203.323 +    0.375  342206.478 +    0.377  343312.084 -   0.0174
+GTR+F+R4        -170968.489  342226.977 - 2.74e-06  342230.046 - 2.88e-06  343320.653 -  0.00024
+GTR+F+I+R5      -170954.320  342204.639 +    0.194  342207.837 +    0.191  343320.942 - 0.000208
+TIM2+F+I+R4     -170976.634  342241.267 - 2.16e-09  342244.294 - 2.32e-09  343327.400 - 8.22e-06
+TPM2u+F+I+R4    -170981.783  342249.567 - 3.41e-11  342252.552 - 3.73e-11  343328.157 - 5.63e-06
+GTR+F+R6        -170953.367  342204.734 +    0.185  342207.975 +    0.178  343328.580 - 4.56e-06
+TIM2+F+R5       -170974.125  342238.251 - 9.76e-09  342241.320 - 1.02e-08  343331.926 - 8.56e-07
+TPM2u+F+R5      -170979.194  342246.389 - 1.67e-10  342249.416 - 1.79e-10  343332.521 - 6.35e-07
+TPM3u+F+I+R4    -171000.066  342286.131 - 3.91e-19  342289.116 - 4.28e-19  343364.721 - 6.47e-14
+TIM3+F+I+R4     -170995.783  342279.566 - 1.04e-17  342282.593 - 1.12e-17  343365.698 - 3.97e-14
+TPM3u+F+R5      -170997.040  342282.080 - 2.96e-18  342285.107 - 3.18e-18  343368.213 - 1.13e-14
+TIM3+F+R5       -170993.101  342276.202 -  5.6e-17  342279.271 - 5.89e-17  343369.877 - 4.91e-15
+TN+F+I+R4       -171016.081  342318.161 - 4.34e-26  342321.146 - 4.75e-26  343396.751 - 7.17e-21
+HKY+F+I+R4      -171020.997  342325.993 - 8.64e-28  342328.937 - 9.66e-28  343397.041 - 6.21e-21
+TN+F+R5         -171012.818  342313.636 - 4.17e-25  342316.663 - 4.47e-25  343399.768 - 1.59e-21
+HKY+F+R5        -171017.618  342321.236 - 9.32e-27  342324.221 - 1.02e-26  343399.827 - 1.54e-21
+TIM+F+I+R4      -171015.479  342318.958 - 2.91e-26  342321.985 - 3.12e-26  343405.091 - 1.11e-22
+K3Pu+F+I+R4     -171020.283  342326.565 - 6.49e-28  342329.550 - 7.11e-28  343405.155 - 1.07e-22
+GTR+F+I+R3      -171016.334  342320.668 - 1.24e-26  342323.695 - 1.33e-26  343406.801 - 4.71e-23
+K3Pu+F+R5       -171016.863  342321.725 -  7.3e-27  342324.752 - 7.83e-27  343407.858 - 2.78e-23
+TIM+F+R5        -171012.203  342314.407 - 2.83e-25  342317.476 - 2.98e-25  343408.082 - 2.48e-23
+GTR+F+R3        -171118.045  342522.090 - 2.26e-70  342525.075 - 2.48e-70  343600.681 - 3.74e-65
+GTR+F+I+G4      -171165.356  342612.711 - 4.75e-90  342615.613 - 5.42e-90  343676.216 - 1.48e-81
+TVMe+I+R4       -171295.832  342875.665 - 3.77e-147  342878.608 - 4.22e-147  343946.712 - 2.71e-140
+TVMe+R5         -171295.427  342876.853 - 2.08e-147  342879.838 - 2.28e-147  343955.444 - 3.44e-142
+SYM+I+R4        -171295.678  342877.355 - 1.62e-147  342880.340 - 1.78e-147  343955.945 - 2.68e-142
+SYM+R5          -171295.633  342879.265 - 6.23e-148  342882.292 - 6.69e-148  343965.398 - 2.37e-144
+TPM2+I+R4       -171395.396  343070.793 - 1.6e-189  343073.653 - 1.87e-189  344126.755 - 2.17e-179
+TPM2+R5         -171394.811  343071.621 - 1.06e-189  343074.523 - 1.21e-189  344135.126 - 3.31e-181
+TIM2e+I+R4      -171395.255  343072.510 - 6.8e-190  343075.412 - 7.76e-190  344136.015 - 2.12e-181
+TIM2e+R5        -171394.748  343073.497 - 4.15e-190  343076.440 - 4.64e-190  344144.544 - 2.98e-183
+TPM3+I+R4       -171434.420  343148.841 - 1.81e-206  343151.702 - 2.11e-206  344204.803 - 2.45e-196
+TPM3+R5         -171432.564  343147.127 - 4.26e-206  343150.029 - 4.86e-206  344210.632 - 1.33e-197
+TIM3e+I+R4      -171434.179  343150.359 - 8.46e-207  343153.261 - 9.67e-207  344213.864 - 2.64e-198
+TIM3e+R5        -171432.708  343149.416 - 1.36e-206  343152.360 - 1.52e-206  344220.464 - 9.74e-200
+GTR+F+I+R2      -171483.848  343251.695 - 8.37e-229  343254.638 - 9.36e-229  344322.743 - 6.01e-222
+K2P+I+R4        -171533.181  343344.362 - 6.32e-249  343347.182 - 7.51e-249  344392.782 - 3.72e-237
+K3P+I+R4        -171528.948  343337.895 - 1.6e-247  343340.756 - 1.87e-247  344393.858 - 2.17e-237
+K2P+R5          -171531.484  343342.968 - 1.27e-248  343345.829 - 1.48e-248  344398.931 - 1.72e-238
+K3P+R5          -171527.207  343336.414 - 3.36e-247  343339.316 - 3.84e-247  344399.919 - 1.05e-238
+TNe+I+R4        -171532.895  343345.790 - 3.09e-249  343348.651 - 3.6e-249  344401.753 - 4.19e-239
+TIMe+I+R4       -171528.729  343339.459 - 7.33e-248  343342.361 - 8.37e-248  344402.964 - 2.29e-239
+TNe+R5          -171531.249  343344.498 - 5.9e-249  343347.400 - 6.74e-249  344408.003 - 1.84e-240
+TIMe+R5         -171527.089  343338.178 - 1.39e-247  343341.121 - 1.56e-247  344409.225 - 9.99e-241
+GTR+F+G4        -171626.342  343532.684 - 8.07e-290  343535.544 - 9.41e-290  344588.646 - 1.09e-279
+GTR+F+R2        -172058.567  344399.134 -        0  344402.036 -        0  345462.639 -        0
+GTR+F+I         -174562.746  349405.491 -        0  349408.352 -        0  350461.454 -        0
+F81+F+I+R4      -174934.698  350151.396 -        0  350154.298 -        0  351214.901 -        0
+F81+F+R5        -174932.886  350149.772 -        0  350152.715 -        0  351220.819 -        0
+JC+I+R4         -175328.270  350932.541 -        0  350935.320 -        0  351973.418 -        0
+JC+R5           -175327.117  350932.234 -        0  350935.054 -        0  351980.654 -        0
+GTR+F           -178586.204  357450.407 -        0  357453.227 -        0  358498.827 -        0
+
+AIC, w-AIC   : Akaike information criterion scores and weights.
+AICc, w-AICc : Corrected AIC scores and weights.
+BIC, w-BIC   : Bayesian information criterion scores and weights.
+
+Plus signs denote the 95% confidence sets.
+Minus signs denote significant exclusion.
+
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: TVM+F+I+R4
+
+Rate parameter R:
+
+  A-C: 1.0607
+  A-G: 3.1590
+  A-T: 1.2048
+  C-G: 0.8519
+  C-T: 3.1590
+  G-T: 1.0000
+
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.276
+  pi(C) = 0.2239
+  pi(G) = 0.2311
+  pi(T) = 0.269
+
+Rate matrix Q:
+
+  A    -0.989    0.1819     0.559    0.2481
+  C    0.2241    -1.026    0.1508    0.6506
+  G    0.6675    0.1461     -1.02     0.206
+  T    0.2546    0.5416     0.177   -0.9732
+
+Model of rate heterogeneity: Invar+FreeRate with 4 categories
+Proportion of invariable sites: 0.05588
+Site proportion and rates:  (0.1027,0.09742) (0.2167,0.4888) (0.439,1.079) (0.1857,2.21)
+
+ Category  Relative_rate  Proportion
+  0         0              0.05588
+  1         0.09742        0.1027
+  2         0.4888         0.2167
+  3         1.079          0.439
+  4         2.21           0.1857
+
+MAXIMUM LIKELIHOOD TREE
+-----------------------
+
+Log-likelihood of the tree: -170960.0252 (s.e. 1777.3029)
+Unconstrained log-likelihood (without tree): -109008.9652
+Number of free parameters (#branches + #model parameters): 145
+Akaike information criterion (AIC) score: 342210.0504
+Corrected Akaike information criterion (AICc) score: 342213.1196
+Bayesian information criterion (BIC) score: 343303.7259
+
+Total tree length (sum of branch lengths): 15.2019
+Sum of internal branch lengths: 4.8631 (31.9898% of tree length)
+
+NOTE: Tree is UNROOTED although outgroup taxon 'Ictalurus_punctatus|46' is drawn at root
+Numbers in parentheses are SH-aLRT support (%) / ultrafast bootstrap support (%)
+
++--Ictalurus_punctatus|46
+|
+|                      +--------------Chanos_chanos|1
+|                   +--| (96.7/98)
+|                   |  |     +-----------------Denticeps_clupeoides|7
+|                   |  |  +--| (99.5/97)
+|                   |  |  |  +------------------Clupea_harengus|22
+|                   |  +--| (49.2/83)
+|                   |     |                       +-------------Danio_rerio|1
+|                   |     |     +-----------------| (100/100)
+|                   |     |     |                 +----------Puntigrus_tetrazona|25
+|                   |     |  +--| (99.5/100)
+|                   |     |  |  |                          +--------Salarias_fasciatus|22
+|                   |     |  |  |                       +--| (100/100)
+|                   |     |  |  |                       |  +-----------Gouania_willdenowi|37
+|                   |     |  |  |                    +--| (36.5/67)
+|                   |     |  |  |                    |  |     +--Stegastes_partitus|22
+|                   |     |  |  |                    |  |  +--| (100/100)
+|                   |     |  |  |                    |  |  |  |  +--Acanthochromis_polyacanthus|22
+|                   |     |  |  |                    |  |  |  +--| (100/100)
+|                   |     |  |  |                    |  |  |     +--Amphiprion_ocellaris|22
+|                   |     |  |  |                    |  +--| (8.8/67)
+|                   |     |  |  |                    |     +-----Parambassis_ranga|22
+|                   |     |  |  |                 +--| (100/100)
+|                   |     |  |  |                 |  |                          +--Poecilia_mexicana|22
+|                   |     |  |  |                 |  |                       +--| (99.9/100)
+|                   |     |  |  |                 |  |                       |  +--Poecilia_formosa|22
+|                   |     |  |  |                 |  |                    +--| (100/100)
+|                   |     |  |  |                 |  |                    |  +--Poecilia_latipinna|22
+|                   |     |  |  |                 |  |                 +--| (99.9/100)
+|                   |     |  |  |                 |  |                 |  +--Poecilia_reticulata|22
+|                   |     |  |  |                 |  |              +--| (100/100)
+|                   |     |  |  |                 |  |              |  |  +--Xiphophorus_couchianus|22
+|                   |     |  |  |                 |  |              |  +--| (100/100)
+|                   |     |  |  |                 |  |              |     |  +--Xiphophorus_maculatus|22
+|                   |     |  |  |                 |  |              |     +--| (97.5/100)
+|                   |     |  |  |                 |  |              |        +--Xiphophorus_hellerii|22
+|                   |     |  |  |                 |  |        +-----| (100/100)
+|                   |     |  |  |                 |  |        |     |  +----Cyprinodon_variegatus|28
+|                   |     |  |  |                 |  |        |     +--| (69.8/84)
+|                   |     |  |  |                 |  |        |        +---Fundulus_heteroclitus|25
+|                   |     |  |  |                 |  |     +--| (99.2/100)
+|                   |     |  |  |                 |  |     |  |  +-------Nothobranchius_furzeri|22
+|                   |     |  |  |                 |  |     |  +--| (100/100)
+|                   |     |  |  |                 |  |     |     +----Kryptolebias_marmoratus|22
+|                   |     |  |  |                 |  |  +--| (100/100)
+|                   |     |  |  |                 |  |  |  |        +--Oryzias_latipes|40
+|                   |     |  |  |                 |  |  |  +--------| (100/100)
+|                   |     |  |  |                 |  |  |           +--Oryzias_melastigma|22
+|                   |     |  |  |                 |  +--| (88.9/79)
+|                   |     |  |  |                 |     |           +--Haplochromis_burtoni|31
+|                   |     |  |  |                 |     |        +--| (90.6/99)
+|                   |     |  |  |                 |     |        |  +--Pundamilia_nyererei|22
+|                   |     |  |  |                 |     |     +--| (100/100)
+|                   |     |  |  |                 |     |     |  |  +--Maylandia_zebra|22
+|                   |     |  |  |                 |     |     |  +--| (90.9/99)
+|                   |     |  |  |                 |     |     |     +--Astatotilapia_calliptera|31
+|                   |     |  |  |                 |     |  +--| (100/100)
+|                   |     |  |  |                 |     |  |  |  +--Oreochromis_niloticus|22
+|                   |     |  |  |                 |     |  |  +--| (99.9/100)
+|                   |     |  |  |                 |     |  |     +--Oreochromis_aureus|22
+|                   |     |  |  |                 |     +--| (100/100)
+|                   |     |  |  |                 |        +--Archocentrus_centrarchus|22
+|                   |     |  |  |              +--| (82.9/81)
+|                   |     |  |  |              |  |              +--Cottoperca_gobio|16
+|                   |     |  |  |              |  |           +--| (100/100)
+|                   |     |  |  |              |  |           |  +---Notothenia_coriiceps|22
+|                   |     |  |  |              |  |        +--| (96.6/100)
+|                   |     |  |  |              |  |        |  +--Anarrhichthys_ocellatus|22
+|                   |     |  |  |              |  |     +--| (100/100)
+|                   |     |  |  |              |  |     |  |     +--Etheostoma_spectabile|97
+|                   |     |  |  |              |  |     |  |  +--| (41.9/98)
+|                   |     |  |  |              |  |     |  |  |  +--Perca_flavescens|58
+|                   |     |  |  |              |  |     |  +--| (100/100)
+|                   |     |  |  |              |  |     |     +--Sander_lucioperca|22
+|                   |     |  |  |              |  |  +--| (99.5/88)
+|                   |     |  |  |              |  |  |  |     +-------------Takifugu_rubripes|22
+|                   |     |  |  |              |  |  |  |  +--| (89.5/85)
+|                   |     |  |  |              |  |  |  |  |  |  +--Larimichthys_crocea|22
+|                   |     |  |  |              |  |  |  |  |  +--| (86.9/98)
+|                   |     |  |  |              |  |  |  |  |     +---Sparus_aurata|22
+|                   |     |  |  |              |  |  |  +--| (70.1/81)
+|                   |     |  |  |              |  |  |     +------Labrus_bergylta|10
+|                   |     |  |  |              |  +--| (96.7/83)
+|                   |     |  |  |              |     |           +-----Betta_splendens|22
+|                   |     |  |  |              |     |        +--| (100/100)
+|                   |     |  |  |              |     |        |  +--Anabas_testudineus|22
+|                   |     |  |  |              |     |     +--| (3.6/60)
+|                   |     |  |  |              |     |     |  +---Mastacembelus_armatus|64
+|                   |     |  |  |              |     |  +--| (99.9/100)
+|                   |     |  |  |              |     |  |  +---Monopterus_albus|22
+|                   |     |  |  |              |     +--| (100/100)
+|                   |     |  |  |              |        |  +--Lates_calcarifer|22
+|                   |     |  |  |              |        +--| (100/100)
+|                   |     |  |  |              |           |  +------Paralichthys_olivaceus|22
+|                   |     |  |  |              |           +--| (63.5/93)
+|                   |     |  |  |              |              |  +----Echeneis_naucrates|22
+|                   |     |  |  |              |              +--| (99.4/100)
+|                   |     |  |  |              |                 +--Seriola_dumerili|22
+|                   |     |  |  |           +--| (69.3/87)
+|                   |     |  |  |           |  |  +--------------Boleophthalmus_pectinirostris|22
+|                   |     |  |  |           |  +--| (100/100)
+|                   |     |  |  |           |     +----Sphaeramia_orbicularis|43
+|                   |     |  |  |        +--| (99.7/100)
+|                   |     |  |  |        |  +--------------Hippocampus_comes|22
+|                   |     |  |  |     +--| (63.1/85)
+|                   |     |  |  |     |  +------Myripristis_murdjan|112
+|                   |     |  |  +-----| (100/100)
+|                   |     |  |        +-------------------Gadus_morhua|67
+|                   |     +--| (99.2/100)
+|                   |        |             +----Salmo_salar|67
+|                   |        +-------------| (100/100)
+|                   |                      +------Esox_lucius|22
+|       +-----------| (100/100)
+|       |           |                    +--Sinocyclocheilus_rhinocerous|154
+|       |           |                 +--| (100/100)
+|       |           |                 |  +--Sinocyclocheilus_anshuiensis|154
+|       |           +-----------------| (100/100)
+|       |                             |  +--Carassius_auratus|148
+|       |                             +--| (99.7/100)
+|       |                                +--Sinocyclocheilus_grahami|148
+|  +----| (100/100)
+|  |    |        +--Pygocentrus_nattereri|46
+|  |    |     +--| (100/100)
+|  |    |     |  +--Colossoma_macropomum|46
+|  |    |  +--| (99.8/100)
+|  |    |  |  +------Astyanax_mexicanus|46
+|  |    +--| (94.7/98)
+|  |       +-----Electrophorus_electricus|283
++--| (83.6/94)
+|  +---Tachysurus_fulvidraco|46
+|
++--Pangasianodon_hypophthalmus|46
+
+Tree in newick format:
+
+(Ictalurus_punctatus|46:0.0946058427,((((Chanos_chanos|1:0.4902567365,((Denticeps_clupeoides|7:0.5673037293,Clupea_harengus|22:0.5988510702)99.5/97:0.0985046427,(((Danio_rerio|1:0.4462188758,Puntigrus_tetrazona|25:0.3715469908)100/100:0.5823899536,((((((((Salarias_fasciatus|22:0.2816986632,Gouania_willdenowi|37:0.3788847640)100/100:0.0717347654,((Stegastes_partitus|22:0.0664884750,(Acanthochromis_polyacanthus|22:0.0338522989,Amphiprion_ocellaris|22:0.0259027420)100/100:0.0403106189)100/100:0.0688840011,Parambassis_ranga|22:0.2073915365)8.8/67:0.0128903939)36.5/67:0.0079176196,((((((((Poecilia_mexicana|22:0.0048743647,Poecilia_formosa|22:0.0008947202)99.9/100:0.0049824144,Poecilia_latipinna|22:0.0052820140)100/100:0.0180687240,Poecilia_reticulata|22:0.0148178687)99.9/100:0.0148688622,(Xiphophorus_couchianus|22:0.0067278287,(Xiphophorus_maculatus|22:0.0075043530,Xiphophorus_hellerii|22:0.0098192881)97.5/100:0.0046190482)100/100:0.0218397731)100/100:0.0859789817,(Cyprinodon_variegatus|28:0.1739481699,Fundulus_heteroclitus|25:0.1505684230)69.8/84:0.0233347945)100/100:0.1997242538,(Nothobranchius_furzeri|22:0.2728933129,Kryptolebias_marmoratus|22:0.1679967893)100/100:0.0516139993)99.2/100:0.0304873941,(Oryzias_latipes|40:0.0956416350,Oryzias_melastigma|22:0.0625457392)100/100:0.2891288808)100/100:0.0521500685,((((Haplochromis_burtoni|31:0.0050944222,Pundamilia_nyererei|22:0.0022507546)90.6/99:0.0018518117,(Maylandia_zebra|22:0.0008382360,Astatotilapia_calliptera|31:0.0013216823)90.9/99:0.0014482974)100/100:0.0198361738,(Oreochromis_niloticus|22:0.0029890769,Oreochromis_aureus|22:0.0008671313)99.9/100:0.0092158543)100/100:0.0790058641,Archocentrus_centrarchus|22:0.0670862978)100/100:0.1202344738)88.9/79:0.0096242678)100/100:0.0369975570,(((((Cottoperca_gobio|16:0.0701820057,Notothenia_coriiceps|22:0.1555968161)100/100:0.0300298614,Anarrhichthys_ocellatus|22:0.1144523709)96.6/100:0.0061105158,((Etheostoma_spectabile|97:0.0537616751,Perca_flavescens|58:0.0213503275)41.9/98:0.0010431357,Sander_lucioperca|22:0.0164693908)100/100:0.0454440950)100/100:0.0293499031,((Takifugu_rubripes|22:0.4431502707,(Larimichthys_crocea|22:0.1084847650,Sparus_aurata|22:0.1297301755)86.9/98:0.0120278013)89.5/85:0.0090955322,Labrus_bergylta|10:0.2480545860)70.1/81:0.0078162458)99.5/88:0.0091369300,((((Betta_splendens|22:0.1919067461,Anabas_testudineus|22:0.0990952800)100/100:0.0644459866,Mastacembelus_armatus|64:0.1354490360)3.6/60:0.0104329401,Monopterus_albus|22:0.1349548215)99.9/100:0.0228247963,(Lates_calcarifer|22:0.0980608313,(Paralichthys_olivaceus|22:0.2255028084,(Echeneis_naucrates|22:0.1591281880,Seriola_dumerili|22:0.0490331316)99.4/100:0.0223980033)63.5/93:0.0060098804)100/100:0.0305752978)100/100:0.0128644229)96.7/83:0.0084331804)82.9/81:0.0120299414,(Boleophthalmus_pectinirostris|22:0.4754276445,Sphaeramia_orbicularis|43:0.1832194328)100/100:0.0813859667)69.3/87:0.0167856413,Hippocampus_comes|22:0.4802842711)99.7/100:0.0488409356,Myripristis_murdjan|112:0.2462443525)63.1/85:0.0446616661,Gadus_morhua|67:0.6437944761)100/100:0.1880636752)99.5/100:0.0780094177,(Salmo_salar|67:0.1795002017,Esox_lucius|22:0.2188931076)100/100:0.4594334101)99.2/100:0.0596577891)49.2/83:0.0362316020)96.7/98:0.0727495022,((Sinocyclocheilus_rhinocerous|154:0.0111316672,Sinocyclocheilus_anshuiensis|154:0.0118749353)100/100:0.0466983910,(Carassius_auratus|148:0.0689887236,Sinocyclocheilus_grahami|148:0.0321646833)99.7/100:0.0394103664)100/100:0.5904903491)100/100:0.3858759677,(((Pygocentrus_nattereri|46:0.0490605659,Colossoma_macropomum|46:0.0292110287)100/100:0.1056378296,Astyanax_mexicanus|46:0.2308944199)99.8/100:0.0491517444,Electrophorus_electricus|283:0.2011048638)94.7/98:0.0523003952)100/100:0.1869481576,Tachysurus_fulvidraco|46:0.1547806056)83.6/94:0.0230064000,Pangasianodon_hypophthalmus|46:0.0509264710);
+
+CONSENSUS TREE
+--------------
+
+Consensus tree is constructed from 1000 bootstrap trees
+Log-likelihood of consensus tree: -170960.025255
+Robinson-Foulds distance between ML tree and consensus tree: 0
+
+Branches with support >0.000000% are kept (extended consensus)
+Branch lengths are optimized by maximum likelihood on original alignment
+Numbers in parentheses are bootstrap supports (%)
+
++--Ictalurus_punctatus|46
+|
+|                      +--------------Chanos_chanos|1
+|                   +--| (98)
+|                   |  |     +-----------------Denticeps_clupeoides|7
+|                   |  |  +--| (97)
+|                   |  |  |  +------------------Clupea_harengus|22
+|                   |  +--| (83)
+|                   |     |                       +-------------Danio_rerio|1
+|                   |     |     +-----------------| (100)
+|                   |     |     |                 +----------Puntigrus_tetrazona|25
+|                   |     |  +--| (100)
+|                   |     |  |  |                          +--------Salarias_fasciatus|22
+|                   |     |  |  |                       +--| (100)
+|                   |     |  |  |                       |  +-----------Gouania_willdenowi|37
+|                   |     |  |  |                    +--| (67)
+|                   |     |  |  |                    |  |     +--Stegastes_partitus|22
+|                   |     |  |  |                    |  |  +--| (100)
+|                   |     |  |  |                    |  |  |  |  +--Acanthochromis_polyacanthus|22
+|                   |     |  |  |                    |  |  |  +--| (100)
+|                   |     |  |  |                    |  |  |     +--Amphiprion_ocellaris|22
+|                   |     |  |  |                    |  +--| (67)
+|                   |     |  |  |                    |     +-----Parambassis_ranga|22
+|                   |     |  |  |                 +--| (100)
+|                   |     |  |  |                 |  |                          +--Poecilia_mexicana|22
+|                   |     |  |  |                 |  |                       +--| (100)
+|                   |     |  |  |                 |  |                       |  +--Poecilia_formosa|22
+|                   |     |  |  |                 |  |                    +--| (100)
+|                   |     |  |  |                 |  |                    |  +--Poecilia_latipinna|22
+|                   |     |  |  |                 |  |                 +--| (100)
+|                   |     |  |  |                 |  |                 |  +--Poecilia_reticulata|22
+|                   |     |  |  |                 |  |              +--| (100)
+|                   |     |  |  |                 |  |              |  |  +--Xiphophorus_couchianus|22
+|                   |     |  |  |                 |  |              |  +--| (100)
+|                   |     |  |  |                 |  |              |     |  +--Xiphophorus_maculatus|22
+|                   |     |  |  |                 |  |              |     +--| (100)
+|                   |     |  |  |                 |  |              |        +--Xiphophorus_hellerii|22
+|                   |     |  |  |                 |  |        +-----| (100)
+|                   |     |  |  |                 |  |        |     |  +----Cyprinodon_variegatus|28
+|                   |     |  |  |                 |  |        |     +--| (84)
+|                   |     |  |  |                 |  |        |        +---Fundulus_heteroclitus|25
+|                   |     |  |  |                 |  |     +--| (100)
+|                   |     |  |  |                 |  |     |  |  +-------Nothobranchius_furzeri|22
+|                   |     |  |  |                 |  |     |  +--| (100)
+|                   |     |  |  |                 |  |     |     +----Kryptolebias_marmoratus|22
+|                   |     |  |  |                 |  |  +--| (100)
+|                   |     |  |  |                 |  |  |  |        +--Oryzias_latipes|40
+|                   |     |  |  |                 |  |  |  +--------| (100)
+|                   |     |  |  |                 |  |  |           +--Oryzias_melastigma|22
+|                   |     |  |  |                 |  +--| (79)
+|                   |     |  |  |                 |     |           +--Haplochromis_burtoni|31
+|                   |     |  |  |                 |     |        +--| (99)
+|                   |     |  |  |                 |     |        |  +--Pundamilia_nyererei|22
+|                   |     |  |  |                 |     |     +--| (100)
+|                   |     |  |  |                 |     |     |  |  +--Maylandia_zebra|22
+|                   |     |  |  |                 |     |     |  +--| (99)
+|                   |     |  |  |                 |     |     |     +--Astatotilapia_calliptera|31
+|                   |     |  |  |                 |     |  +--| (100)
+|                   |     |  |  |                 |     |  |  |  +--Oreochromis_niloticus|22
+|                   |     |  |  |                 |     |  |  +--| (100)
+|                   |     |  |  |                 |     |  |     +--Oreochromis_aureus|22
+|                   |     |  |  |                 |     +--| (100)
+|                   |     |  |  |                 |        +--Archocentrus_centrarchus|22
+|                   |     |  |  |              +--| (81)
+|                   |     |  |  |              |  |              +--Cottoperca_gobio|16
+|                   |     |  |  |              |  |           +--| (100)
+|                   |     |  |  |              |  |           |  +---Notothenia_coriiceps|22
+|                   |     |  |  |              |  |        +--| (100)
+|                   |     |  |  |              |  |        |  +--Anarrhichthys_ocellatus|22
+|                   |     |  |  |              |  |     +--| (100)
+|                   |     |  |  |              |  |     |  |     +--Etheostoma_spectabile|97
+|                   |     |  |  |              |  |     |  |  +--| (98)
+|                   |     |  |  |              |  |     |  |  |  +--Perca_flavescens|58
+|                   |     |  |  |              |  |     |  +--| (100)
+|                   |     |  |  |              |  |     |     +--Sander_lucioperca|22
+|                   |     |  |  |              |  |  +--| (88)
+|                   |     |  |  |              |  |  |  |     +-------------Takifugu_rubripes|22
+|                   |     |  |  |              |  |  |  |  +--| (85)
+|                   |     |  |  |              |  |  |  |  |  |  +--Larimichthys_crocea|22
+|                   |     |  |  |              |  |  |  |  |  +--| (98)
+|                   |     |  |  |              |  |  |  |  |     +---Sparus_aurata|22
+|                   |     |  |  |              |  |  |  +--| (81)
+|                   |     |  |  |              |  |  |     +------Labrus_bergylta|10
+|                   |     |  |  |              |  +--| (83)
+|                   |     |  |  |              |     |           +-----Betta_splendens|22
+|                   |     |  |  |              |     |        +--| (100)
+|                   |     |  |  |              |     |        |  +--Anabas_testudineus|22
+|                   |     |  |  |              |     |     +--| (60)
+|                   |     |  |  |              |     |     |  +---Mastacembelus_armatus|64
+|                   |     |  |  |              |     |  +--| (100)
+|                   |     |  |  |              |     |  |  +---Monopterus_albus|22
+|                   |     |  |  |              |     +--| (100)
+|                   |     |  |  |              |        |  +--Lates_calcarifer|22
+|                   |     |  |  |              |        +--| (100)
+|                   |     |  |  |              |           |  +------Paralichthys_olivaceus|22
+|                   |     |  |  |              |           +--| (93)
+|                   |     |  |  |              |              |  +----Echeneis_naucrates|22
+|                   |     |  |  |              |              +--| (100)
+|                   |     |  |  |              |                 +--Seriola_dumerili|22
+|                   |     |  |  |           +--| (87)
+|                   |     |  |  |           |  |  +--------------Boleophthalmus_pectinirostris|22
+|                   |     |  |  |           |  +--| (100)
+|                   |     |  |  |           |     +----Sphaeramia_orbicularis|43
+|                   |     |  |  |        +--| (100)
+|                   |     |  |  |        |  +--------------Hippocampus_comes|22
+|                   |     |  |  |     +--| (85)
+|                   |     |  |  |     |  +------Myripristis_murdjan|112
+|                   |     |  |  +-----| (100)
+|                   |     |  |        +-------------------Gadus_morhua|67
+|                   |     +--| (100)
+|                   |        |             +----Salmo_salar|67
+|                   |        +-------------| (100)
+|                   |                      +------Esox_lucius|22
+|       +-----------| (100)
+|       |           |                    +--Sinocyclocheilus_rhinocerous|154
+|       |           |                 +--| (100)
+|       |           |                 |  +--Sinocyclocheilus_anshuiensis|154
+|       |           +-----------------| (100)
+|       |                             |  +--Carassius_auratus|148
+|       |                             +--| (100)
+|       |                                +--Sinocyclocheilus_grahami|148
+|  +----| (100)
+|  |    |        +--Pygocentrus_nattereri|46
+|  |    |     +--| (100)
+|  |    |     |  +--Colossoma_macropomum|46
+|  |    |  +--| (100)
+|  |    |  |  +------Astyanax_mexicanus|46
+|  |    +--| (98)
+|  |       +-----Electrophorus_electricus|283
++--| (94)
+|  +---Tachysurus_fulvidraco|46
+|
++--Pangasianodon_hypophthalmus|46
+
+
+Consensus tree in newick format: 
+
+(Ictalurus_punctatus|46:0.0946078077,((((Chanos_chanos|1:0.4902660469,((Denticeps_clupeoides|7:0.5673359393,Clupea_harengus|22:0.5988849978)97:0.0984839469,(((Danio_rerio|1:0.4462325728,Puntigrus_tetrazona|25:0.3715686751)100:0.5824058084,((((((((Salarias_fasciatus|22:0.2817110043,Gouania_willdenowi|37:0.3789033473)100:0.0717403604,((Stegastes_partitus|22:0.0664912262,(Acanthochromis_polyacanthus|22:0.0338537390,Amphiprion_ocellaris|22:0.0259021199)100:0.0403116397)100:0.0688881362,Parambassis_ranga|22:0.2074017930)67:0.0128909468)67:0.0079182679,((((((((Poecilia_mexicana|22:0.0048745765,Poecilia_formosa|22:0.0008952002)100:0.0049825775,Poecilia_latipinna|22:0.0052823313)100:0.0180688746,Poecilia_reticulata|22:0.0148180784)100:0.0148712246,(Xiphophorus_couchianus|22:0.0067281598,(Xiphophorus_maculatus|22:0.0075034620,Xiphophorus_hellerii|22:0.0098194885)100:0.0046192606)100:0.0218398193)100:0.0859835473,(Cyprinodon_variegatus|28:0.1739572494,Fundulus_heteroclitus|25:0.1505754198)84:0.0233358822)100:0.1997345161,(Nothobranchius_furzeri|22:0.2729074730,Kryptolebias_marmoratus|22:0.1680046303)100:0.0516185254)100:0.0304923444,(Oryzias_latipes|40:0.0956469667,Oryzias_melastigma|22:0.0625491847)100:0.2891469946)100:0.0521509225,((((Haplochromis_burtoni|31:0.0050944005,Pundamilia_nyererei|22:0.0022500945)99:0.0018518958,(Maylandia_zebra|22:0.0008379915,Astatotilapia_calliptera|31:0.0013216941)99:0.0014480291)100:0.0198361622,(Oreochromis_niloticus|22:0.0029893495,Oreochromis_aureus|22:0.0008662873)100:0.0092156255)100:0.0790098135,Archocentrus_centrarchus|22:0.0670893576)100:0.1202404112)79:0.0096235724)100:0.0369994202,(((((Cottoperca_gobio|16:0.0701852734,Notothenia_coriiceps|22:0.1556050509)100:0.0300320991,Anarrhichthys_ocellatus|22:0.1144580982)100:0.0061105678,((Etheostoma_spectabile|97:0.0537636409,Perca_flavescens|58:0.0213509766)98:0.0010438814,Sander_lucioperca|22:0.0164692186)100:0.0454458247)100:0.0293513211,((Takifugu_rubripes|22:0.4431762867,(Larimichthys_crocea|22:0.1084897665,Sparus_aurata|22:0.1297368863)98:0.0120312241)85:0.0090915621,Labrus_bergylta|10:0.2480663508)81:0.0078176958)88:0.0091378390,((((Betta_splendens|22:0.1919166001,Anabas_testudineus|22:0.0990993850)100:0.0644504275,Mastacembelus_armatus|64:0.1354556117)60:0.0104337149,Monopterus_albus|22:0.1349609934)100:0.0228270825,(Lates_calcarifer|22:0.0980652974,(Paralichthys_olivaceus|22:0.2255140155,(Echeneis_naucrates|22:0.1591365414,Seriola_dumerili|22:0.0490357588)100:0.0223980014)93:0.0060109537)100:0.0305775440)100:0.0128628933)83:0.0084331985)81:0.0120210984,(Boleophthalmus_pectinirostris|22:0.4754434704,Sphaeramia_orbicularis|43:0.1832066475)100:0.0814300584)87:0.0167802827,Hippocampus_comes|22:0.4803162985)100:0.0488437007,Myripristis_murdjan|112:0.2462626505)85:0.0446565529,Gadus_morhua|67:0.6438344488)100:0.1880619104)100:0.0780157539,(Salmo_salar|67:0.1795022448,Esox_lucius|22:0.2189041138)100:0.4594445940)100:0.0596458969)83:0.0362316316)98:0.0727508548,((Sinocyclocheilus_rhinocerous|154:0.0111315819,Sinocyclocheilus_anshuiensis|154:0.0118739411)100:0.0466546298,(Carassius_auratus|148:0.0689891083,Sinocyclocheilus_grahami|148:0.0321662766)100:0.0394731807)100:0.5905095249)100:0.3858915718,(((Pygocentrus_nattereri|46:0.0490619258,Colossoma_macropomum|46:0.0292111098)100:0.1056402689,Astyanax_mexicanus|46:0.2309023418)100:0.0491542578,Electrophorus_electricus|283:0.2011099356)98:0.0522997016)100:0.1869586896,Tachysurus_fulvidraco|46:0.1547853642)94:0.0230066508,Pangasianodon_hypophthalmus|46:0.0509267368);
+
+ALISIM COMMAND
+--------------
+To simulate an alignment of the same length as the original alignment, using the tree and model parameters estimated from this analysis, you can use the following command:
+
+--alisim simulated_MSA -t iqtree/Actinopterygii_v3/Actinopterygii.treefile -m "TVM{1.06071,3.15897,1.20483,0.851941}+F{0.275973,0.223932,0.231114,0.268981}+I{0.0558782}+R4{0.102727,0.0974239,0.216727,0.488842,0.438997,1.07916,0.18567,2.20982}" --length 13941
+
+To mimic the alignment used to produce this analysis, i.e. simulate an alignment of the same length as the original alignment, using the tree and model parameters estimated from this analysis *and* copying the same gap positions as the original alignment, you can use the following command:
+
+iqtree -s Alignment/Actinopterygii/Actinopterygii_cds_cassette_motif_v3.aln --alisim mimicked_MSA
+
+To simulate any number of alignments in either of the two commandlines above, use the --num-alignments options, for example mimic 100 alignments you would use the command line:
+
+iqtree -s Alignment/Actinopterygii/Actinopterygii_cds_cassette_motif_v3.aln --alisim mimicked_MSA --num-alignments 100
+
+For more information on using AliSim, please visit: www.iqtree.org/doc/AliSim
+
+TIME STAMP
+----------
+
+Date and time: Wed Jun  4 18:17:48 2025
+Total CPU time used: 3022.521977 seconds (0h:50m:22s)
+Total wall-clock time used: 204.665264 seconds (0h:3m:24s)
+

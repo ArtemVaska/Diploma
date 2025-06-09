@@ -1,0 +1,268 @@
+IQ-TREE multicore version 2.4.0 for Linux x86 64-bit built Feb 12 2025
+Developed by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor, Heiko Schmidt,
+Dominik Schrempf, Michael Woodhams, Ly Trong Nhan, Thomas Wong
+
+Host:    artemvaska-PC (AVX2, FMA3, 31 GB RAM)
+Command: iqtree -s Alignment/Actinopterygii/Actinopterygii_cds_cassette_motif.aln -pre iq_tree/Actinopterygii/Actinopterygii -m MFP -bb 1000 -alrt 1000 -seed 12345 -nt 16
+Seed:    12345 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Fri May 30 20:19:08 2025
+Kernel:  AVX+FMA - 16 threads (16 CPU cores detected)
+
+Reading alignment file Alignment/Actinopterygii/Actinopterygii_cds_cassette_motif.aln ... Fasta format detected
+Reading fasta file: done in 0.00731925 secs using 94.18% CPU
+Alignment most likely contains DNA/RNA sequences
+WARNING: 369 sites contain only gaps or ambiguous characters.
+Alignment has 67 sequences with 13941 columns, 8095 distinct patterns
+5572 parsimony-informative, 2230 singleton sites, 6139 constant sites
+                                                 Gap/Ambiguity  Composition  p-value
+Analyzing sequences: done in 0.000260967 secs using 99.25% CPU
+   1  Otomorpha_Ictalurus_punctatus                     63.63%    passed     20.74%
+   2  Otomorpha_Chanos_chanos                           60.66%    passed     14.36%
+   3  Otomorpha_Sinocyclocheilus_rhinocerous            61.55%    failed      0.00%
+   4  Otomorpha_Carassius_auratus                       58.56%    failed      0.00%
+   5  Otomorpha_Denticeps_clupeoides                    67.67%    failed      0.51%
+   6  Otomorpha_Pygocentrus_nattereri                   67.29%    passed      8.53%
+   7  Otomorpha_Pangasianodon_hypophthalmus             62.15%    failed      0.86%
+   8  Otomorpha_Sinocyclocheilus_grahami                62.41%    failed      0.00%
+   9  Otomorpha_Danio_rerio                             60.48%    failed      0.00%
+  10  Otomorpha_Electrophorus_electricus                65.63%    passed      9.91%
+  11  Otomorpha_Tachysurus_fulvidraco                   61.17%    passed     17.36%
+  12  Otomorpha_Sinocyclocheilus_anshuiensis            55.94%    failed      0.00%
+  13  Otomorpha_Astyanax_mexicanus                      66.04%    passed     21.41%
+  14  Otomorpha_Colossoma_macropomum                    67.31%    passed      9.65%
+  15  Otomorpha_Puntigrus_tetrazona                     68.81%    failed      0.00%
+  16  Otomorpha_Clupea_harengus                         63.09%    failed      3.06%
+  17  Euteleosteomorpha_Salarias_fasciatus              58.75%    failed      2.49%
+  18  Euteleosteomorpha_Poecilia_mexicana               69.53%    failed      2.98%
+  19  Euteleosteomorpha_Xiphophorus_couchianus          69.74%    passed     27.60%
+  20  Euteleosteomorpha_Cottoperca_gobio                68.47%    passed     23.79%
+  21  Euteleosteomorpha_Cyprinodon_variegatus           67.84%    passed      8.59%
+  22  Euteleosteomorpha_Gouania_willdenowi              67.59%    passed     63.34%
+  23  Euteleosteomorpha_Poecilia_reticulata             69.40%    failed      3.95%
+  24  Euteleosteomorpha_Takifugu_rubripes               70.68%    passed     47.17%
+  25  Euteleosteomorpha_Notothenia_coriiceps            70.50%    passed     14.24%
+  26  Euteleosteomorpha_Myripristis_murdjan             67.81%    failed      0.88%
+  27  Euteleosteomorpha_Betta_splendens                 69.23%    passed     97.44%
+  28  Euteleosteomorpha_Etheostoma_spectabile           68.00%    passed     52.12%
+  29  Euteleosteomorpha_Salmo_salar                     60.89%    passed      9.13%
+  30  Euteleosteomorpha_Larimichthys_crocea             69.36%    passed     16.98%
+  31  Euteleosteomorpha_Lates_calcarifer                67.28%    passed     22.11%
+  32  Euteleosteomorpha_Stegastes_partitus              65.55%    passed     13.68%
+  33  Euteleosteomorpha_Fundulus_heteroclitus           68.19%    failed      0.04%
+  34  Euteleosteomorpha_Sparus_aurata                   68.73%    failed      2.25%
+  35  Euteleosteomorpha_Anarrhichthys_ocellatus         68.67%    failed      0.03%
+  36  Euteleosteomorpha_Boleophthalmus_pectinirostris   74.17%    failed      0.02%
+  37  Euteleosteomorpha_Xiphophorus_maculatus           70.40%    passed     50.88%
+  38  Euteleosteomorpha_Anabas_testudineus              68.75%    passed     65.75%
+  39  Euteleosteomorpha_Mastacembelus_armatus           69.28%    passed     86.81%
+  40  Euteleosteomorpha_Acanthochromis_polyacanthus     66.29%    passed     98.89%
+  41  Euteleosteomorpha_Haplochromis_burtoni            67.61%    passed     65.79%
+  42  Euteleosteomorpha_Nothobranchius_furzeri          69.41%    passed     99.75%
+  43  Euteleosteomorpha_Paralichthys_olivaceus          63.07%    passed     78.64%
+  44  Euteleosteomorpha_Maylandia_zebra                 67.40%    passed     58.56%
+  45  Euteleosteomorpha_Labrus_bergylta                 66.18%    passed     92.60%
+  46  Euteleosteomorpha_Parambassis_ranga               68.58%    passed     52.50%
+  47  Euteleosteomorpha_Sander_lucioperca               67.69%    passed     79.21%
+  48  Euteleosteomorpha_Oryzias_latipes                 68.95%    passed     87.82%
+  49  Euteleosteomorpha_Archocentrus_centrarchus        67.24%    passed     42.43%
+  50  Euteleosteomorpha_Esox_lucius                     66.10%    failed      0.05%
+  51  Euteleosteomorpha_Monopterus_albus                69.05%    passed     80.37%
+  52  Euteleosteomorpha_Echeneis_naucrates              69.80%    passed     82.75%
+  53  Euteleosteomorpha_Sphaeramia_orbicularis          69.27%    passed     72.37%
+  54  Euteleosteomorpha_Xiphophorus_hellerii            70.22%    passed     45.36%
+  55  Euteleosteomorpha_Poecilia_latipinna              69.36%    failed      2.12%
+  56  Euteleosteomorpha_Pundamilia_nyererei             76.04%    passed     50.44%
+  57  Euteleosteomorpha_Hippocampus_comes               66.43%    passed      9.49%
+  58  Euteleosteomorpha_Poecilia_formosa                69.40%    failed      1.17%
+  59  Euteleosteomorpha_Oreochromis_niloticus           67.29%    passed     39.22%
+  60  Euteleosteomorpha_Kryptolebias_marmoratus         67.38%    passed     31.85%
+  61  Euteleosteomorpha_Oryzias_melastigma              69.82%    passed     51.98%
+  62  Euteleosteomorpha_Amphiprion_ocellaris            66.59%    passed     89.04%
+  63  Euteleosteomorpha_Seriola_dumerili                68.38%    passed     56.77%
+  64  Euteleosteomorpha_Oreochromis_aureus              67.30%    passed     39.84%
+  65  Euteleosteomorpha_Perca_flavescens                68.55%    passed     85.99%
+  66  Euteleosteomorpha_Gadus_morhua                    62.92%    failed      0.00%
+  67  Euteleosteomorpha_Astatotilapia_calliptera        67.36%    passed     58.67%
+WARNING: 67 sequences contain more than 50% gaps/ambiguity
+****  TOTAL                                             66.94%  21 sequences failed composition chi2 test (p-value<5%; df=3)
+
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.027 seconds
+Perform fast likelihood tree search using GTR+I+G model...
+Estimate model parameters (epsilon = 5.000)
+Perform nearest neighbor interchange...
+Estimate model parameters (epsilon = 1.000)
+1. Initial log-likelihood: -171166.256
+Optimal log-likelihood: -171165.581
+Rate parameters:  A-C: 1.03622  A-G: 2.97524  A-T: 1.19840  C-G: 0.83428  C-T: 3.29086  G-T: 1.00000
+Base frequencies:  A: 0.276  C: 0.224  G: 0.231  T: 0.269
+Proportion of invariable sites: 0.078
+Gamma shape alpha: 1.787
+Parameters optimization took 1 rounds (0.158 sec)
+Time for fast ML tree search: 2.188 seconds
+
+NOTE: ModelFinder requires 206 MB RAM!
+ModelFinder will test up to 484 DNA models (sample size: 13941 epsilon: 0.100) ...
+ No. Model         -LnL         df  AIC          AICc         BIC
+  1  GTR+F         178586.204   139 357450.407   357453.227   358498.827
+  2  GTR+F+I       174562.746   140 349405.491   349408.352   350461.454
+  3  GTR+F+G4      171626.342   140 343532.684   343535.545   344588.646
+  4  GTR+F+I+G4    171165.356   141 342612.711   342615.613   343676.216
+  5  GTR+F+R2      172058.567   141 344399.134   344402.036   345462.639
+  6  GTR+F+R3      171118.042   143 342522.085   342525.070   343600.675
+  7  GTR+F+R4      170968.491   145 342226.982   342230.051   343320.658
+  8  GTR+F+R5      170954.759   147 342203.519   342206.674   343312.280
+  9  GTR+F+R6      170953.401   149 342204.803   342208.044   343328.649
+ 14  GTR+F+I+R2    171483.847   142 343251.694   343254.637   344322.742
+ 15  GTR+F+I+R3    171016.336   144 342320.672   342323.699   343406.805
+ 16  GTR+F+I+R4    170956.156   146 342204.311   342207.423   343305.530
+ 17  GTR+F+I+R5    170954.301   148 342204.601   342207.799   343320.904
+ 30  SYM+R5        171295.720   144 342879.439   342882.466   343965.572
+ 38  SYM+I+R4      171295.678   143 342877.357   342880.342   343955.947
+ 52  TVM+F+R5      170959.236   146 342210.473   342213.585   343311.691
+ 60  TVM+F+I+R4    170960.853   145 342211.706   342214.776   343305.382
+ 74  TVMe+R5       171295.488   143 342876.976   342879.961   343955.566
+ 82  TVMe+I+R4     171295.833   142 342875.665   342878.608   343946.713
+ 96  TIM3+F+R5     170993.146   145 342276.291   342279.360   343369.967
+104  TIM3+F+I+R4   170995.783   144 342279.566   342282.593   343365.699
+118  TIM3e+R5      171432.749   142 343149.498   343152.441   344220.545
+126  TIM3e+I+R4    171434.180   141 343150.360   343153.262   344213.865
+140  TIM2+F+R5     170974.150   145 342238.301   342241.370   343331.976
+148  TIM2+F+I+R4   170976.635   144 342241.269   342244.296   343327.402
+162  TIM2e+R5      171394.763   142 343073.525   343076.469   344144.573
+170  TIM2e+I+R4    171395.253   141 343072.506   343075.408   344136.011
+184  TIM+F+R5      171012.218   145 342314.436   342317.505   343408.111
+192  TIM+F+I+R4    171015.477   144 342318.954   342321.981   343405.087
+206  TIMe+R5       171527.101   142 343338.203   343341.146   344409.251
+214  TIMe+I+R4     171528.728   141 343339.457   343342.359   344402.962
+228  TPM3u+F+R5    170997.050   144 342282.100   342285.127   343368.233
+236  TPM3u+F+I+R4  171000.065   143 342286.130   342289.115   343364.720
+250  TPM3+R5       171432.569   141 343147.138   343150.039   344210.643
+258  TPM3+I+R4     171434.421   140 343148.842   343151.703   344204.804
+272  TPM2u+F+R5    170979.198   144 342246.396   342249.423   343332.529
+280  TPM2u+F+I+R4  170981.783   143 342249.565   342252.550   343328.156
+294  TPM2+R5       171394.815   141 343071.630   343074.532   344135.136
+302  TPM2+I+R4     171395.396   140 343070.792   343073.653   344126.755
+316  K3Pu+F+R5     171016.865   144 342321.731   342324.758   343407.864
+324  K3Pu+F+I+R4   171020.282   143 342326.564   342329.549   343405.154
+338  K3P+R5        171527.210   141 343336.419   343339.321   344399.924
+346  K3P+I+R4      171528.947   140 343337.895   343340.756   344393.857
+360  TN+F+R5       171012.818   144 342313.635   342316.662   343399.768
+368  TN+F+I+R4     171016.080   143 342318.161   342321.146   343396.751
+382  TNe+R5        171531.252   141 343344.503   343347.405   344408.008
+390  TNe+I+R4      171532.894   140 343345.787   343348.648   344401.750
+404  HKY+F+R5      171017.620   143 342321.239   342324.224   343399.829
+412  HKY+F+I+R4    171020.996   142 342325.992   342328.935   343397.040
+426  K2P+R5        171531.486   140 343342.971   343345.832   344398.934
+434  K2P+I+R4      171533.180   139 343344.361   343347.181   344392.780
+448  F81+F+R5      174932.886   142 350149.773   350152.716   351220.821
+456  F81+F+I+R4    174934.697   141 350151.394   350154.296   351214.899
+470  JC+R5         175327.117   139 350932.235   350935.055   351980.655
+478  JC+I+R4       175328.270   138 350932.540   350935.319   351973.417
+Akaike Information Criterion:           GTR+F+R5
+Corrected Akaike Information Criterion: GTR+F+R5
+Bayesian Information Criterion:         TVM+F+I+R4
+Best-fit model: TVM+F+I+R4 chosen according to BIC
+
+All model information printed to iq_tree/Actinopterygii/Actinopterygii.model.gz
+CPU time for ModelFinder: 1467.211 seconds (0h:24m:27s)
+Wall-clock time for ModelFinder: 100.615 seconds (0h:1m:40s)
+Generating 1000 samples for ultrafast bootstrap (seed: 12345)...
+
+NOTE: 101 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -174936.279
+2. Current log-likelihood: -172873.401
+3. Current log-likelihood: -172591.853
+4. Current log-likelihood: -172300.079
+5. Current log-likelihood: -170978.825
+6. Current log-likelihood: -170960.777
+7. Current log-likelihood: -170960.384
+Optimal log-likelihood: -170960.358
+Rate parameters:  A-C: 1.05020  A-G: 3.14927  A-T: 1.20074  C-G: 0.84886  C-T: 3.14927  G-T: 1.00000
+Base frequencies:  A: 0.276  C: 0.224  G: 0.231  T: 0.269
+Proportion of invariable sites: 0.056
+Site proportion and rates:  (0.103,0.097) (0.217,0.489) (0.439,1.080) (0.185,2.214)
+Parameters optimization took 7 rounds (3.882 sec)
+Wrote distance file to... 
+Computing ML distances based on estimated model parameters...
+Calculating distance matrix: done in 0.00452015 secs using 1472% CPU
+Computing ML distances took 0.008442 sec (of wall-clock time) 0.125821 sec (of CPU time)
+Setting up auxiliary I and S matrices: done in 0.00075839 secs using 61.31% CPU
+Computing RapidNJ tree took 0.061613 sec (of wall-clock time) 0.003960 sec (of CPU time)
+Log-likelihood of RapidNJ tree: -171492.051
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 4.927 second
+Computing log-likelihood of 98 initial trees ... 2.630 seconds
+Current best score: -170960.358
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -170960.067
+Iteration 10 / LogL: -170960.173 / Time: 0h:1m:59s
+Iteration 20 / LogL: -171021.881 / Time: 0h:2m:9s
+Finish initializing candidate tree set (3)
+Current best tree score: -170960.067 / CPU time: 24.287
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Iteration 30 / LogL: -170961.412 / Time: 0h:2m:14s (0h:1m:23s left)
+Iteration 40 / LogL: -170970.740 / Time: 0h:2m:19s (0h:1m:0s left)
+Iteration 50 / LogL: -170996.565 / Time: 0h:2m:27s (0h:0m:49s left)
+Log-likelihood cutoff on original alignment: -171017.483
+Iteration 60 / LogL: -170960.539 / Time: 0h:2m:35s (0h:0m:37s left)
+Iteration 70 / LogL: -170960.184 / Time: 0h:2m:39s (0h:0m:26s left)
+Iteration 80 / LogL: -170960.228 / Time: 0h:2m:45s (0h:0m:17s left)
+Iteration 90 / LogL: -170960.205 / Time: 0h:2m:53s (0h:0m:8s left)
+Iteration 100 / LogL: -170960.446 / Time: 0h:3m:0s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -171017.483
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.999
+TREE SEARCH COMPLETED AFTER 102 ITERATIONS / Time: 0h:3m:1s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -170960.067
+Optimal log-likelihood: -170960.062
+Rate parameters:  A-C: 1.05089  A-G: 3.14878  A-T: 1.20110  C-G: 0.84897  C-T: 3.14878  G-T: 1.00000
+Base frequencies:  A: 0.276  C: 0.224  G: 0.231  T: 0.269
+Proportion of invariable sites: 0.056
+Site proportion and rates:  (0.103,0.097) (0.217,0.490) (0.439,1.081) (0.185,2.213)
+Parameters optimization took 1 rounds (0.160 sec)
+BEST SCORE FOUND : -170960.062
+
+Testing tree branches by SH-like aLRT with 1000 replicates...
+2.000 sec.
+Creating bootstrap support values...
+Split supports printed to NEXUS file iq_tree/Actinopterygii/Actinopterygii.splits.nex
+Total tree length: 15.199
+
+Total number of iterations: 102
+CPU time used for tree search: 1109.829 sec (0h:18m:29s)
+Wall-clock time used for tree search: 77.010 sec (0h:1m:17s)
+Total CPU time used: 2666.142 sec (0h:44m:26s)
+Total wall-clock time used: 184.171 sec (0h:3m:4s)
+
+Computing bootstrap consensus tree...
+Reading input file iq_tree/Actinopterygii/Actinopterygii.splits.nex...
+67 taxa and 206 splits.
+Consensus tree written to iq_tree/Actinopterygii/Actinopterygii.contree
+Reading input trees file iq_tree/Actinopterygii/Actinopterygii.contree
+Log-likelihood of consensus tree: -170960.061
+
+Analysis results written to: 
+  IQ-TREE report:                iq_tree/Actinopterygii/Actinopterygii.iqtree
+  Maximum-likelihood tree:       iq_tree/Actinopterygii/Actinopterygii.treefile
+  Likelihood distances:          iq_tree/Actinopterygii/Actinopterygii.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          iq_tree/Actinopterygii/Actinopterygii.splits.nex
+  Consensus tree:                iq_tree/Actinopterygii/Actinopterygii.contree
+  Screen log file:               iq_tree/Actinopterygii/Actinopterygii.log
+
+Date and Time: Fri May 30 20:22:12 2025

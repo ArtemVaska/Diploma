@@ -1,0 +1,169 @@
+#NEXUS
+begin taxa;
+	dimensions ntax=67;
+	taxlabels
+	Acanthochromis_polyacanthus
+	Amphiprion_ocellaris
+	Anabas_testudineus
+	Anarrhichthys_ocellatus
+	Archocentrus_centrarchus
+	Astatotilapia_calliptera
+	Astyanax_mexicanus
+	Betta_splendens
+	Boleophthalmus_pectinirostris
+	Carassius_auratus
+	Chanos_chanos
+	Clupea_harengus
+	Colossoma_macropomum
+	Cottoperca_gobio
+	Cyprinodon_variegatus
+	Danio_rerio
+	Denticeps_clupeoides
+	Echeneis_naucrates
+	Electrophorus_electricus
+	Esox_lucius
+	Etheostoma_spectabile
+	Fundulus_heteroclitus
+	Gadus_morhua
+	Gouania_willdenowi
+	Haplochromis_burtoni
+	Hippocampus_comes
+	Ictalurus_punctatus
+	Kryptolebias_marmoratus
+	Labrus_bergylta
+	Larimichthys_crocea
+	Lates_calcarifer
+	Mastacembelus_armatus
+	Maylandia_zebra
+	Monopterus_albus
+	Myripristis_murdjan
+	Nothobranchius_furzeri
+	Notothenia_coriiceps
+	Oreochromis_aureus
+	Oreochromis_niloticus
+	Oryzias_latipes
+	Oryzias_melastigma
+	Pangasianodon_hypophthalmus
+	Paralichthys_olivaceus
+	Parambassis_ranga
+	Perca_flavescens
+	Poecilia_formosa
+	Poecilia_latipinna
+	Poecilia_mexicana
+	Poecilia_reticulata
+	Pundamilia_nyererei
+	Puntigrus_tetrazona
+	Pygocentrus_nattereri
+	Salarias_fasciatus
+	Salmo_salar
+	Sander_lucioperca
+	Seriola_dumerili
+	Sinocyclocheilus_anshuiensis
+	Sinocyclocheilus_grahami
+	Sinocyclocheilus_rhinocerous
+	Sparus_aurata
+	Sphaeramia_orbicularis
+	Stegastes_partitus
+	Tachysurus_fulvidraco
+	Takifugu_rubripes
+	Xiphophorus_couchianus
+	Xiphophorus_hellerii
+	Xiphophorus_maculatus
+;
+end;
+
+begin trees;
+	tree tree_1 = [&R] (Ictalurus_punctatus[&!color=#00ff00]:0.094598,((((Chanos_chanos[&!color=#00ff00]:0.490141,((Denticeps_clupeoides[&!color=#00ff00]:0.567101,Clupea_harengus[&!color=#00ff00]:0.598666)[&label="99.5/96",!color=#00ff00]:0.098511,(((Danio_rerio[&!color=#00ff00]:0.446117,Puntigrus_tetrazona[&!color=#00ff00]:0.371475)[&label="100/100",!color=#00ff00]:0.582209,((((((((Salarias_fasciatus[&!color=#0000ff]:0.281646,Gouania_willdenowi[&!color=#0000ff]:0.378838)[&label="100/100",!color=#0000ff]:0.071697,((Stegastes_partitus[&!color=#0000ff]:0.066484,(Acanthochromis_polyacanthus[&!color=#0000ff]:0.03385,Amphiprion_ocellaris[&!color=#0000ff]:0.0259)[&label="100/100",!color=#0000ff]:0.040305)[&label="100/100",!color=#0000ff]:0.068879,Parambassis_ranga[&!color=#0000ff]:0.20736)[&label="9.2/65",!color=#0000ff]:0.012895)[&label="36.3/63",!color=#0000ff]:0.007914,((((((((Poecilia_mexicana[&!color=#0000ff]:0.004875,Poecilia_formosa[&!color=#0000ff]:8.95E-4)[&label="99.9/100",!color=#0000ff]:0.004983,Poecilia_latipinna[&!color=#0000ff]:0.005283)[&label="100/100",!color=#0000ff]:0.018067,Poecilia_reticulata[&!color=#0000ff]:0.014816)[&label="99.9/100",!color=#0000ff]:0.014867,(Xiphophorus_couchianus[&!color=#0000ff]:0.006729,(Xiphophorus_maculatus[&!color=#0000ff]:0.007504,Xiphophorus_hellerii[&!color=#0000ff]:0.009818)[&label="97.5/100",!color=#0000ff]:0.004619)[&label="100/100",!color=#0000ff]:0.02184)[&label="100/100",!color=#0000ff]:0.085965,(Cyprinodon_variegatus[&!color=#0000ff]:0.173927,Fundulus_heteroclitus[&!color=#0000ff]:0.150543)[&label="69.9/86",!color=#0000ff]:0.023332)[&label="100/100",!color=#0000ff]:0.199684,(Nothobranchius_furzeri[&!color=#0000ff]:0.27286,Kryptolebias_marmoratus[&!color=#0000ff]:0.167976)[&label="100/100",!color=#0000ff]:0.051621)[&label="99.2/100",!color=#0000ff]:0.030488,(Oryzias_latipes[&!color=#0000ff]:0.095629,Oryzias_melastigma[&!color=#0000ff]:0.06254)[&label="100/100",!color=#0000ff]:0.289073)[&label="100/100",!color=#0000ff]:0.052145,((((Haplochromis_burtoni[&!color=#0000ff]:0.005094,Pundamilia_nyererei[&!color=#0000ff]:0.002251)[&label="90.6/99",!color=#0000ff]:0.001852,(Maylandia_zebra[&!color=#0000ff]:8.38E-4,Astatotilapia_calliptera[&!color=#0000ff]:0.001322)[&label="90.9/100",!color=#0000ff]:0.001448)[&label="100/100",!color=#0000ff]:0.019836,(Oreochromis_niloticus[&!color=#0000ff]:0.002989,Oreochromis_aureus[&!color=#0000ff]:8.67E-4)[&label="99.9/100",!color=#0000ff]:0.009215)[&label="100/100",!color=#0000ff]:0.078999,Archocentrus_centrarchus[&!color=#0000ff]:0.067079)[&label="100/100",!color=#0000ff]:0.12022)[&label="88.9/75",!color=#0000ff]:0.009625)[&label="100/100",!color=#0000ff]:0.036995,(((((Cottoperca_gobio[&!color=#0000ff]:0.070178,Notothenia_coriiceps[&!color=#0000ff]:0.155583)[&label="100/100",!color=#0000ff]:0.030022,Anarrhichthys_ocellatus[&!color=#0000ff]:0.114435)[&label="96.6/100",!color=#0000ff]:0.006109,((Etheostoma_spectabile[&!color=#0000ff]:0.053757,Perca_flavescens[&!color=#0000ff]:0.021349)[&label="42/95",!color=#0000ff]:0.001043,Sander_lucioperca[&!color=#0000ff]:0.016467)[&label="100/100",!color=#0000ff]:0.045441)[&label="100/100",!color=#0000ff]:0.029345,((Takifugu_rubripes[&!color=#0000ff]:0.443073,(Larimichthys_crocea[&!color=#0000ff]:0.108476,Sparus_aurata[&!color=#0000ff]:0.12971)[&label="86.9/98",!color=#0000ff]:0.012026)[&label="89.4/82",!color=#0000ff]:0.009095,Labrus_bergylta[&!color=#0000ff]:0.248013)[&label="70.1/78",!color=#0000ff]:0.007814)[&label="99.5/86",!color=#0000ff]:0.009134,((((Betta_splendens[&!color=#0000ff]:0.191878,Anabas_testudineus[&!color=#0000ff]:0.099096)[&label="100/100",!color=#0000ff]:0.064436,Mastacembelus_armatus[&!color=#0000ff]:0.135432)[&label="3.7/66",!color=#0000ff]:0.010433,Monopterus_albus[&!color=#0000ff]:0.134935)[&label="99.9/100",!color=#0000ff]:0.022824,(Lates_calcarifer[&!color=#0000ff]:0.098051,(Paralichthys_olivaceus[&!color=#0000ff]:0.225471,(Echeneis_naucrates[&!color=#0000ff]:0.159106,Seriola_dumerili[&!color=#0000ff]:0.049029)[&label="99.4/100",!color=#0000ff]:0.022394)[&label="63.1/98",!color=#0000ff]:0.006009)[&label="100/100",!color=#0000ff]:0.030573)[&label="100/100",!color=#0000ff]:0.012867)[&label="96.7/85",!color=#0000ff]:0.008431)[&label="82.9/82",!color=#0000ff]:0.012026,(Boleophthalmus_pectinirostris[&!color=#0000ff]:0.475321,Sphaeramia_orbicularis[&!color=#0000ff]:0.183183)[&label="100/100",!color=#0000ff]:0.081385)[&label="69.2/88",!color=#0000ff]:0.016778,Hippocampus_comes[&!color=#0000ff]:0.480171)[&label="99.7/100",!color=#0000ff]:0.048842,Myripristis_murdjan[&!color=#0000ff]:0.24619)[&label="63.2/85",!color=#0000ff]:0.044655,Gadus_morhua[&!color=#0000ff]:0.643571)[&label="100/100",!color=#0000ff]:0.188037)[&label="99.5/100",!color=#0000ff]:0.077986,(Salmo_salar[&!color=#0000ff]:0.179454,Esox_lucius[&!color=#0000ff]:0.218845)[&label="100/100",!color=#0000ff]:0.459277)[&label="99.2/98",!color=#0000ff]:0.059649)[&label="49.2/80",!color=#0000ff]:0.036252)[&label="96.6/96",!color=#0000ff]:0.072736,((Sinocyclocheilus_rhinocerous[&!color=#00ff00]:0.011131,Sinocyclocheilus_anshuiensis[&!color=#00ff00]:0.011875)[&label="100/100",!color=#00ff00]:0.046701,(Carassius_auratus[&!color=#00ff00]:0.068991,Sinocyclocheilus_grahami[&!color=#00ff00]:0.03216)[&label="99.7/100",!color=#00ff00]:0.03941)[&label="100/100",!color=#00ff00]:0.590353)[&label="100/100",!color=#0000ff]:0.385779,(((Pygocentrus_nattereri[&!color=#00ff00]:0.04906,Colossoma_macropomum[&!color=#00ff00]:0.029212)[&label="100/100",!color=#00ff00]:0.105635,Astyanax_mexicanus[&!color=#00ff00]:0.230866)[&label="99.8/100",!color=#00ff00]:0.049149,Electrophorus_electricus[&!color=#00ff00]:0.201079)[&label="94.7/97",!color=#00ff00]:0.052287)[&label="100/100",!color=#0000ff]:0.186944,Tachysurus_fulvidraco[&!color=#00ff00]:0.154778)[&label="83.7/95",!color=#0000ff]:0.023012,Pangasianodon_hypophthalmus[&!color=#00ff00]:0.050923)[&!color=#010101];
+end;
+
+begin figtree;
+	set appearance.backgroundColorAttribute="Default";
+	set appearance.backgroundColour=#ffffff;
+	set appearance.branchColorAttribute="User selection";
+	set appearance.branchColorGradient=false;
+	set appearance.branchLineWidth=2.0;
+	set appearance.branchMinLineWidth=0.0;
+	set appearance.branchWidthAttribute="Fixed";
+	set appearance.foregroundColour=#000000;
+	set appearance.hilightingGradient=false;
+	set appearance.selectionColour=#2d3680;
+	set branchLabels.colorAttribute="User selection";
+	set branchLabels.displayAttribute="Branch times";
+	set branchLabels.fontName="aakar";
+	set branchLabels.fontSize=10;
+	set branchLabels.fontStyle=0;
+	set branchLabels.isShown=false;
+	set branchLabels.significantDigits=4;
+	set layout.expansion=0;
+	set layout.layoutType="RECTILINEAR";
+	set layout.zoom=0;
+	set legend.attribute="label";
+	set legend.fontSize=10.0;
+	set legend.isShown=false;
+	set legend.significantDigits=4;
+	set nodeBars.barWidth=4.0;
+	set nodeBars.displayAttribute=null;
+	set nodeBars.isShown=false;
+	set nodeLabels.colorAttribute="User selection";
+	set nodeLabels.displayAttribute="Node ages";
+	set nodeLabels.fontName="aakar";
+	set nodeLabels.fontSize=8;
+	set nodeLabels.fontStyle=0;
+	set nodeLabels.isShown=false;
+	set nodeLabels.significantDigits=4;
+	set nodeShapeExternal.colourAttribute="User selection";
+	set nodeShapeExternal.isShown=false;
+	set nodeShapeExternal.minSize=10.0;
+	set nodeShapeExternal.scaleType=Width;
+	set nodeShapeExternal.shapeType=Circle;
+	set nodeShapeExternal.size=4.0;
+	set nodeShapeExternal.sizeAttribute="Fixed";
+	set nodeShapeInternal.colourAttribute="User selection";
+	set nodeShapeInternal.isShown=false;
+	set nodeShapeInternal.minSize=10.0;
+	set nodeShapeInternal.scaleType=Width;
+	set nodeShapeInternal.shapeType=Circle;
+	set nodeShapeInternal.size=4.0;
+	set nodeShapeInternal.sizeAttribute="Fixed";
+	set polarLayout.alignTipLabels=false;
+	set polarLayout.angularRange=0;
+	set polarLayout.rootAngle=0;
+	set polarLayout.rootLength=100;
+	set polarLayout.showRoot=true;
+	set radialLayout.spread=0.0;
+	set rectilinearLayout.alignTipLabels=false;
+	set rectilinearLayout.curvature=0;
+	set rectilinearLayout.rootLength=100;
+	set scale.offsetAge=0.0;
+	set scale.rootAge=1.0;
+	set scale.scaleFactor=1.0;
+	set scale.scaleRoot=false;
+	set scaleAxis.automaticScale=true;
+	set scaleAxis.fontSize=8.0;
+	set scaleAxis.isShown=false;
+	set scaleAxis.lineWidth=1.0;
+	set scaleAxis.majorTicks=1.0;
+	set scaleAxis.minorTicks=0.5;
+	set scaleAxis.origin=0.0;
+	set scaleAxis.reverseAxis=false;
+	set scaleAxis.showGrid=true;
+	set scaleBar.automaticScale=true;
+	set scaleBar.fontSize=16.0;
+	set scaleBar.isShown=true;
+	set scaleBar.lineWidth=1.0;
+	set scaleBar.scaleRange=0.2;
+	set tipLabels.colorAttribute="User selection";
+	set tipLabels.displayAttribute="Names";
+	set tipLabels.fontName="aakar";
+	set tipLabels.fontSize=18;
+	set tipLabels.fontStyle=0;
+	set tipLabels.isShown=true;
+	set tipLabels.significantDigits=4;
+	set trees.order=false;
+	set trees.orderType="increasing";
+	set trees.rooting=false;
+	set trees.rootingType="User Selection";
+	set trees.transform=false;
+	set trees.transformType="cladogram";
+end;
+

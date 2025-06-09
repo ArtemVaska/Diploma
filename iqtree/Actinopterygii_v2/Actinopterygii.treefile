@@ -1,0 +1,169 @@
+#NEXUS
+begin taxa;
+	dimensions ntax=67;
+	taxlabels
+	Euteleosteomorpha_Acanthochromis_polyacanthus
+	Euteleosteomorpha_Amphiprion_ocellaris
+	Euteleosteomorpha_Anabas_testudineus
+	Euteleosteomorpha_Anarrhichthys_ocellatus
+	Euteleosteomorpha_Archocentrus_centrarchus
+	Euteleosteomorpha_Astatotilapia_calliptera
+	Euteleosteomorpha_Betta_splendens
+	Euteleosteomorpha_Boleophthalmus_pectinirostris
+	Euteleosteomorpha_Cottoperca_gobio
+	Euteleosteomorpha_Cyprinodon_variegatus
+	Euteleosteomorpha_Echeneis_naucrates
+	Euteleosteomorpha_Esox_lucius
+	Euteleosteomorpha_Etheostoma_spectabile
+	Euteleosteomorpha_Fundulus_heteroclitus
+	Euteleosteomorpha_Gadus_morhua
+	Euteleosteomorpha_Gouania_willdenowi
+	Euteleosteomorpha_Haplochromis_burtoni
+	Euteleosteomorpha_Hippocampus_comes
+	Euteleosteomorpha_Kryptolebias_marmoratus
+	Euteleosteomorpha_Labrus_bergylta
+	Euteleosteomorpha_Larimichthys_crocea
+	Euteleosteomorpha_Lates_calcarifer
+	Euteleosteomorpha_Mastacembelus_armatus
+	Euteleosteomorpha_Maylandia_zebra
+	Euteleosteomorpha_Monopterus_albus
+	Euteleosteomorpha_Myripristis_murdjan
+	Euteleosteomorpha_Nothobranchius_furzeri
+	Euteleosteomorpha_Notothenia_coriiceps
+	Euteleosteomorpha_Oreochromis_aureus
+	Euteleosteomorpha_Oreochromis_niloticus
+	Euteleosteomorpha_Oryzias_latipes
+	Euteleosteomorpha_Oryzias_melastigma
+	Euteleosteomorpha_Paralichthys_olivaceus
+	Euteleosteomorpha_Parambassis_ranga
+	Euteleosteomorpha_Perca_flavescens
+	Euteleosteomorpha_Poecilia_formosa
+	Euteleosteomorpha_Poecilia_latipinna
+	Euteleosteomorpha_Poecilia_mexicana
+	Euteleosteomorpha_Poecilia_reticulata
+	Euteleosteomorpha_Pundamilia_nyererei
+	Euteleosteomorpha_Salarias_fasciatus
+	Euteleosteomorpha_Salmo_salar
+	Euteleosteomorpha_Sander_lucioperca
+	Euteleosteomorpha_Seriola_dumerili
+	Euteleosteomorpha_Sparus_aurata
+	Euteleosteomorpha_Sphaeramia_orbicularis
+	Euteleosteomorpha_Stegastes_partitus
+	Euteleosteomorpha_Takifugu_rubripes
+	Euteleosteomorpha_Xiphophorus_couchianus
+	Euteleosteomorpha_Xiphophorus_hellerii
+	Euteleosteomorpha_Xiphophorus_maculatus
+	Otomorpha_Astyanax_mexicanus
+	Otomorpha_Carassius_auratus
+	Otomorpha_Chanos_chanos
+	Otomorpha_Clupea_harengus
+	Otomorpha_Colossoma_macropomum
+	Otomorpha_Danio_rerio
+	Otomorpha_Denticeps_clupeoides
+	Otomorpha_Electrophorus_electricus
+	Otomorpha_Ictalurus_punctatus
+	Otomorpha_Pangasianodon_hypophthalmus
+	Otomorpha_Puntigrus_tetrazona
+	Otomorpha_Pygocentrus_nattereri
+	Otomorpha_Sinocyclocheilus_anshuiensis
+	Otomorpha_Sinocyclocheilus_grahami
+	Otomorpha_Sinocyclocheilus_rhinocerous
+	Otomorpha_Tachysurus_fulvidraco
+;
+end;
+
+begin trees;
+	tree tree_1 = [&R] (Otomorpha_Ictalurus_punctatus[&!color=#00ff00]:0.09459,((((Otomorpha_Chanos_chanos[&!color=#00ff00]:0.490159,((Otomorpha_Denticeps_clupeoides[&!color=#00ff00]:0.567134,Otomorpha_Clupea_harengus[&!color=#00ff00]:0.598725)[&label="99.5/97",!color=#00ff00]:0.098637,(((Otomorpha_Danio_rerio[&!color=#00ff00]:0.446184,Otomorpha_Puntigrus_tetrazona[&!color=#00ff00]:0.371453)[&label="100/100",!color=#00ff00]:0.582337,((((((((Euteleosteomorpha_Salarias_fasciatus[&!color=#0000ff]:0.281659,Euteleosteomorpha_Gouania_willdenowi[&!color=#0000ff]:0.378814)[&label="100/100",!color=#0000ff]:0.071743,((Euteleosteomorpha_Stegastes_partitus[&!color=#0000ff]:0.066474,(Euteleosteomorpha_Acanthochromis_polyacanthus[&!color=#0000ff]:0.033842,Euteleosteomorpha_Amphiprion_ocellaris[&!color=#0000ff]:0.025896)[&label="100/100",!color=#0000ff]:0.0403)[&label="100/100",!color=#0000ff]:0.068874,Euteleosteomorpha_Parambassis_ranga[&!color=#0000ff]:0.207354)[&label="8.6/69",!color=#0000ff]:0.012881)[&label="36.4/56",!color=#0000ff]:0.007913,((((((((Euteleosteomorpha_Poecilia_mexicana[&!color=#0000ff]:0.004874,Euteleosteomorpha_Poecilia_formosa[&!color=#0000ff]:8.95E-4)[&label="99.9/100",!color=#0000ff]:0.004982,Euteleosteomorpha_Poecilia_latipinna[&!color=#0000ff]:0.005282)[&label="100/100",!color=#0000ff]:0.018064,Euteleosteomorpha_Poecilia_reticulata[&!color=#0000ff]:0.014814)[&label="99.9/100",!color=#0000ff]:0.014866,(Euteleosteomorpha_Xiphophorus_couchianus[&!color=#0000ff]:0.006728,(Euteleosteomorpha_Xiphophorus_maculatus[&!color=#0000ff]:0.007503,Euteleosteomorpha_Xiphophorus_hellerii[&!color=#0000ff]:0.009816)[&label="97.5/100",!color=#0000ff]:0.004618)[&label="100/100",!color=#0000ff]:0.021834)[&label="100/100",!color=#0000ff]:0.085964,(Euteleosteomorpha_Cyprinodon_variegatus[&!color=#0000ff]:0.173925,Euteleosteomorpha_Fundulus_heteroclitus[&!color=#0000ff]:0.150542)[&label="69.7/85",!color=#0000ff]:0.023328)[&label="100/100",!color=#0000ff]:0.199691,(Euteleosteomorpha_Nothobranchius_furzeri[&!color=#0000ff]:0.272819,Euteleosteomorpha_Kryptolebias_marmoratus[&!color=#0000ff]:0.167963)[&label="100/100",!color=#0000ff]:0.051593)[&label="99.2/100",!color=#0000ff]:0.030499,(Euteleosteomorpha_Oryzias_latipes[&!color=#0000ff]:0.095614,Euteleosteomorpha_Oryzias_melastigma[&!color=#0000ff]:0.06254)[&label="100/100",!color=#0000ff]:0.289068)[&label="100/100",!color=#0000ff]:0.052131,((((Euteleosteomorpha_Haplochromis_burtoni[&!color=#0000ff]:0.005094,Euteleosteomorpha_Pundamilia_nyererei[&!color=#0000ff]:0.002251)[&label="90.6/98",!color=#0000ff]:0.00185,(Euteleosteomorpha_Maylandia_zebra[&!color=#0000ff]:8.38E-4,Euteleosteomorpha_Astatotilapia_calliptera[&!color=#0000ff]:0.001322)[&label="90.9/99",!color=#0000ff]:0.001448)[&label="100/100",!color=#0000ff]:0.019831,(Euteleosteomorpha_Oreochromis_niloticus[&!color=#0000ff]:0.002989,Euteleosteomorpha_Oreochromis_aureus[&!color=#0000ff]:8.67E-4)[&label="99.9/100",!color=#0000ff]:0.009213)[&label="100/100",!color=#0000ff]:0.078987,Euteleosteomorpha_Archocentrus_centrarchus[&!color=#0000ff]:0.067069)[&label="100/100",!color=#0000ff]:0.120208)[&label="89/72",!color=#0000ff]:0.009624)[&label="100/100",!color=#0000ff]:0.036993,(((((Euteleosteomorpha_Cottoperca_gobio[&!color=#0000ff]:0.070167,Euteleosteomorpha_Notothenia_coriiceps[&!color=#0000ff]:0.155565)[&label="100/100",!color=#0000ff]:0.030022,Euteleosteomorpha_Anarrhichthys_ocellatus[&!color=#0000ff]:0.114426)[&label="96.6/100",!color=#0000ff]:0.006109,((Euteleosteomorpha_Etheostoma_spectabile[&!color=#0000ff]:0.053747,Euteleosteomorpha_Perca_flavescens[&!color=#0000ff]:0.021344)[&label="41.9/98",!color=#0000ff]:0.001043,Euteleosteomorpha_Sander_lucioperca[&!color=#0000ff]:0.016464)[&label="100/100",!color=#0000ff]:0.045431)[&label="100/100",!color=#0000ff]:0.029339,((Euteleosteomorpha_Takifugu_rubripes[&!color=#0000ff]:0.443042,(Euteleosteomorpha_Larimichthys_crocea[&!color=#0000ff]:0.10846,Euteleosteomorpha_Sparus_aurata[&!color=#0000ff]:0.129698)[&label="86.9/97",!color=#0000ff]:0.012025)[&label="89.4/85",!color=#0000ff]:0.0091,Euteleosteomorpha_Labrus_bergylta[&!color=#0000ff]:0.247998)[&label="70.4/81",!color=#0000ff]:0.007815)[&label="99.5/89",!color=#0000ff]:0.009133,((((Euteleosteomorpha_Betta_splendens[&!color=#0000ff]:0.191857,Euteleosteomorpha_Anabas_testudineus[&!color=#0000ff]:0.099066)[&label="100/100",!color=#0000ff]:0.064422,Euteleosteomorpha_Mastacembelus_armatus[&!color=#0000ff]:0.135421)[&label="3.6/70",!color=#0000ff]:0.010428,Euteleosteomorpha_Monopterus_albus[&!color=#0000ff]:0.134921)[&label="99.9/100",!color=#0000ff]:0.022814,(Euteleosteomorpha_Lates_calcarifer[&!color=#0000ff]:0.098038,(Euteleosteomorpha_Paralichthys_olivaceus[&!color=#0000ff]:0.225464,(Euteleosteomorpha_Echeneis_naucrates[&!color=#0000ff]:0.159088,Euteleosteomorpha_Seriola_dumerili[&!color=#0000ff]:0.049023)[&label="99.4/100",!color=#0000ff]:0.022386)[&label="63.1/97",!color=#0000ff]:0.006005)[&label="100/100",!color=#0000ff]:0.030573)[&label="100/100",!color=#0000ff]:0.012862)[&label="96.7/89",!color=#0000ff]:0.008429)[&label="82.9/88",!color=#0000ff]:0.012032,(Euteleosteomorpha_Boleophthalmus_pectinirostris[&!color=#0000ff]:0.475334,Euteleosteomorpha_Sphaeramia_orbicularis[&!color=#0000ff]:0.183176)[&label="100/100",!color=#0000ff]:0.081381)[&label="69.6/86",!color=#0000ff]:0.016801,Euteleosteomorpha_Hippocampus_comes[&!color=#0000ff]:0.480196)[&label="99.7/100",!color=#0000ff]:0.048842,Euteleosteomorpha_Myripristis_murdjan[&!color=#0000ff]:0.246179)[&label="63.2/88",!color=#0000ff]:0.044716,Euteleosteomorpha_Gadus_morhua[&!color=#0000ff]:0.643643)[&label="100/100",!color=#0000ff]:0.188022)[&label="99.5/100",!color=#0000ff]:0.078008,(Euteleosteomorpha_Salmo_salar[&!color=#0000ff]:0.179486,Euteleosteomorpha_Esox_lucius[&!color=#0000ff]:0.218869)[&label="100/100",!color=#0000ff]:0.459359)[&label="99.2/99",!color=#0000ff]:0.059691)[&label="48.9/80",!color=#0000ff]:0.036262)[&label="96.6/98",!color=#0000ff]:0.072799,((Otomorpha_Sinocyclocheilus_rhinocerous[&!color=#00ff00]:0.01113,Otomorpha_Sinocyclocheilus_anshuiensis[&!color=#00ff00]:0.011873)[&label="100/100",!color=#00ff00]:0.046695,(Otomorpha_Carassius_auratus[&!color=#00ff00]:0.068978,Otomorpha_Sinocyclocheilus_grahami[&!color=#00ff00]:0.032159)[&label="99.7/100",!color=#00ff00]:0.039401)[&label="100/100",!color=#00ff00]:0.5904)[&label="100/100",!color=#0000ff]:0.385762,(((Otomorpha_Pygocentrus_nattereri[&!color=#00ff00]:0.049045,Otomorpha_Colossoma_macropomum[&!color=#00ff00]:0.029211)[&label="100/100",!color=#00ff00]:0.105606,Otomorpha_Astyanax_mexicanus[&!color=#00ff00]:0.230873)[&label="99.8/100",!color=#00ff00]:0.049152,Otomorpha_Electrophorus_electricus[&!color=#00ff00]:0.201075)[&label="94.7/97",!color=#00ff00]:0.052279)[&label="100/100",!color=#0000ff]:0.186941,Otomorpha_Tachysurus_fulvidraco[&!color=#00ff00]:0.154755)[&label="83.5/95",!color=#0000ff]:0.022991,Otomorpha_Pangasianodon_hypophthalmus[&!color=#00ff00]:0.05092)[&!color=#010101];
+end;
+
+begin figtree;
+	set appearance.backgroundColorAttribute="Default";
+	set appearance.backgroundColour=#ffffff;
+	set appearance.branchColorAttribute="User selection";
+	set appearance.branchColorGradient=false;
+	set appearance.branchLineWidth=2.0;
+	set appearance.branchMinLineWidth=0.0;
+	set appearance.branchWidthAttribute="Fixed";
+	set appearance.foregroundColour=#000000;
+	set appearance.hilightingGradient=false;
+	set appearance.selectionColour=#2d3680;
+	set branchLabels.colorAttribute="User selection";
+	set branchLabels.displayAttribute="Branch times";
+	set branchLabels.fontName="aakar";
+	set branchLabels.fontSize=10;
+	set branchLabels.fontStyle=0;
+	set branchLabels.isShown=false;
+	set branchLabels.significantDigits=4;
+	set layout.expansion=0;
+	set layout.layoutType="RECTILINEAR";
+	set layout.zoom=0;
+	set legend.attribute="label";
+	set legend.fontSize=10.0;
+	set legend.isShown=false;
+	set legend.significantDigits=4;
+	set nodeBars.barWidth=4.0;
+	set nodeBars.displayAttribute=null;
+	set nodeBars.isShown=false;
+	set nodeLabels.colorAttribute="User selection";
+	set nodeLabels.displayAttribute="Node ages";
+	set nodeLabels.fontName="aakar";
+	set nodeLabels.fontSize=8;
+	set nodeLabels.fontStyle=0;
+	set nodeLabels.isShown=false;
+	set nodeLabels.significantDigits=4;
+	set nodeShapeExternal.colourAttribute="User selection";
+	set nodeShapeExternal.isShown=false;
+	set nodeShapeExternal.minSize=10.0;
+	set nodeShapeExternal.scaleType=Width;
+	set nodeShapeExternal.shapeType=Circle;
+	set nodeShapeExternal.size=4.0;
+	set nodeShapeExternal.sizeAttribute="Fixed";
+	set nodeShapeInternal.colourAttribute="User selection";
+	set nodeShapeInternal.isShown=false;
+	set nodeShapeInternal.minSize=10.0;
+	set nodeShapeInternal.scaleType=Width;
+	set nodeShapeInternal.shapeType=Circle;
+	set nodeShapeInternal.size=4.0;
+	set nodeShapeInternal.sizeAttribute="Fixed";
+	set polarLayout.alignTipLabels=false;
+	set polarLayout.angularRange=0;
+	set polarLayout.rootAngle=0;
+	set polarLayout.rootLength=100;
+	set polarLayout.showRoot=true;
+	set radialLayout.spread=0.0;
+	set rectilinearLayout.alignTipLabels=false;
+	set rectilinearLayout.curvature=0;
+	set rectilinearLayout.rootLength=100;
+	set scale.offsetAge=0.0;
+	set scale.rootAge=1.0;
+	set scale.scaleFactor=1.0;
+	set scale.scaleRoot=false;
+	set scaleAxis.automaticScale=true;
+	set scaleAxis.fontSize=8.0;
+	set scaleAxis.isShown=false;
+	set scaleAxis.lineWidth=1.0;
+	set scaleAxis.majorTicks=0.25;
+	set scaleAxis.minorTicks=0.05;
+	set scaleAxis.origin=0.0;
+	set scaleAxis.reverseAxis=false;
+	set scaleAxis.showGrid=true;
+	set scaleBar.automaticScale=true;
+	set scaleBar.fontSize=15.0;
+	set scaleBar.isShown=true;
+	set scaleBar.lineWidth=1.0;
+	set scaleBar.scaleRange=0.2;
+	set tipLabels.colorAttribute="User selection";
+	set tipLabels.displayAttribute="Names";
+	set tipLabels.fontName="aakar";
+	set tipLabels.fontSize=15;
+	set tipLabels.fontStyle=0;
+	set tipLabels.isShown=true;
+	set tipLabels.significantDigits=4;
+	set trees.order=false;
+	set trees.orderType="increasing";
+	set trees.rooting=false;
+	set trees.rootingType="User Selection";
+	set trees.transform=false;
+	set trees.transformType="cladogram";
+end;
+
