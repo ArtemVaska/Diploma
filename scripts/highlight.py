@@ -51,7 +51,7 @@ def highlight_and_wrap(seq: str, highlight: str, width: int = 70) -> str:
 
 
 def highlight_intron_in_seq(phylum: str, org_name: str):
-    prefix = "../Datasets"
+    prefix = "../datasets"
     postfix = "ncbi_dataset/data"
 
     cds = read_single_fasta(f"{prefix}/{phylum}/{org_name}/{postfix}/cds_cassette.fa")

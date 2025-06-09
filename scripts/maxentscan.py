@@ -9,7 +9,7 @@ from fasta_processing import read_single_fasta, read_fasta
 
 
 def run_maxentscan(phylum: str, org_names: list) -> pd.DataFrame:
-    prefix = "../Datasets"
+    prefix = "../datasets"
     postfix = "ncbi_dataset/data"
     site_path = "../maxentscan_output"
 
@@ -63,8 +63,8 @@ def run_maxentscan(phylum: str, org_names: list) -> pd.DataFrame:
 
 
 def run_maxentscan_all_introns(phylum: str, org_name: str) -> pd.DataFrame:
-    full_seq = read_single_fasta(f"../Datasets/{phylum}/{org_name}/ncbi_dataset/data/gene.fna")
-    exons_dict = read_fasta(f"../Datasets/{phylum}/{org_name}/ncbi_dataset/data/exons.fa")
+    full_seq = read_single_fasta(f"../datasets/{phylum}/{org_name}/ncbi_dataset/data/gene.fna")
+    exons_dict = read_fasta(f"../datasets/{phylum}/{org_name}/ncbi_dataset/data/exons.fa")
 
     # Creating list of exons and exons_coords for introns parsing
     exons = []

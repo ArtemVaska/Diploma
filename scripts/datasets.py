@@ -81,8 +81,8 @@ def download_subset_df_datasets(df: pd.DataFrame, phyla: str = "") -> list:
     """
     if phyla != "":
         phyla = f"{phyla}/"
-        if not os.path.exists(f"../Datasets/{phyla}"):
-            os.mkdir(f"../Datasets/{phyla}")
+        if not os.path.exists(f"../datasets/{phyla}"):
+            os.mkdir(f"../datasets/{phyla}")
 
     org_names = []
     for i, (index, row) in enumerate(df.iterrows()):
@@ -91,10 +91,10 @@ def download_subset_df_datasets(df: pd.DataFrame, phyla: str = "") -> list:
         shell_commands = [
             ["datasets", "download", "gene", "gene-id", gene_id,
              "--include", "gene,cds,rna,protein",
-             "--filename", f"../Datasets/{phyla}{org_name}.zip"],
-            ["unzip", f"../Datasets/{phyla}{org_name}.zip",
-             "-d", f"../Datasets/{phyla}{org_name}"],
-            ["rm", "-r", f"../Datasets/{phyla}{org_name}.zip"]
+             "--filename", f"../datasets/{phyla}{org_name}.zip"],
+            ["unzip", f"../datasets/{phyla}{org_name}.zip",
+             "-d", f"../datasets/{phyla}{org_name}"],
+            ["rm", "-r", f"../datasets/{phyla}{org_name}.zip"]
         ]
         for command in shell_commands:
             try:
@@ -119,7 +119,7 @@ def download_gene_gb(phyla: str, org_names: list) -> None:
     # Obtain mRNA Accession and ranges of the gene
     for org_name in org_names:
         try:
-            with open(f"../Datasets/{phyla}/{org_name}/ncbi_dataset/data/gene.fna") as infile:
+            with open(f"../datasets/{phyla}/{org_name}/ncbi_dataset/data/gene.fna") as infile:
                 line = infile.readline().rstrip()
                 gene_acc = line.split(":")[0][1:]
                 gene_ranges = line.split()[0].split(":")[1]
@@ -138,7 +138,7 @@ def download_gene_gb(phyla: str, org_names: list) -> None:
         stream = Entrez.efetch(db="nucleotide", id=gene_acc, idtype="acc",
                                seq_start=gene_range_1, seq_stop=gene_range_2, strand=strand,
                                rettype="gb", retmode="text")
-        with open(f"../Datasets/{phyla}/{org_name}/ncbi_dataset/data/gene.gb", "w") as outfile:
+        with open(f"../datasets/{phyla}/{org_name}/ncbi_dataset/data/gene.gb", "w") as outfile:
             outfile.write(stream.read())
 
         print(f"Gene GenBank for {phyla}/{org_name} downloaded successfully")
@@ -164,7 +164,7 @@ def parse_exon_ranges(phyla: str, org_names: list, feature_type: str = "mRNA") -
 
     for org_name in org_names:
         try:
-            records = SeqIO.parse(f"../Datasets/{phyla}/{org_name}/ncbi_dataset/data/gene.gb", "genbank")
+            records = SeqIO.parse(f"../datasets/{phyla}/{org_name}/ncbi_dataset/data/gene.gb", "genbank")
         except FileNotFoundError:
             continue
         for record in records:
@@ -187,8 +187,8 @@ def create_exons(phyla: str, exon_ranges: dict) -> None:
     :return:
     """
     for org_name in exon_ranges.keys():
-        gene_seq = read_single_fasta(f"../Datasets/{phyla}/{org_name}/ncbi_dataset/data/gene.fna")
-        with open(f"../Datasets/{phyla}/{org_name}/ncbi_dataset/data/exons.fa", "w") as outfile:
+        gene_seq = read_single_fasta(f"../datasets/{phyla}/{org_name}/ncbi_dataset/data/gene.fna")
+        with open(f"../datasets/{phyla}/{org_name}/ncbi_dataset/data/exons.fa", "w") as outfile:
             for exon_i, exon_range in exon_ranges[org_name].items():
                 outfile.write(f">{exon_i}:{exon_range[0]}-{exon_range[1]}\n"
                               f"{gene_seq[exon_range[0]:exon_range[1]]}\n")
@@ -215,7 +215,7 @@ def download_all_files_ncbi(df: pd.DataFrame,
         raise Exception(f"Feature type {feature_type} is not supported")
 
     for phyla in phylas:
-        if os.path.exists(f"../Datasets/{phyla}"):
+        if os.path.exists(f"../datasets/{phyla}"):
             print(f"Files for {phyla} already downloaded")
             continue
 
@@ -231,8 +231,8 @@ def check_transcript_count(phylas: list):
     message = False
     species_to_update = []
     for phyla in phylas:
-        for org_name in os.listdir(f"../Datasets/{phyla}"):
-            with open(f"../Datasets/{phyla}/{org_name}/ncbi_dataset/data/cds.fna") as infile:
+        for org_name in os.listdir(f"../datasets/{phyla}"):
+            with open(f"../datasets/{phyla}/{org_name}/ncbi_dataset/data/cds.fna") as infile:
                 lines = "".join(infile.readlines())
                 transcript_count = lines.count(">")
                 if transcript_count > 1:
@@ -247,7 +247,7 @@ def check_transcript_count(phylas: list):
 
 
 def obtain_data_gcpr(phylum: str, org_name: str) -> dict:
-    prefix = "../Datasets"
+    prefix = "../datasets"
     postfix = "ncbi_dataset/data"
     file_path = f"{prefix}/{phylum}/{org_name}/{postfix}"
 
@@ -281,7 +281,7 @@ def update_data_for_species(phylum_species_list: list) -> None:
         data = obtain_data_gcpr(phylum, org_name)
         data_upd = leave_only_first_key(data)
 
-        file_path = f"../Datasets/{phylum}/{org_name}/ncbi_dataset/data"
+        file_path = f"../datasets/{phylum}/{org_name}/ncbi_dataset/data"
         for data_type, value in data_upd.items():
             match data_type:
                 case "gene":

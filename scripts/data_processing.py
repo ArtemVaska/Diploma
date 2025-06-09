@@ -7,7 +7,7 @@ from Bio import Entrez, SeqIO
 from Bio.Seq import Seq
 from sklearn.cluster import DBSCAN
 
-from Scripts.fasta_processing import plain_to_fasta
+from scripts.fasta_processing import plain_to_fasta
 from fasta_processing import read_fasta, read_single_fasta
 
 Entrez.email = "artemvaskaa@gmail.com"
@@ -386,7 +386,7 @@ def dict_align_create(phyla: str, org_names: list, align_type: str) -> dict:
     filename = f"{align_type}.{ext}"
     dict_align = {}
     for org_name in org_names:
-        dict_align[f"{org_name}"] = read_single_fasta(f"../Datasets/{phyla}/{org_name}/ncbi_dataset/data/{filename}")
+        dict_align[f"{org_name}"] = read_single_fasta(f"../datasets/{phyla}/{org_name}/ncbi_dataset/data/{filename}")
 
     return dict_align
 
@@ -414,7 +414,7 @@ def analyze_exons(path: str) -> pd.DataFrame:
 
 
 def concat_2_exons(df: pd.DataFrame, org_name: str, indices: list):
-    path = f"../Datasets/{org_name}/ncbi_dataset/data/"
+    path = f"../datasets/{org_name}/ncbi_dataset/data/"
 
     seq_0 = df.iloc[indices[0]].sequence
     seq_1 = df.iloc[indices[1]].sequence
@@ -444,7 +444,7 @@ def concat_cassette(cassette_dict: dict, concat_type: str) -> str | None:
 
 
 def create_cassette(phyla: str, org_name: str, df_exons: pd.DataFrame, exons_i: list) -> dict:
-    path = f"../Datasets/{phyla}/{org_name}/ncbi_dataset/data"
+    path = f"../datasets/{phyla}/{org_name}/ncbi_dataset/data"
     gene_fna = read_single_fasta(f"{path}/gene.fna")
 
     try:
@@ -491,7 +491,7 @@ def dict_align_info_analyze(dict_align_info: dict, feature: str) -> (pd.DataFram
     for phyla, org_name_seq in dict_align.items():
         for org_name, seq in org_name_seq.items():
             stop_codon_pos = find_codon(seq, which="stop")
-            cassette_dict = read_fasta(f"../Datasets/{phyla}/{org_name}/ncbi_dataset/data/cassette.fa")
+            cassette_dict = read_fasta(f"../datasets/{phyla}/{org_name}/ncbi_dataset/data/cassette.fa")
             first_exon = cassette_dict[next(iter(cassette_dict))]
             cassette_intron = cassette_dict["cassette"]
             cassette_intron_start = seq.find(cassette_intron)
@@ -533,7 +533,7 @@ def dict_align_update_keys(dict_align: dict):
 
 
 def obtain_data(phylum: str, org_name: str) -> dict:
-    prefix = "../Datasets"
+    prefix = "../datasets"
     postfix = "ncbi_dataset/data"
     file_path = f"{prefix}/{phylum}/{org_name}/{postfix}"
 

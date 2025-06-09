@@ -144,7 +144,8 @@ def add_highlight_coords(df_info: pd.DataFrame, df_to_upd: pd.DataFrame) -> pd.D
         source = row[1].source
         match source:
             case "datasets":
-                cds_cassette_seq = read_single_fasta(f"../Datasets/{sub_phylum}/{org_name_protein_id}/ncbi_dataset/data/cds_cassette_plain.fa")
+                cds_cassette_seq = read_single_fasta(
+                    f"../datasets/{sub_phylum}/{org_name_protein_id}/ncbi_dataset/data/cds_cassette_plain.fa")
             case "psi_blast":
                 cds_cassette_seq = read_single_fasta(f"../Sequences_protein_id/{sub_phylum}/{org_name_protein_id.split("__")[1]}/cds_cassette_plain.fa")
 

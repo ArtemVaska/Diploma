@@ -258,7 +258,7 @@ def update_df(df: pd.DataFrame) -> pd.DataFrame:
     return df
 
 
-def save_genes(df, dir: str = "../Sequences_protein_id") -> None:
+def save_genes(df, dir: str = "../sequences_protein_id") -> None:
     for protein_id in df.protein_id:
         df_subset = df[df["protein_id"] == protein_id]
         gene_id = df_subset.gene_id.iloc[0]
@@ -274,7 +274,7 @@ def save_genes(df, dir: str = "../Sequences_protein_id") -> None:
                 outfile.write(handle.read())
 
 
-def save_cdss_exons(df, dir: str = "../Sequences_protein_id") -> None:
+def save_cdss_exons(df, dir: str = "../sequences_protein_id") -> None:
     for protein_id in df.protein_id:
         df_subset = df[df["protein_id"] == protein_id]
         org_name = df_subset.org_name.iloc[0]
@@ -310,7 +310,7 @@ def save_cdss_exons(df, dir: str = "../Sequences_protein_id") -> None:
                 outfile.write(f"{header}\n{exon_seq}\n")
 
 
-def save_proteins(df, dir: str = "../Sequences_protein_id") -> None:
+def save_proteins(df, dir: str = "../sequences_protein_id") -> None:
     for protein_id in df.protein_id:
         os.makedirs(f"{dir}/{protein_id}", exist_ok=True)
 
@@ -321,7 +321,7 @@ def save_proteins(df, dir: str = "../Sequences_protein_id") -> None:
 
 
 @telegram_logger(chat_id=611478740)
-def save_files(df: pd.DataFrame, dir: str = "../Sequences_protein_id") -> None:
+def save_files(df: pd.DataFrame, dir: str = "../sequences_protein_id") -> None:
     save_genes(df, dir)
     save_cdss_exons(df, dir)
     save_proteins(df, dir)
@@ -381,7 +381,7 @@ def create_many_cassettes(dir: str, data: dict) -> dict:
     return introns
 
 
-def dict_align_create(df: pd.DataFrame, align_type: str, dir: str = "../Sequences_protein_id") -> dict:
+def dict_align_create(df: pd.DataFrame, align_type: str, dir: str = "../sequences_protein_id") -> dict:
     align_types = ["gene", "rna", "protein", "cds", "cassette", "cds_cassette"]
     if align_type not in align_types:
         raise ValueError(f"Unknown alignment type: {align_type}")
@@ -411,7 +411,7 @@ def dict_align_create(df: pd.DataFrame, align_type: str, dir: str = "../Sequence
     return dict_align
 
 
-def dict_align_info_analyze(df: pd.DataFrame, sub_phylum: str, feature: str, dir: str = "../Sequences_protein_id") -> (pd.DataFrame,
+def dict_align_info_analyze(df: pd.DataFrame, sub_phylum: str, feature: str, dir: str = "../sequences_protein_id") -> (pd.DataFrame,
                                                                                                       dict):
     rows = []
     dict_align = dict_align_create(df, feature, dir)

@@ -25,13 +25,13 @@ def run_maxentscan(df: pd.DataFrame, sub_phylum: str) -> pd.DataFrame:
 
         # определяем пути для получения данных из файлов в зависимости от источника
         if row[1].source == "datasets":
-            prefix = "../Datasets"
+            prefix = "../datasets"
             postfix = "ncbi_dataset/data/"  # здесь обязательно еще один слеш прописываем
             intron_name = "cassette"  # FIXME
             org_name = row[1].org_name_protein_id
             new_org_name = org_name.rsplit("_", 1)[0].capitalize()
         elif row[1].source == "psi_blast":
-            prefix = "../Sequences_protein_id"
+            prefix = "../sequences_protein_id"
             postfix = ""  # а тут нет, потому что да
             intron_name = "cassette_intron"  # FIXME
             org_name = row[1].org_name_protein_id.split("__")[1]
