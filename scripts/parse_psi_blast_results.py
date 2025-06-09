@@ -1,6 +1,6 @@
 import os
 import time
-from typing import Any, List, Dict
+from typing import List
 
 from Bio import Entrez, SeqIO
 from Bio.Blast import NCBIXML

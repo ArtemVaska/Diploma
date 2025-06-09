@@ -2,7 +2,6 @@ import os
 import shutil
 
 import pandas as pd
-import numpy as np
 
 
 def extract_species_names(dir_name: str, folder_name: str) -> dict:
