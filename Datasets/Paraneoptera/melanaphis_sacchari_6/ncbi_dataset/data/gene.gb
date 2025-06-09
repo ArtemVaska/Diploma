@@ -1,0 +1,143 @@
+LOCUS       NW_020270366            1982 bp    DNA     linear   CON 28-JUN-2018
+DEFINITION  Melanaphis sacchari strain LSU unplaced genomic scaffold, SCAv2.0
+            Contig0_pilon_pilon, whole genome shotgun sequence.
+ACCESSION   NW_020270366 REGION: complement(18770996..18772977)
+VERSION     NW_020270366.1
+DBLINK      BioProject: PRJNA421017
+            BioSample: SAMN07757676
+            Assembly: GCF_002803265.2
+KEYWORDS    WGS; RefSeq.
+SOURCE      Melanaphis sacchari
+  ORGANISM  Melanaphis sacchari
+            Eukaryota; Metazoa; Ecdysozoa; Arthropoda; Hexapoda; Insecta;
+            Pterygota; Neoptera; Paraneoptera; Hemiptera; Sternorrhyncha;
+            Aphidomorpha; Aphidoidea; Aphididae; Aphidini; Melanaphis.
+COMMENT     REFSEQ INFORMATION: The reference sequence is identical to
+            PDEX02000005.1.
+            Assembly name: SCAv2.0
+            The genomic sequence for this RefSeq record is from the
+            whole-genome assembly released by the USDA-ARS Center for Grain and
+            Animal Health Research on 2018/06/22. The original whole-genome
+            shotgun project has the accession PDEX00000000.2.
+            
+            ##Genome-Assembly-Data-START##
+            Assembly Provider      :: USDA-ARS Center for Grain and Animal
+                                      Health Research
+            Assembly Date          :: 17-FEB-2018
+            Assembly Method        :: Supernova v. 2
+            Assembly Name          :: SCAv2.0
+            Long Assembly Name     :: Whole genome assembly of Melanaphis
+                                      sacchari version 2
+            Expected Final Version :: yes
+            Genome Coverage        :: 100.0x
+            Sequencing Technology  :: Illumina HiSeq Xten
+            ##Genome-Assembly-Data-END##
+            
+            ##Genome-Annotation-Data-START##
+            Annotation Provider         :: NCBI
+            Annotation Status           :: Full annotation
+            Annotation Name             :: Melanaphis sacchari Annotation
+                                           Release 100
+            Annotation Version          :: 100
+            Annotation Pipeline         :: NCBI eukaryotic genome annotation
+                                           pipeline
+            Annotation Software Version :: 8.1
+            Annotation Method           :: Best-placed RefSeq; Gnomon
+            Features Annotated          :: Gene; mRNA; CDS; ncRNA
+            ##Genome-Annotation-Data-END##
+FEATURES             Location/Qualifiers
+     source          1..1982
+                     /organism="Melanaphis sacchari"
+                     /mol_type="genomic DNA"
+                     /strain="LSU"
+                     /host="Sorghum bicolor"
+                     /db_xref="taxon:742174"
+                     /chromosome="Unknown"
+                     /tissue_type="Whole body"
+                     /dev_stage="adult"
+                     /geo_loc_name="USA: Lincoln, NE"
+                     /collection_date="Jan-2017"
+     gene            <1..>1982
+                     /gene="LOC112601250"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /db_xref="GeneID:112601250"
+     gene            complement(<1..>1982)
+                     /gene="LOC112601259"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /db_xref="GeneID:112601259"
+     misc_RNA        complement(join(<1..163,1738..1818))
+                     /gene="LOC112601259"
+                     /product="uncharacterized LOC112601259, transcript variant
+                     X3"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon. Supporting evidence
+                     includes similarity to: 100% coverage of the annotated
+                     genomic feature by RNAseq alignments, including 7 samples
+                     with support for all annotated introns"
+                     /transcript_id="XR_003115044.1"
+                     /db_xref="GeneID:112601259"
+     gene            1..1982
+                     /gene="LOC112601269"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /db_xref="GeneID:112601269"
+     mRNA            join(1..230,1817..1982)
+                     /gene="LOC112601269"
+                     /product="nuclear RNA export factor 1-like"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon. Supporting evidence
+                     includes similarity to: 1 Protein, and 100% coverage of
+                     the annotated genomic feature by RNAseq alignments,
+                     including 11 samples with support for all annotated
+                     introns"
+                     /transcript_id="XM_025348786.1"
+                     /db_xref="GeneID:112601269"
+     CDS             join(64..230,1817..1910)
+                     /gene="LOC112601269"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /codon_start=1
+                     /product="nuclear RNA export factor 1-like"
+                     /protein_id="XP_025204571.1"
+                     /db_xref="GeneID:112601269"
+                     /translation="MFNTISPSTPASLTVNQLSTGMPINVISDVNVNPENISMVKSFS
+                     NESGMNNQWAKKCLDENGWDYAKAAACFSDLKANIPPVAFIH"
+ORIGIN      
+        1 tcaccttctg ctactctaag tttccaacta gactcacaac agtagtcaat tgctactttt
+       61 cctatgttta acacaatatc accgtcaact cctgcctcct tgactgtaaa tcaattatct
+      121 actggaatgc ctataaatgt gatcagcgat gttaatgtaa atcctgaaaa tatatccatg
+      181 gttaagagtt tttcaaatga gtctggaatg aataatcagt gggctaaaaa gtaagtcatt
+      241 acatatgttt aatcggtact agtctgttat cgccccgcca cgggaatgaa aaatgttatc
+      301 gccccgccaa ttacgcacgc agctatacta tttaaaacgt aaatagaaat tgaaatatat
+      361 atatatatat aggtacatac agtgtataga aatatcagaa aaaatcgttt atttaaaaaa
+      421 aatcatcaat ttaattcgtt aattcattaa ttatttccaa aattatatca ttaaaaaaaa
+      481 tatgtaatat ataaaataaa tctaaaattt aataaaattt aaaaatatat agataaaata
+      541 aaataaaatt acaataatta ctatatcatg atggaggcca aaatgctaag atatccaata
+      601 aaatctgttc aaatggatca ttctgattgg taagttttga tcgccacata tactctgcca
+      661 tgtatgagtc aaggaaattt cgagctgttc cgcgacgtcg tttgttgccc cattttgcag
+      721 caccccacat tctttccacg ttttgggtgt gaactccagt agaggggtcg acaaagttgt
+      781 acttgtgatt gacttgatta tgttgataac ctaattgttg aattttattg tacgatctcc
+      841 agctgtccaa aaatattatg gaccctgggc gaataaactt ttagattaat ggtagtaaaa
+      901 ttttttcaga ccgatcaggt acacacacaa tgaaacattc tttagtttct cggcaaatgc
+      961 ctccaaatac ccactgttga ggaagtatac gacctgcatt gttttttcta cgtacaaata
+     1021 ggctttcgtc aatttccaca attaaattag gaccaccaat ttctttatta ccaatttcaa
+     1081 ttttccaaac gcacacttca cgtaaataat tattccagtc aacaacggcg cttttactca
+     1141 ttccaaactc acgtttacaa tacgatacag aggtcatttc ataagcccag cagtatatgt
+     1201 agtatactat tgtatgtatt ggtaatcttg aaccacttag ccaattgttg gttcttatac
+     1261 ctttttcttt tcggcaagtt cttctctgac aacgccatcg agatcctttt atggtcattt
+     1321 ttgcactttt gagtttgtaa taaaacattt ttcgtttgga gaaaattaat agtaaaatct
+     1381 tcattagaga cttcggaata caaatctttt aaattcattt tcaactactg caatatatac
+     1441 ttcgacactg atacgggcag agctttagac atactggaca tactgctaag taaaattacc
+     1501 tgaactaata aaataaagcg atgaagcttc aattgtcgta gatataaata aaaaataatg
+     1561 tgtttgatat ggttcgtaat cgccgcgttc gtaattggcg gggcgataac agaccagtac
+     1621 cgtttaatct tattaatcac aatattaaaa ttggaagtat tgttaatgtt gaacatagtt
+     1681 tgggaaatat cttcatctga tatttacaaa ttgataataa tataatatta gacttacctt
+     1741 gaaaattgtt ttctaaattg tttagacctg tagttaagtt ttttgtattt tttatatatg
+     1801 gtattatttt gcacaggtgt ttagacgaaa acggatggga ttatgctaaa gctgctgcat
+     1861 gcttttcaga tcttaaagct aatattccac ctgtagcttt catacattaa tgagcataat
+     1921 ttaatataaa tgagtcttat acaaagcaat gagtgtattt attttcatga tgtgacattt
+     1981 tt
+//
+

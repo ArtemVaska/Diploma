@@ -1,0 +1,119 @@
+LOCUS       NW_025222181            2023 bp    DNA     linear   CON 28-SEP-2021
+DEFINITION  Apis laboriosa isolate Shangri-la unplaced genomic scaffold,
+            ASM1406632v1 scaffold17_cov146, whole genome shotgun sequence.
+ACCESSION   NW_025222181 REGION: 381740..383762
+VERSION     NW_025222181.1
+DBLINK      BioProject: PRJNA764244
+            BioSample: SAMN15599769
+            Assembly: GCF_014066325.1
+KEYWORDS    WGS; RefSeq.
+SOURCE      Apis laboriosa (Himalayan honeybee)
+  ORGANISM  Apis laboriosa
+            Eukaryota; Metazoa; Ecdysozoa; Arthropoda; Hexapoda; Insecta;
+            Pterygota; Neoptera; Endopterygota; Hymenoptera; Apocrita;
+            Aculeata; Apoidea; Anthophila; Apidae; Apis.
+COMMENT     REFSEQ INFORMATION: The reference sequence is identical to
+            JACEOM010000016.1.
+            Assembly name: ASM1406632v1
+            The genomic sequence for this RefSeq record is from the
+            whole-genome assembly released by the Chongqing Normal University
+            on 2020/08/05. The original whole-genome shotgun project has the
+            accession JACEOM000000000.1.
+            
+            ##Genome-Assembly-Data-START##
+            Assembly Provider      :: Chongqing Normal University
+            Assembly Method        :: SOAPdenovo v. February-2019
+            Genome Representation  :: Full
+            Expected Final Version :: No
+            Genome Coverage        :: 304.0x
+            Sequencing Technology  :: Illumina HiSeq
+            ##Genome-Assembly-Data-END##
+            
+            ##Genome-Annotation-Data-START##
+            Annotation Provider         :: NCBI
+            Annotation Status           :: Full annotation
+            Annotation Name             :: Apis laboriosa Annotation Release
+                                           100
+            Annotation Version          :: 100
+            Annotation Pipeline         :: NCBI eukaryotic genome annotation
+                                           pipeline
+            Annotation Software Version :: 9.0
+            Annotation Method           :: Best-placed RefSeq; Gnomon
+            Features Annotated          :: Gene; mRNA; CDS; ncRNA
+            ##Genome-Annotation-Data-END##
+FEATURES             Location/Qualifiers
+     source          1..2023
+                     /organism="Apis laboriosa"
+                     /mol_type="genomic DNA"
+                     /isolate="Shangri-la"
+                     /db_xref="taxon:183418"
+                     /chromosome="Unknown"
+                     /sex="female"
+                     /tissue_type="chest"
+                     /dev_stage="adult"
+     gene            1..2023
+                     /gene="LOC122711683"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /db_xref="GeneID:122711683"
+     mRNA            join(1..58,391..2023)
+                     /gene="LOC122711683"
+                     /product="nuclear RNA export factor 2-like"
+                     /experiment="COORDINATES: polyA evidence [ECO:0006239]"
+                     /transcript_id="XM_043930689.1"
+                     /db_xref="GeneID:122711683"
+     CDS             395..2002
+                     /gene="LOC122711683"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /codon_start=1
+                     /product="nuclear RNA export factor 2-like"
+                     /protein_id="XP_043786624.1"
+                     /db_xref="GeneID:122711683"
+                     /translation="MANVEVTENIISWEPLRLTHVKPSFNAQESALASRQDLWHKFIL
+                     FGIGQFKAAEVLRTIIIACEPEIILPVMYKEENPNKSTFLTKCSCNAIENLIKQGLCL
+                     TLSNGQELHIDIILGYTDSQNLQLNPNRIIAQALYYRYEPTKKILNLDDFENEKSLSS
+                     IYCPISLPKVLHFVLRCTKMGILSNNRDSRLPVRELSLRYNQITSIIFFEKFFNYHLT
+                     KLDLRHNQIADVEYLRYFSEFKISELWLDGNPLCIKYNKCHDYIQAVKNIFPHLQKLD
+                     GIVIGMEQKFVPNIQSNYLKDGTNTCLIKQFVKHYFTLYDQDDRQVINGLYDRDALYS
+                     MTLGPVSNYVHKQLTKTFVTNRNLLKFVDYAKCQEFLLRGPEKIISALKNQPPTIHHF
+                     KSFHVDLLYEGEIHLAISVQGMFSFRDVNQCPPMFFNRTFIIMKKEDNEYCITNDQCY
+                     LDGTPANLSGNNEIRFELKSVPKFIPTVFSVSEKEQLLTFLHELTTMNIKFCHQYLED
+                     ANWDIRTAIATFMNMYTVNNVPPEAFL"
+ORIGIN      
+        1 aaatttgtaa ctgtaaaata aatttaatct cattagtatt gatatatcat tggaatcagt
+       61 aatgtttttc cattaaataa tttttcttac ttaaaataat ttatctaatc aattttttat
+      121 atatttaaac aaatatgtat gaatagtata tatatataca tatatattga atagtatata
+      181 tatattgaat agtatttatt tatttattat aaatacataa tttttttatt ataattaatt
+      241 cttaatattc taaaaatttt ttataaataa atcttataaa tttaagtgat tgtattatgg
+      301 agtgatttca tattttatta attttaatta tattttttat gaaattataa atttctatta
+      361 taaatcaatt ttatttacat atattatcag aataatggca aatgtagaag taactgaaaa
+      421 tattataagt tgggaaccat tacgtctaac acatgttaaa ccatcattta atgctcaaga
+      481 atccgctttg gcatcacgtc aagatttatg gcataagttc attttatttg gcataggaca
+      541 attcaaagca gcagaagtgt tacgaactat tattattgct tgtgaaccag aaattatatt
+      601 acctgttatg tataaagaag aaaatcccaa caaaagcact ttcttgacaa aatgtagttg
+      661 taatgctatt gaaaatctta taaaacaagg tttatgtcta acattgtcaa atggacaaga
+      721 attacacatt gatattatat taggatatac agattctcaa aatttacaat taaatcctaa
+      781 tagaattata gcacaagctc tttattatag atatgaacct acaaaaaaaa tattgaatct
+      841 tgatgatttt gaaaatgaaa aatcattaag ctctatatat tgtcccatat ctttgcccaa
+      901 agtattgcat tttgttttaa gatgtactaa aatgggaatt ttaagtaata atcgtgattc
+      961 acggttacct gttagagaat tgagtttaag atataatcaa atcacaagca ttatcttttt
+     1021 tgaaaaattt tttaattatc atttaaccaa attagattta cgtcacaatc aaattgcaga
+     1081 tgtagagtac ttacgttatt ttagtgagtt taaaataagt gaactttggt tggatggaaa
+     1141 tccattatgt ataaaatata ataagtgtca tgattatatc caagcagtaa aaaatatttt
+     1201 tcctcattta caaaaattgg atgggattgt aataggtatg gaacaaaaat ttgttcccaa
+     1261 tattcaaagt aattatttaa aagatggtac aaacacttgt ttaatcaagc aatttgtgaa
+     1321 gcattatttt acattatacg atcaagatga taggcaagtg ataaatggtt tatatgacag
+     1381 agatgctctc tattctatga ctttaggacc tgtttcaaat tatgttcata aacagttgac
+     1441 taaaacattt gtaacaaata gaaatttact aaaatttgtt gattatgcta agtgtcaaga
+     1501 atttttatta cgtggtccag aaaaaattat ttctgcactt aaaaatcaac cacctacaat
+     1561 acatcacttc aaatcatttc atgtggattt attgtatgaa ggagaaatcc atcttgcaat
+     1621 ttctgtacaa ggaatgtttt catttcgaga tgtcaatcaa tgtccaccaa tgtttttcaa
+     1681 tagaactttt ataattatga agaaagaaga taatgaatat tgcattacta atgatcagtg
+     1741 ttatcttgat ggaacaccag ctaatctatc aggaaacaat gaaataagat ttgaattaaa
+     1801 aagcgttcca aagtttattc caacagtgtt tagtgtttct gaaaaagaac aactgcttac
+     1861 atttttacat gaattgacta caatgaacat aaaattttgt catcagtatc ttgaagatgc
+     1921 caactgggat attaggactg ctattgctac atttatgaat atgtacacag ttaacaatgt
+     1981 accacctgaa gcctttttat aatatataca tcttttataa tct
+//
+

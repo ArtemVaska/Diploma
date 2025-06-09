@@ -1,0 +1,138 @@
+LOCUS       NW_010560323            3311 bp    DNA     linear   CON 17-NOV-2014
+DEFINITION  Phaethon lepturus isolate BGI_N335 unplaced genomic scaffold,
+            ASM68728v1 scaffold34528, whole genome shotgun sequence.
+ACCESSION   NW_010560323 REGION: 4..3314
+VERSION     NW_010560323.1
+DBLINK      BioProject: PRJNA265998
+            BioSample: SAMN02339888
+            Assembly: GCF_000687285.1
+KEYWORDS    WGS; RefSeq.
+SOURCE      Phaethon lepturus (White-tailed tropicbird)
+  ORGANISM  Phaethon lepturus
+            Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi;
+            Archelosauria; Archosauria; Dinosauria; Saurischia; Theropoda;
+            Coelurosauria; Aves; Neognathae; Neoaves; Phaethontimorphae;
+            Phaethontiformes; Phaethontidae; Phaethon.
+COMMENT     REFSEQ INFORMATION: The reference sequence is identical to
+            KK465244.1.
+            Assembly name: ASM68728v1
+            The genomic sequence for this RefSeq record is from the
+            whole-genome assembly released by the BGI on 2014/05/08. The
+            original whole-genome shotgun project has the accession
+            JJRF00000000.1.
+            
+            ##Genome-Assembly-Data-START##
+            Assembly Provider     :: BGI
+            Assembly Method       :: SOAPdenovo v. 1.6
+            Genome Coverage       :: 39x
+            Sequencing Technology :: Illumina HiSeq
+            ##Genome-Assembly-Data-END##
+            
+            ##Genome-Annotation-Data-START##
+            Annotation Provider         :: NCBI
+            Annotation Status           :: Full annotation
+            Annotation Version          :: Phaethon lepturus Annotation Release
+                                           100
+            Annotation Pipeline         :: NCBI eukaryotic genome annotation
+                                           pipeline
+            Annotation Software Version :: 6.1
+            Annotation Method           :: Best-placed RefSeq; Gnomon
+            Features Annotated          :: Gene; mRNA; CDS; ncRNA
+            ##Genome-Annotation-Data-END##
+FEATURES             Location/Qualifiers
+     source          1..3311
+                     /organism="Phaethon lepturus"
+                     /mol_type="genomic DNA"
+                     /isolate="BGI_N335"
+                     /db_xref="taxon:97097"
+                     /chromosome="Unknown"
+                     /sex="female"
+                     /geo_loc_name="Antarctica"
+     gene            <1..>3311
+                     /gene="NXF1"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /db_xref="GeneID:104625884"
+     mRNA            join(<1..173,217..344,1999..2084,2229..2333,2630..2710,
+                     2795..2864,3022..3110,3204..>3311)
+                     /gene="NXF1"
+                     /product="nuclear RNA export factor 1"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon. Supporting evidence
+                     includes similarity to: 5 Proteins"
+                     /transcript_id="XM_010293640.1"
+                     /db_xref="GeneID:104625884"
+     CDS             join(<1..173,217..344,1999..2084,2229..2333,2630..2710,
+                     2795..2864,3022..3110,3204..>3311)
+                     /gene="NXF1"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /codon_start=1
+                     /product="nuclear RNA export factor 1"
+                     /protein_id="XP_010291942.1"
+                     /db_xref="GeneID:104625884"
+                     /translation="RVGGRGFSGRRKKGRGPFRGKMYSEMNHRSRSRGGPGLRARLGE
+                     DDSEWGWRVGRGSGLPYGPRPNRTANIHITVRRDLPTPERSSSTSRDGGGEXXXXXXI
+                     PYGKKYDKSWLLSSIQNLCSVPFTPVEFHYDHNRAQFYVEDATTASALKQVSRKITDR
+                     DNYKVVIIINSSAPPQSLQNELKPEEIEQLKLCMSKRYDGSQRALDLKSLRVDPDLVS
+                     QSIDVVLNQRSCMLVVLRIIEDNIPELQSLNLSSNKLYQLDDLSELAQKAAGLKILDL
+                     SHNE"
+ORIGIN      
+        1 cgcgtgggcg gccgaggttt ctcgggccgc aggaagaagg gccgcggtcc gttccgcggg
+       61 aagatgtaca gcgagatgaa ccaccgctcc cgtagccgcg gtggccccgg tctccgcgcg
+      121 cggctgggag aggacgatag tgagtggggc tggcgtgtgg ggaggggctc ggggtggggt
+      181 tcagggctcc ccccaatctc acctcgtcat ttttagcttg ccctacggcc cacgaccgaa
+      241 ccgcacggcc aacatccaca tcacagtcag acgcgacctt cccactccgg agcggagcag
+      301 cagcaccagc cgtgatggcg ggggggaggn nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn
+      361 nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn
+      421 nnnnnnnnnn cccatggcgt gggggcaggg atcacccgtc gccggggacc gttggcagtg
+      481 agtggacggc gagcgtggcc gttgtcaccc tgtccctgag ggaactgggg gtgttcagag
+      541 ggatccagct cccgccagac ctggcaccgg gcacgatccc ggctctgacc agtgtgctca
+      601 ggtggccaag aaggccgata gcttcctggc ttgcgtcagg actagcgtgg ccagtgggac
+      661 gaggaacagg atcggttccc ccgtgtactc agcccccccc cgaatactgt gttcagtttt
+      721 gggctacaaa aaaagacgtt ttggtgctgc aatgtgtcca gagaagagcg acgaagttgg
+      781 tgaaggggct gagggaacca tggagggggc tcaggggaga cctcctcgtt ctccacagct
+      841 gcctggtagc gagttggggg tccggctttc atctcaagcg atgggatgag aggaaacggc
+      901 ctcaggttgc gcctggggag ggttaaattg gatatcagag caatttcttc aatgaaatca
+      961 ttgacaagcg ttggaacagg ctccacagcg gtggagtcgt catccctgga gggatttaac
+     1021 aggcgtgggg cagacggacg gcgtttggtg tggacttggc cgcgtgaacg gttggactcg
+     1081 atgatcttaa gggtcgtctt ccgcttaaat gctgctatga ttcattatga ttttacaatt
+     1141 gttttgggct acgatgaatt ttaacaagtt gaaatgctgg attgtgcacc cgggacagag
+     1201 taacgctggt cacaaagata aactgggaga ggagcagctg gggagcagcc ctgcaggaag
+     1261 ggatctggag gtgctggtcg gcagctgaga gggtacatgg caccctgggg ggcatcaaac
+     1321 gcaggagaag cggccggtga agagaggggc ttgtcgtgct gtgggcccca tgatactaaa
+     1381 gaggatgttt aaggtgctta aatgtagaaa agagaaacaa agctggtgac aaggctggaa
+     1441 gggatgttct gtgaggagcg actgaggact ttgggctggt ctagtttgga gagaaggagg
+     1501 ctgaggcgct tcctgaggac ctggagaggg agatgctgag ctcttctcct gggatccagg
+     1561 ggcaggacgc ctgggaaggg ttcagagctg cggcagggga ggttcacact ggctacgagg
+     1621 aagcatttgt ttaccgaggg ggtggccaga cactggaaga ggcttcctgg agaggcggtc
+     1681 gatgccccag gcctgccggg gtgcgagagg tgttgggata attcccttaa caacaggctt
+     1741 tggcgtttgg tcagcccggg agtggtcggg cagttggatt tgatgagcct tgtaggtcac
+     1801 ttcagcctga aatcgtttat tttgctattt ctttccttcc ctgggcggac gcagaaggca
+     1861 gctgcatcct gcgcagctgc aacacgcgtg gtctggccag ggctgtggca gctcctccac
+     1921 gagcgctgat gcagcatatg ctgttaccag ccctgcctgc accttgcctg cgccctgaca
+     1981 ccgggcaaat tatctcttag atcccgtacg ggaagaaata cgacaagtcg tggttgctga
+     2041 gctccatcca gaacctctgc agcgtcccct tcactcccgt tgaggtgagc agggcccaag
+     2101 cgcttgggtt ttgtttcgct tcccgtttcg gggaggtcgg ggcaggggag catgcgcctg
+     2161 ccaggaggtc ggttctgctc cagctctgcg ggagctgccc cccagacccc aacttttgct
+     2221 tttttcagtt ccactacgac cacaaccggg cccagttcta cgtggaagat gccaccaccg
+     2281 ccagcgccct caaacaagtt tcccgcaaga tcaccgacag ggacaactac aaggtctgcg
+     2341 gctcctccgg cnnnnnnnnn nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn
+     2401 nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn
+     2461 nnnnnnnnnc tacatgctgt gcggcccctc cgtggccgcc gggacgggcg ggccgggggc
+     2521 ttctccccac aggagcgaat ctcacggcac ggccgtttct gcccgctccg cgtgggccac
+     2581 gctcgctgcc agcacgcgct gcctcatgct ctgctctgct cgttcgtagg tggtgataat
+     2641 tatcaactcg tcggctccac ctcagtccct gcagaacgag ctgaaaccgg aggagattga
+     2701 gcaactgaag gtgagcgggg cgggcggctg cgggctctgg gcagagggga aaaggcagga
+     2761 gctgcccgct ctcattctcg ttgccttgtc ccagctctgc atgagcaaga gatacgatgg
+     2821 ttcgcagcgg gcgttggacc tcaagagcct ccgcgtcgac ccaggtaagc gctgctcgtc
+     2881 gccccggtgg tgggannnnn nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn
+     2941 nnnnnnnnnn nnnnngtggt gggggggggc tgcggtggcc agcccctcac ccctcgtttc
+     3001 cacaccttcc ccctgcgcca gatctggtgt cgcagagcat cgacgtggtg ctgaaccaac
+     3061 ggagctgcat gctggtcgtg ctgcgcatca tcgaggacaa catccccgag gtgaggatgg
+     3121 ggtggctctc cgtgctccag cggcaccagc tgaaccccca cagcccccat ttgaccccca
+     3181 caacccctta cctgttcccg cagctgcaat ccctgaacct gagcagcaac aagctctacc
+     3241 agctggacga cttgtccgag ctggcacaga aagccgccgg cctcaagatc ctcgacctct
+     3301 ctcacaacga g
+//
+

@@ -1,0 +1,189 @@
+LOCUS       NW_003526944            3402 bp    DNA     linear   CON 01-JUL-2011
+DEFINITION  Trichinella spiralis strain ISS 195 chromosome Unknown Scfld5,
+            whole genome shotgun sequence.
+ACCESSION   NW_003526944 REGION: 1419239..1422640
+VERSION     NW_003526944.1
+DBLINK      BioProject: PRJNA66457
+KEYWORDS    WGS; RefSeq.
+SOURCE      Trichinella spiralis
+  ORGANISM  Trichinella spiralis
+            Eukaryota; Metazoa; Ecdysozoa; Nematoda; Enoplea; Dorylaimia;
+            Trichinellida; Trichinellidae; Trichinella.
+REFERENCE   1  (bases 1 to 3402)
+  AUTHORS   Mitreva,M., Jasmer,D.P., Zarlenga,D.S., Wang,Z., Abubucker,S.,
+            Martin,J., Taylor,C.M., Yin,Y., Fulton,L., Minx,P., Yang,S.P.,
+            Warren,W.C., Fulton,R.S., Bhonagiri,V., Zhang,X.,
+            Hallsworth-Pepin,K., Clifton,S.W., McCarter,J.P., Appleton,J.,
+            Mardis,E.R. and Wilson,R.K.
+  TITLE     The draft genome of the parasitic nematode Trichinella spiralis
+  JOURNAL   Nat. Genet. 43 (3), 228-235 (2011)
+   PUBMED   21336279
+REFERENCE   2  (bases 1 to 3402)
+  CONSRTM   NCBI Genome Project
+  TITLE     Direct Submission
+  JOURNAL   Submitted (01-JUL-2011) National Center for Biotechnology
+            Information, NIH, Bethesda, MD 20894, USA
+REFERENCE   3  (bases 1 to 3402)
+  AUTHORS   Mitreva,M., Wang,Z., Abubucker,S., Martin,J., Taylor,C., Fulton,L.,
+            Minx,P., Wesley,C., Warren,C., Fulton,R., Pepin,K.H., Bhonagiri,V.,
+            Zhang,X.W.E., Clifton,S., Mardis,E.R. and Wilson,R.K.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (11-MAR-2010) Genome Sequencing Center, Washington
+            University School of Medicine, 4444 Forest Park, St. Louis, MO
+            63108, USA
+REFERENCE   4  (bases 1 to 3402)
+  AUTHORS   Wilson,R.K.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (16-OCT-2007) Genome Sequencing Center, Washington
+            University School of Medicine, 4444 Forest Park Parkway, St. Louis,
+            MO 63108, USA
+COMMENT     PROVISIONAL REFSEQ: This record has not yet been subject to final
+            NCBI review. The reference sequence is identical to GL622788.
+            Trichinella spiralis is a roundworm that cause most of the human
+            trichinella infections and deaths around the world. Its
+            pathogenicity is higher than that of other trichinella species due
+            to the higher number of newborn larvae produced by the females and
+            for the stronger immune reaction induced in humans. The life cycle
+            of the parasite begins when a person or an animal eats contaminated
+            meat containing larvae. T. spiralis is a basal nematode with a
+            well-defined phylogenetic position near the root of the phylum
+            Nematoda. The genome size estimate based on flow sorted nuclei
+            stained with PI (Spencer Johnston, Texas A&M University) is 1C =
+            71.3 +/1 1.2 Mb. The strain being sequenced (ISS 195) was obtained
+            from the laboratory of Judith Appleton (Cornell University) and has
+            been maintained in rats since 1970. Worm isolation and DNA
+            extraction was performed by Dante Zarlenga (USDA)
+            
+            This assembly consists of plasmid, fosmid and BAC end sequences.
+            The data were assembled using the assembly engine, PCAP (Xiaoqiu
+            Huang et. al. 2006). Our goal is to explore this WGS draft sequence
+            of T. spiralis in several ways: i) to provide a better
+            understanding of evolutionary biology by identifying gene loss or
+            gain across the phylum Nematoda and clarify evolution of genome
+            architecture (synteny, operons); ii) help identify RNA genes and
+            regulatory regions; and iii) better define proteins involved in
+            nematode parasitism that impact health and disease and are relevant
+            to both host-parasite relationships and basic biological
+            processes..
+            
+            We masked the repeats by using RECON (Bao and Eddy, 2002) and
+            RepeatMasker (A.F.A. Smit, R. Hubley & P. Green RepeatMasker at
+            http://repeatmasker.org). Then the Ribosomal RNA genes were
+            identified using RNAmmer
+            ((http://www.cbs.dtu.dk/cgi-bin/nph-sw_request?rnammer ). Transfer
+            RNA genes were identified with tRNAscan-SE (Lowe and Eddy, 1997).
+            Non-coding RNAs, such as microRNAs, were identified by sequence
+            homology search of the Rfam database
+            (http://selab.janelia.org/software.html). Protein-coding genes were
+            predicted using a combination of ab initio programs (Snap, Korf,
+            2004 and Fgenesh, Softberry, Corp) and an inhouse evidence based
+            program Eannot (Eannot Ding et al., 2004) which uses mRNA, EST and
+            protein alignment information from same species or cross-species to
+            aid in gene structure determination. A consensus gene set from the
+            above prediction algorithms will be generated, using a logical,
+            hierarchical approach. Gene product naming was determined by BER
+            (JCVI: http://ber.sourceforge.net ).
+            
+            For information regarding this assembly or project, or any other
+            GSC genome project, please visit our Genome Groups web page
+            (http://genome.wustl.edu/genome_group_index.cgi) and email the
+            designated contact person. For specific questions regarding the T.
+            spiralis genome project contact Makedonka Mitreva
+            mmitreva@watson.wustl.edu (Washington University School of
+            Medicine). The National Human Genome Research Institute (NHGRI) of
+            the National Institutes of Health (NIH) provided funds for this
+            project.
+FEATURES             Location/Qualifiers
+     source          1..3402
+                     /organism="Trichinella spiralis"
+                     /mol_type="genomic DNA"
+                     /strain="ISS 195"
+                     /db_xref="taxon:6334"
+                     /chromosome="Unknown"
+     gene            1..3402
+                     /locus_tag="Tsp_03999"
+                     /db_xref="GeneID:10904254"
+     mRNA            join(1..83,501..537,699..890,1123..1264,1323..1519,
+                     1600..1709,1895..1931,1999..2091,2230..2355,2776..2891,
+                     2965..3213,3303..3402)
+                     /locus_tag="Tsp_03999"
+                     /product="nuclear RNA export factor 1"
+                     /transcript_id="XM_003374763.1"
+                     /db_xref="GeneID:10904254"
+     CDS             join(1..83,501..537,699..890,1123..1264,1323..1519,
+                     1600..1709,1895..1931,1999..2091,2230..2355,2776..2891,
+                     2965..3213,3303..3402)
+                     /locus_tag="Tsp_03999"
+                     /codon_start=1
+                     /product="nuclear RNA export factor 1"
+                     /protein_id="XP_003374811.1"
+                     /db_xref="GeneID:10904254"
+                     /translation="MASHMRRPNTNAYRSRLVYGAKSSSTNQPTTSRSTGVRRTVRNG
+                     KDLSESEIIAALEDFLKSPVHPFCISNLDNGDVTFYVRKSEEGSAILSASRRATTSSG
+                     RKLVIETQSASPPCIELVDADKEVLRQVLDSLFCAGTHHLNLGCFSQNTVIRNHREYM
+                     PVNRNSVMLAIATLLSEQGGLIHSIDLSNNRLRYLDYLANLVSFTRNVIALDLNENQV
+                     DSVDELRKLSGWKLSQLNIKQNPFYKHFKSESEYHRAMLSVFPQLTLLDGVPVVKEET
+                     VNFGLDVPTASAAQINWPPALGSFLVNDELKDLLIRFFMEYYSCFDSTETSQREKLLH
+                     AYTKTGDLIGCCMNGSMKMISEGEPDVFLLFTRSFILRRVTAQGLCIENDMINVRNVS
+                     EEELRSYTTTVQNALNAPPQVNQQIGQITAPSASTDTSVNLGSQVAQSPVAMGELLSR
+                     ETNLRLEWAMKCLEDNGWQYNDAKNAFFRLLEQGNVPPQAFIN"
+ORIGIN      
+        1 atggcatccc atatgcgacg tccaaatacc aatgcttata gaagtcgact tgtttatggc
+       61 gcaaagagct cgagcacaaa tcagtgagaa ttctactttt gttgttatct ttcattttta
+      121 agatgattac atcgtaatag taattaattt tcagctattt aaaaatgtag aaaattttta
+      181 atagttttta attcttgtct ttatttttat attttgaatt agtattgtta ttgaagagta
+      241 cataggcatg cggtaaaaga catgaaaaat tcatacttta tttccttaat tataatgatt
+      301 tgtattacca ttgaatgtat cgtacaccta tttatgaaat tatttagatt gcgaaatgta
+      361 tttaaaataa tattattgcg tgtttggtta tttttgaaaa atatattttt ttctgtatta
+      421 gaataattta tgtcagcagc atgcgtgttt aatattttgt ttggaagata aattttggaa
+      481 ttttgtgtaa ttttgtttag accaacaacc agtcgttcca ctggtgtacg aagaacggtg
+      541 aataaaagtg tttttgaacg catcagcgga cgactgagcg tatcaaaaag acaaaaaaac
+      601 actgctgcta ccgcgcgtgc tagtggttgg acaaggataa ctgtacgaac gaaatcgatt
+      661 tgtttaattg atattgttta atttaatttg tcttcaaggt gagaaatgga aaagatttat
+      721 cagaaagtga aattatcgct gctttggaag attttttaaa aagtcctgtc catccgtttt
+      781 gcatttcaaa tttggacaat ggtgatgtta cgttttatgt gcgcaaaagc gaagaaggaa
+      841 gcgcaatttt atctgcttca cgtcgtgcta caacgtcatc tgggagaaaa gtaaacaaca
+      901 aaacattaaa gcagctcatt tctatttgaa atttttaaga tttgtatttt ccattgatat
+      961 tttttaattt attttttgta ttttgctttt actgatttgt taaatcaata tcagttgatg
+     1021 aagaattccg gttttttacg tttttgacag taattgggag tggatgaaaa gtaattttag
+     1081 actgatgaca gagaaatgat aaatttcttt tcatcatttt agttagttat tgaaactcag
+     1141 tcagcttcac caccatgtat tgaattggtt gatgcggata aagaggtgtt gaggcaagta
+     1201 ttggattcgt tgttttgtgc tggaacgcat catttaaatt tgggatgctt ctcccagaat
+     1261 acaggtatta ttttttgtta tacaatttga aaattttaat ttctgaaagt ttttttttgc
+     1321 agtaattcgc aaccatcgcg aatacatgcc tgtcaatcgc aacagcgtga tgttggcaat
+     1381 tgcaactttg ttatccgagc aaggcggttt aatacattct atagacttgt cgaacaatcg
+     1441 tcttcggtat ttggactatt tggcaaattt agtctcattc acgagaaatg ttattgcgct
+     1501 ggatcttaac gaaaatcaag taagttgtga atgaaaggaa ggaaaatgga cattgattac
+     1561 atgtgtaaat taattatttg tttccatttt tctgtttagg tggattcagt ggatgagttg
+     1621 cgtaagctga gtggttggaa gttgagccag ttgaatataa agcaaaatcc attctataaa
+     1681 cattttaaat cagaatcgga gtatcacagg tttgtttttg ttcggttttt tgttttattt
+     1741 gtttttttcc ggctgcacct cgacgttgac gttgtatttt ggttgtctct acgtccaggc
+     1801 gactttacac ttttagttgc aacggttgta gagattgcac agcagtcttt aatgacatca
+     1861 ttgtcatttc taccaaatga tcttatactt atagagccat gctatcagta tttccccagc
+     1921 tgactttgct tgtgagtgta ttgttttttt gtgtttgttt gtttgttttt ttaaacatat
+     1981 gtaatttatt taacttagga tggtgtacct gtggtaaaag aggagacggt gaattttggt
+     2041 cttgatgtac caactgcatc tgcagcacaa ataaactggc ctccagcgtt ggtaacattt
+     2101 tttgcatctc ttttcaccaa ccactgatgg tcatattcat tctagttatg acagctgata
+     2161 ttataaattt tcggcacttt gtcatacgcg ttaattttcc gttaaaaaat tattcatctt
+     2221 gttatttagg gaagttttct cgtcaatgat gaattgaaag acttgttaat tcgatttttt
+     2281 atggaatact atagctgttt tgatagcaca gaaacatccc agcgtgaaaa gcttttgcat
+     2341 gcttacacaa aaacggtaca aatttacaat tccggcagtt gaatattgat tttaatattt
+     2401 ctatttattt cttttagtcg ttattttctt taacggccga cgtatcttac tcgactaaag
+     2461 attggtagaa tgagatccgt tacttgtata gaagtattgt taattctttc ttccttatta
+     2521 tcatatttag tgtcaagcaa agaactgcat tgagaaattt ataccgagac agtcataaca
+     2581 ttgttcgaat ttctgtatgg aaatcgtttc gtgacagact ggtgaagcga ggacatatga
+     2641 atattgttgg ccatttgtcg tccgcatttc cacgcactca acatgatcca tcgtcatttt
+     2701 tgctcgacat ctttttcgtt tctgtaaata ggtagtattt tataatcagt ttacaaattg
+     2761 agaattattt attagggaga tttgattggc tgttgtatga atggttcgat gaaaatgatc
+     2821 tctgaagggg agccggacgt tttcttgcta tttacccgca gttttatttt acgtcgtgta
+     2881 acagcacaag ggtaagcaag gaattttttg aaatataatt aaatataata tatatttttt
+     2941 ctaattttta ttttccaatt tcagactttg catagagaat gacatgataa acgtgcgtaa
+     3001 tgtcagtgaa gaagaattgc gatcgtacac aacgacagta cagaatgctt tgaatgcccc
+     3061 accccaagtt aatcagcaaa tcggacaaat aactgcacct tcggcgtcca ctgatacgtc
+     3121 tgttaatttg ggttctcaag ttgcacaatc gccagttgct atgggagaat tgcttagcag
+     3181 agaaacgaat ttgcggttgg aatgggcaat gaagtgagtt tatacgtttt ggttgttcgg
+     3241 tcaacttttg gcattggaat tgtttattaa tttttatccg aatttttttc tccctcgtgt
+     3301 agatgtttgg aagataacgg gtggcaatac aatgatgcaa aaaatgcttt ttttcgactg
+     3361 ctggaacaag gaaacgtacc cccgcaagct ttcataaatt aa
+//
+

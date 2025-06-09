@@ -1,0 +1,178 @@
+LOCUS       NW_022995380            4724 bp    DNA     linear   CON 20-MAY-2020
+DEFINITION  Drosophila innubila isolate TH190305 chromosome 3R unlocalized
+            genomic scaffold, UK_Dinn_1.0 2_E_3R, whole genome shotgun
+            sequence.
+ACCESSION   NW_022995380 REGION: complement(2446592..2451315)
+VERSION     NW_022995380.1
+DBLINK      BioProject: PRJNA630747
+            BioSample: SAMN11037163
+            Assembly: GCF_004354385.1
+KEYWORDS    WGS; RefSeq.
+SOURCE      Drosophila innubila
+  ORGANISM  Drosophila innubila
+            Eukaryota; Metazoa; Ecdysozoa; Arthropoda; Hexapoda; Insecta;
+            Pterygota; Neoptera; Endopterygota; Diptera; Brachycera;
+            Muscomorpha; Ephydroidea; Drosophilidae; Drosophila.
+REFERENCE   1  (bases 1 to 4724)
+  AUTHORS   Hill,T., Koseva,B.S. and Unckless,R.L.
+  TITLE     The Genome of Drosophila innubila Reveals Lineage-Specific Patterns
+            of Selection in Immune Genes
+  JOURNAL   Mol. Biol. Evol. 36 (7), 1405-1417 (2019)
+   PUBMED   30865231
+COMMENT     REFSEQ INFORMATION: The reference sequence is identical to
+            SKCT01000003.1.
+            Assembly name: UK_Dinn_1.0
+            The genomic sequence for this RefSeq record is from the
+            whole-genome assembly released by the University of Kansas on
+            2019/03/19. The original whole-genome shotgun project has the
+            accession SKCT00000000.1.
+            
+            ##Genome-Assembly-Data-START##
+            Assembly Provider      :: University of Kansas
+            Assembly Date          :: 18-JUN-2018
+            Assembly Method        :: Canu v. 1.6
+            Assembly Name          :: UK_Dinn_1.0
+            Genome Representation  :: Full
+            Expected Final Version :: Yes
+            Genome Coverage        :: 20.0x
+            Sequencing Technology  :: Oxford Nanopore MiniION
+            ##Genome-Assembly-Data-END##
+            
+            ##Genome-Annotation-Data-START##
+            Annotation Provider         :: NCBI
+            Annotation Status           :: Full annotation
+            Annotation Name             :: Drosophila innubila Annotation
+                                           Release 100
+            Annotation Version          :: 100
+            Annotation Pipeline         :: NCBI eukaryotic genome annotation
+                                           pipeline
+            Annotation Software Version :: 8.4
+            Annotation Method           :: Best-placed RefSeq; Gnomon
+            Features Annotated          :: Gene; mRNA; CDS; ncRNA
+            ##Genome-Annotation-Data-END##
+FEATURES             Location/Qualifiers
+     source          1..4724
+                     /organism="Drosophila innubila"
+                     /mol_type="genomic DNA"
+                     /isolate="TH190305"
+                     /db_xref="taxon:198719"
+                     /chromosome="3R"
+                     /map="unlocalized"
+                     /sex="female"
+                     /tissue_type="whole body"
+                     /dev_stage="adult"
+                     /geo_loc_name="USA: AZ"
+     gene            1..4724
+                     /gene="LOC117792204"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /db_xref="GeneID:117792204"
+     mRNA            join(1..7,2884..4000,4055..4724)
+                     /gene="LOC117792204"
+                     /product="nuclear RNA export factor 1-like"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon. Supporting evidence
+                     includes similarity to: 1 Protein, and 98% coverage of the
+                     annotated genomic feature by RNAseq alignments"
+                     /transcript_id="XM_034632244.1"
+                     /db_xref="GeneID:117792204"
+     CDS             join(1..7,2884..4000,4055..4565)
+                     /gene="LOC117792204"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /codon_start=1
+                     /product="nuclear RNA export factor 1-like"
+                     /protein_id="XP_034488135.1"
+                     /db_xref="GeneID:117792204"
+                     /translation="MATKSQKLRSVAVVVAPPDKARSPCKQYFHPYGRYIIPISPYGW
+                     YRVLVYSHNSGYTIEEVLDKLRLSVSPQRLRYYYLHEGGEQDEDRDKRATFTFYVDSY
+                     KLAAKLQQKGHRPPVIGVRVSDGPPNIQVDDFYRWKLRTVIMSSSRYDPGKSCLNLCR
+                     FYADDCWKGEFCALQQFQCLEAIIEIMEQEMPQLRHLMLDSNHLSILSGFQGMEQRFS
+                     QLKSISLEHNELKSLHELRVFERLQLKKLNLRRNPLPRNYEQHLVIMFPHLRALNGQR
+                     LRWQRSSSPGEFIVSDTDIDSDVEIVSVSECKPVVLLPEPRFFYLAPHSLNMQPGIRK
+                     FVRRYLKAFDGDKRSTDLEGFYHDNTLVTLRLDKEQASWFKNTPDAAHGRQLLASRQA
+                     VLQMFEAWPKTRHLPSTMTLDLTLVQLKMLSASITGCFEETELRHYMRTFVLTRSQET
+                     DDFRIANELIYLGRAIHSRGHGPCQQSSLNPNQHNLMTKLSAETRLKSHWSCKFLKDT
+                     NWDYQQSLLAFQTLLRRRQIPNTAFHELDIQPEWCP"
+ORIGIN      
+        1 atggcaagtg aatttaatcc gtacagtcga gttataaaag aatcctcttc cgttaggtct
+       61 gaccaaaagt aataccgaaa caggcatgca tatttgacaa atttaatata cccttattct
+      121 tattttgatg tgcaaggtct aagaacaaaa attatttcat cagtaacttg aattctctct
+      181 gcaactaatc ttaattatta aaaggtttca ttcaagtgtt tgttttaaga ccgtgaaact
+      241 gatttcatac tcggagatag ataaaagaga tacagcagat gtggctgctg aaaagttgct
+      301 tggccatagg atataaattt ttcccagaat ggtactctga atgaatggct aattaatttg
+      361 accataaaga aaagtgctta atcatgattt ttgcataata ttttcaaaga gattgtttca
+      421 tggactcgct ttctgcagcc acaaccctta aaacttgaat gaaagtgctt tgcttttgat
+      481 aaaacccagg gctcaaacat cccatgactg cttcccaaca caattaaaag gcagacgaaa
+      541 tcctttgtgt gtcggctcct cactgtccta tcaggacgac atggcacaat tatcaataag
+      601 aatctctagc tgaatccgta ttcgaataga cggaaaggtt acagtcttcc gaattttgga
+      661 aattaattta tgacacgccg cacattttcc atttgccgca ctgagaaacg tgctacgatt
+      721 tttatcagta ttttccctgc tttctattcc tttcccggct tttccttctc ttctgcctgt
+      781 ctctcatttc tatgcacgta ttatttttaa tccattaaac aaataccatg ttgcgggcca
+      841 gcctgttgtg cctgtgtgtc cgttatcagt aaatggtcaa aagggtcttt gatttgctgc
+      901 cagcacaatg attggggtag aagcaacgcc tccgctgtga gagtgtttgt gtgtgtgtgt
+      961 ctgtgtgtgt gtgtgtgttg catgcaatca gacagttttc tccattcgaa ttccttgggc
+     1021 gaaacatttg ttgtgttcac gctgtgttat catgcataaa gaaatgtatc tgaagccaag
+     1081 ggaaaatgaa aattatttaa tggcattggc agttgaaatc attaatatct ggagagactt
+     1141 ataaattgcc aacaacaact gaaacgttaa taatgccaga caagtatcaa tcaattttca
+     1201 gattctattt acgattcgac ttagttgtct atgtgggctg ctccaggtgc actcattttt
+     1261 cggatgaata tactcgtata tatgcaatgg tgaaaaaatt attgagttcg attccccgtc
+     1321 atgttattca aaatgtgttt tttgtacccg ttaattaatt tttaattaca attatacaat
+     1381 gtttacaaaa agtttatcgg tgttcgactt ttggatgaca ctcgttaggt aaaacggctt
+     1441 gtcacattgc agcacactca tgctgctttt ggccatcaaa gccagttggc cagttgggcc
+     1501 ttaaagctca ctcgccgcca ttcacagttc aataagcaaa gagctctcaa aataagcaca
+     1561 accacagtgc cctcctcttc atgttggtct aaaacaaaag cggcaaagta gacaaaaata
+     1621 aagtgtctga catggaaata ccctaactcg tagtttaatt tcgagaccta ctttatatag
+     1681 gttttttacg gttttaaaaa atattaagga ttcatttgaa ctattttcaa aatatgtatt
+     1741 ccttcaactt tatccccagt ttaatgcact gctttgctta tttttataga gaatattaag
+     1801 cgaactaagc aatttactgg aactacaaag catttttaat tgttaagtaa gcataatgtg
+     1861 tgtaaaatgg tggcgagagt gttgcctgga cgtcgagttc cttctccgct ttaaatggac
+     1921 tcaatagcta tatattgtgt atgaaaattt gagtaaagag tttgacgagt tggaaggagg
+     1981 aaatagcata aataaattgg caacatgatg aaaaaaaaaa aaaaaaaaaa aatacaaaaa
+     2041 gaaatgtctg acataaaaat gggcttataa tttttttttt ttttgttatg cagtcaacaa
+     2101 actgcgagtc aacttatttg gggagggttg aggactacga aactcatcac gttgtgggca
+     2161 aacaatgagg gagcattcag cttgcaaact gagcagatga gcagctaatt gcagctgggg
+     2221 acatactgga tctgaatacc gttcataaat atgggataca ttatttttga aatgcttaaa
+     2281 ctctttgatc tatttggact tgttacgctt ttaatattgc ttaaatttaa aggaagtgaa
+     2341 actaatcgga cagcaattag taaggcctcg tttttttttg ctttgcattt aatatgtcac
+     2401 gttttacatg cctcttcttt gtagttacgt tttcttaaaa gtttgaaccg tcgctttcct
+     2461 ttgcttatcc tctcttaaaa gctagttatt ttatatactt ctttgtgtaa cgtccttgaa
+     2521 cgctttgctg catttttgtg ttccctctgt ctctttcgac tgaaggcatt tatttaatct
+     2581 gtttctcttt caacaaaatt cttcaatgct tttattgact tattgctcat tttgtagttt
+     2641 tcgatcattg tgtaacattc ttaaacgcaa tgcctgactc attgcttgcg taatgtatat
+     2701 gctcttactt tctttagaga gctttaaaaa ctgctaatag gtttgcgtca ttattagctt
+     2761 tgctttgttt ttcttatttt acaaattctt ttcatctaga aggccgaatg aaaaaccaat
+     2821 agatttgatt ttgtttgaaa attatgagca aggaaaatga aaatattaaa tcaccggatg
+     2881 cagcgaaatc ccaaaaacta agatctgttg ctgtggttgt ggctcctcca gataaggcaa
+     2941 gatcaccatg caaacagtac tttcacccat atggacgcta tatcattccg attagcccct
+     3001 acggatggta tcgcgttctc gtctacagtc acaacagtgg ttataccatc gaggaggtgc
+     3061 tggataagtt gaggctgtcc gtgtcacctc aaaggcttag atactactat ctgcacgaag
+     3121 gcggggagca ggatgaggat cgggacaaga gggccacgtt caccttctat gtggatagct
+     3181 acaaactggc tgcgaaacta cagcaaaaag gtcatcgacc tcctgttatt ggtgtacgag
+     3241 tgagcgacgg accacccaac atccaagtgg acgattttta tagatggaaa ctgcgcacag
+     3301 tgatcatgtc cagctccagg tatgaccctg gaaaatcttg tctaaatctc tgtcgctttt
+     3361 acgccgacga ttgctggaag ggcgagttct gtgctttgca gcagttccag tgcctggagg
+     3421 ctatcattga gattatggaa caagagatgc cacagttgcg tcacctaatg ctggacagca
+     3481 atcatcttag tattttgagc gggttccagg gtatggaaca gcgtttttcc cagctgaaaa
+     3541 gtatttccct ggagcacaac gaactgaagt cgctgcatga gttgcgcgtc tttgagcgtc
+     3601 ttcaactcaa aaagctgaac cttagaagga atcccttgcc ccgaaactat gagcaacact
+     3661 tggtcatcat gtttcctcat ctgcgtgcat tgaatggaca gagactaagg tggcagagat
+     3721 catcttcacc cggcgaattc attgtcagtg ataccgatat cgacagcgat gtggagattg
+     3781 tgtcagtcag cgaatgtaag cctgtcgtcc tcctgcccga accacgtttt ttttatctgg
+     3841 caccgcattc cctcaacatg caaccgggaa tacgaaagtt tgtgcgtcga tatctcaagg
+     3901 cgttcgatgg cgataaaagg agcactgact tggaaggctt ttatcatgac aacacgctgg
+     3961 tcacgctgag actggataag gaacaagctt catggttcaa gtaaataatg ctacttttat
+     4021 tcccactaca taactctact tgttttctat ttagaaacac tcccgatgcg gcccatggtc
+     4081 gtcagctctt ggcatcccgt caagccgttc tacagatgtt cgaagcatgg ccaaaaacgc
+     4141 gacatctgcc atcaacaatg accttggacc taactttggt gcagttgaaa atgctgtccg
+     4201 catcgattac aggttgcttc gaggagacgg aactgcgaca ttatatgcgc acctttgtgc
+     4261 tgacaaggag ccaagaaact gatgactttc gcattgccaa tgagctcatc tatctgggtc
+     4321 gtgctatcca tagtcgtggt cacggtccat gccaacaatc gtctctcaat cccaaccagc
+     4381 acaatctcat gaccaagttg tcagcagaga cgcgattgaa atcgcactgg agttgcaagt
+     4441 ttctcaagga taccaattgg gactaccagc aatctttgtt ggcattccag acactcctcc
+     4501 gtcgtcgcca gattcccaat accgccttcc acgagcttga tatccagcct gaatggtgcc
+     4561 cgtgacgcca aactgtattt ccaatgtgcc cacagggaaa ttgaaaattc cactgattat
+     4621 gctgattaca ttttatttga atttgatggt aagggtatta agagtccaac gactatgact
+     4681 tctatccgaa atgaaggaga ctttattgga gcaatatcat aata
+//
+

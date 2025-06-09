@@ -1,0 +1,417 @@
+LOCUS       NC_040011              10957 bp    DNA     linear   CON 05-DEC-2018
+DEFINITION  Larimichthys crocea isolate SSNF chromosome I, L_crocea_2.0, whole
+            genome shotgun sequence.
+ACCESSION   NC_040011 REGION: complement(28280946..28291902)
+VERSION     NC_040011.1
+DBLINK      BioProject: PRJNA354443
+            BioSample: SAMN03092871
+            Assembly: GCF_000972845.2
+KEYWORDS    WGS; RefSeq.
+SOURCE      Larimichthys crocea (large yellow croaker)
+  ORGANISM  Larimichthys crocea
+            Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi;
+            Actinopterygii; Neopterygii; Teleostei; Neoteleostei;
+            Acanthomorphata; Eupercaria; Sciaenidae; Larimichthys.
+REFERENCE   1  (bases 1 to 10957)
+  AUTHORS   Ao,J., Mu,Y., Xiang,L.X., Fan,D., Feng,M., Zhang,S., Shi,Q.,
+            Zhu,L.Y., Li,T., Ding,Y., Nie,L., Li,Q., Dong,W.R., Jiang,L.,
+            Sun,B., Zhang,X., Li,M., Zhang,H.Q., Xie,S., Zhu,Y., Jiang,X.,
+            Wang,X., Mu,P., Chen,W., Yue,Z., Wang,Z., Wang,J., Shao,J.Z. and
+            Chen,X.
+  TITLE     Genome sequencing of the perciform fish Larimichthys crocea
+            provides insights into molecular and genetic mechanisms of stress
+            adaptation
+  JOURNAL   PLoS Genet. 11 (4), e1005118 (2015)
+   PUBMED   25835551
+COMMENT     REFSEQ INFORMATION: The reference sequence is identical to
+            CM011615.1.
+            Assembly name: L_crocea_2.0
+            The genomic sequence for this RefSeq record is from the
+            whole-genome assembly released by the BGI on 2018/11/27. The
+            original whole-genome shotgun project has the accession
+            JRPU00000000.2.
+            
+            ##Genome-Assembly-Data-START##
+            Assembly Provider      :: BGI
+            Assembly Date          :: 01-MAY-2017
+            Assembly Method        :: Platanus v. 1.2.1
+            Assembly Name          :: L_crocea_2.0
+            Genome Representation  :: Full
+            Expected Final Version :: Yes
+            Genome Coverage        :: 140x
+            Sequencing Technology  :: Illumina HiSeq
+            ##Genome-Assembly-Data-END##
+            
+            ##Genome-Annotation-Data-START##
+            Annotation Provider         :: NCBI
+            Annotation Status           :: Full annotation
+            Annotation Name             :: Larimichthys crocea Annotation
+                                           Release 102
+            Annotation Version          :: 102
+            Annotation Pipeline         :: NCBI eukaryotic genome annotation
+                                           pipeline
+            Annotation Software Version :: 8.1
+            Annotation Method           :: Best-placed RefSeq; Gnomon
+            Features Annotated          :: Gene; mRNA; CDS; ncRNA
+            ##Genome-Annotation-Data-END##
+FEATURES             Location/Qualifiers
+     source          1..10957
+                     /organism="Larimichthys crocea"
+                     /mol_type="genomic DNA"
+                     /isolate="SSNF"
+                     /db_xref="taxon:215358"
+                     /chromosome="I"
+                     /tissue_type="blood"
+                     /geo_loc_name="China: Southeast region"
+                     /collection_date="Aug-2011"
+     gene            1..10957
+                     /gene="nxf1"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /db_xref="GeneID:104925535"
+     mRNA            join(1..118,328..431,3132..3330,3832..3997,4085..4168,
+                     4399..4503,4732..4812,5057..5126,5447..5535,5617..5724,
+                     5838..5947,8288..8324,8492..8560,8774..8829,9031..9138,
+                     9372..9430,9535..9650,9748..9790,9892..9970,10176..10358,
+                     10452..10512,10604..10957)
+                     /gene="nxf1"
+                     /product="nuclear RNA export factor 1, transcript variant
+                     X3"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon. Supporting evidence
+                     includes similarity to: 3 Proteins, and 100% coverage of
+                     the annotated genomic feature by RNAseq alignments,
+                     including 17 samples with support for all annotated
+                     introns"
+                     /transcript_id="XM_027280877.1"
+                     /db_xref="GeneID:104925535"
+     mRNA            join(1..118,328..431,2580..2639,3132..3330,3832..3997,
+                     4085..4168,4399..4503,4732..4812,5057..5126,5447..5535,
+                     5617..5724,5838..5947,8288..8324,8492..8560,8774..8829,
+                     9031..9138,9372..9430,9535..9650,9748..9790,9892..9970,
+                     10176..10358,10452..10512,10604..10957)
+                     /gene="nxf1"
+                     /product="nuclear RNA export factor 1, transcript variant
+                     X1"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon. Supporting evidence
+                     includes similarity to: 3 Proteins, and 100% coverage of
+                     the annotated genomic feature by RNAseq alignments,
+                     including 22 samples with support for all annotated
+                     introns"
+                     /transcript_id="XM_019253534.2"
+                     /db_xref="GeneID:104925535"
+     CDS             join(362..431,3132..3330,3832..3997,4085..4168,4399..4503,
+                     4732..4812,5057..5126,5447..5535,5617..5724,5838..5947,
+                     8288..8324,8492..8560,8774..8829,9031..9138,9372..9430,
+                     9535..9650,9748..9790,9892..9970,10176..10358,
+                     10452..10512,10604..10642)
+                     /gene="nxf1"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /codon_start=1
+                     /product="nuclear RNA export factor 1 isoform X3"
+                     /protein_id="XP_027136678.1"
+                     /db_xref="GeneID:104925535"
+                     /translation="MDRVTFCQRSYPNLAVVARVVHDEHDDRTAPQFRNRKDRGPHKG
+                     RSYDRSRRGRQRGGFGGPGPRSRLDDTDGDVTMSDNSQDNSSQHRYNPYGDRPFRKGG
+                     DGRFDKDRRQGKGGGRGGGFRADRGGGGGRGGVKARSGWYKVTIPHGRKYDKKWLLTA
+                     LQNICSVTYTPVQYHVDHNRAHFFLDDSSAANALHKCSHKITDADGYKVEVHVNPSAP
+                     PSFLLSDLKPEHLEHLKQCMAKRFDGSQQALDLNNIRTDPDLVSQNIEVILNRKTNME
+                     AVIKIIEGNIPELTSLNLSNNRIHKLDELAELVTKVPHLKTLNLSHNELKSDRELDKL
+                     KGLKLVELWLNRNPLCDLFKDQASYISAVRQRFPRLLKLDGNDLPAPIGFDVETPTTI
+                     PPCKGSCFGSDEIKAIILRFLQQYYSIYDSGDRQPLLDAYHDGASLSLTTPYSTQNPS
+                     RSSLGEYHKDSRNLKRLKDSTIRFRLLKHTRLNVVAFLNELPKTQHDIASFTVDVNTY
+                     TNTLLSFTVSGVFKEVAVDGKSRESTMAFSRVFITVPAGNTGLCIVNDQLFIRMATTE
+                     EIRRAFVAPAPTPSSSPVPTLTAPQQEMLTAFSQKSGMNLEWSQKCLQDNEWDFNRAA
+                     QIFTQLKTEGKIPDVAFIK"
+     CDS             join(362..431,2580..2639,3132..3330,3832..3997,4085..4168,
+                     4399..4503,4732..4812,5057..5126,5447..5535,5617..5724,
+                     5838..5947,8288..8324,8492..8560,8774..8829,9031..9138,
+                     9372..9430,9535..9650,9748..9790,9892..9970,10176..10358,
+                     10452..10512,10604..10642)
+                     /gene="nxf1"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /codon_start=1
+                     /product="nuclear RNA export factor 1 isoform X1"
+                     /protein_id="XP_019109079.1"
+                     /db_xref="GeneID:104925535"
+                     /translation="MDRVTFCQRSYPNLAVVARVVHDDRGDFMVSREVRSTGYIAQGE
+                     HDDRTAPQFRNRKDRGPHKGRSYDRSRRGRQRGGFGGPGPRSRLDDTDGDVTMSDNSQ
+                     DNSSQHRYNPYGDRPFRKGGDGRFDKDRRQGKGGGRGGGFRADRGGGGGRGGVKARSG
+                     WYKVTIPHGRKYDKKWLLTALQNICSVTYTPVQYHVDHNRAHFFLDDSSAANALHKCS
+                     HKITDADGYKVEVHVNPSAPPSFLLSDLKPEHLEHLKQCMAKRFDGSQQALDLNNIRT
+                     DPDLVSQNIEVILNRKTNMEAVIKIIEGNIPELTSLNLSNNRIHKLDELAELVTKVPH
+                     LKTLNLSHNELKSDRELDKLKGLKLVELWLNRNPLCDLFKDQASYISAVRQRFPRLLK
+                     LDGNDLPAPIGFDVETPTTIPPCKGSCFGSDEIKAIILRFLQQYYSIYDSGDRQPLLD
+                     AYHDGASLSLTTPYSTQNPSRSSLGEYHKDSRNLKRLKDSTIRFRLLKHTRLNVVAFL
+                     NELPKTQHDIASFTVDVNTYTNTLLSFTVSGVFKEVAVDGKSRESTMAFSRVFITVPA
+                     GNTGLCIVNDQLFIRMATTEEIRRAFVAPAPTPSSSPVPTLTAPQQEMLTAFSQKSGM
+                     NLEWSQKCLQDNEWDFNRAAQIFTQLKTEGKIPDVAFIK"
+     mRNA            join(1980..2034,2580..2639,3132..3330,3832..3997,
+                     4085..4168,4399..4503,4732..4812,5057..5126,5447..5535,
+                     5617..5724,5838..5947,8288..8324,8492..8560,8774..8829,
+                     9031..9138,9372..9430,9535..9650,9748..9790,9892..9970,
+                     10176..10358,10452..10512,10604..10957)
+                     /gene="nxf1"
+                     /product="nuclear RNA export factor 1, transcript variant
+                     X2"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon. Supporting evidence
+                     includes similarity to: 3 Proteins, and 100% coverage of
+                     the annotated genomic feature by RNAseq alignments,
+                     including 6 samples with support for all annotated
+                     introns"
+                     /transcript_id="XM_027280871.1"
+                     /db_xref="GeneID:104925535"
+     CDS             join(1995..2034,2580..2639,3132..3330,3832..3997,
+                     4085..4168,4399..4503,4732..4812,5057..5126,5447..5535,
+                     5617..5724,5838..5947,8288..8324,8492..8560,8774..8829,
+                     9031..9138,9372..9430,9535..9650,9748..9790,9892..9970,
+                     10176..10358,10452..10512,10604..10642)
+                     /gene="nxf1"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /codon_start=1
+                     /product="nuclear RNA export factor 1 isoform X2"
+                     /protein_id="XP_027136672.1"
+                     /db_xref="GeneID:104925535"
+                     /translation="MLCRRCERCRKPPDRGDFMVSREVRSTGYIAQGEHDDRTAPQFR
+                     NRKDRGPHKGRSYDRSRRGRQRGGFGGPGPRSRLDDTDGDVTMSDNSQDNSSQHRYNP
+                     YGDRPFRKGGDGRFDKDRRQGKGGGRGGGFRADRGGGGGRGGVKARSGWYKVTIPHGR
+                     KYDKKWLLTALQNICSVTYTPVQYHVDHNRAHFFLDDSSAANALHKCSHKITDADGYK
+                     VEVHVNPSAPPSFLLSDLKPEHLEHLKQCMAKRFDGSQQALDLNNIRTDPDLVSQNIE
+                     VILNRKTNMEAVIKIIEGNIPELTSLNLSNNRIHKLDELAELVTKVPHLKTLNLSHNE
+                     LKSDRELDKLKGLKLVELWLNRNPLCDLFKDQASYISAVRQRFPRLLKLDGNDLPAPI
+                     GFDVETPTTIPPCKGSCFGSDEIKAIILRFLQQYYSIYDSGDRQPLLDAYHDGASLSL
+                     TTPYSTQNPSRSSLGEYHKDSRNLKRLKDSTIRFRLLKHTRLNVVAFLNELPKTQHDI
+                     ASFTVDVNTYTNTLLSFTVSGVFKEVAVDGKSRESTMAFSRVFITVPAGNTGLCIVND
+                     QLFIRMATTEEIRRAFVAPAPTPSSSPVPTLTAPQQEMLTAFSQKSGMNLEWSQKCLQ
+                     DNEWDFNRAAQIFTQLKTEGKIPDVAFIK"
+     mRNA            join(2253..2513,3132..3330,3832..3997,4085..4168,
+                     4399..4503,4732..4812,5057..5126,5447..5535,5617..5724,
+                     5838..5947,8288..8324,8492..8560,8774..8829,9031..9138,
+                     9372..9430,9535..9650,9748..9790,9892..9970,10176..10358,
+                     10452..10512,10604..10957)
+                     /gene="nxf1"
+                     /product="nuclear RNA export factor 1, transcript variant
+                     X4"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon. Supporting evidence
+                     includes similarity to: 3 Proteins, and 100% coverage of
+                     the annotated genomic feature by RNAseq alignments,
+                     including 46 samples with support for all annotated
+                     introns"
+                     /transcript_id="XM_010739181.3"
+                     /db_xref="GeneID:104925535"
+     CDS             join(2486..2513,3132..3330,3832..3997,4085..4168,
+                     4399..4503,4732..4812,5057..5126,5447..5535,5617..5724,
+                     5838..5947,8288..8324,8492..8560,8774..8829,9031..9138,
+                     9372..9430,9535..9650,9748..9790,9892..9970,10176..10358,
+                     10452..10512,10604..10642)
+                     /gene="nxf1"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /codon_start=1
+                     /product="nuclear RNA export factor 1 isoform X4"
+                     /protein_id="XP_010737483.1"
+                     /db_xref="GeneID:104925535"
+                     /translation="MADGGHYYNEHDDRTAPQFRNRKDRGPHKGRSYDRSRRGRQRGG
+                     FGGPGPRSRLDDTDGDVTMSDNSQDNSSQHRYNPYGDRPFRKGGDGRFDKDRRQGKGG
+                     GRGGGFRADRGGGGGRGGVKARSGWYKVTIPHGRKYDKKWLLTALQNICSVTYTPVQY
+                     HVDHNRAHFFLDDSSAANALHKCSHKITDADGYKVEVHVNPSAPPSFLLSDLKPEHLE
+                     HLKQCMAKRFDGSQQALDLNNIRTDPDLVSQNIEVILNRKTNMEAVIKIIEGNIPELT
+                     SLNLSNNRIHKLDELAELVTKVPHLKTLNLSHNELKSDRELDKLKGLKLVELWLNRNP
+                     LCDLFKDQASYISAVRQRFPRLLKLDGNDLPAPIGFDVETPTTIPPCKGSCFGSDEIK
+                     AIILRFLQQYYSIYDSGDRQPLLDAYHDGASLSLTTPYSTQNPSRSSLGEYHKDSRNL
+                     KRLKDSTIRFRLLKHTRLNVVAFLNELPKTQHDIASFTVDVNTYTNTLLSFTVSGVFK
+                     EVAVDGKSRESTMAFSRVFITVPAGNTGLCIVNDQLFIRMATTEEIRRAFVAPAPTPS
+                     SSPVPTLTAPQQEMLTAFSQKSGMNLEWSQKCLQDNEWDFNRAAQIFTQLKTEGKIPD
+                     VAFIK"
+ORIGIN      
+        1 ggcgccatgc tgttcgtgct gcaggcagcg cgcggtacgg actgactcac tgacagcatc
+       61 aggattacag acagagacac ccggtaacat tgttatcatc atacgaaata ctgcaaaggt
+      121 aaaaaaatga attaatcagt aaatatttta gtgttgtgtc tgtgagttta gctcgatgct
+      181 ccgccgtgct aactaacagc taactgtagc tagctgacgt ctggctaact ttcgctagcc
+      241 acaacgtgac ttagcatcac agagcacgtg gagctgttgt tgttgttttt tatttatgtt
+      301 catttaacaa caactaaact ccgacagctt tactcagggt ggaggttgaa gggttatctg
+      361 catggaccgt gtgactttct gtcagagaag ctaccctaac ctagctgtgg tggcacgtgt
+      421 ggtgcacgat ggtaagttta attaattaat taaacttcat taagtacatg tagctgcagt
+      481 ttggacacat ttcactgaca ggttcaaatg tacactgacc acaagaggtc tgctggtagt
+      541 ttaagtgttg aacgtttgaa attaaacaag tgttgctaat tagtttaatg aacgcgggca
+      601 ggctgcacgt gactgctgag tcactgttta tgttcaagtt gagcttcaac tctgaagact
+      661 gtggcacaat aagtctgtat tatttagtag tgatagtctc ttatggcagt aaaacacatt
+      721 aattaaacag ttaacattta atgtcgtttt ataaatgaga ttaaataatg aataataaat
+      781 gcctggaatc aatggacacc cccaaacata tcgtaacatt attattattg ttattatttc
+      841 tgtcaatatt gttcagccct gactgtctta gatcagtatt aaagtggatt tattaaggag
+      901 gattattaac atctggtcag ggcagcagct gagcaaaaaa tgtcaatttg atttaaaaag
+      961 cctcagtaaa tagaagactg gaactgtttt tacaatatta cacaaaagca atgcgactgt
+     1021 tttattttag taatctatct aaaaatgaag gtgaatacat ttcacagcaa ggtgtttcgg
+     1081 aagaagttaa gtagcatcag tgcagaaata atgttaagca tgcatcagat taattacata
+     1141 tgcacgtgtc ttattataca ttattaagtt taagagactc gaggtaattt ccaaattcaa
+     1201 agattagtac ttcaaaaagt tggcaaagag atgatatgat gatataattc tattatatag
+     1261 atcattagat cattacatgt attaaaccta gagcactaag gttaaaatga gtaacaccat
+     1321 cactacccga tataatatcc cggataaaat acagttttca tcaatttatg taatttatgt
+     1381 aatatgcaat atcacataaa ataaaaaata aaaaaggtac catggtgggc ccttttaaaa
+     1441 aggcggcaaa attattgaaa tatcaggtaa tccttaacga aaaatttcca aacaaaataa
+     1501 aaataatgga gctgggaact tgttcttcgg tccacccatt cctgactcac tatcacttgc
+     1561 ctcttgaaaa accatagatg ggaggaggga aacaaacatt aatgacatca gtgagcagca
+     1621 actcagacag cagcaacaca atgaaaatca catgacaaga accgtgcggg tgaaaatcaa
+     1681 taagatgctt tttattttta tttttagtgt atcaaataca cttaaataaa tatccagaat
+     1741 gctgaactgt attgtgaata aaatgtgact caacgtctat aaatgagaca tcacacatgt
+     1801 ctgctcttta ataaccgttg ataaaattta atcagtttaa ccgtttaacg ttagccgtta
+     1861 tgtctccaac ggacgagcct tccaaacaaa gcggtgtctc tataaacaca atctattttt
+     1921 ttaatatata tatatctcaa tcataattag tctgtgtaac gtcgatgagt aagttaagtg
+     1981 atcagacatt agttatgctc tgtcgtcgat gtgaacggtg cagaaagcct ccaggtaggc
+     2041 taactatagc tcatattagt ccgcgctgcg ttaaacgcac ttttatgttc tgttgcgttt
+     2101 gtttactctt ctctgttgtt atgtttatgg tttactcttc tgtgttgtgt tatgtttgtt
+     2161 tgttttttgt ttactcttgt atgttgtgtg agttgttttg ttccggtctc ccgccccgtg
+     2221 tgctcttgtt aacccggaag ggaaggtgtt catttccgcg gtcaggagaa gctaaagcta
+     2281 agctatcggc tcgctaacaa acagctgctc ggtcacatcg tgctcctctt tgtttccgcc
+     2341 tccgaaccac ctgggatgtt gcagcttctt ttaaaatcca gcgtttgtgc ttcgtgaaag
+     2401 aggcttacga gtcatcgaca cgtatatttt aaacccagag ctttgtgttt tttttttgtt
+     2461 tgttatctaa cactaattta gaaacatggc ggatggcgga cattactaca acggtaagaa
+     2521 agcctgttgt cctcagctgt aacctcactg actgtgctgc ttgtaatgtt tttgtccaga
+     2581 ccgtggagac tttatggtga gcagagaggt cagaagcact ggttacattg cccaaggagg
+     2641 taaaatgata tcttgccccc aggaggtctg catgtttctt taaagataaa agtgtcggtt
+     2701 atctattata gtaccagtca atgtgctata gtcttaagac agagtctagt gaatacagct
+     2761 actgcagagg tcaataggga gaggtactcg agcacgttgg cgtgtttcct gtctcagcat
+     2821 gaatgccctg tataaagatg aatataagct acattttgaa agacacataa gtaacttaat
+     2881 gttgagtttt attaatgttc tttaaagatt tactatgaga caggtcattt aagatatgta
+     2941 gggttagttt tacaaataca taacgttata cagcaagcag taagatgtca gtgtgtcatc
+     3001 atggtgcgtt gtatttagta tgttttgctc taatcttatt atttatatac tgccggagtt
+     3061 gtataacttc gttctgactt gatgcaatgc gataaagtca gatttttaaa aaactctgtc
+     3121 ccgtttttca gagcacgatg acagaactgc accacagttt cgcaatcgta aagacagagg
+     3181 cccccacaag ggtcggtcgt atgacaggtc ccgcagaggc cgccaacggg gaggctttgg
+     3241 aggacctgga ccgcggtcta ggctggatga taccgatggg gatgtaacta tgagtgacaa
+     3301 ctctcaggac aacagctccc agcacagata gtaagtgtgg ccgactgaac acgtacattt
+     3361 gcatacattt accaacagaa gtgaaacagt gaaagtgttt tgagctcagt cgagcagtgt
+     3421 taatttcagc agctatttca gatttagtct ttttggatta aatttttttt tagttttatc
+     3481 acattttagt tgtttttttt aaatccttca cttcagcaga ctcctgttgg tgaaaagtca
+     3541 gctttaagtc tgtgttttct cttttttatc tcgagtgttt atgtgtacag tgcacatatg
+     3601 tctttatgtt aatgcctgga tcttctcact actgtgggca aaagaaaagc gtgccctgga
+     3661 aagcttctgg ctgctcccag catcagaatc agctccttgt agagcaccga ggtgctcagt
+     3721 tatgacaggg ctactataat acttggtggt tttctgggtt aggttcgagt cgggaggtgc
+     3781 aagaagacta gaagacattg tttcaacatg gccttgtttt gtcttcttca gcaacccata
+     3841 tggtgatcga ccttttcgga aaggaggaga tggacggttt gacaaagacc ggcgacaagg
+     3901 caaaggaggc ggtagaggag gtggttttag agcagacaga ggtggaggag gcggtcgtgg
+     3961 aggagtgaaa gcccgatcag gctggtacaa agtaacggtg tgtattgatg gtcatcacag
+     4021 ggtattcata attgtacctt gtaacctgtt aaacaagaac atgttttact tgtctctttg
+     4081 acagatacca catggaagaa aatatgacaa gaaatggtta ttgacagctc ttcagaacat
+     4141 ctgttcagtt acctacacac ctgtacaggt gaggtctgag cgtgagcttc cactcctgtg
+     4201 cttttattta tatttgcatt atggatctta cattttaata tcatacacag tatgttgagt
+     4261 tctaataaag cacatgtgtt aaaatggtaa cacatgtgct ttattttttt cccttgcctg
+     4321 ctgatttaaa aatagaaatc tctgtgggta ccagctttgt gtgtttgaat tttgtttatg
+     4381 tctctccctt ctgtccagta ccacgttgac cataacaggg cccatttctt tctggatgat
+     4441 tcatctgctg ccaatgcctt gcacaaatgc tctcacaaga tcacagatgc agatggttat
+     4501 aaggtatgtt ggtgtagtgg aaatttctct catattgctg cacaaagttt gtcttcactt
+     4561 atctcatatg tatcattaga cactgcaagc tcattaagtt tttatcctat cccctttaca
+     4621 accaatactt gtatgtgtgt atatataatg aatcgccaca atacaacaat ctaaaactta
+     4681 atatgtgtat ggtatacctc tctcatgcca cctaatgttt gtcttttcaa ggtggaagtg
+     4741 catgtcaacc ccagtgctcc accatccttc ctgctctctg acttgaagcc tgaacacttg
+     4801 gagcacctga aggtgagctg tttttgtcac tttaaaatca gtgtgttata tctgcagaca
+     4861 ctgtgcgtcc tcttccagag tctgacatgt ttcagcagcc ctgagcccaa aacagacaaa
+     4921 ctaaatgttg agtctagatt gtccttacct ttcacccttt aatccataac gattaatcgg
+     4981 agcaagtttc tattaatgac aattgttttt gttgttcaga tgaggcctct catgccgact
+     5041 gtattatctt tcacagcaat gcatggcaaa acgctttgat ggctcccagc aagctctgga
+     5101 cctgaacaac atccgaacag acccaggtaa ttacagtaca ccctcacaca cacacaaatc
+     5161 gtttgtatga tatattattg aacacagatt gaaccagcat ctgacagtac atactggacc
+     5221 agctgttctg gttgttgctg ctaattatct gtcactggaa tgttgtttta cgttgaggat
+     5281 tcaatagatg gtgcaggcaa tctagtgatg aaacagagct tttattttat tacttactat
+     5341 tagttactgt cactgaaaat gctgaaaatc tgttttcaat gttacatttt ttttttcttg
+     5401 gtttagcatt ttgagagcct gtttttgttt tttttgtgtg tgacagacct ggtgtcccaa
+     5461 aacattgaag tcatcttgaa caggaagaca aacatggaag ctgtcatcaa aatcattgaa
+     5521 ggaaacattc cagaggtaaa acgcagcgca tgtttttgat gttggttgaa atgtagttgc
+     5581 tttctggtca aactgaaagt gtctgtctct tgccagctga cgagcttaaa cctgagtaac
+     5641 aaccgcattc acaaactgga tgagctcgct gaattggtta ccaaggtccc tcatctgaag
+     5701 acactcaacc tttcccacaa tgaggtgaaa atggctgcac acatgagaat aataaccagg
+     5761 tgtgaattag gcccatacct gacctatttt gacatacttc tcacaacaac ttgttctgtc
+     5821 cctgtgtggc tgtctagctg aagtcagacc gggagctgga caagttgaaa ggcctgaagt
+     5881 tggtggagct gtggctgaac aggaaccctc tgtgtgacct cttcaaggat caggcctcgt
+     5941 acatcaggtc agtcggcgag tttggggggt gaaatgagaa gacttaatgg aggagacaca
+     6001 gcagtgtgat tgtttgtgtg tgagtagggg tgtccaggag cctttcctta gcaacaaaca
+     6061 tgcagcagtg tgctatagaa gatcgtccct tttgttagtg taaaacacgg gaactataac
+     6121 taaacccact tccccagcag ccgaactttt ggagcaagca gaggcacaac atgtaatttg
+     6181 ttcaaatgaa tacactttat gattatttcc ttttcacgcc acgaactaaa catttcttac
+     6241 ttccagaagt tgccgtgagg acgtctaccc acaatgcagt tccacatttt tcctttcaga
+     6301 ttactttttc tccacacagt ttgaacagac atatcctcac tgtgagttat tcagcttctc
+     6361 tgtggggcat cctgtcaagc tttgttctgt tttatggttt tcagtgatgc tgtacccagc
+     6421 actcccctgc tgacatcttg attagttatc tcataagctg ctgtaaaaca ccatcacact
+     6481 gctgatgaga tataactctg agaagaagca ctttaaaaaa aaaaaaagaa gacatttctc
+     6541 atgacaaccg tctaaaacaa tttactgtga actgctttca aaaaatatga atccaaatca
+     6601 atctcttgag cagtactgta aaacaactgt aggttgttta ttggagagag ggcaatccac
+     6661 ggttgcctcg acaaatgttt ggatgaaaca aagaaattcc gaagattttc tctcacctcg
+     6721 tgcacccttg cccactcggc cccctgtatc aggcgagtat ggaaggctgg atagcccatg
+     6781 acgggtaaga tcccacctcg aaaccctggg acaacctaag gcaggcacag tcacgattac
+     6841 tccgcctcag tccccgtgag ctctgactcg ccgagaagaa cttgtgaaga agggactcga
+     6901 caggaaaagc tgctgggctg aggtgaaggg gaatacgtgt cattatcaat gaccaaagct
+     6961 gagccaaaga gaaaaagcag tctgtctctt ccactaagtt ggttctgttc agcctaagac
+     7021 aggcctctgc tgttcagtga atgacgtgga gagtttggca aataccctta actaacttct
+     7081 gaaggaaata tgttctgaac tgaaaattga agttcagttt tgcctgaaat aagtcaaatg
+     7141 gagaaaaagt gaaaacgcct cttccagttt gtgatggctg tgatcagtac aaaagctcaa
+     7201 ccattaagca gagagagcag agtaaagatt tatcacacaa gtcgaatgct taattatttc
+     7261 ccaacccctc tttaattaga ggtttggggc ccaaattgaa cttgatcatt taaaaaccta
+     7321 cagcacgaac tccaactagt gcatgaagac tcatctcttc agaattgatg gtgactatga
+     7381 gatagttgac tgataactgc tttgtttgtg cagcggagag gctataggat ggatggtggg
+     7441 actgctgggt tcagttcact ttgaggccaa ctgtcctttt tgtccagctc tctccttagg
+     7501 ttgcctttct ctgctgaatt atgggcgcac acaacaacaa caacattcgc ttacatgatg
+     7561 aatatcaatt gatgcttaat gaatcttctt gtcctagcat ttgtgtggac ttcactttat
+     7621 atttttatac ctaggccctg ttttcctgtt ttgtttcttg atgttgaaat gttccccagc
+     7681 atcttggccc aagtttgggg gggggggggc taacgcgaga ctggcgataa ccacctgtct
+     7741 ccccaccaat gcgtatcgtc ttcatttaac taagccacgg tggatgtttt tactggtttg
+     7801 cagggcagtc tggtagatcg tgagtctctg catgtttgta tgtgtgtgtt tgtagatgag
+     7861 tgcgtttatg ttgcttcctc atgtcagatc tgtgtatatc tccataatgg ggaagagggt
+     7921 gagtatacct gctggtaagt acaatgtggg gtgggaggat tgtagaaggg cacagcctga
+     7981 aactgaaggg aggataaaga agtctatgat agtccatttg tggatctact tgtatgcaag
+     8041 ggtcaaaccc ctacagtatc ccctgcacta cattttgtgt atccatgtat ttatacctga
+     8101 ctgtgttctc ccaaatgttc tggacagtgt aacttaaaat tacatcaact gaaagacaca
+     8161 aaatgacatt aagggggtcg gcaggtgtga ctgacagtgg tatgtacagt aatgagcatg
+     8221 atttatctgt acacgaggag gtttgtggtg ataactttcc tgctcttgat ttttcttcct
+     8281 gtaccagtgc tgtgcggcag aggtttcccc ggctcctgaa actggtaagt ggatctgttg
+     8341 acactccacc gtttcgatcc tcttcagcct atgtggcttt tttatgtatt agtacattaa
+     8401 agttttgtaa attaagtctg tgaaatacat tttcagtatg tatttgtagt caaatcatac
+     8461 tttctctctc tctctggtga tttcttttta ggatggtaat gacctccctg cacccattgg
+     8521 attcgatgtg gaaacgccca ccactatccc tccctgcaag gttatttatt ttacctcgtg
+     8581 gttgtatagt tttatttaag aagacattca agttgttttc tggtgtgtat tcagctctcc
+     8641 aagatgttaa tttcttgagc cattcatttc agagccgtac gttcaagctc tcattctcct
+     8701 tcaggtgaaa gcctcaagac aattattgtc tcttttatgt acctgacaaa tgtttttcca
+     8761 atcaacactg cagggcagct gtttcggctc cgacgaaatc aaggccatca tccttcggtt
+     8821 cttgcaacag taagtttgta gcttttatgt agagaatctt ttcacatcaa tcagttgata
+     8881 agtgcctgtt ttccagggtt aatgtggcca aattattgac tgattaacca ggactgcttt
+     8941 ttatagaacc cagttccaca aaagggattg tgggcaagga aggatctcag agacgtacac
+     9001 aagaaaacta actaaatgac tgtgttgcag gtactacagc atatatgact ccggggacag
+     9061 acagccactc ctggatgctt accatgatgg agcatcatta tctcttacaa caccttactc
+     9121 cacccagaac ccctctaggt aagaacacgc acaaaatacc cacagaaatt ttacaatact
+     9181 gattaacaca tgaacagacg tgagaggtgt acagttttaa agcatttcta cgattagact
+     9241 tttatcaagt cattaattta aaagatgttt gcgtagctcc acccatcatt gcctgctctc
+     9301 tgagcttacc acccacctga gtctcgattg tattcacatt gagtccgtct gtccctctcc
+     9361 tctggtttta ggagcagcct cggagagtat cacaaagaca gtcgaaacct gaagaggctc
+     9421 aaagactcca gtgagtttca ttgcatagtg cgtcacagca tctgagttgt tgacactgaa
+     9481 tatttgtgtg attcgagatt tctccttgtg tttctccctt tttgcctctt ttagcaatac
+     9541 ggtttcggct tctgaagcac acacgactga acgttgtggc attccttaac gagttgccca
+     9601 aaactcagca cgacatcgcc tcctttactg ttgatgtaaa cacctacacc gtgagttcat
+     9661 gtttcttcgt catccagcac ttctctttac actttttcgt ttcactgtga atcatttctc
+     9721 tgtgttaata ctgttttctg tttacagaac acactactat cattcacagt cagtggagtc
+     9781 ttcaaagaag gtgagttgtt tggttgtcat gattttaaat ctttgatctc acccacaacg
+     9841 atacgagtgg tggtgttttt attgataatt tgtgtcgtat ccatttttca gttgcagtgg
+     9901 atggtaaatc tagagagtcc accatggcct tctctcgagt tttcatcaca gtcccagcag
+     9961 gaaatactgg gtgagtgtag taaactccca atggtttgta tcatcttcct gttgtccctc
+    10021 acattttccc acaggaaaag gaaacggtac taaattaaca gttgtgggtc tttaagatat
+    10081 gtgcactgca ttggctttag ctaggtaagg aagaagttca gctccttgaa acagtcaaat
+    10141 cttattgtct gtctactgtg ttccttttgt gccagtctgt gcatcgtgaa tgaccaactt
+    10201 tttatccgga tggccacaac agaggagatc cgcagagcct ttgttgctcc cgccccaact
+    10261 ccatcttcca gccctgtccc caccctcact gcaccgcagc aggagatgct cacagcgttc
+    10321 tcacagaagt ctggcatgaa cctggaatgg tcccagaagt gagtctcgtt ctgtgcttgt
+    10381 tgtgttggta gtaaattctg acaatgtgta tacttacttt aaaattcctg aacacttatt
+    10441 ctttgactca ggtgtctgca agacaatgaa tgggatttca acagagcggc acaaattttc
+    10501 acccagttga aggtaacatt atttcaactc tgtacatctc catgaaagtg ggatcattcc
+    10561 tttacagcgg ggccctaaca tgcttgttcc tctctctttc cagacggaag gcaagatccc
+    10621 agacgttgca ttcataaaat gaagagttga accatcatgc ttctgtgaaa taaaatctgc
+    10681 agtaatttta tttatgtatt ttgttttatc ctttattctt cttgaacata atagagatca
+    10741 agttgttact tccgcaactt gtgtaaaccg ttttaacagc caaatgtcag ctgtttgacc
+    10801 tagagaccta tgatgttttc ggtcgtcatt gttacccttt gatttttgta tagaaatcac
+    10861 tacgttttca taggaataaa gacaaatggc tagtagttta tcttgtgttc ccattgattt
+    10921 gctgtattgt ttaataataa aatattttgt tacagaa
+//
+

@@ -1,0 +1,132 @@
+LOCUS       NC_057927               1247 bp    DNA     linear   CON 21-OCT-2021
+DEFINITION  Drosophila ananassae strain 14024-0371.13 chromosome 2L,
+            ASM1763931v2, whole genome shotgun sequence.
+ACCESSION   NC_057927 REGION: 2992388..2993634
+VERSION     NC_057927.1
+DBLINK      BioProject: PRJNA765704
+            BioSample: SAMN13901672
+            Assembly: GCF_017639315.1
+KEYWORDS    WGS; RefSeq.
+SOURCE      Drosophila ananassae
+  ORGANISM  Drosophila ananassae
+            Eukaryota; Metazoa; Ecdysozoa; Arthropoda; Hexapoda; Insecta;
+            Pterygota; Neoptera; Endopterygota; Diptera; Brachycera;
+            Muscomorpha; Ephydroidea; Drosophilidae; Drosophila; Sophophora.
+REFERENCE   1  (bases 1 to 1247)
+  AUTHORS   Tvedte,E.S., Gasser,M., Sparklin,B.C., Michalski,J., Hjelmen,C.E.,
+            Johnston,J.S., Zhao,X., Bromley,R., Tallon,L.J., Sadzewicz,L.,
+            Rasko,D.A. and Hotopp,J.C.D.
+  TITLE     Comparison of long read sequencing technologies in interrogating
+            bacteria and fly genomes
+  JOURNAL   G3 (Bethesda) (2021) In press
+   PUBMED   33768248
+  REMARK    Publication Status: Available-Online prior to print
+COMMENT     REFSEQ INFORMATION: The reference sequence is identical to
+            CM029943.2.
+            Assembly name: ASM1763931v2
+            The genomic sequence for this RefSeq record is from the
+            whole-genome assembly released by the University of Maryland,
+            Baltimore on 2021/07/16. The original whole-genome shotgun project
+            has the accession JACRYV000000000.2.
+            
+            ##Genome-Assembly-Data-START##
+            Assembly Provider     :: University of Maryland, Baltimore
+            Assembly Method       :: Canu v. 1.8; Flye v. 2.7.1
+            Genome Coverage       :: 370x
+            Sequencing Technology :: PacBio Sequel II; Oxford Nanopore MinION
+            ##Genome-Assembly-Data-END##
+            
+            ##Genome-Annotation-Data-START##
+            Annotation Provider         :: NCBI
+            Annotation Status           :: Full annotation
+            Annotation Name             :: Drosophila ananassae Annotation
+                                           Release 102
+            Annotation Version          :: 102
+            Annotation Pipeline         :: NCBI eukaryotic genome annotation
+                                           pipeline
+            Annotation Software Version :: 9.0
+            Annotation Method           :: Best-placed RefSeq; Gnomon
+            Features Annotated          :: Gene; mRNA; CDS; ncRNA
+            ##Genome-Annotation-Data-END##
+FEATURES             Location/Qualifiers
+     source          1..1247
+                     /organism="Drosophila ananassae"
+                     /mol_type="genomic DNA"
+                     /strain="14024-0371.13"
+                     /db_xref="taxon:7217"
+                     /chromosome="2L"
+                     /sex="pooled male and female"
+                     /tissue_type="whole organism"
+                     /dev_stage="adult"
+                     /note="cured of Wolbachia by treatment with tetracycline"
+     gene            1..1247
+                     /gene="LOC6500455"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /db_xref="GeneID:6500455"
+     mRNA            1..1247
+                     /gene="LOC6500455"
+                     /product="nuclear RNA export factor 1, transcript variant
+                     X1"
+                     /experiment="COORDINATES: polyA evidence [ECO:0006239]"
+                     /transcript_id="XM_001953210.3"
+                     /db_xref="GeneID:6500455"
+     mRNA            join(5..89,146..1247)
+                     /gene="LOC6500455"
+                     /product="nuclear RNA export factor 1, transcript variant
+                     X2"
+                     /experiment="COORDINATES: polyA evidence [ECO:0006239]"
+                     /transcript_id="XM_044716135.1"
+                     /db_xref="GeneID:6500455"
+     CDS             138..1142
+                     /gene="LOC6500455"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /codon_start=1
+                     /product="nuclear RNA export factor 1 isoform X1"
+                     /protein_id="XP_001953245.1"
+                     /db_xref="GeneID:6500455"
+                     /translation="MFSPPRRDEGDAPLCHSTPKGDLQEISFGPRFPARIPVSIYGWY
+                     RVLVFCDSRRESKGRVMRRLHRLVSPNRLAPRYMHPGGEKDAPDDVDAFLTFYVNSYV
+                     IASELNRCSMSEPRLYLKVSDRMPLVKIDSGYRWRLKKTLKARYDSRKRSLDLTQFYT
+                     DEAWREEFCALAQPHCLYEAISIVSSIMPDLLSLKLDRNHLRNLWPFVHLEQRLPNLQ
+                     CISLLNNDIDTLNMLQVFQFLPLTELDIRRNLLPSGYENDVIRMWPSLKILDGTPIWL
+                     GRRVTSDVDPVEKLSQQTGMNPVFSRQLLAQNEGDYSQALWVFERLYDAGQIPPKAFM
+                     "
+     CDS             318..1142
+                     /gene="LOC6500455"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /codon_start=1
+                     /product="nuclear RNA export factor 1 isoform X2"
+                     /protein_id="XP_044572070.1"
+                     /db_xref="GeneID:6500455"
+                     /translation="MRRLHRLVSPNRLAPRYMHPGGEKDAPDDVDAFLTFYVNSYVIA
+                     SELNRCSMSEPRLYLKVSDRMPLVKIDSGYRWRLKKTLKARYDSRKRSLDLTQFYTDE
+                     AWREEFCALAQPHCLYEAISIVSSIMPDLLSLKLDRNHLRNLWPFVHLEQRLPNLQCI
+                     SLLNNDIDTLNMLQVFQFLPLTELDIRRNLLPSGYENDVIRMWPSLKILDGTPIWLGR
+                     RVTSDVDPVEKLSQQTGMNPVFSRQLLAQNEGDYSQALWVFERLYDAGQIPPKAFM"
+ORIGIN      
+        1 gcagtaatat ttgcttgtta cagcaacaat ttataaattt ttgagcactt ggtagtagaa
+       61 gtccacctct aactcgcagc caaaattgag tttgtaaaaa agagactttc taatttgctt
+      121 gttattttaa tttgatcatg ttcagccctc cgagacgcga cgaaggcgat gcacccttgt
+      181 gccattctac acccaagggt gacctgcagg aaatttcatt cgggccgcga ttcccagcta
+      241 gaattcctgt tagcatctat ggctggtacc gtgtcctggt tttttgcgac agccgccgag
+      301 agtccaaggg tcgagtgatg cggcgcttgc atcgtttggt gagtcccaac cggctggcgc
+      361 cgcgttacat gcaccccggc ggtgaaaagg atgctccgga cgatgtcgat gccttcctaa
+      421 ccttctacgt gaatagctat gtgatagcca gcgaattgaa ccgctgcagc atgagtgagc
+      481 ctaggctgta tctgaaggtc agcgatcgaa tgcctctggt caagatagat agtgggtata
+      541 ggtggcggct gaagaaaaca ctcaaggcca gatacgactc tcggaagagg agtctggacc
+      601 tcacccagtt ctataccgac gaggcttggc gcgaggaatt ctgtgctttg gcccagccgc
+      661 attgcctcta cgaggccatc tcgattgtgt ccagcatcat gccggatctg ctgagtctga
+      721 agttggaccg gaaccacctg aggaaccttt ggccttttgt ccacttggag cagcgcttgc
+      781 cgaatctgca atgcatctcg ctgctaaaca acgacataga taccttgaat atgctacagg
+      841 tgttccaatt tctacccctg acggagttgg acatcaggcg aaatcttctg ccctctggct
+      901 acgaaaacga cgtcatccgt atgtggcctt ctcttaaaat tttggacggg acccccatct
+      961 ggctggggag acgggtaact agcgacgttg atccggtgga gaaactgagt cagcagaccg
+     1021 gaatgaatcc agttttcagt cgccaactac tcgcacaaaa cgaaggcgac tactcacagg
+     1081 cactttgggt attcgagaga ctctacgatg ctggccagat tcctccgaaa gcatttatgt
+     1141 gaatttacgg ggattttttt gcatttataa ttgccaaaaa aactaatcgc gatcaatcga
+     1201 cttcccatta tgacaatgaa atataaaaaa gcatcaaata attaaaa
+//
+

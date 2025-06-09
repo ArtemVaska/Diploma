@@ -1,0 +1,132 @@
+LOCUS       NW_022045914            1960 bp    DNA     linear   CON 16-AUG-2019
+DEFINITION  Drosophila navojoa isolate navoj_Jal97 unplaced genomic scaffold,
+            UFRJ_Dnav_4.2, whole genome shotgun sequence.
+ACCESSION   NW_022045914 REGION: 543362..545321
+VERSION     NW_022045914.1
+DBLINK      BioProject: PRJNA340011
+            BioSample: SAMN04440794
+            Assembly: GCF_001654015.2
+KEYWORDS    WGS; RefSeq.
+SOURCE      Drosophila navojoa
+  ORGANISM  Drosophila navojoa
+            Eukaryota; Metazoa; Ecdysozoa; Arthropoda; Hexapoda; Insecta;
+            Pterygota; Neoptera; Endopterygota; Diptera; Brachycera;
+            Muscomorpha; Ephydroidea; Drosophilidae; Drosophila.
+REFERENCE   1  (bases 1 to 1960)
+  AUTHORS   Vanderlinde,T., Dupim,E.G., Nazario-Yepiz,N.O. and Carvalho,A.B.
+  TITLE     An Improved Genome Assembly for Drosophila navojoa, the Basal
+            Species in the mojavensis Cluster
+  JOURNAL   J. Hered. 110 (1), 118-123 (2019)
+   PUBMED   30423125
+COMMENT     REFSEQ INFORMATION: The reference sequence is identical to
+            LSRL02000055.1.
+            Assembly name: UFRJ_Dnav_4.2
+            The genomic sequence for this RefSeq record is from the
+            whole-genome assembly released by the Biotechnology Institute of
+            UNAM on 2019/03/18. The original whole-genome shotgun project has
+            the accession LSRL00000000.2.
+            
+            ##Genome-Assembly-Data-START##
+            Assembly Provider      :: Biotechnology Institute of UNAM
+            Assembly Date          :: 28-SEP-2018
+            Assembly Method        :: SPAdes v. 11.1
+            Assembly Name          :: UFRJ_Dnav_4.2
+            Genome Representation  :: Full
+            Expected Final Version :: No
+            Genome Coverage        :: 81.0x
+            Sequencing Technology  :: Illumina HiSeq
+            ##Genome-Assembly-Data-END##
+            
+            ##Genome-Annotation-Data-START##
+            Annotation Provider         :: NCBI
+            Annotation Status           :: Full annotation
+            Annotation Name             :: Drosophila navojoa Annotation
+                                           Release 101
+            Annotation Version          :: 101
+            Annotation Pipeline         :: NCBI eukaryotic genome annotation
+                                           pipeline
+            Annotation Software Version :: 8.2
+            Annotation Method           :: Best-placed RefSeq; Gnomon
+            Features Annotated          :: Gene; mRNA; CDS; ncRNA
+            ##Genome-Annotation-Data-END##
+FEATURES             Location/Qualifiers
+     source          1..1960
+                     /organism="Drosophila navojoa"
+                     /mol_type="genomic DNA"
+                     /isolate="navoj_Jal97"
+                     /isolation_source="banana trap"
+                     /db_xref="taxon:7232"
+                     /chromosome="Unknown"
+                     /tissue_type="whole organism"
+                     /geo_loc_name="Mexico: Tomatlan, Jalisco"
+                     /collection_date="1997-03"
+     gene            1..1960
+                     /gene="LOC115562648"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /db_xref="GeneID:115562648"
+     mRNA            join(1..1145,1221..1960)
+                     /gene="LOC115562648"
+                     /product="nuclear RNA export factor 1"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon. Supporting evidence
+                     includes similarity to: 5 Proteins, and 97% coverage of
+                     the annotated genomic feature by RNAseq alignments,
+                     including 31 samples with support for all annotated
+                     introns"
+                     /transcript_id="XM_030384564.1"
+                     /db_xref="GeneID:115562648"
+     CDS             join(1..1145,1221..1728)
+                     /gene="LOC115562648"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /codon_start=1
+                     /product="nuclear RNA export factor 1"
+                     /protein_id="XP_030240424.1"
+                     /db_xref="GeneID:115562648"
+                     /translation="MSTKKDRSNPDSSVDTANNSGSSHSSTSYNPNVRRSQGRYLVPI
+                     SPYGWYRVLVYSQYSGYTVEQVMEKLREAVAPRKLKYYYLHEGGEQDVERDKRATFTF
+                     YVDSYKLAAELQLRGHQPPVVGLRVNDRPPLIDVDEAYKWKLRKVIMSRYDEKRRCLN
+                     LCRFYADDQWKGEFCALQQFECFAATMDIMERELPQLRRLLLDNNHMCHLGGFRGVDQ
+                     RLPRLHSISLQQNDLKTLRELRVFQRLHLTELSVKRNLLPRNYEQQVLVMFPSLCMLN
+                     GRCVRRSPSIHTVNVSESDADSIHNTDSDVELVSVTEVKPIVLPEPRVTFLAFHDLPM
+                     PMGVRKFVRRYIKAFDGDERITSLERFYQEHVLVSLTLAKEHAMLGSWTGPYAVYSRQ
+                     LLACREATLDMFAAWPKTLHLPGTMTLDLTLVEPLMLCVSITGSFEENGSASHRRHYM
+                     RSFVLTRKAETDDFRIANELIYLSRVGRGERQPPLLNPLQRNLVSLMSTETQLKLRWS
+                     SKFLRDTNWDYQQAMLAFHTLLRQRQIPENAFRCDTKTEPNP"
+ORIGIN      
+        1 atgtcgacta agaaggatcg cagtaatccc gactcgtctg tagacaccgc aaacaactcg
+       61 ggtagtagcc atagttcaac aagttataac cccaacgtac ggcgttcgca gggccgctac
+      121 ctcgtgccca ttagcccgta tggttggtat cgtgtcctgg tctacagcca gtacagcggc
+      181 tacaccgtgg agcaggtgat ggaaaaactc cgtgaggctg tggcgccgcg caagctcaag
+      241 tattactatt tacacgaagg cggcgaacag gatgtggagc gggacaagcg ggccacgttc
+      301 accttctatg tggatagcta caagctggcc gcggagctgc agctgcgtgg acaccagccg
+      361 ccagttgtgg gtctgcgcgt caacgatcga ccgcccctga tcgatgtgga cgaggcgtac
+      421 aagtggaagc tgcgaaaggt gataatgtcc cgctacgatg agaagaggcg ctgcttgaat
+      481 ctgtgtcgct tctatgcgga tgaccagtgg aagggcgagt tctgtgcgct gcagcagttc
+      541 gagtgcttcg cggcgaccat ggacatcatg gagcgggagt tgccgcagct gcgtcgtctg
+      601 ctgctggaca acaatcatat gtgccacttg ggtggctttc gtggcgtgga tcagcgactg
+      661 ccacgcctac actcgatctc gctgcagcaa aacgacctga agacgctgcg cgaactgcgc
+      721 gtcttccagc gcctgcatct caccgagctc tcggtcaagc ggaatctgct gccccgcaac
+      781 tacgagcaac aggttctcgt catgtttccg tctctgtgca tgctcaacgg ccgatgcgtg
+      841 aggcgcagcc cctcgataca cacagtcaac gtcagcgaaa gcgatgcgga tagtattcat
+      901 aataccgaca gcgatgtgga gctagtctcc gtcaccgagg tcaagccaat tgtcctgcct
+      961 gaaccgcgcg tcacgtttct ggctttccac gatctaccga tgccgatggg cgtcaggaag
+     1021 ttcgtgcgcc gatatataaa ggccttcgat ggcgatgaga ggatcacaag tctggagcga
+     1081 ttctatcaag agcatgtgct ggtctcccta acactggcca aggaacacgc catgctgggc
+     1141 tcatggtagg tgacgccacc aaagattcct tttcccaatt ccgtttttcg attcacaagt
+     1201 ttcgttcatc ccctccacag gaccgggccc tacgccgtct atagccggca gctgctggcc
+     1261 tgccgggaag ctacgctcga tatgtttgcg gcctggccca aaacattgca tttgccggga
+     1321 acgatgaccc tggacttgac tctagtggag ccgctcatgc tgtgcgtctc catcacgggc
+     1381 agctttgagg agaatggctc ggccagccat cgacgccact atatgcgaag ctttgtgctg
+     1441 accagaaagg ccgaaacgga cgactttcgc atagccaatg agctcatcta tctcagtcgt
+     1501 gttggccgtg gcgaacggca gccgcccctg ctcaatcctc tgcagcgcaa tctggtctcc
+     1561 ttgatgtcga cggagacgca actcaagttg cgctggagca gcaaattctt gagagatacg
+     1621 aattgggact atcaacaggc aatgctggca ttccacacac tcctacgaca gcgccagata
+     1681 cccgaaaacg cattcaggtg cgatacaaag accgagccga atccgtgacg tcagccaccg
+     1741 caagccgtat acccgatgtg cccgcaggga aattgaaaat tccactgatt atgctgatta
+     1801 aattttgttt tgaactgaat gtaagggcat taactgtgcc ttgactatgc caataaggat
+     1861 gtccctgcgc tctgtgaata atttcataat ttatttgctc aattcgatct atgctatgtg
+     1921 gaagacagcc aaagtttctt acaactggta agattgtgaa
+//
+

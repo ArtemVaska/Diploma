@@ -1,0 +1,161 @@
+LOCUS       NW_026992239            4405 bp    DNA     linear   CON 26-APR-2024
+DEFINITION  Zonotrichia leucophrys gambelii isolate GWCS_2022_RI unplaced
+            genomic scaffold, RI_Zleu_2.0 Scaffold_34_1600103, whole genome
+            shotgun sequence.
+ACCESSION   NW_026992239 REGION: 910791..915195
+VERSION     NW_026992239.1
+DBLINK      BioProject: PRJNA1102008
+            BioSample: SAMN31812169
+            Assembly: GCF_028769735.1
+KEYWORDS    WGS; RefSeq.
+SOURCE      Zonotrichia leucophrys gambelii (White-crowned sparrow)
+  ORGANISM  Zonotrichia leucophrys gambelii
+            Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi;
+            Archelosauria; Archosauria; Dinosauria; Saurischia; Theropoda;
+            Coelurosauria; Aves; Neognathae; Neoaves; Telluraves; Australaves;
+            Passeriformes; Passerellidae; Zonotrichia.
+COMMENT     REFSEQ INFORMATION: The reference sequence is identical to
+            JAPPSN020000034.1.
+            Assembly name: RI_Zleu_2.0
+            The genomic sequence for this RefSeq record is from the
+            whole-genome assembly released by The Roslin institute on
+            2023/12/27. The original whole-genome shotgun project has the
+            accession JAPPSN000000000.2.
+            
+            ##Genome-Assembly-Data-START##
+            Assembly Provider      :: The Roslin institute
+            Assembly Date          :: 2023
+            Assembly Method        :: Wtdbg2 v. 2.5
+            Assembly Name          :: RI_Zleu_2.0
+            Genome Representation  :: Full
+            Expected Final Version :: Yes
+            Genome Coverage        :: 50.0x
+            Sequencing Technology  :: PacBio Sequel
+            ##Genome-Assembly-Data-END##
+            
+            ##Genome-Annotation-Data-START##
+            Annotation Provider         :: NCBI RefSeq
+            Annotation Status           :: Full annotation
+            Annotation Name             :: GCF_028769735.1-RS_2024_04
+            Annotation Pipeline         :: NCBI eukaryotic genome annotation
+                                           pipeline
+            Annotation Software Version :: 10.2
+            Annotation Method           :: Gnomon; cmsearch; tRNAscan-SE
+            Features Annotated          :: Gene; mRNA; CDS; ncRNA
+            Annotation Date             :: 04/24/2024
+            ##Genome-Annotation-Data-END##
+FEATURES             Location/Qualifiers
+     source          1..4405
+                     /organism="Zonotrichia leucophrys gambelii"
+                     /mol_type="genomic DNA"
+                     /isolate="GWCS_2022_RI"
+                     /sub_species="gambelii"
+                     /db_xref="taxon:257770"
+                     /chromosome="Unknown"
+                     /sex="female"
+                     /tissue_type="muscle"
+                     /dev_stage="adult"
+                     /common="White-crowned sparrow"
+     gene            1..4405
+                     /gene="NXF1"
+                     /note="nuclear RNA export factor 1; Derived by automated
+                     computational analysis using gene prediction method:
+                     Gnomon."
+                     /db_xref="GeneID:135460350"
+     mRNA            join(1..135,875..917,1385..1457,2858..3040,3749..3809,
+                     4265..4405)
+                     /gene="NXF1"
+                     /product="nuclear RNA export factor 1"
+                     /experiment="COORDINATES: polyA evidence [ECO:0006239]"
+                     /transcript_id="XM_064737156.1"
+                     /db_xref="GeneID:135460350"
+     CDS             join(22..135,875..917,1385..1457,2858..3040,3749..3809,
+                     4265..4303)
+                     /gene="NXF1"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /codon_start=1
+                     /product="nuclear RNA export factor 1"
+                     /protein_id="XP_064593226.1"
+                     /db_xref="GeneID:135460350"
+                     /translation="MRFKLLKHTRLNVVAFLNELPKTQHDVNSFVVDICAQTNTLLCF
+                     TVHGIFKEVDGKSRDSVRAFTRMFIAVPAGNSGLCIVNDELFVRGASPEELRKAFALP
+                     APTPSSSPVPTLTAEQQEMLAAFAMQSGMNLEWSQKCLQDNDWDYSQAGQVFTQLKLE
+                     GKIPEVAFLK"
+ORIGIN      
+        1 tttcccctct ccgtggcagc catgcgcttc aagctgctga agcacacgcg gctgaacgtg
+       61 gtggcgtttc tgaacgagct gcccaaaacc cagcacgacg tcaattcctt cgtggtggac
+      121 atctgtgccc agacggtgag aattgggatt ttctgggatt tggggatttt ctgggatttg
+      181 gggatttttt gggatttatt ggggtttttc tgggattttt tggggttttt ttgggcattt
+      241 ttcgggggat tttggggatt tttttgggat tttttgggga tttttctgtg gttttttgag
+      301 gatttttctg ggtttttctg ggattttgct gggcattttt tggggatttt gctgggattt
+      361 ttctggggat ttttctgagg atttttggga ttttactaag attttctagg gtttttctgg
+      421 gattttttgg ggattttttt ggggttattt gggatttttc ggggattttt cggggatttt
+      481 tctgaggttt ttttggggga tttttctggg gtcttcctgg gatttttctg ggattttttt
+      541 gggtttttgg ggatttttgg gggatttttt ggggattttt ctgggcattt ttgggatttt
+      601 tctgaggttt tttggggatt tttctgggat tttttttgga ttttgatttt ttgggggttt
+      661 ttgattttct gggggaattt ttgggatttt ttgggggatt tttctgggga tttttggggg
+      721 gattttcggg tattttggga gtggttttgg tggatttttg gggagaattt tggggggatt
+      781 tttggtgcaa tttctgccaa ttctgggccc caaaatctgg gaattcctgg gaattgctgg
+      841 gaattgtgcc aatcctggcc ccgctgtgtt ccagaacacg ctgctctgct tcaccgtcca
+      901 cggcatcttc aaggaaggtc agtcctgctt taatttcctt ttttatcctc ttttattcct
+      961 tattttcctt ttttttctct cctttttccc tatttttttt cctatttttt cctctttttt
+     1021 tctccttttc cccctccatt ttctttattc ctctggattt ttttcctcct ttttttcccc
+     1081 ctttttcccc ccaatttccc ctccccattt tccttattcc tcccccattt ccccccattt
+     1141 ttccccttat tcctccccca tttttcccca tttccccccc tttttttacc tccttctccc
+     1201 ccccattttt ccccattttt cccccacatt tttcccaatt ctcctccccc attttccccc
+     1261 atttttgtcc cattttcccc cattctcccc cacatttttc ccaattctcc ccctcccttt
+     1321 tccccccatt ttcccccttt ttccccattt ttccccattt cctgactgtt ttctgtgccc
+     1381 tcagtggatg ggaagtcgcg ggactctgtc cgggcgttca cgcggatgtt catcgccgtg
+     1441 ccggccggga acagcgggtg aggccccaaa aacccctggt tttaccctaa atccccccta
+     1501 aaccccctgg ttttacccta aatcccccct aaatccctgg tttttaccca aatcccctgg
+     1561 tttttaccca aatcccctgg ttttacccta aaccccctgg ttttacccta aatcctgtgt
+     1621 ttcttaccct aaactccctg gttttcctcc tataacccct tggttttacc ctaaatcccc
+     1681 aggtctggcc ctaaatctgg gaattttacc caaaaccccc gaatttttac ccaaaatcct
+     1741 ctggtctgtc cccagagccc tggtttgtcc ctaaaccctg gggtttttac ccaaatctcc
+     1801 ctgattttcc ccctaaatcc catgatttgt cactaaattc tctgttctgt ccctaaatcc
+     1861 catgtttctt ccccaaaatc ccgtgtttta tcctaaaccc cctggtttta ccctaaatcc
+     1921 tggggatttt accctaaacg tccttttccc ccctaaatcc tctttttccc cctgaaaccc
+     1981 catttttcct tccccaaacc cccattattg ccccctaaac ccccattttc ccccccaaat
+     2041 ccccattttt cctttccaaa cccccatttt ttcccccaaa gccctattat accccataaa
+     2101 ctcccatttt ttcctcccaa atccccattt tcacccccaa cccccaatta ttccacctca
+     2161 atcctcattt ttttccccca aaccccattt ctaccctcta acccccagtt ttctccccaa
+     2221 acccctatta tatcccacaa actcccattt tttccctcca aacccccatt ttccccccta
+     2281 aatccgaatt tcccccccaa aactccatat ttccccacaa aattctcatt tttttccctt
+     2341 caaaccccca tttttttccc cccaaaccca attttttccc cccaaacccc catttttccc
+     2401 ccctaaatcc aaatttcccc cccaaaactc catatttccc cacaaaattc taattttttt
+     2461 cccccaaatc cccatttttc cccctaaatc caaatctccc ccccaaaact ccatatttcc
+     2521 tcacaaaatc ccaatttttc ccccaaaccc ccattttttc cccccaaatc cccaattttc
+     2581 tccttaatcc tgagttttcc cccgaaacct caatttttcc ccccaaaccc cattttttcc
+     2641 ccccaaatcc ccaattttct cccttaaatc ctgatttttc ccccgaaacc tcaatttccc
+     2701 ccctaaaacc cccatttttc cccctaaatc caaatctccc cccaaaactc catatttccc
+     2761 cacaaaattc tcattttttc cccccaaacc cccatttccc cccccaaaac tccatatttc
+     2821 cccacacaat tctcattttt tccccatttc ccggcaggct gtgcatcgtg aacgacgagc
+     2881 tgtttgtgcg cggcgccagc cccgaggagc tgcgcaaagc cttcgccctg cccgcgccca
+     2941 cgccctcgtc cagccccgtg cccaccctga cggccgagca gcaggagatg ctggcggcct
+     3001 tcgccatgca gtcgggcatg aacctcgagt ggtcccagaa gtgagtgcaa aacacaccaa
+     3061 atttgctcaa aaaatcaaaa aaaatcaccc caaaacctcc taaaaatccc actgaaaatc
+     3121 actcaaaaat cgccttaaaa atggctcaaa aatcacttca gaagttgctc aagaatcgtt
+     3181 caaaaaatgc tccgaaattc ctttataaat ggctccaaaa tcccctgaaa gttgctcaaa
+     3241 aatcccttca aaaatagcta aaaaatcccc tcaaaagtca ctcaaaatgc ccccaaaatc
+     3301 cataaaaatt cccttgaaac gcacctgaaa atcgcttgaa aatcccttca taagtggccc
+     3361 aaatgtcccc ataaaaatgg cacaaaaatc actccaaaaa tggctcaaaa atcccttcaa
+     3421 aaatggccta aaattccctt caaaatactt caaaagttgc tcaaaaatcc cctcaaaaat
+     3481 cactcaaaaa ttcccctaaa aatggctgaa aattcacctc aaaaatggat taaaaacccc
+     3541 ccgagcagca ggagatgctg gcggccttcg ccgtgcagtc gggcatgaac ctcgagtggt
+     3601 cccagaagtg agtgcaaaac acaccaaaaa cgccccaaaa acgccccaaa aatcaaaaaa
+     3661 aatctccaac atttccccaa aaaaatccta aaataaaccc ccaaaaatcc ctcaaaaaaa
+     3721 ccccaaaatt cccctttgtg tccctcaggt gcctccagga caacgactgg gattacagcc
+     3781 aggccggcca ggtcttcacc cagctcaagg ttggtttctt tccttttatt tttatttctt
+     3841 tttctctctt ttccctgtta ttttcccttt ttctcatttt tctcccatta ttcccaattt
+     3901 tccccccatt tttctccatt ttttccccat tttcctccat tatttttccc tttttttttc
+     3961 tctattttcc ccaatttttc cccattattt tcccctgtta tttttcccca ttttccccca
+     4021 ttctcactcc attatttccc ccattttccc tgttactatc ctctgatttt tttctcattt
+     4081 ttccccatta ttttccccat tatttctccc atttttgcca ttatttttcc cattttcctc
+     4141 cattattttc tcccttattt ttccctttat ttcccctcat tattttcccc attttccccc
+     4201 tttctcaccc cattatttct catttttccc catttttccc attttttccc gtttttcccc
+     4261 tcagctggaa gggaagattc cggaagtcgc ttttctcaag tgaacgttgg agctccccgc
+     4321 cccctccccg ggcccctgtc ccgtgttcga gtcctttcga tgcccccgag ttttgtaaat
+     4381 aaaccgatgg attattgatt atcga
+//
+

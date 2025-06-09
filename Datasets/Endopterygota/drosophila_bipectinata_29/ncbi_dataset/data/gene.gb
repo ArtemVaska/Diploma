@@ -1,0 +1,113 @@
+LOCUS       NC_091739               1332 bp    DNA     linear   CON 11-DEC-2024
+DEFINITION  Drosophila bipectinata strain 14024-0381.07 chromosome 3R,
+            DbipHiC1v2, whole genome shotgun sequence.
+ACCESSION   NC_091739 REGION: complement(17399832..17401163)
+VERSION     NC_091739.1
+DBLINK      BioProject: PRJNA1195146
+            BioSample: SAMN33872898
+            Assembly: GCF_030179905.1
+KEYWORDS    WGS; RefSeq.
+SOURCE      Drosophila bipectinata
+  ORGANISM  Drosophila bipectinata
+            Eukaryota; Metazoa; Ecdysozoa; Arthropoda; Hexapoda; Insecta;
+            Pterygota; Neoptera; Endopterygota; Diptera; Brachycera;
+            Muscomorpha; Ephydroidea; Drosophilidae; Drosophila; Sophophora.
+COMMENT     REFSEQ INFORMATION: The reference sequence is identical to
+            CM058215.1.
+            Assembly name: DbipHiC1v2
+            The genomic sequence for this RefSeq record is from the
+            whole-genome assembly released by the Washington University in St.
+            Louis on 2023/06/12. The original whole-genome shotgun project has
+            the accession JARPSB000000000.1.
+            
+            ##Genome-Assembly-Data-START##
+            Assembly Provider      :: Washington University in St. Louis
+            Assembly Date          :: 14-JUL-2022
+            Assembly Method        :: Canu v. 2.1; Flye v. 2.8.1; quickmerge v.
+                                      0.3; 3D-DNA v. 180419
+            Assembly Name          :: DbipHiC1
+            Genome Representation  :: Full
+            Expected Final Version :: No
+            Genome Coverage        :: 63x
+            Sequencing Technology  :: PacBio Sequel; Oxford Nanopore; Illumina
+            ##Genome-Assembly-Data-END##
+            
+            ##Genome-Annotation-Data-START##
+            Annotation Provider         :: NCBI RefSeq
+            Annotation Status           :: Full annotation
+            Annotation Name             :: GCF_030179905.1-RS_2024_12
+            Annotation Pipeline         :: NCBI eukaryotic genome annotation
+                                           pipeline
+            Annotation Software Version :: 10.3
+            Annotation Method           :: Best-placed RefSeq; Gnomon;
+                                           cmsearch; tRNAscan-SE
+            Features Annotated          :: Gene; mRNA; CDS; ncRNA
+            Annotation Date             :: 12/09/2024
+            ##Genome-Annotation-Data-END##
+FEATURES             Location/Qualifiers
+     source          1..1332
+                     /organism="Drosophila bipectinata"
+                     /mol_type="genomic DNA"
+                     /strain="14024-0381.07"
+                     /db_xref="taxon:42026"
+                     /chromosome="3R"
+                     /sex="female"
+                     /tissue_type="Whole fly"
+                     /dev_stage="Adult fly"
+                     /collected_by="Originally obtained from the National
+                     Drosophila Species Stock Center"
+     gene            1..1332
+                     /gene="nxf4"
+                     /note="nuclear export factor 4; Derived by automated
+                     computational analysis using gene prediction method:
+                     Gnomon."
+                     /db_xref="GeneID:108130397"
+     mRNA            join(1..101,243..1332)
+                     /gene="nxf4"
+                     /product="nuclear export factor 4"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon. Supporting evidence
+                     includes similarity to: 1 Protein"
+                     /transcript_id="XM_017248802.3"
+                     /db_xref="GeneID:108130397"
+     CDS             255..1259
+                     /gene="nxf4"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /codon_start=1
+                     /product="nuclear RNA export factor 1"
+                     /protein_id="XP_017104291.2"
+                     /db_xref="GeneID:108130397"
+                     /translation="MFSSPRRDTLDGPIFHSTPKERVREISPGPRSPPRIPVSVYGWY
+                     RVLVFCKNHRETKGRVMRRLHRLVSPHPLAPRYMHPGGEKDATHDIDAFLTFYVNSYL
+                     IASELNRRCMREPKLFLKISDRMPLVRLDDSYRWRLKRTLKARYDPQTRVLDLTQFYT
+                     DYAWRNHFCALAQPQCLDAAISIISRFMPDLLCLKLDRNFLRNLRPLAHLDRRLPDLR
+                     RISLLNNDIDSLDMLQVFKDLPMTELDIRHNLLSPGYEEDVIRMWPTLRVLNGTSIGL
+                     EIRITCDVDPVERLSRQTGMNSIFSHQLLMQNDGDFSKALWVFEELYYANQIPEKAFM
+                     "
+ORIGIN      
+        1 gtaaaatggc gtaaattgat attttcacaa taatttttgt acaaaaaatt aagaattctt
+       61 tttccaaact tcatacaaat tggtctttga aaattgtcaa agtaaagaaa aaatcaacaa
+      121 agtagcattt gcttgttaca tcaacaagtc gtataatttg agcaatcatt cgtagtggcc
+      181 aaccctctaa ctcgtagcaa aaaatagcgt gaataaaaaa gcttttcaaa tttttgtttt
+      241 aggtcaattt tatcatgttc agttctccaa gacgcgatac cctcgatgga cccattttcc
+      301 actcaacgcc caaggaacgt gtgcgggaga tttctcctgg tccgagatca ccacctagaa
+      361 ttccagttag cgtttatggt tggtaccgtg tcctggtttt ctgcaagaac caccgagaaa
+      421 ccaagggtcg tgtgatgcgg cgcctgcatc ggctggtgag tcctcatccg ttggcgccgc
+      481 gttacatgca ccccggtggc gaaaaggatg caacgcacga catcgacgca tttctcactt
+      541 tctacgtgaa tagctatttg atagcaagcg aactgaatcg ccgatgcatg cgtgaaccca
+      601 agctgtttct gaagatcagc gatcgaatgc ccctggtcag gttggatgat tcgtataggt
+      661 ggcgactgaa gagaacgctc aaggccaggt acgaccctca gactagggtt ctggacctta
+      721 cacagtttta taccgactac gcttggcgca atcatttctg tgcattggcc cagccgcaat
+      781 gcctcgacgc ggccatctcg ataatttcca gattcatgcc ggacctgcta tgtctgaagt
+      841 tggatcgcaa cttcctgagg aatcttcggc cattggcaca cttggatcgg cgcttgccgg
+      901 atcttcgacg catctctctg ctaaacaatg acatagatag tttggatatg cttcaggtgt
+      961 ttaaagatct acccatgacg gagttggaca tcaggcacaa tcttctatcc cctggctacg
+     1021 aagaggacgt catccggatg tggcccactc taagagtttt gaacgggacc tccatcgggt
+     1081 tggagatacg aataacttgc gacgttgatc cggtggagag actgagtcgc cagaccggaa
+     1141 tgaattcaat tttcagccac caactactaa tgcaaaacga tggcgacttc tcgaaggcac
+     1201 tttgggtatt tgaggaactc tattatgcca atcagattcc tgagaaagca ttcatgtgaa
+     1261 tttaatggaa acttatacat ttttaattgt aatctttcca tcatgaacaa gaaatataca
+     1321 tataatagta aa
+//
+

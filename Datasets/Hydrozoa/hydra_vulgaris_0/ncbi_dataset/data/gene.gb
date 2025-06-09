@@ -1,0 +1,123 @@
+LOCUS       NC_088975               2580 bp    DNA     linear   CON 19-JUN-2024
+DEFINITION  Hydra vulgaris strain AEPx105 ecotype Laboratory strain chromosome
+            12, HydraT2T_105.
+ACCESSION   NC_088975 REGION: complement(736736..739315)
+VERSION     NC_088975.1
+DBLINK      BioProject: PRJNA1122161
+            BioSample: SAMN40291295
+            Assembly: GCF_037890685.1
+KEYWORDS    RefSeq.
+SOURCE      Hydra vulgaris (swiftwater hydra)
+  ORGANISM  Hydra vulgaris
+            Eukaryota; Metazoa; Cnidaria; Hydrozoa; Hydroidolina;
+            Anthoathecata; Aplanulata; Hydridae; Hydra.
+COMMENT     REFSEQ INFORMATION: The reference sequence is identical to
+            CP147934.1.
+            Assembly name: HydraT2T_105
+            The genomic sequence for this RefSeq record is from the
+            whole-genome assembly released by the University of Vienna on
+            2024/03/28.
+            
+            ##Genome-Annotation-Data-START##
+            Annotation Provider         :: NCBI RefSeq
+            Annotation Status           :: Full annotation
+            Annotation Name             :: GCF_037890685.1-RS_2024_06
+            Annotation Pipeline         :: NCBI eukaryotic genome annotation
+                                           pipeline
+            Annotation Software Version :: 10.2
+            Annotation Method           :: Best-placed RefSeq; Gnomon;
+                                           cmsearch; tRNAscan-SE
+            Features Annotated          :: Gene; mRNA; CDS; ncRNA
+            Annotation Date             :: 06/11/2024
+            ##Genome-Annotation-Data-END##
+FEATURES             Location/Qualifiers
+     source          1..2580
+                     /organism="Hydra vulgaris"
+                     /mol_type="genomic DNA"
+                     /strain="AEPx105"
+                     /db_xref="taxon:6087"
+                     /chromosome="12"
+                     /tissue_type="Whole_polyps"
+                     /dev_stage="Adult polyp"
+                     /ecotype="Laboratory strain"
+                     /geo_loc_name="USA"
+                     /collection_date="2023"
+                     /collected_by="Robert E. Steele"
+     gene            1..2580
+                     /gene="LOC100214173"
+                     /note="nuclear RNA export factor 1; Derived by automated
+                     computational analysis using gene prediction method:
+                     Gnomon."
+                     /db_xref="GeneID:100214173"
+     mRNA            join(1..351,752..2580)
+                     /gene="LOC100214173"
+                     /product="nuclear RNA export factor 1"
+                     /experiment="COORDINATES: polyA evidence [ECO:0006239]"
+                     /transcript_id="XM_002156424.5"
+                     /db_xref="GeneID:100214173"
+     CDS             join(171..351,752..2511)
+                     /gene="LOC100214173"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /codon_start=1
+                     /product="nuclear RNA export factor 1"
+                     /protein_id="XP_002156460.1"
+                     /db_xref="GeneID:100214173"
+                     /translation="MAFRGFKKAINDANFSVNISSNGTRSIERRLSEGGFENRRCYTD
+                     GFENKSNTSSYRGSGSGNNGGRWKRGGSFNNRNGGGRGYGKGNFKPKHRFVDDDDDGD
+                     ARMRDEEHLHRSNYGGSGFGNKERDRDESDWFKVVVPEGKKHNRDWLLNKIKQIAKVS
+                     FEEVDYHTFKDNIVFFLKGQMIADAVQSASNIVTTKDGSKLFFTVRPSRPPNNNINKD
+                     EKKSSSNTSVETSPEKLEVLKTFLGNRYDVKLVKLDLSNISSEKILFENRIEGHAGNF
+                     KFMNTIFTIINSICPQLKSLDLSHNGITRLNTLEFLADKCPELEELNLSRNQIRFSGE
+                     LTKIASNKKLKRLFLNDNPFSDNYKSDNVAYIAEIRSKLPDIEELDGVVLPKTIKCDL
+                     LSESVIPESKPAYTENQDALKLIATFLENYYKIYDSSDASYRQHLLGAYHNDAVFSMS
+                     LNTGISSSSKSHSLNDYVKISRNLRRIRERNIRHQLIKQSKLAVVAFLTELPTTTHKL
+                     DSFVLDIPVVTPSCLVFTIHGVFLEKKLNILRGFSRVFVSVPETNSQFLIINDELHIR
+                     NITDAQLAKFEIKPIETKEQELLSETKQQELIKQFSLHSKMNLKWSCDCLVSNGWNFE
+                     QAATKFTELNNLGKIPPEAFVI"
+ORIGIN      
+        1 ggtggaataa ttacggtgaa atcccgtttt ggttatcctg tgttcgagtt gacggcatta
+       61 aaaaaacggt agtataaaaa ctttattttc agcgtttttt tgtctcgata atgttctgct
+      121 attgtgaata atgtttgaaa taataaactg gagctcaata tagacctaaa atggctttta
+      181 ggggcttcaa aaaagcaatt aatgatgcaa atttttcagt aaatatctct tctaacggta
+      241 caagatcgat cgaaagacgt ttaagcgaag gtggatttga aaatcgacgt tgttatacag
+      301 atgggtttga aaataaatct aatacatcaa gttatcgtgg gtctggttca ggtgaaaatt
+      361 acatttatta gtataataca tgcataaagt tgctgcaaaa gtttataaaa atttatattt
+      421 aaatcaaata aaaaatataa tgcttatagt aatatatagt aagcattata ttctttattt
+      481 gatatttaac tatttgattt aatttgattt tacttatttg atatatatat atatatatat
+      541 atatatatat atatatatat atatatatat atatatatat gtaattttat tatttatata
+      601 ttatatatat attatattat atatttatat attatatata cattatatat atatatatat
+      661 atatatatat atatatatat atatatatat atatatatat atatatatat atatataatg
+      721 taaattactt gaatgaaatg tttgatttta ggaaataatg gtggtcgttg gaaaagagga
+      781 ggtagtttta ataatagaaa tggtggtggc agaggatatg gaaaaggaaa ttttaaacca
+      841 aagcatagat ttgttgatga tgatgatgat ggggatgcaa gaatgagaga tgaagagcat
+      901 ttacatcgca gtaattatgg tggcagtgga tttggaaaca aagaaagaga tagagatgaa
+      961 agtgattggt ttaaagttgt agtgccagaa ggcaaaaaac ataatcgaga ctggttgcta
+     1021 aacaaaatca agcaaatagc aaaggtttcc tttgaagaag ttgactacca tacttttaaa
+     1081 gataatattg ttttttttct taaaggccaa atgattgcag acgctgttca aagtgcaagt
+     1141 aacattgtca ctactaaaga tgggtcaaaa ttgtttttta ctgtacggcc tagtagacct
+     1201 cctaacaata atataaataa agacgaaaaa aagtcttcta gcaatacttc tgttgaaact
+     1261 tcacctgaaa agttagaagt cttaaaaacc tttcttggta atcgttatga tgttaaacta
+     1321 gtcaagttag atttgtctaa tatttcaagt gagaaaattc tttttgaaaa tcggatagaa
+     1381 gggcatgctg gaaattttaa atttatgaac actatattta ctattataaa ttctatatgc
+     1441 cctcaattaa aatctttaga tttgtcacat aatggtatta caagattaaa cactcttgaa
+     1501 tttttagcag ataagtgtcc agaattagag gagttaaatt tgtcaagaaa tcaaattcgc
+     1561 ttttcagggg aattaacgaa aattgcttca aacaaaaagt taaaaaggtt gtttttaaat
+     1621 gataatccat tttcagacaa ttacaagtca gacaatgttg cctatatagc agagattcgc
+     1681 agtaaactac ctgatattga agagttagac ggtgttgttt taccaaaaac tattaaatgt
+     1741 gacttactct cagaatctgt tattccagaa tcaaaaccag cttatactga aaaccaagat
+     1801 gcattaaaat tgatagcaac atttttagaa aattattata agatatatga ttctagtgat
+     1861 gcaagttatc gccaacattt attaggagca tatcataatg atgcggtgtt ttctatgtct
+     1921 ttaaatacag gaatatcttc aagtagcaaa agtcattcgt tgaatgatta tgtcaaaata
+     1981 agtagaaact tgcgacgaat acgtgaacga aatataagac atcagcttat taaacaatca
+     2041 aaacttgctg ttgttgcttt tttaactgag ctgccaacaa caacacacaa attagattct
+     2101 tttgttcttg atatacctgt tgtgacgcca tcatgtcttg tattcactat tcatggagtt
+     2161 tttttggaaa agaagttgaa tattttgaga ggtttttcta gagtttttgt tagtgtgcct
+     2221 gaaacaaatt cccagttttt aattataaat gatgaacttc acattagaaa tatcactgat
+     2281 gcacaactag ctaagttcga aataaaacca attgagacaa aagagcaaga attgttaagt
+     2341 gagacaaaac aacaagaact aataaaacag ttttctttgc actctaaaat gaacttgaaa
+     2401 tggtcttgtg attgtttagt atcaaatgga tggaattttg agcaagctgc tacaaaattt
+     2461 actgaactaa ataatttggg aaaaattcca ccagaagcat ttgttatata atttttatta
+     2521 aatcatatta tatttctgac tgtaaacttg tttgtttgaa ttggtattag tagttgagaa
+//
+

@@ -1,0 +1,150 @@
+LOCUS       NC_058164               2661 bp    DNA     linear   CON 25-OCT-2021
+DEFINITION  Cotesia glomerata isolate CgM1 linkage group LG7, MPM_Cglom_v2.3,
+            whole genome shotgun sequence.
+ACCESSION   NC_058164 REGION: complement(3416608..3419268)
+VERSION     NC_058164.1
+DBLINK      BioProject: PRJNA772161
+            BioSample: SAMN18340714
+            Assembly: GCF_020080835.1
+KEYWORDS    WGS; RefSeq.
+SOURCE      Cotesia glomerata
+  ORGANISM  Cotesia glomerata
+            Eukaryota; Metazoa; Ecdysozoa; Arthropoda; Hexapoda; Insecta;
+            Pterygota; Neoptera; Endopterygota; Hymenoptera; Apocrita;
+            Ichneumonoidea; Braconidae; Microgastrinae; Cotesia.
+REFERENCE   1  (bases 1 to 2661)
+  AUTHORS   Pinto,B.J., Weis,J.J., Gamble,T., Ode,P.J., Paul,R. and Zaspel,J.M.
+  TITLE     A chromosome-level genome assembly of the parasitoid wasp, Cotesia
+            glomerata (Hymenoptera: Braconidae)
+  JOURNAL   J Hered (2021) In press
+   PUBMED   34043785
+  REMARK    Publication Status: Available-Online prior to print
+COMMENT     REFSEQ INFORMATION: The reference sequence is identical to
+            CM034666.1.
+            Assembly name: MPM_Cglom_v2.3
+            The genomic sequence for this RefSeq record is from the
+            whole-genome assembly released by the Milwaukee Public Museum on
+            2021/09/24. The original whole-genome shotgun project has the
+            accession JAHXZJ000000000.1.
+            
+            ##Genome-Assembly-Data-START##
+            Assembly Provider      :: Milwaukee Public Museum
+            Assembly Date          :: MAY-2021
+            Assembly Method        :: Flye v. 2.8.1
+            Assembly Name          :: MPM_Cglom_v2.3
+            Genome Representation  :: Full
+            Expected Final Version :: Yes
+            Genome Coverage        :: 130.0x
+            Sequencing Technology  :: Oxford Nanopore MinION; Illumina HiSeq;
+                                      Hi-C
+            ##Genome-Assembly-Data-END##
+            
+            ##Genome-Annotation-Data-START##
+            Annotation Provider         :: NCBI
+            Annotation Status           :: Full annotation
+            Annotation Name             :: Cotesia glomerata Annotation Release
+                                           100
+            Annotation Version          :: 100
+            Annotation Pipeline         :: NCBI eukaryotic genome annotation
+                                           pipeline
+            Annotation Software Version :: 9.0
+            Annotation Method           :: Best-placed RefSeq; Gnomon
+            Features Annotated          :: Gene; mRNA; CDS; ncRNA
+            ##Genome-Annotation-Data-END##
+FEATURES             Location/Qualifiers
+     source          1..2661
+                     /organism="Cotesia glomerata"
+                     /mol_type="genomic DNA"
+                     /isolate="CgM1"
+                     /isolation_source="ARDEC"
+                     /db_xref="taxon:32391"
+                     /sex="male"
+                     /tissue_type="whole"
+                     /dev_stage="adult"
+                     /geo_loc_name="USA: Colorado"
+                     /collection_date="2019-03"
+                     /collected_by="RP + PO"
+                     /linkage_group="LG7"
+     gene            1..2661
+                     /gene="LOC123269385"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /db_xref="GeneID:123269385"
+     mRNA            join(1..45,727..2661)
+                     /gene="LOC123269385"
+                     /product="nuclear RNA export factor 1-like"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon. Supporting evidence
+                     includes similarity to: 2 Proteins, and 100% coverage of
+                     the annotated genomic feature by RNAseq alignments,
+                     including 10 samples with support for all annotated
+                     introns"
+                     /transcript_id="XM_044735066.1"
+                     /db_xref="GeneID:123269385"
+     CDS             744..2615
+                     /gene="LOC123269385"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /codon_start=1
+                     /product="nuclear RNA export factor 1-like"
+                     /protein_id="XP_044591001.1"
+                     /db_xref="GeneID:123269385"
+                     /translation="MPKLPTKSIKSRLGFQSKDEESEIDWKSKIQSKSLFNFSNNPNN
+                     NRNGNSNGANNNDEDVDIEEDDNDASKKESLSLFTRKNRSKPEPYSLSDRSKPSVWKR
+                     LDYNPTDLNWFQVVLPGVHRFDKNLIISALKDHIKPHTFFPIMYEVSYKKAVFYVDNP
+                     EAAENLRKCHKNIIIDNYFTLTVDVCTSRFPASEFNEDFKMKVQQAMSIRYVEETKSL
+                     DLSCFHRDSNFIDNYFCALFRPDILIYVLEIASEAVPNLEALNLDNNQLTKLENLTIL
+                     STCFKNLKILSLANNKIKHESNLNFLKGLKLQDLRLEGNEFISRLEKIKLNYSSVIRE
+                     KFPSLIRLDGKQLPKKISFDIEDTEISLPSTVKIFTTNQQVLEIAQQFVQLYFNVYDS
+                     NSRQPLLDAYLDNAVFTMTISPEVLIDKNSSYALRNRNLLCIHNSRRVKLLNKGRLHV
+                     VSCLSEFPKTQHLAGSFTLDVKALTGSMMMMMIITVTGLFKELSSEGDVLRQFCRTFI
+                     VEQFGTGYCIGNEQFHLANATASQVRLVLQQMHLGVGNPGYRQSQDDKKIIIKEDNTQ
+                     LPESIREQMTRALSERTKMNHEWSFKCLSEVNWIYDVAINAFEEHHKRGSIPPEAFG"
+ORIGIN      
+        1 atcagctgaa tccacgacca atttcatcaa atgtcaattc aaatggtacg tacaaaaatt
+       61 aaaattatta atctttacta atgacattaa attaaagtta acagtcactt gactattttt
+      121 taatttttta acaagcaaat ttgttccaaa aaattatttt tcaaaattgc tacatgtaaa
+      181 tttttttcca aattattctg tcataattta cttgttacaa aattcatgaa aattaatgta
+      241 gcagatattt gataatttta aggatttttt taacaaataa attatggcaa aaaaaaagta
+      301 gaaaaaaaat tgccatgtag aaatttaaaa aaataaaaaa tgcaattttt tttaaataat
+      361 ttttttgaaa aaatatattt gttaaaaaaa ttaaaaaata gttaagtgac agctctttaa
+      421 tgtcataaaa aattcttgaa attatcaatg acattaaagt gatcattaac aatcttttaa
+      481 ttttatttaa caaaaaaatt tgtcccgaaa aataaatttt caaaaaattg tattttttat
+      541 ttttaaaaat tttcacatgt caattttttt tataattttt tttgccataa tttatttatt
+      601 atagaattta aaaaattatt aaacgtatgc taaattaatt ttcataaatt atcaaatatc
+      661 tgctaaatga atttttttta ctcatttcta ttaaaagtta tccaaaaaaa caataattat
+      721 ttacagaaca acaaaaaata aaaatgccaa aattaccaac aaagtcaata aaatcccgac
+      781 tcggattcca atcaaaggat gaagaatcag agatcgactg gaagtcaaaa attcaatcca
+      841 agtctttgtt taatttctcc aacaatccca acaacaatcg taatggtaac agtaatggtg
+      901 ccaataataa tgatgaagat gtcgacatag aagaagatga caatgacgca agtaagaaag
+      961 aaagcctatc attattcacg cgaaaaaata gatcaaaacc agagccttac agtctatcag
+     1021 acagatccaa gccttccgtt tggaagagac tagattacaa cccaaccgac ttaaactggt
+     1081 tccaagtagt tctcccaggt gtccacagat ttgacaagaa ccttataatc agtgctctta
+     1141 aagatcatat aaaacctcat accttcttcc caataatgta cgaagtatct tacaaaaagg
+     1201 ctgtgtttta cgttgacaac cccgaagctg ctgagaattt acgtaaatgc cataagaata
+     1261 taataataga caattacttc acccttacag ttgatgtatg tacatcaagg ttccccgctt
+     1321 ctgaatttaa cgaagacttt aaaatgaaag tccaacaagc aatgtcaatt agatacgtcg
+     1381 aagaaacaaa atctctagac ttgtcttgct ttcacagaga ctcaaacttt attgataatt
+     1441 atttctgcgc tttatttaga cctgatattc ttatttacgt actagaaatt gccagtgaag
+     1501 ctgtgcctaa tttagaagcg cttaatttgg acaataatca attaactaaa ttggaaaatt
+     1561 tgacaatatt gagcacgtgt tttaaaaact tgaaaatttt gagcctagct aacaataaaa
+     1621 tcaagcatga atcaaattta aattttttaa aaggattaaa gttacaagat cttcgcttag
+     1681 aaggaaatga atttatttca aggctggaaa aaattaaatt gaattactct tcagtaataa
+     1741 gagaaaaatt tccgagttta attcggttag atggcaagca attgcctaaa aaaattagct
+     1801 ttgacattga agacacggaa atttctttac caagtactgt aaaaattttt acaaccaacc
+     1861 aacaagttct cgaaattgct cagcaatttg tccagcttta cttcaatgtt tatgacagta
+     1921 attctaggca gccactgctg gatgcttatt tagacaacgc ggtttttaca atgacaatca
+     1981 gccccgaggt tttgattgat aagaacagta gttacgcttt aagaaacagg aatcttcttt
+     2041 gtattcataa ttctagaagg gttaaattac tgaacaaagg acggctgcat gtcgttagtt
+     2101 gcttgtcaga gttccccaag acccagcatt tagctggtag cttcacgcta gatgtcaaag
+     2161 ctctcactgg ttcgatgatg atgatgatga tcatcactgt gacggggttg ttcaaagaac
+     2221 tgagcagtga aggtgatgtt cttaggcagt tttgcaggac gtttattgtt gaacagtttg
+     2281 gaaccgggta ttgtattggt aatgaacaat ttcaccttgc taatgctact gctagtcaag
+     2341 ttaggctcgt cttgcagcaa atgcatcttg gggttggtaa tcctggttat aggcagagtc
+     2401 aagatgataa gaagataatt atcaaggagg ataatacgca gcttccggag agtattagag
+     2461 aacagatgac tagagcgctg agtgagagga ccaagatgaa ccacgagtgg agtttcaagt
+     2521 gcttgtctga agttaattgg atttatgatg ttgctattaa tgcttttgaa gaacatcata
+     2581 aacgtgggtc tattccgcct gaagcttttg gatagatttg ctgatagttt cttatttttt
+     2641 atcatgataa ttttcaaatt a
+//
+

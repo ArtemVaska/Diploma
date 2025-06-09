@@ -1,0 +1,237 @@
+LOCUS       NC_003283               3366 bp    DNA     linear   CON 16-MAY-2025
+DEFINITION  Caenorhabditis elegans chromosome V.
+ACCESSION   NC_003283 REGION: complement(14411649..14415014)
+VERSION     NC_003283.11
+DBLINK      BioProject: PRJNA158
+            Assembly: GCF_000002985.6
+KEYWORDS    RefSeq.
+SOURCE      Caenorhabditis elegans
+  ORGANISM  Caenorhabditis elegans
+            Eukaryota; Metazoa; Ecdysozoa; Nematoda; Chromadorea; Rhabditida;
+            Rhabditina; Rhabditomorpha; Rhabditoidea; Rhabditidae; Peloderinae;
+            Caenorhabditis.
+REFERENCE   1  (bases 1 to 3366)
+  AUTHORS   Sulson,J.E. and Waterston,R.
+  CONSRTM   Caenorhabditis elegans Sequencing Consortium
+  TITLE     Genome sequence of the nematode C. elegans: a platform for
+            investigating biology
+  JOURNAL   Science 282 (5396), 2012-2018 (1998)
+   PUBMED   9851916
+  REMARK    Erratum:[Science 1999 Jan 1;283(5398):35]
+REFERENCE   2  (bases 1 to 3366)
+  CONSRTM   NCBI Genome Project
+  TITLE     Direct Submission
+  JOURNAL   Submitted (16-MAY-2025) National Center for Biotechnology
+            Information, NIH, Bethesda, MD 20894, USA
+REFERENCE   3  (bases 1 to 3366)
+  AUTHORS   WormBase.
+  CONSRTM   WormBase Consortium
+  TITLE     Direct Submission
+  JOURNAL   Submitted (01-MAY-2025) WormBase Group, European Bioinformatics
+            Institute, Cambridge, CB10 1SA, UK. Email: help@wormbase.org
+REFERENCE   4  (bases 1 to 3366)
+  AUTHORS   Sulson,J.E. and Waterston,R.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (03-MAR-2003) Nematode Sequencing Project: Sanger
+            Institute, Hinxton, Cambridge CB10 1SA, UK and The Genome Institute
+            at Washington University, St. Louis, MO 63110, USA
+COMMENT     REVIEWED REFSEQ: This record has been curated by WormBase. The
+            reference sequence is identical to BX284605.
+            
+            On Feb 27, 2013 this sequence version replaced NC_003283.10.
+            Annotated features correspond to WormBase release WS297.
+            Protein-coding gene structures below are the result of integration
+            and manual review of the following types of data: ab initio
+            predictions by Genefinder (P. Green and L. Hillier, pers. comm.);
+            alignments to published proteins and cDNAs; genome sequence
+            conservation with other nematodes (e.g. to C. briggsae using WABA:
+            Genome Res. 2000. 10:1115-1125); sequence features (such as
+            trans-splice and polyA sites).
+            Sources of data: large-scale EST projects of Yuji Kohara
+            (http://www.ddbj.nig.ac.jp/c-elegans/html/CE_INDEX.html); ORFeome
+            cloning project (http://worfdb.dfci.harvard.edu); RST large-scale
+            sequencing project (Genome Res. 2009. 19:2334-2342); IST library
+            (Science. 2004. 303:540-3); RT-PCR EST set (Ewing B. Green P. 2010
+            Unpublished); UTRome EST data submission (UTRome v1 Mangone M.
+            Piano F. 2009); TEC-RED data (PNAS 2004. 101:1650-1655); RNA Deep
+            sequencing data (454 read clusters - Makedonka Mitreva,
+            unpublished; Illumina sequence data, Genome Res. 2009. 19:657-66);
+            Numerous data sets from the modENCODE project (Science. 2010.
+            330:1775-87); Individual C. elegans Nucleotide Database
+            submissions; Personal communications with C. elegans researchers;
+            Non-Coding gene structures below are derived using the following
+            methods and data: ab initio prediction of tRNAs by tRNAscan-SE
+            (Nucl. Acids. Res., 25, 955-964); integration and appraisal of
+            miRNAs from miRBase (http://www.mirbase.org); integration and
+            appraisal of RFAM predictions (rfam.sanger.ac.uk); 21U-RNAs (Cell.
+            2006. 127:1193-1207); modENCODE data (Science. 2010. 330:1775-87);
+            manual curation of novel published ncRNAs from the literature.
+            
+            ##Genome-Annotation-Data-START##
+            Annotation Provider :: WormBase
+            Annotation Status   :: Full annotation
+            Annotation Version  :: WS297
+            Annotation Pipeline :: Eukaryotic Annotation Propagation Pipeline
+            ##Genome-Annotation-Data-END##
+FEATURES             Location/Qualifiers
+     source          1..3366
+                     /organism="Caenorhabditis elegans"
+                     /mol_type="genomic DNA"
+                     /strain="Bristol N2"
+                     /db_xref="taxon:6239"
+                     /chromosome="V"
+     gene            1..3366
+                     /gene="nxf-1"
+                     /locus_tag="CELE_C15H11.3"
+                     /db_xref="GeneID:191736"
+                     /db_xref="WormBase:WBGene00003834"
+     mRNA            join(1..129,178..569,619..798,849..935,984..1093,
+                     1200..1236,1291..1359,1416..1609,1659..1949,2003..2282,
+                     2332..3366)
+                     /gene="nxf-1"
+                     /locus_tag="CELE_C15H11.3"
+                     /product="Nuclear RNA export factor 1"
+                     /standard_name="C15H11.3.1"
+                     /transcript_id="NM_001136408.4"
+                     /db_xref="GeneID:191736"
+                     /db_xref="WormBase:WBGene00003834"
+     CDS             join(3..129,178..569,619..798,849..935,984..1093,
+                     1200..1236,1291..1359,1416..1609,1659..1949,2003..2282,
+                     2332..2394)
+                     /gene="nxf-1"
+                     /locus_tag="CELE_C15H11.3"
+                     /standard_name="C15H11.3"
+                     /note="Confirmed by transcript evidence"
+                     /codon_start=1
+                     /product="Nuclear RNA export factor 1"
+                     /protein_id="NP_001129880.1"
+                     /db_xref="GeneID:191736"
+                     /db_xref="WormBase:WBGene00003834"
+                     /translation="MNRKGFGGHRDAKQLSRTKNRFARLDPDTQSRYEDDDEPAVPVR
+                     ASLTSASSRGRGGSSRGFGQSAASIANTGVRNADIVYKCRATGAAKKVDAKWLIKQLN
+                     QIIENFKPLLWTDNARGDFEWYVRDEDTASTIRANNRRVVHKESGTRVEFYTSKVPAP
+                     WMKLKREEIEIIHRVVDKRHNAENRVLDLSNFHEDEEFKAKDMMMNLTKGNVMLTVLD
+                     HIDDKYGNIVALSLSNNRIRHLDYASALVSIAKFVMELDLSHNHISTEKELEKFAGLP
+                     VERFFFEGNPVVESFTQRAAYISYIHQSFPRCNMLDGVEVQPLVVGPDLDIHDAMPFR
+                     AGYYPNPQIRVLVEQFVTSYFDFYDGPDGQRTRRNLHNAYDADASTFSLTIEHLRGSS
+                     HARHHNDECFAQYAGVSHNVLKQERFARHRASRSARGAMDIAVALSKLPTSSHMRDTF
+                     IVDVFLQSNDLLGFTVQGLFCDGDLTQTPSPSFFSRSFLVSPRENDSVAVISDQLFIT
+                     VASLDRLEKFKKLYDQSIANGAAVEQVSAVQIAQIGVNGMGFDGAPALPIREEMIKAM
+                     CQFSGMIPPFSEKCLADCAWNFDFACQKFNEIKSSVPAEAFAH"
+     gene            complement(<3012..>3366)
+                     /gene="gnrr-2"
+                     /locus_tag="CELE_C15H11.2"
+                     /db_xref="GeneID:182647"
+                     /db_xref="WormBase:WBGene00007614"
+     mRNA            complement(3012..>3207)
+                     /gene="gnrr-2"
+                     /locus_tag="CELE_C15H11.2"
+                     /product="G-protein coupled receptors family 1 profile
+                     domain-containing protein"
+                     /standard_name="C15H11.2a.1"
+                     /transcript_id="NM_001269654.4"
+                     /db_xref="GeneID:182647"
+                     /db_xref="WormBase:WBGene00007614"
+     CDS             complement(3120..>3207)
+                     /gene="gnrr-2"
+                     /locus_tag="CELE_C15H11.2"
+                     /standard_name="C15H11.2a"
+                     /note="Confirmed by transcript evidence"
+                     /codon_start=1
+                     /product="G-protein coupled receptors family 1 profile
+                     domain-containing protein"
+                     /protein_id="NP_001256583.1"
+                     /db_xref="GeneID:182647"
+                     /db_xref="WormBase:WBGene00007614"
+                     /translation="MSLILPNSTPPFINPLDEISNQETLGHVPSDYAQMLLYGIFALI
+                     GLPVNISTLIYMLKRYRHAKSFLLLLHINLNISDILVLGLYVPGLIGWLVTLEWRGGA
+                     YLCKFMRFVDAFVFAISSNIMVCIALYRLSALRYPLWVNAVGHSRVPRMLILAWALAV
+                     VTMLPQMLVWNEVQFSNITQCVTVWTEIINKREKLSESELRNMKLYSIQNATIIFYIP
+                     LMILVACYVLILKDIYKTLNTDTECSSAAYLSEMSSSKTGGKAALHKKDQESFVTLTT
+                     RTVRGQEKFRRAKVRSLRITLLLILTYAVTWLPYNLLSWWMVLHWDSYRENLDSNYIL
+                     NSLVVLNSVINPFIYGRCQGIRFLFKCRERLAAPKTKKICKLLQN"
+     mRNA            complement(<3120..>3207)
+                     /gene="gnrr-2"
+                     /locus_tag="CELE_C15H11.2"
+                     /product="G-protein coupled receptors family 1 profile
+                     domain-containing protein"
+                     /standard_name="C15H11.2b.1"
+                     /transcript_id="NM_001269655.4"
+                     /db_xref="GeneID:182647"
+                     /db_xref="WormBase:WBGene00007614"
+     CDS             complement(3120..>3207)
+                     /gene="gnrr-2"
+                     /locus_tag="CELE_C15H11.2"
+                     /standard_name="C15H11.2b"
+                     /note="Confirmed by transcript evidence"
+                     /codon_start=1
+                     /product="G-protein coupled receptors family 1 profile
+                     domain-containing protein"
+                     /protein_id="NP_001256584.2"
+                     /db_xref="GeneID:182647"
+                     /db_xref="WormBase:WBGene00007614"
+                     /translation="MVCIALYRLSALRYPLWVNAVGHSRVPRMLILAWALAVVTMLPQ
+                     MLVWNEVQFSNITQCVTVWTEIINKREKLSESELRNMKLYSIQNATIIFYIPLMILVA
+                     CYVLILKDIYKTLNTDTECSSAAYLSEMSSSKTGGKAALHKKDQESFVTLTTRTVRGQ
+                     EKFRRAKVRSLRITLLLILTYAVTWLPYNLLSWWMVLHWDSYRENLDSNYILNSLVVL
+                     NSVINPFIYGRCQGIRFLFKCRERLAAPKTKKICKLLQN"
+ORIGIN      
+        1 atatgaatcg caaagggttt ggagggcatc gtgacgcgaa gcaattgtca cgtacaaaga
+       61 atcgttttgc tcgacttgac ccagacactc aaagcagata tgaagacgac gacgagcctg
+      121 ccgttccagg taacgcttag atttattcat atccttgcca acttattttt gtttcagttc
+      181 gtgcaagcct tacttctgcc agtagccgtg gtcgtggagg atcatcacgc ggtttcggac
+      241 aatcggctgc atccatcgcc aacactggag ttcgtaatgc tgacatcgtc tacaagtgcc
+      301 gtgctactgg agctgccaag aaagttgatg ccaagtggct gatcaagcag cttaatcaaa
+      361 taatcgaaaa tttcaagcca cttctctgga ctgataacgc ccgtggagac tttgaatggt
+      421 acgtccgcga cgaggacact gcttcaacta tccgagccaa taatcgtcgt gttgtccaca
+      481 aagaaagtgg cacacgcgtt gagttttaca cttccaaagt tccagcccca tggatgaaac
+      541 tgaaacgaga ggaaattgag atcattcatg taagcctcaa aatttatttg tcaggtaatc
+      601 attacaaaca tttttcagag agtagtcgac aaacgtcaca acgccgagaa tcgagtattg
+      661 gatttatcaa acttccacga agacgaagag ttcaaggcaa aggatatgat gatgaatttg
+      721 acgaaaggaa atgtcatgct cacagttctc gatcacattg atgataagta cggaaacatt
+      781 gtggctttgt cgttatcagt gagtcatgct cttaatattc tctataaaag taatttttat
+      841 catttcagaa caatcgcatc cgtcatttgg actacgcttc agctctcgtg tcaatcgcta
+      901 agttcgttat ggagttggat ttgagtcaca accacgttag ttcaatagat ctagctattt
+      961 tttattcaac ttttgattta cagatttcca ctgaaaagga gttagagaaa ttcgccggat
+     1021 tgccagtcga aagattcttc tttgaaggaa acccagtcgt cgagtcattc acacagaggg
+     1081 cagcatatat caggttacat tatctgaatg attttcagat tttttattta aatttcattg
+     1141 tgttttcctc cttgttccct attttattat gttcattaac cccaaaccta ccacttcagc
+     1201 tatattcatc aatcattccc gcgatgcaac atgctggtaa gttatttaac attgagccaa
+     1261 gttcgcatct cggaatgaaa ctactttcag gacggagtcg aagtgcagcc gctggttgtt
+     1321 ggaccggatc tcgatattca tgacgcaatg ccattcagag taagttcctg cggatttaaa
+     1381 tctccctaga accttcgtta ttctaatatt tttaggctgg atattaccca aatccacaga
+     1441 tccgagttct tgtcgagcaa tttgtgactt catactttga tttctacgat ggaccggatg
+     1501 gccagagaac tagaagaaat ctccacaatg cgtacgacgc tgatgcttca acattctcgt
+     1561 tgacaatcga acatttgcgt ggatcttctc atgcacgaca ccacaatgag taaggatatt
+     1621 ttaaaatgca caatattatt atatttattg attttcagcg agtgctttgc acaatacgct
+     1681 ggtgtatcac acaacgtgct gaaacaggag cgattcgctc gtcatagagc ttctcgttca
+     1741 gcgcgtggag ccatggatat tgcagttgct ctctcaaaac tgccaacatc tagccatatg
+     1801 agggacacat ttattgtcga cgtttttctc caatcaaatg atcttctcgg attcacagtt
+     1861 caaggactat tctgcgatgg tgatcttaca cagacccctt cacccagttt cttcagcaga
+     1921 tcatttttgg tgtctccgag agagaatgag tgggttacac ttttgtatct caaacttata
+     1981 ctcatgattt tcgtattttc agctcagttg cagtaatctc tgatcagctt tttatcacag
+     2041 ttgcctcgtt ggatcgatta gaaaagttca agaagctgta cgatcaatct attgcaaatg
+     2101 gtgcggccgt ggaacaagtt agcgccgttc aaattgcaca aatcggagtt aacggaatgg
+     2161 gattcgacgg agcacctgca ctaccgattc gtgaggaaat gatcaaagcg atgtgccagt
+     2221 tcagtggaat gattccacca ttcagtgaga aatgtcttgc agactgcgct tggaactttg
+     2281 acgtatgtta atcatttctc aaagcatttg ttaaaattga agcaatttca gttcgcctgt
+     2341 cagaagttca acgaaataaa atcatcagtt ccagcagaag cgtttgctca ttaaatactg
+     2401 ttctatcgac atcttcagta tgcttagttc ttcctgattt actctttttt tatcgatctt
+     2461 tcgttcaatt ttcttctgtt cgcccttttt agtttttaat atttttctgc aatttttcat
+     2521 cccttcccct ctttcgaact agctcctcca ggtatttcta caattcgctt taacgttaac
+     2581 ctttctaaaa ttaggcctca caaatctcaa ttggttcgag tttctttcaa catgttaata
+     2641 gtcactggtg aatcgtatag tgctgtaaac ggaactgcca atggtattta aatttttcat
+     2701 tagttagaat tagttaacac gtcgaatgtc gctcccactt ccatctttca ccgtcactga
+     2761 gcttttcaca ctctttaaca cttcctccta attcaaaaaa ggagttcgcc gaagtgtgtg
+     2821 tcctgcagaa gctctttggc accatttgga gtgacgttgg gcgtgtgttc gtagttgaat
+     2881 taaactaaat ttaatatctg ttggcagtct ccataacagt tgctatcttc actgactttt
+     2941 ctctttttcg gaggtcaatt aaaaaaaaaa aaaaactagg gatctatgag cgaatcgtcg
+     3001 gaaaacttgc aaaaattatc attattattc tttattgtat tttcagaaaa tgcattatca
+     3061 attattctac acctctcgat gtgtttattg acccgtattt tgtcccactc cattcctcct
+     3121 tagttttgca ataacttgca aatcttcttt gttttgggag cagccaatcg ctctctacac
+     3181 ttgaacaaga atcgaatccc ctggcatctg aaaattaatc atattggttt tctaactatt
+     3241 cattctctaa ttcttcgttt tttcaatttg ccctgtcatc attatccctc tattttatct
+     3301 tatatttcaa aaatttgtcg tctcattctt ttcttttttt tatcaaataa aattatataa
+     3361 cccaaa
+//
+

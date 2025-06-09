@@ -1,0 +1,149 @@
+LOCUS       NC_057781               2496 bp    DNA     linear   CON 21-SEP-2021
+DEFINITION  Bombus pyrosoma isolate SC7728 linkage group LG12, ASM1482585v1,
+            whole genome shotgun sequence.
+ACCESSION   NC_057781 REGION: 268673..271168
+VERSION     NC_057781.1
+DBLINK      BioProject: PRJNA759419
+            BioSample: SAMN15897728
+            Assembly: GCF_014825855.1
+KEYWORDS    WGS; RefSeq.
+SOURCE      Bombus pyrosoma
+  ORGANISM  Bombus pyrosoma
+            Eukaryota; Metazoa; Ecdysozoa; Arthropoda; Hexapoda; Insecta;
+            Pterygota; Neoptera; Endopterygota; Hymenoptera; Apocrita;
+            Aculeata; Apoidea; Anthophila; Apidae; Bombus; Melanobombus.
+REFERENCE   1  (bases 1 to 2496)
+  AUTHORS   Sun,C., Huang,J., Wang,Y., Zhao,X., Su,L., Thomas,G.W.C., Zhao,M.,
+            Zhang,X., Jungreis,I., Kellis,M., Vicario,S., Sharakhov,I.V.,
+            Bondarenko,S.M., Hasselmann,M., Kim,C.N., Paten,B.,
+            Penso-Dolfin,L., Wang,L., Chang,Y., Gao,Q., Ma,L., Ma,L., Zhang,Y.,
+            Zhang,H., Zhang,H., Ruzzante,L., Robertson,H.M., Zhu,Y., Liu,Y.,
+            Yang,H., Ding,L., Wang,Q., Ma,D., Xu,W., Liang,C., Itgen,M.W.,
+            Mee,L., Cao,G., Zhang,Z., Sadd,B.M., Hahn,M., Schaack,S.,
+            Barribeau,S.M., Williams,P.H., Waterhouse,R.M. and Mueller,R.L.
+  TITLE     Genus-wide characterization of bumblebee genomes provides insights
+            into their evolution and variation in ecological and behavioral
+            traits
+  JOURNAL   Mol. Biol. Evol. (2020) In press
+   PUBMED   32946576
+  REMARK    Publication Status: Available-Online prior to print
+COMMENT     REFSEQ INFORMATION: The reference sequence is identical to
+            CM026136.1.
+            Assembly name: ASM1482585v1
+            The genomic sequence for this RefSeq record is from the
+            whole-genome assembly released by the Chinese Academy of
+            Agricultural Sciences on 2020/10/02. The original whole-genome
+            shotgun project has the accession JACXIN000000000.1.
+            
+            ##Genome-Assembly-Data-START##
+            Assembly Provider      :: Chinese Academy of Agricultural Sciences
+            Assembly Date          :: DEC-2017
+            Assembly Method        :: DISCOVAR de novo v. 52488
+            Genome Representation  :: Full
+            Expected Final Version :: Yes
+            Genome Coverage        :: 100x
+            Sequencing Technology  :: Illumina HiSeq
+            ##Genome-Assembly-Data-END##
+            
+            ##Genome-Annotation-Data-START##
+            Annotation Provider         :: NCBI
+            Annotation Status           :: Full annotation
+            Annotation Name             :: Bombus pyrosoma Annotation Release
+                                           100
+            Annotation Version          :: 100
+            Annotation Pipeline         :: NCBI eukaryotic genome annotation
+                                           pipeline
+            Annotation Software Version :: 9.0
+            Annotation Method           :: Best-placed RefSeq; Gnomon
+            Features Annotated          :: Gene; mRNA; CDS; ncRNA
+            ##Genome-Annotation-Data-END##
+FEATURES             Location/Qualifiers
+     source          1..2496
+                     /organism="Bombus pyrosoma"
+                     /mol_type="genomic DNA"
+                     /isolate="SC7728"
+                     /isolation_source="wild"
+                     /db_xref="taxon:396416"
+                     /tissue_type="whole body"
+                     /geo_loc_name="China: Hebei"
+                     /collection_date="Aug-2016"
+                     /linkage_group="LG12"
+     gene            1..2496
+                     /gene="LOC122573534"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /db_xref="GeneID:122573534"
+     mRNA            join(1..137,710..2496)
+                     /gene="LOC122573534"
+                     /product="nuclear RNA export factor 2-like"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon. Supporting evidence
+                     includes similarity to: 6 Proteins, and 100% coverage of
+                     the annotated genomic feature by RNAseq alignments,
+                     including 3 samples with support for all annotated
+                     introns"
+                     /transcript_id="XM_043740019.1"
+                     /db_xref="GeneID:122573534"
+     CDS             714..2327
+                     /gene="LOC122573534"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /codon_start=1
+                     /product="nuclear RNA export factor 2-like"
+                     /protein_id="XP_043595954.1"
+                     /db_xref="GeneID:122573534"
+                     /translation="MTNAEVVKNMPDWEPLRLTHIKPSFNTQESTLAARQDLWHKFIL
+                     FGIGQYKATEVLRTVIVACEPEIILPIMYKEESPNKSTFLTKCSCSVIENLVKQGLCI
+                     TLSNGQDLRIDIILGYTDSQSLQLNPNRIIAQALYYRYEPTKKVLNLDDFENEKSLNS
+                     IYCPISLPKILHFVLRCTKMGILSNNRDSRLPVRELTLRYNQITGIVFFEKFFNYHLT
+                     KLDLRHNQITDVEYLRYFSEFKISELWLDGNPLCAKYSKCQDYVQAVKNVFPHLQKLD
+                     GIVIGMEQKFVPNIQSNFLRDGTNTCLIKQFVKHFFTLYDQDDRQVMNGLYDRDALYS
+                     MTLGPVSNYIHKQLTKMFVTNRNLLKFVDYAKCQEFLLRGPEKIISALRNQPPTIHHF
+                     KTFYIDLLYEGEIHIAISVQGMFSFRDIHQCPPMFFNRTFMIMKKEDNEYCITNDQCY
+                     LDGTPANGTLSGNSEIRFESKGAPKFIPTVFSVSEKEQLLTFLHELTTMNMKFCHQYL
+                     EDANWDIRTAIVTFMNMYTVNNVPPEAFI"
+ORIGIN      
+        1 tatttaaact tgaattaacc catataaatt aatgtgttac ttatttgtta aaattaaata
+       61 tatattagtt tttgaaacaa atattcaata tctttgttat tgaattgtag acgcaataaa
+      121 aatgagtaaa agttaatgta agaaatacaa tattttctgc aactaaaatt taaagtagga
+      181 atatttaggg ttaagatatt taattcattt cttaaaagtt tcaaatatta aagttttgaa
+      241 caaatatttt tgtttttaca tattatatac attttgttag aaatcaaatc ttaataaatc
+      301 gtttcgtata agaaaagtat tatataagta caaaaaaatt tgttttatgt aatattcgta
+      361 atttaaataa aaatgtaatg cgagcattag caagtacatg acactcaata cttaatataa
+      421 atcgttgaat tagtgatatt cttccagaaa gtaatatttt ttgtataggg aaatttatct
+      481 aaacagtgta ttatatgtct aaacaattgt atagagaaat cttttatata tttactaaat
+      541 attgtttgat taaaattaat ttctaatgtc ttctaactat ttgtgaataa atcttataaa
+      601 tttaagcgat tctattgtga attaatttca tattttatta cttttaattt tattgttgct
+      661 ttttgtgaaa acataaactt tataaatcaa cattatatac atcatcaaga acaatgacaa
+      721 atgcagaagt tgttaaaaat atgccagact gggaaccatt gcgactgaca catattaaac
+      781 catcatttaa tactcaagaa tcaactttgg cagcacgaca agatttatgg cacaaattca
+      841 ttttatttgg cataggacaa tataaagcaa cagaagtgtt gagaactgtt attgttgctt
+      901 gtgaacctga aattatatta cccattatgt ataaagagga aagtcccaac aaaagtacat
+      961 tcctgacaaa atgtagctgc agcgttattg aaaatcttgt aaagcaaggt ttatgcataa
+     1021 cattgtcaaa cgggcaagac ttacgcattg atattatatt gggatataca gattctcaaa
+     1081 gtttacaatt gaatcctaat agaattatag cacaggcact ttattatagg tatgaaccta
+     1141 caaaaaaggt attgaacctt gatgattttg aaaatgaaaa gtcattaaac tctatatatt
+     1201 gtcccatatc tttacctaaa atattacact ttgttttaag atgtactaaa atgggtattt
+     1261 taagcaataa tcgtgattca cggttacctg ttagagaact gactttaaga tataatcaaa
+     1321 ttacaggcat tgtctttttt gaaaaatttt ttaactatca tttaaccaaa ttagacttac
+     1381 gtcataatca aatcacagat gtggaatact tacgctattt tagtgagttt aaaataagtg
+     1441 aactttggtt ggatgggaat ccactgtgtg caaaatacag caagtgtcaa gattatgtgc
+     1501 aagcagtaaa aaatgttttt cctcatttac aaaaattgga tggaattgta ataggtatgg
+     1561 aacaaaagtt tgttcctaat attcaaagta actttctaag agatggtaca aatacttgtt
+     1621 tgatcaaaca atttgtgaag cattttttca cattatatga tcaagatgat agacaagtga
+     1681 tgaatggttt atatgacaga gatgcacttt attctatgac tctgggacct gtttcaaatt
+     1741 acattcataa acagctaact aagatgtttg ttacaaacag aaatttacta aaatttgttg
+     1801 attatgcaaa gtgccaagaa tttttattac gtggaccaga aaaaatcatt tctgcgctca
+     1861 gaaatcaacc acctacgata catcacttta aaacatttta tatagattta ttgtatgaag
+     1921 gagagattca cattgcaatt tctgtgcaag gaatgttctc atttcgggac attcaccaat
+     1981 gtcctccaat gtttttcaat agaactttta tgattatgaa aaaagaagat aatgaatatt
+     2041 gcattactaa tgatcagtgt tatcttgacg gaacacctgc taatggcact ttgtcaggaa
+     2101 acagtgaaat aaggtttgaa tcaaaaggtg ctccaaaatt tattccaaca gtgtttagtg
+     2161 tttctgaaaa agaacaatta cttacatttt tacatgaatt gactacaatg aatatgaaat
+     2221 tttgtcacca atatcttgaa gatgccaact gggatattag aactgctatt gtgacattta
+     2281 tgaatatgta tacagtcaac aatgtgccac ctgaagcttt tatataatat atattttact
+     2341 gtataatatt tatataatat agatgtcatt atttgttaca tgcctgtaat ataacaagaa
+     2401 aattgtataa ttgtactata aatttgtacc tatgtaaaat attaaattag ttttatttta
+     2461 tataagtgca gaaaaaattc attttcaact tcatat
+//
+

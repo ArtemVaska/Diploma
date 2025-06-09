@@ -1,0 +1,323 @@
+LOCUS       NW_014333043            2812 bp    DNA     linear   CON 16-MAY-2018
+DEFINITION  Cephus cinctus unplaced genomic scaffold, Ccin1 Ccin1_scaffold0351,
+            whole genome shotgun sequence.
+ACCESSION   NW_014333043 REGION: 49745..52556
+VERSION     NW_014333043.1
+DBLINK      BioProject: PRJNA297591
+            BioSample: SAMN02905554
+            Assembly: GCF_000341935.1
+KEYWORDS    WGS; RefSeq.
+SOURCE      Cephus cinctus (wheat stem sawfly)
+  ORGANISM  Cephus cinctus
+            Eukaryota; Metazoa; Ecdysozoa; Arthropoda; Hexapoda; Insecta;
+            Pterygota; Neoptera; Endopterygota; Hymenoptera; Cephoidea;
+            Cephidae; Cephus.
+COMMENT     REFSEQ INFORMATION: The reference sequence is identical to
+            KB465834.1.
+            Assembly name: Ccin1
+            The genomic sequence for this RefSeq record is from the
+            whole-genome assembly released by the University of Illinois at
+            Urbana-Champaign on 2014/07/09. The original whole-genome shotgun
+            project has the accession AMWH00000000.1.
+            
+            ##Genome-Assembly-Data-START##
+            Assembly Provider     :: University of Illinois at Urbana-Champaign
+            Assembly Method       :: SOAPdenovo v. Apr-2012
+            Assembly Name         :: Ccin1
+            Long Assembly Name    :: Cephus cinctus 1.0
+            Genome Coverage       :: 56.0x
+            Sequencing Technology :: Illumina GAII; Illumina GAIIx; Illumina
+                                     HiSeq
+            ##Genome-Assembly-Data-END##
+            
+            ##Genome-Annotation-Data-START##
+            Annotation Provider         :: NCBI
+            Annotation Status           :: Full annotation
+            Annotation Name             :: Cephus cinctus Annotation Release
+                                           101
+            Annotation Version          :: 101
+            Annotation Pipeline         :: NCBI eukaryotic genome annotation
+                                           pipeline
+            Annotation Software Version :: 8.0
+            Annotation Method           :: Best-placed RefSeq; Gnomon
+            Features Annotated          :: Gene; mRNA; CDS; ncRNA
+            ##Genome-Annotation-Data-END##
+FEATURES             Location/Qualifiers
+     source          1..2812
+                     /organism="Cephus cinctus"
+                     /mol_type="genomic DNA"
+                     /db_xref="taxon:211228"
+                     /chromosome="Unknown"
+                     /sex="male"
+     gene            1..2812
+                     /gene="LOC107267151"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /db_xref="GeneID:107267151"
+     mRNA            join(1..210,294..489,556..748,822..1065,1142..1338,
+                     1411..1523,1599..1635,1699..1940,2020..2188,2264..2812)
+                     /gene="LOC107267151"
+                     /product="nuclear RNA export factor 1"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon. Supporting evidence
+                     includes similarity to: 4 Proteins, and 100% coverage of
+                     the annotated genomic feature by RNAseq alignments,
+                     including 18 samples with support for all annotated
+                     introns"
+                     /transcript_id="XM_015738463.2"
+                     /db_xref="GeneID:107267151"
+     CDS             join(123..210,294..489,556..748,822..1065,1142..1338,
+                     1411..1523,1599..1635,1699..1940,2020..2188,2264..2659)
+                     /gene="LOC107267151"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /codon_start=1
+                     /product="nuclear RNA export factor 1"
+                     /protein_id="XP_015593949.1"
+                     /db_xref="GeneID:107267151"
+                     /translation="MPKKAAKGRSRWTGQTSSRHGSPERKQYFDHDDRAVRGPARPKV
+                     SFRTGRNAKGGRSKNLQTALKIHLEDDVDMSDPNAKRIRFKGNVGVGGSAREGCRSPA
+                     PSRRIDGGGRGLYHKKGLRDDGGWFKVVIPYGNKYGKDFILKNLLSYIAPDPIIPIMY
+                     KIEGNTASFFVDDYKTALKLQSCDKKITTEEGFKISVNVLPGYPVSNMNDNFKERLKA
+                     AMAKRFVQATNALDLSQFHREPDLCEDYFCSLARTAMLIFVIDIIVEHTPQLEALNLD
+                     GNKIQAIDRLGSLLSRKLPSIKILYIGDNRIRDLRDTDSLKPLKLEELRLAGNPLCNK
+                     YKQRNEDYISDVRKRFPKLLKLDGILLPAPIVFDVGDDAEGHKLPPSQRAFAVNEDAR
+                     QVATTFLHQYFTIFDNDDRQPLLDAYDEHASFSLTIHFPPNNSHRFTFYLPENRNLFR
+                     VNDREKRQRLLKQGRLPVVSFISKMPKTHHYLNSFTMDLGVLTKTMMVVTVTGLFREL
+                     DGDKAQLRYFNRTMIIVPQGSGYCIRNEQVHITDPLDSQKKELAASLPALLSIPEETK
+                     NLEQQQEQLIMALRQQSGMNTEWSRKCLEEVQWNFDAALAAFRQVHEVGQVPAEAFQS
+                     "
+     gene            complement(1355..>2812)
+                     /gene="LOC107267149"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /db_xref="GeneID:107267149"
+     mRNA            complement(1355..>1484)
+                     /gene="LOC107267149"
+                     /product="ATP-dependent DNA helicase DDX11, transcript
+                     variant X3"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon. Supporting evidence
+                     includes similarity to: 6 Proteins, and 100% coverage of
+                     the annotated genomic feature by RNAseq alignments,
+                     including 7 samples with support for all annotated
+                     introns"
+                     /transcript_id="XM_015738458.2"
+                     /db_xref="GeneID:107267149"
+     mRNA            complement(1355..>1484)
+                     /gene="LOC107267149"
+                     /product="ATP-dependent DNA helicase DDX11, transcript
+                     variant X5"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon. Supporting evidence
+                     includes similarity to: 100% coverage of the annotated
+                     genomic feature by RNAseq alignments, including 4 samples
+                     with support for all annotated introns"
+                     /transcript_id="XM_015738461.2"
+                     /db_xref="GeneID:107267149"
+     mRNA            complement(1355..>1484)
+                     /gene="LOC107267149"
+                     /product="ATP-dependent DNA helicase DDX11, transcript
+                     variant X1"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon. Supporting evidence
+                     includes similarity to: 6 Proteins, and 100% coverage of
+                     the annotated genomic feature by RNAseq alignments,
+                     including 9 samples with support for all annotated
+                     introns"
+                     /transcript_id="XM_015738457.2"
+                     /db_xref="GeneID:107267149"
+     mRNA            complement(1355..>1484)
+                     /gene="LOC107267149"
+                     /product="ATP-dependent DNA helicase DDX11, transcript
+                     variant X2"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon. Supporting evidence
+                     includes similarity to: 6 Proteins, and 100% coverage of
+                     the annotated genomic feature by RNAseq alignments,
+                     including 9 samples with support for all annotated
+                     introns"
+                     /transcript_id="XM_015738459.2"
+                     /db_xref="GeneID:107267149"
+     mRNA            complement(1355..>1484)
+                     /gene="LOC107267149"
+                     /product="ATP-dependent DNA helicase DDX11, transcript
+                     variant X4"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon. Supporting evidence
+                     includes similarity to: 6 Proteins, and 100% coverage of
+                     the annotated genomic feature by RNAseq alignments,
+                     including 10 samples with support for all annotated
+                     introns"
+                     /transcript_id="XM_025084394.1"
+                     /db_xref="GeneID:107267149"
+     CDS             complement(1462..>1484)
+                     /gene="LOC107267149"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /codon_start=1
+                     /product="ATP-dependent DNA helicase DDX11 isoform X2"
+                     /protein_id="XP_015593947.1"
+                     /db_xref="GeneID:107267149"
+                     /translation="METPEEFIFPFPPYAIQEDFMKNLYFCLENGKLGIFESPTGTGK
+                     SLSIICGALKWLLDHEERQKSDLIEKIQEIDSSIKESEKKADHDWFFVQSSQLEFAAE
+                     RRILQQKLNMIIKHNEKREKLKERVQNNKENKKRYYKPKPGKSKDSLKDIDQDSKEGE
+                     AKNDTIDEDFLLDDFLEHSDSSEDEDTQEDIYKNSKIYFCSRTHSQLKQFVSELKKTP
+                     YSDKIALVPLASRQNYCINKEVKKLKHVNFINERCLQLQKKCTTAKKEKDLKRLKSST
+                     CCPYMPGDQQRLIADILSEVQDVEDIVQNSQELKTCPYYATRNSIPDSQIILVPYNTI
+                     LHKSTRISSGIDLKGNILIIDEAHNLLEAIEHIHSAMITGRNVLHCYSQLTQYQQRYQ
+                     HLFSAKNVLYLSQLCFCLKKLLKFFGATVKSSPDDASDPSKQSTKFYTVEDFETASEL
+                     DTINIFELLDFVKNSKLNRKLQGYLEKYGGETQIQEVELRKTGITAFLKTIKAHNLAR
+                     YEMEAEQKELLFDKEVSSNPLMTIVSFLECLKSSCEDGRILLVPGKTIGQGVMKFLLL
+                     NPAAYFNDIARAVIVAGGTMEPISDFKDRLFIKAGASPERIMSFSCDHVVPKDNIMTR
+                     IVTHGPNAKQFIFTYGERASHCLLEELSRSLINICNVVPAGIVVFLQSYTYEEVVYKY
+                     LVDQKYLNKISDKKRVFREPKYANQVSQVLEEYAEAVKNPQPPQNGALLFSVVGGKLS
+                     EGLNFSDDLGRCVIVVGMPYPNLFAPEIREKMNYLNENVGYNTGTMYYENACMKAVNQ
+                     CIGRAVRHINDYAGVILLDQRYTTKKTSLPRWIQRSLSVDNSFGMTIRNLAKFYSTKK
+                     HAERISSQS"
+     CDS             complement(1462..>1484)
+                     /gene="LOC107267149"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /codon_start=1
+                     /product="ATP-dependent DNA helicase DDX11 isoform X1"
+                     /protein_id="XP_015593943.1"
+                     /db_xref="GeneID:107267149"
+                     /translation="METPEEFIFPFPPYAIQEDFMKNLYFCLENGKLGIFESPTGTGK
+                     SLSIICGALKWLLDHEERQKSDLIEKIQEIDSSIKESEKKADHDWFFVQSSQLEFAAE
+                     RRILQQKLNMIIKHNEKREKLKERVQNNKENKKRYYKPKPGKSKDSLKDIDQDSKEGE
+                     AKNDTIDEDFLLDDFLEHSDSSEDEDTQEDIYKNSKIYFCSRTHSQLKQFVSELKKTP
+                     YSDKIALVPLASRQNYCINKEVKKLKHVNFINERCLQLQKKCTTAKKEKDLKRLKSST
+                     CCPYMPGDQQRLIADILSEVQDVEDIVQNSQELKTCPYYATRNSIPDSQIILVPYNTI
+                     LHKSTRISSGIDLKGNILIIDEAHNLLEAIEHIHSAMITGRNVLHCYSQLTQYQQRYQ
+                     HLFSAKNVLYLSQLCFCLKKLLKFFGATVKSSPDDASDPSKQSTKFYTVEDFETASEL
+                     DTINIFELLDFVKNSKLNRKLQGYLEKYGGETQIQEVELRKTGITAFLKTIKAHNLAR
+                     YEMEAEQKELLFDKEVSSNPLMTIVSFLECLKSSCEDGRILLVPGKTIGQGVMKFLLL
+                     NPAAYFNDIVKEARAVIVAGGTMEPISDFKDRLFIKAGASPERIMSFSCDHVVPKDNI
+                     MTRIVTHGPNAKQFIFTYGERASHCLLEELSRSLINICNVVPAGIVVFLQSYTYEEVV
+                     YKYLVDQKYLNKISDKKRVFREPKYANQVSQVLEEYAEAVKNPQPPQNGALLFSVVGG
+                     KLSEGLNFSDDLGRCVIVVGMPYPNLFAPEIREKMNYLNENVGYNTGTMYYENACMKA
+                     VNQCIGRAVRHINDYAGVILLDQRYTTKKTSLPRWIQRSLSVDNSFGMTIRNLAKFYS
+                     TKKHAERISSQS"
+     CDS             complement(1462..>1484)
+                     /gene="LOC107267149"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /codon_start=1
+                     /product="ATP-dependent DNA helicase DDX11 isoform X1"
+                     /protein_id="XP_015593944.1"
+                     /db_xref="GeneID:107267149"
+                     /translation="METPEEFIFPFPPYAIQEDFMKNLYFCLENGKLGIFESPTGTGK
+                     SLSIICGALKWLLDHEERQKSDLIEKIQEIDSSIKESEKKADHDWFFVQSSQLEFAAE
+                     RRILQQKLNMIIKHNEKREKLKERVQNNKENKKRYYKPKPGKSKDSLKDIDQDSKEGE
+                     AKNDTIDEDFLLDDFLEHSDSSEDEDTQEDIYKNSKIYFCSRTHSQLKQFVSELKKTP
+                     YSDKIALVPLASRQNYCINKEVKKLKHVNFINERCLQLQKKCTTAKKEKDLKRLKSST
+                     CCPYMPGDQQRLIADILSEVQDVEDIVQNSQELKTCPYYATRNSIPDSQIILVPYNTI
+                     LHKSTRISSGIDLKGNILIIDEAHNLLEAIEHIHSAMITGRNVLHCYSQLTQYQQRYQ
+                     HLFSAKNVLYLSQLCFCLKKLLKFFGATVKSSPDDASDPSKQSTKFYTVEDFETASEL
+                     DTINIFELLDFVKNSKLNRKLQGYLEKYGGETQIQEVELRKTGITAFLKTIKAHNLAR
+                     YEMEAEQKELLFDKEVSSNPLMTIVSFLECLKSSCEDGRILLVPGKTIGQGVMKFLLL
+                     NPAAYFNDIVKEARAVIVAGGTMEPISDFKDRLFIKAGASPERIMSFSCDHVVPKDNI
+                     MTRIVTHGPNAKQFIFTYGERASHCLLEELSRSLINICNVVPAGIVVFLQSYTYEEVV
+                     YKYLVDQKYLNKISDKKRVFREPKYANQVSQVLEEYAEAVKNPQPPQNGALLFSVVGG
+                     KLSEGLNFSDDLGRCVIVVGMPYPNLFAPEIREKMNYLNENVGYNTGTMYYENACMKA
+                     VNQCIGRAVRHINDYAGVILLDQRYTTKKTSLPRWIQRSLSVDNSFGMTIRNLAKFYS
+                     TKKHAERISSQS"
+     CDS             complement(1462..>1484)
+                     /gene="LOC107267149"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /codon_start=1
+                     /product="ATP-dependent DNA helicase DDX11 isoform X1"
+                     /protein_id="XP_015593945.1"
+                     /db_xref="GeneID:107267149"
+                     /translation="METPEEFIFPFPPYAIQEDFMKNLYFCLENGKLGIFESPTGTGK
+                     SLSIICGALKWLLDHEERQKSDLIEKIQEIDSSIKESEKKADHDWFFVQSSQLEFAAE
+                     RRILQQKLNMIIKHNEKREKLKERVQNNKENKKRYYKPKPGKSKDSLKDIDQDSKEGE
+                     AKNDTIDEDFLLDDFLEHSDSSEDEDTQEDIYKNSKIYFCSRTHSQLKQFVSELKKTP
+                     YSDKIALVPLASRQNYCINKEVKKLKHVNFINERCLQLQKKCTTAKKEKDLKRLKSST
+                     CCPYMPGDQQRLIADILSEVQDVEDIVQNSQELKTCPYYATRNSIPDSQIILVPYNTI
+                     LHKSTRISSGIDLKGNILIIDEAHNLLEAIEHIHSAMITGRNVLHCYSQLTQYQQRYQ
+                     HLFSAKNVLYLSQLCFCLKKLLKFFGATVKSSPDDASDPSKQSTKFYTVEDFETASEL
+                     DTINIFELLDFVKNSKLNRKLQGYLEKYGGETQIQEVELRKTGITAFLKTIKAHNLAR
+                     YEMEAEQKELLFDKEVSSNPLMTIVSFLECLKSSCEDGRILLVPGKTIGQGVMKFLLL
+                     NPAAYFNDIVKEARAVIVAGGTMEPISDFKDRLFIKAGASPERIMSFSCDHVVPKDNI
+                     MTRIVTHGPNAKQFIFTYGERASHCLLEELSRSLINICNVVPAGIVVFLQSYTYEEVV
+                     YKYLVDQKYLNKISDKKRVFREPKYANQVSQVLEEYAEAVKNPQPPQNGALLFSVVGG
+                     KLSEGLNFSDDLGRCVIVVGMPYPNLFAPEIREKMNYLNENVGYNTGTMYYENACMKA
+                     VNQCIGRAVRHINDYAGVILLDQRYTTKKTSLPRWIQRSLSVDNSFGMTIRNLAKFYS
+                     TKKHAERISSQS"
+     CDS             complement(1462..>1484)
+                     /gene="LOC107267149"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /codon_start=1
+                     /product="ATP-dependent DNA helicase DDX11 isoform X1"
+                     /protein_id="XP_024940162.1"
+                     /db_xref="GeneID:107267149"
+                     /translation="METPEEFIFPFPPYAIQEDFMKNLYFCLENGKLGIFESPTGTGK
+                     SLSIICGALKWLLDHEERQKSDLIEKIQEIDSSIKESEKKADHDWFFVQSSQLEFAAE
+                     RRILQQKLNMIIKHNEKREKLKERVQNNKENKKRYYKPKPGKSKDSLKDIDQDSKEGE
+                     AKNDTIDEDFLLDDFLEHSDSSEDEDTQEDIYKNSKIYFCSRTHSQLKQFVSELKKTP
+                     YSDKIALVPLASRQNYCINKEVKKLKHVNFINERCLQLQKKCTTAKKEKDLKRLKSST
+                     CCPYMPGDQQRLIADILSEVQDVEDIVQNSQELKTCPYYATRNSIPDSQIILVPYNTI
+                     LHKSTRISSGIDLKGNILIIDEAHNLLEAIEHIHSAMITGRNVLHCYSQLTQYQQRYQ
+                     HLFSAKNVLYLSQLCFCLKKLLKFFGATVKSSPDDASDPSKQSTKFYTVEDFETASEL
+                     DTINIFELLDFVKNSKLNRKLQGYLEKYGGETQIQEVELRKTGITAFLKTIKAHNLAR
+                     YEMEAEQKELLFDKEVSSNPLMTIVSFLECLKSSCEDGRILLVPGKTIGQGVMKFLLL
+                     NPAAYFNDIVKEARAVIVAGGTMEPISDFKDRLFIKAGASPERIMSFSCDHVVPKDNI
+                     MTRIVTHGPNAKQFIFTYGERASHCLLEELSRSLINICNVVPAGIVVFLQSYTYEEVV
+                     YKYLVDQKYLNKISDKKRVFREPKYANQVSQVLEEYAEAVKNPQPPQNGALLFSVVGG
+                     KLSEGLNFSDDLGRCVIVVGMPYPNLFAPEIREKMNYLNENVGYNTGTMYYENACMKA
+                     VNQCIGRAVRHINDYAGVILLDQRYTTKKTSLPRWIQRSLSVDNSFGMTIRNLAKFYS
+                     TKKHAERISSQS"
+ORIGIN      
+        1 ctgaaactag aggttgttta cggatattcc tatgcaagga taggtatatc cttgaggcga
+       61 ggaacacgct agaggttgta aactaagagg attttatgtt gctccttatt aaatagaaga
+      121 caatgccaaa gaaagcggca aaaggtcgta gtcgttggac tggtcagacg tcttctagac
+      181 atgggagtcc agaaagaaaa caatattttg gtaaatatat gaacgtacag tgtttatgtt
+      241 atttgttatg cctttggagt aaattgttat tagtcataca aatactcttc tagatcacga
+      301 tgatagggct gtacgaggac cagcgagacc taaagtttcc tttaggacag gtcgtaatgc
+      361 aaagggtgga cggagtaaaa atttacagac tgcacttaaa atacatttag aggatgatgt
+      421 ggatatgtcc gatcctaatg ctaagcgaat ccgatttaag ggtaatgttg gtgttggtgg
+      481 tagtgcaagg tatgtgaaag gtgttcttat tagttaactt tatagatttt tgaatagtca
+      541 atccattggt tttagggaag ggtgtcggag tcctgctcca tctagacgaa tagatggtgg
+      601 cggacgtggg ttgtatcata aaaagggatt acgtgatgat ggaggttggt ttaaagtagt
+      661 tattccttat ggaaacaaat atggcaagga cttcatttta aagaatttat tgagttatat
+      721 tgctccggac ccaatcattc caattatggt atatataaat atgttctaca ttttcacata
+      781 tatttggaaa aatagttaat caaaagtttc ttcttcgaca gtacaaaata gaaggaaata
+      841 ctgctagctt ctttgttgat gattacaaaa cagcattaaa actacagagt tgtgataaaa
+      901 agatcacaac cgaggagggt tttaaaattt ctgtaaatgt tttaccagga tatcctgtat
+      961 ctaatatgaa tgacaatttc aaagaaagac tgaaggcagc catggcaaaa cgatttgtcc
+     1021 aagccacgaa tgctttagat ctttcacaat ttcatagaga gccaggtaaa tattgtcatg
+     1081 aacaatatac atattgcatg atataacaaa attagtcttt cttattcttt aacattacta
+     1141 gatctgtgcg aggattactt ctgctcacta gctcgtaccg ccatgcttat ctttgtgata
+     1201 gatataattg tcgagcacac gcctcaatta gaggcattaa atttagatgg aaacaaaata
+     1261 caagccatcg acagattagg ttctctatta agccgaaaat taccatcaat taaaatcctc
+     1321 tatatcgggg ataatcgggt aaatatttat gaatctccga aatatcgtag gaaaaaaaat
+     1381 gttataaaat attgattttt catacatcag atacgcgatt taagagacac tgactctttg
+     1441 aaacctttga aactagaaga gttacgactg gctggaaatc ctctctgtaa taaatataaa
+     1501 caacgtaatg aagattatat ttcgtgagta aacccaaaca ttaatactat aagataagtg
+     1561 tatttgaaaa taataataat aatatatctt caaaatagtg atgttcgaaa gcggtttcct
+     1621 aaactactca aattggtaag tattttgaag gttatgtagg tttatttgaa atataaaatg
+     1681 gataattttg ttctttagga cggcatttta cttcctgccc ctatagtttt tgacgtcggt
+     1741 gatgatgccg aaggacataa gttgccacca agtcaaaggg cattcgcagt taatgaagac
+     1801 gcccgacaag tagcgacgac gtttcttcat cagtacttta caatttttga taacgatgac
+     1861 cgtcagccat tattagatgc ttatgacgaa catgcatcgt tcagtttaac aatccatttt
+     1921 ccccctaata attcgcacag gtgggcattg ttttaatata tttctactag gcgtatttaa
+     1981 aaaaggcaat aaatggaaaa cccaattttc tcgttacaga tttacatttt acttgccgga
+     2041 gaaccggaat ttattcaggg taaatgatcg tgagaaacga caacgattac tcaaacaggg
+     2101 cagattacct gtagtctcat ttatatcaaa aatgccgaaa acacatcact acctcaacag
+     2161 tttcacaatg gatctgggtg tcttaacggt ataattactc ttttttcata cacgaattac
+     2221 tgatacttga tcggatattt ataactttga aatgaatttt cagaaaacta tgatggttgt
+     2281 aacagtgaca ggattattta gagaattaga tggagataaa gcacaattga gatactttaa
+     2341 tagaacgatg atcatcgttc ctcaaggaag tggctactgc atccgtaatg agcaagtaca
+     2401 cataaccgat cctctagatt cccagaaaaa ggaactagct gcgtcgctac cggcgttact
+     2461 ctcgatacca gaagaaacaa agaatttaga gcaacaacaa gaacaactga taatggcact
+     2521 gagacaacaa tctggcatga ataccgaatg gagtcgaaaa tgtttagagg aagtacaatg
+     2581 gaattttgac gcggctctag cagcgtttcg acaggtccat gaagtgggac aagttccagc
+     2641 tgaagccttt caaagttaaa cacgtgagaa tacatcttgg aatgaaggat tttcattttg
+     2701 aggttaaatt aggtaattat tattatgcgt ccacgccgtc ttttttgtgg gatcgcttaa
+     2761 tgtgtatata tgcaacctta ataaaaatat caaaataaat accttaatgc ta
+//
+

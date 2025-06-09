@@ -1,0 +1,192 @@
+LOCUS       NC_057696               3571 bp    DNA     linear   CON 22-SEP-2021
+DEFINITION  Vespula pensylvanica isolate Volc-1 chromosome 12, ASM1446617v1,
+            whole genome shotgun sequence.
+ACCESSION   NC_057696 REGION: 2883545..2887115
+VERSION     NC_057696.1
+DBLINK      BioProject: PRJNA761702
+            BioSample: SAMN15507680
+            Assembly: GCF_014466175.1
+KEYWORDS    WGS; RefSeq.
+SOURCE      Vespula pensylvanica (western yellowjacket)
+  ORGANISM  Vespula pensylvanica
+            Eukaryota; Metazoa; Ecdysozoa; Arthropoda; Hexapoda; Insecta;
+            Pterygota; Neoptera; Endopterygota; Hymenoptera; Apocrita;
+            Aculeata; Vespoidea; Vespidae; Vespinae; Vespula.
+REFERENCE   1  (bases 1 to 3571)
+  AUTHORS   Harrop,T.W.R., Guhlin,J., McLaughlin,G.M., Permina,E.,
+            Stockwell,P., Gilligan,J., Le Lec,M.F., Gruber,M.A.M., Quinn,O.,
+            Lovegrove,M., Duncan,E.J., Remnant,E.J., Van Eeckhoven,J.,
+            Graham,B., Knapp,R.A., Langford,K.W., Kronenberg,Z., Press,M.O.,
+            Eacker,S.M., Wilson-Rankin,E.E., Purcell,J., Lester,P.J. and
+            Dearden,P.K.
+  TITLE     High-Quality Assemblies for Three Invasive Social Wasps from the
+            Vespula Genus
+  JOURNAL   G3 (Bethesda) (2020) In press
+   PUBMED   32859687
+  REMARK    Publication Status: Available-Online prior to print
+COMMENT     REFSEQ INFORMATION: The reference sequence is identical to
+            CM025347.1.
+            Assembly name: ASM1446617v1
+            The genomic sequence for this RefSeq record is from the
+            whole-genome assembly released by the University of Otago on
+            2020/09/09. The original whole-genome shotgun project has the
+            accession JACSDY000000000.1.
+            
+            ##Genome-Assembly-Data-START##
+            Assembly Provider      :: University of Otago
+            Assembly Date          :: 03-JUL-2020
+            Assembly Method        :: meraculous v. 2.2.6
+            Genome Representation  :: Full
+            Expected Final Version :: Yes
+            Genome Coverage        :: 644x
+            Sequencing Technology  :: Illumina HiSeq
+            ##Genome-Assembly-Data-END##
+            
+            ##Genome-Annotation-Data-START##
+            Annotation Provider         :: NCBI
+            Annotation Status           :: Full annotation
+            Annotation Name             :: Vespula pensylvanica Annotation
+                                           Release 100
+            Annotation Version          :: 100
+            Annotation Pipeline         :: NCBI eukaryotic genome annotation
+                                           pipeline
+            Annotation Software Version :: 9.0
+            Annotation Method           :: Best-placed RefSeq; Gnomon
+            Features Annotated          :: Gene; mRNA; CDS; ncRNA
+            ##Genome-Annotation-Data-END##
+FEATURES             Location/Qualifiers
+     source          1..3571
+                     /organism="Vespula pensylvanica"
+                     /mol_type="genomic DNA"
+                     /isolate="Volc-1"
+                     /db_xref="taxon:30213"
+                     /chromosome="12"
+                     /sex="male"
+                     /tissue_type="Whole adult"
+                     /geo_loc_name="USA: Volcano, HI"
+                     /lat_lon="19.43 N 155.21 W"
+                     /collection_date="2017-08"
+     gene            1..3571
+                     /gene="LOC122633381"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /db_xref="GeneID:122633381"
+     mRNA            join(1..405,623..924,999..1082,1172..1415,1508..1701,
+                     1788..1900,2174..2210,2324..2556,2635..2803,2927..3571)
+                     /gene="LOC122633381"
+                     /product="nuclear RNA export factor 1-like, transcript
+                     variant X1"
+                     /experiment="COORDINATES: polyA evidence [ECO:0006239]"
+                     /transcript_id="XM_043821193.1"
+                     /db_xref="GeneID:122633381"
+     mRNA            join(256..513,623..924,999..1082,1172..1415,1508..1701,
+                     1788..1900,2174..2210,2324..2556,2635..2803,2927..3571)
+                     /gene="LOC122633381"
+                     /product="nuclear RNA export factor 1-like, transcript
+                     variant X2"
+                     /experiment="COORDINATES: polyA evidence [ECO:0006239]"
+                     /transcript_id="XM_043821194.1"
+                     /db_xref="GeneID:122633381"
+     CDS             join(327..405,623..924,999..1082,1172..1415,1508..1701,
+                     1788..1900,2174..2210,2324..2556,2635..2803,2927..3355)
+                     /gene="LOC122633381"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /codon_start=1
+                     /product="nuclear RNA export factor 1-like isoform X1"
+                     /protein_id="XP_043677128.1"
+                     /db_xref="GeneID:122633381"
+                     /translation="MSKKPNKSAWGRRGRRTSNPEDKHYFGHDDRVGRTSSGTCGNRR
+                     RVSFKPQGRLGRDISRSLTLALDDDIPMAGTSNNNNRQVIVRGRNRGLSRGRNSPLPH
+                     RAIRTGILSTPQSLPAGETNWYKITIPYGAKYTKDYILSSLNSIASEAFVPIMYKTSG
+                     NEASFYVDSQKAASILLHCDRKITTTNGFKLRIKIKLGLPQCEISDALKERLKQAMVK
+                     RYVQETNALDLSKFHHDPDLIADYFCALSRPIMLMAVLDIVSEYVPTLEALNLDGNKL
+                     YMIEKLDVLYKKFPRLKILYIGDNKIKEISQLDAIKELQLEELRLTGNPVSNRYISRQ
+                     NDYISGVRKIFPKLLRLDGIELPRPILFDVANDTTKVPHTQRLFVTDVKAQDIASQFL
+                     QQYFIIFDSENRHPLLDAYDEHARFSLTVINNQTTERLSAYLSENRNLFRVNNNNKRQ
+                     KLLKQGRLPVLSFIIELPRTKHHLNTFTMDISVITQGMMLITVTGLFDELNNKGDQLR
+                     YFNRTFIIVPRGNGYCICNEQLHISLPTEEQCKKFITDNFSAQMSDVPSGSKSSSEIR
+                     SPQLTEDVKRKMALTLSQETNMNSEWSLKCLEEVHWNYENAILAFQELFKHGQIPSEA
+                     FTK"
+     CDS             join(757..924,999..1082,1172..1415,1508..1701,1788..1900,
+                     2174..2210,2324..2556,2635..2803,2927..3355)
+                     /gene="LOC122633381"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /codon_start=1
+                     /product="nuclear RNA export factor 1-like isoform X2"
+                     /protein_id="XP_043677129.1"
+                     /db_xref="GeneID:122633381"
+                     /translation="MAGTSNNNNRQVIVRGRNRGLSRGRNSPLPHRAIRTGILSTPQS
+                     LPAGETNWYKITIPYGAKYTKDYILSSLNSIASEAFVPIMYKTSGNEASFYVDSQKAA
+                     SILLHCDRKITTTNGFKLRIKIKLGLPQCEISDALKERLKQAMVKRYVQETNALDLSK
+                     FHHDPDLIADYFCALSRPIMLMAVLDIVSEYVPTLEALNLDGNKLYMIEKLDVLYKKF
+                     PRLKILYIGDNKIKEISQLDAIKELQLEELRLTGNPVSNRYISRQNDYISGVRKIFPK
+                     LLRLDGIELPRPILFDVANDTTKVPHTQRLFVTDVKAQDIASQFLQQYFIIFDSENRH
+                     PLLDAYDEHARFSLTVINNQTTERLSAYLSENRNLFRVNNNNKRQKLLKQGRLPVLSF
+                     IIELPRTKHHLNTFTMDISVITQGMMLITVTGLFDELNNKGDQLRYFNRTFIIVPRGN
+                     GYCICNEQLHISLPTEEQCKKFITDNFSAQMSDVPSGSKSSSEIRSPQLTEDVKRKMA
+                     LTLSQETNMNSEWSLKCLEEVHWNYENAILAFQELFKHGQIPSEAFTK"
+ORIGIN      
+        1 aagtgcgaca atagtattaa agggtgcgtt acaaatacaa tacgtaccat gcttcatttt
+       61 ttctattttt cattatgttc ataaaacgca tgcaaaagtt tagtaagcag ctccatacga
+      121 tcaactacta ctctgtctaa agttattcaa tctcgaacaa attcagcagt taagacttga
+      181 accttgaatt ctttaatgga aaactgaatg aagatataat aggctttact ctacacttat
+      241 tctgtttatt cgggcttatt tttgtttgtt attttcaatt gaatgtttta tgattctgat
+      301 ttcgtatcct atataattat ttgaaaatgt caaagaaacc taacaaatct gcatggggaa
+      361 gacgaggcag aaggacgagt aatccagaag ataaacatta ctttggtatt atttataatt
+      421 ataataatat aaactcttga atgttttatc aatttataaa gtcatggaaa atatgcaaaa
+      481 tgtacaaata gaatatgtga aatctaaaaa agagtatgta ttaattccat gtattttgtc
+      541 ataattgcaa tattaattat attgttaatg ttaataattt gtttattagt aatattaagt
+      601 tttattatac tatattatac aggacatgat gatcgtgttg gaagaacaag cagtggaacg
+      661 tgtggaaata gacgtcgtgt atcttttaaa cctcaaggaa gattaggcag agatatatca
+      721 agaagcttaa ctttggcatt agatgatgat ataccaatgg caggaacttc caataataac
+      781 aacagacaag tcattgttcg aggaaggaat agaggtttat ctagaggaag aaatagtcct
+      841 ttaccacata gagcaattcg tactggtatc ttatctacac ctcaatcact acctgctgga
+      901 gaaactaact ggtataaaat tacggtaaat atattgtgat atgtgattct tattatttaa
+      961 gtattattta tatttatatt tatttattta ttttttagat accatatggt gcaaaatata
+     1021 caaaagatta tattttgagc agtcttaaca gcattgcttc agaagctttt gtacctataa
+     1081 tggtaaatag atttataata gatattttat aattcctgtg tattggttca attttccaga
+     1141 tttttaacgt tcttttcaaa atcatttgta gtataagact tcaggaaacg aagcgtcctt
+     1201 ttatgttgat agtcaaaaag cagcaagtat tcttcttcat tgtgatcgta aaattacaac
+     1261 aacaaatgga tttaaacttc gaataaaaat taaattagga cttccacagt gtgaaatcag
+     1321 tgatgcttta aaagaaagat taaaacaagc tatggttaaa cgatatgttc aagagacaaa
+     1381 tgctttagat ttatcaaaat ttcatcatga tcctggttag tcaagcaatc aatttctaat
+     1441 ttttgcatgg aaatattaaa ttactattat aaaatactta ttagtacaat atctattttt
+     1501 gctatagatc ttattgcaga ttacttttgt gcattatctc gaccgattat gttaatggca
+     1561 gtattagata ttgtgtcaga gtatgtaccc acgttagaag cattgaatct ggatggtaac
+     1621 aagttatata tgattgaaaa acttgatgtc ctatataaaa aatttccaag attgaaaata
+     1681 ctttatatag gagataataa ggtaaatcgt atatataaat ttaacactta acaaaataca
+     1741 aatatatata atctaacaaa acatacatat atgtgtattt gttgtagata aaagaaatta
+     1801 gtcaattaga tgctataaaa gaattacaat tagaagaatt aagattgaca ggaaatcctg
+     1861 tctccaatag gtatatatct cgtcaaaatg actatattag gtaatgtatt gttttacata
+     1921 atttttttta ttcttaataa gaaatttgtc aaagaatgta gaatatgtat ttcgatgaat
+     1981 ttttacaaat attgtctata tttatttttt gattttatac gtgaatattg acgattttta
+     2041 tattaaatac aattctttat gtgtagaatt aattcatatc tgcattcttt gctaatttat
+     2101 tatgtaaaaa tatgatacat atttttgtta tcacaactaa tttggagctt ttgggtttct
+     2161 ttctcaacaa cagcggtgta cggaaaatat ttcctaagct tttaagactg gtaaggaaag
+     2221 aatctaacta ttgagtataa tagaagaaat tatattaaat taaattaaaa aaataatgta
+     2281 taaatataat aatgattttg ttaaaaattt atctatttta aaggatggta tagagttacc
+     2341 acgtccaata ttatttgatg ttgcaaatga tacaacaaaa gtgcctcata ctcaacgatt
+     2401 atttgtcaca gatgttaaag cacaagacat agcaagtcag ttcttgcaac aatattttat
+     2461 tatttttgac agtgaaaata ggcatccatt gttagatgca tacgatgagc atgcacgttt
+     2521 cagtttgaca gtgataaata atcaaactac tgaaaggtaa gtgaaaaaat gatattacac
+     2581 tttttacgat acattataaa tcataatgtt attgaaaatt atcggaattt tcagattaag
+     2641 tgcatatctt tcagagaata gaaatttatt tagagtaaat aataataata agaggcagaa
+     2701 attattaaag caaggtagat taccagttct atcttttata atagaactac cacgaacaaa
+     2761 acaccattta aataccttta caatggatat cagtgttata actgtaagtt aatattattt
+     2821 gaagaatatt aaaaataaat tttttgtttt gtttaaatac tatataaata atttggtaaa
+     2881 tcgaacttac tttcttcttt ttgtcctttt ctttttacaa ttatagcaag gaatgatgtt
+     2941 gatcacagta acaggattat ttgacgaatt gaataataaa ggtgatcaac tacgttattt
+     3001 caataggaca tttatcatag taccaagagg aaatggctat tgtatctgta atgagcaatt
+     3061 gcatattagt cttcctactg aagaacaatg taaaaaattc atcactgata atttctcagc
+     3121 ccaaatgtct gatgtaccaa gtggatctaa atcttcatca gaaatacgat caccgcaatt
+     3181 aacggaagac gtaaaacgaa aaatggcatt aacattaagt caagaaacga acatgaattc
+     3241 agaatggagt ttgaaatgtt tagaggaagt tcactggaat tatgaaaatg caatattagc
+     3301 ttttcaggaa cttttcaaac atggacaaat accgtcggaa gcatttacaa aataaaaatt
+     3361 ggattatagg taaaaaatat gacaaaaata catcattctg tattcaaatt ttttcgtaaa
+     3421 tcattctaat tctcattgtt tatcacagcc ttcaaagtaa tatgtacaaa attgatgaat
+     3481 tttatagata aaaatgaaat ttgttaattt ataattacat attgttacta tctttttcat
+     3541 attttgtgct acaaagacac aaaaaaaaga a
+//
+

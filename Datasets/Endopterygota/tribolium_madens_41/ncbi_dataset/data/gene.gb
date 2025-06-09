@@ -1,0 +1,133 @@
+LOCUS       NW_025400985            2205 bp    DNA     linear   CON 16-OCT-2021
+DEFINITION  Tribolium madens isolate multiple individuals breed KSU strain
+            unplaced genomic scaffold, Tmad_KSU_1.1
+            Scaffold_20;HRSCAF=117;Tcas5.2_LG4, whole genome shotgun sequence.
+ACCESSION   NW_025400985 REGION: complement(6088438..6090642)
+VERSION     NW_025400985.1
+DBLINK      BioProject: PRJNA771348
+            BioSample: SAMN16398860
+            Assembly: GCF_015345945.1
+KEYWORDS    WGS; RefSeq.
+SOURCE      Tribolium madens (black flour beetle)
+  ORGANISM  Tribolium madens
+            Eukaryota; Metazoa; Ecdysozoa; Arthropoda; Hexapoda; Insecta;
+            Pterygota; Neoptera; Endopterygota; Coleoptera; Polyphaga;
+            Cucujiformia; Tenebrionidae; Tenebrionidae incertae sedis;
+            Tribolium.
+COMMENT     REFSEQ INFORMATION: The reference sequence is identical to
+            JADDYM010000020.1.
+            Assembly name: Tmad_KSU_1.1
+            The genomic sequence for this RefSeq record is from the
+            whole-genome assembly released by the Kansas State University on
+            2020/11/10. The original whole-genome shotgun project has the
+            accession JADDYM000000000.1.
+            
+            ##Genome-Assembly-Data-START##
+            Assembly Provider      :: Kansas State University
+            Assembly Date          :: 28-SEP-2020
+            Assembly Method        :: AllPaths v. G-40028; AllPaths v. G-42337;
+                                      HiRise v. Devetail 2019
+            Assembly Name          :: Tmad_KSU_1.1
+            Genome Representation  :: Full
+            Expected Final Version :: Yes
+            Genome Coverage        :: 22.0x
+            Sequencing Technology  :: Illumina GAII
+            ##Genome-Assembly-Data-END##
+            
+            ##Genome-Annotation-Data-START##
+            Annotation Provider         :: NCBI
+            Annotation Status           :: Full annotation
+            Annotation Name             :: Tribolium madens Annotation Release
+                                           100
+            Annotation Version          :: 100
+            Annotation Pipeline         :: NCBI eukaryotic genome annotation
+                                           pipeline
+            Annotation Software Version :: 9.0
+            Annotation Method           :: Best-placed RefSeq; Gnomon
+            Features Annotated          :: Gene; mRNA; CDS; ncRNA
+            ##Genome-Annotation-Data-END##
+FEATURES             Location/Qualifiers
+     source          1..2205
+                     /organism="Tribolium madens"
+                     /mol_type="genomic DNA"
+                     /isolate="multiple individuals"
+                     /isolation_source="laboratory strain"
+                     /db_xref="taxon:41895"
+                     /chromosome="Unknown"
+                     /sex="pooled male and female"
+                     /tissue_type="Pooled whole body"
+                     /dev_stage="Late pupae"
+                     /geo_loc_name="USA: Kanssas"
+                     /collection_date="2012"
+                     /breed="KSU strain"
+     gene            1..2205
+                     /gene="LOC123004969"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /db_xref="GeneID:123004969"
+     mRNA            join(1..359,408..608,658..1119,1178..1395,1448..1616,
+                     1669..1973,2026..2205)
+                     /gene="LOC123004969"
+                     /product="nuclear RNA export factor 1-like"
+                     /experiment="COORDINATES: polyA evidence [ECO:0006239]"
+                     /transcript_id="XM_044398535.1"
+                     /db_xref="GeneID:123004969"
+     CDS             join(186..359,408..608,658..1119,1178..1395,1448..1616,
+                     1669..1973,2026..2125)
+                     /gene="LOC123004969"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /codon_start=1
+                     /product="nuclear RNA export factor 1-like"
+                     /protein_id="XP_044254470.1"
+                     /db_xref="GeneID:123004969"
+                     /translation="MASTLFFGGESQSITNLDAKKIRQNVQAIIVNDFSLQTGILYKN
+                     KEVLENPIYWHKFIVNNAEDFSRDLILKTILDHVQPLDLIPVFFLKEGSSASFLARNC
+                     GAAIEKICKDNLIIDNPYVKNQPFKLSIILRYSTTNDVKIDVSKNISKVLRKRTNTAT
+                     STINLENFYQDSDLSEFCILSQPKLMSYVLHLSRLSKPKSIILSNNEIRSLVPIEALW
+                     GINVTSLDLRNNLIMSLTELEPLTQLKITELWLEGNPLCDNYDEHTYIQRVKEYCPKI
+                     ERLDGVLLKHNGFPSFRRNFLCNSSGHDLVDQFLEYYFTSYDSSNRAMLKNLYHKGAL
+                     FSLTADYHPMQLSSPSAQLKRYKTYSRNVLSLADLSRSDLNLQQGSKAIIDLLNLLPP
+                     SEHDPYSFTVDLIHYSDVCAIVVVTGVFKELPESILDAERFMGFNRCFALESINGEYC
+                     IINEQMHVFNALTSQQVKAFKHERPIRPQMLPPAQTPKQKSQIITAMKLITNLTTEWA
+                     KKCLEECHYDLKNALALFVDLYKVDKIPADGFQN"
+ORIGIN      
+        1 tcgtgcgcat gttccaattc tgtgttgtgt tttttcgtgt tgataaaaga taaaaaatat
+       61 tttgagtgat ttaattcttt taggagttta atcatttcaa ttgataaact tccgagtttt
+      121 attttattag tgtgatagat ttagaagcgt ttttatttgg aggaatttta taatataacc
+      181 taaaaatggc ttcaactttg ttttttggtg gcgagtctca gtcgattaca aatttagacg
+      241 cgaaaaaaat tcgacaaaat gtgcaagcta ttatcgtaaa tgatttttca ttacagactg
+      301 ggattcttta taaaaacaag gaagttttgg aaaaccccat ttattggcat aagtttattg
+      361 tgggtgttta cttattacgt ttctcttctt ttaaagcttg tttttaggtg aataacgctg
+      421 aagattttag tagagacctg atcttgaaaa caattctaga tcatgtgcaa ccattagact
+      481 taattccagt tttcttctta aaagaaggca gttctgcttc ttttcttgca aggaattgtg
+      541 gagcagcaat agaaaaaatc tgcaaagata atttgatcat tgataatcct tatgtgaaaa
+      601 atcagccagt aggtgtgtag ttgatttata taacttgttt ctaatttgta tttgtagttt
+      661 aagctcagta ttatattaag gtattcaaca acaaacgatg tgaaaattga tgtttccaaa
+      721 aatatttcaa aagtgttaag aaaaagaaca aacacagcca cttccaccat aaatcttgag
+      781 aatttctatc aagactctga tttatcagag ttctgtattt tatctcaacc caaattgatg
+      841 tcttatgtgt tgcatttatc aagattatca aaacccaaat ctattatcct aagtaataat
+      901 gaaattagaa gcttggttcc aattgaagct ttatggggaa ttaatgtgac aagtttagat
+      961 ttgagaaaca atctaataat gagcttgact gaacttgaac ctttaacaca actcaaaatt
+     1021 actgagcttt ggttggaagg taatccttta tgtgataatt atgacgaaca tacttacatc
+     1081 caacgggtta aggagtattg tccaaaaatt gaaagacttg taagtaaaaa tgtaaaaata
+     1141 ctactgattt attttctgtg tgcttcattt cttttaggat ggtgttttat tgaagcacaa
+     1201 cggctttcct tcatttagaa gaaacttttt gtgtaacagc tctggtcatg atttagttga
+     1261 tcaatttcta gaatattact tcacttctta tgactcttca aacagagcta tgcttaaaaa
+     1321 tttatatcac aaaggtgctc ttttctcgtt aactgcggat tatcacccta tgcagttatc
+     1381 ttcaccttca gcacagtaat caattcattg aaatatttta ctagtcatga catttttcaa
+     1441 aatacaggtt aaaacgctac aagacgtatt ccagaaatgt tctatcttta gcagacttat
+     1501 ctcggagtga tttaaattta caacaaggaa gtaaagctat tatagatttg ttgaatttgt
+     1561 tgccaccatc agaacacgat ccatattctt ttacagttga tttaatacat tattcggtat
+     1621 gttatgcaac cagtaatatt tattcaacat gaaaatgttt taatttagga cgtttgtgcc
+     1681 attgtggttg tcactggtgt ctttaaagaa ctaccagagt caattttaga cgcggaaagg
+     1741 tttatgggtt ttaatcggtg ctttgcactt gaatccataa atggagaata ttgtattatc
+     1801 aatgaacaaa tgcatgtgtt caatgcattg acatcacagc aagtaaaagc atttaaacat
+     1861 gagaggccca tcagaccaca aatgcttcca cctgcccaaa ctccgaaaca aaaaagtcag
+     1921 attattacag caatgaaact gattactaat ttgaccactg agtgggctaa aaagtatgga
+     1981 tggttactgt gcttttaatt agataaagaa taatttttgt tgtaggtgtt tggaagaatg
+     2041 ccattatgat ttgaaaaacg cacttgctct ttttgtagat ctgtataagg tggataaaat
+     2101 tcccgccgac ggattccaaa attgagcaat tatgttttaa tttatgtgaa tgtgtataac
+     2161 tgttctcaac gaaaatattt gagataaagg gctttcaatc taaaa
+//
+

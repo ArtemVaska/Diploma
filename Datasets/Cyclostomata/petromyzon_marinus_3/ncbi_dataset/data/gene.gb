@@ -1,0 +1,138 @@
+LOCUS       NC_046119               2334 bp    DNA     linear   CON 20-MAR-2020
+DEFINITION  Petromyzon marinus isolate kPetMar1 chromosome 51, kPetMar1.pri,
+            whole genome shotgun sequence.
+ACCESSION   NC_046119 REGION: complement(8511659..8513992)
+VERSION     NC_046119.1
+DBLINK      BioProject: PRJNA611764
+            BioSample: SAMN12629506
+            Assembly: GCF_010993605.1
+KEYWORDS    WGS; RefSeq.
+SOURCE      Petromyzon marinus (sea lamprey)
+  ORGANISM  Petromyzon marinus
+            Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Cyclostomata;
+            Hyperoartia; Petromyzontiformes; Petromyzontidae; Petromyzon.
+COMMENT     REFSEQ INFORMATION: The reference sequence is identical to
+            CM021491.1.
+            Assembly name: kPetMar1.pri
+            The genomic sequence for this RefSeq record is from the
+            whole-genome assembly released by the Vertebrate Genomes Project on
+            2020/02/24. The original whole-genome shotgun project has the
+            accession JAAIYE000000000.1.
+            
+            ##Genome-Assembly-Data-START##
+            Assembly Provider      :: Vertebrate Genomes Project
+            Assembly Date          :: 09-DEC-2019
+            Assembly Method        :: FALCON v. DNANexus 1.9.0; FALCON-Unzip v.
+                                      DNANexus 1.0.6; purge_dups v. github
+                                      ca23030ccf4254dfd2d3a5ea90d0eed41c24f88b;
+                                      scaff10x v. 4.1.0; Bionano Solve DLS v.
+                                      3.2.1; Salsa HiC v. 2.2; Arrow
+                                      smrtanalysis Pacbio polishing & gap
+                                      filling v. smrtlink_6.0.0.47841;
+                                      longranger align v. 2.2.2; freebayes
+                                      Illumina polishing v. 1.3.1; gEVAL manual
+                                      curation v. 2019-12-09; VGP assembly
+                                      pipeline individual v. 1.6
+            Assembly Name          :: kPetMar1.pri
+            Diploid                :: Principal pseudohaplotype
+            Genome Representation  :: Full
+            Expected Final Version :: No
+            Genome Coverage        :: 62.36x
+            Sequencing Technology  :: PacBio Sequel I CLR; llumina NovaSeq;
+                                      Arima Genomics Hi-C; Bionano Genomics DLS
+            ##Genome-Assembly-Data-END##
+            
+            ##Genome-Annotation-Data-START##
+            Annotation Provider         :: NCBI
+            Annotation Status           :: Full annotation
+            Annotation Name             :: Petromyzon marinus Annotation
+                                           Release 100
+            Annotation Version          :: 100
+            Annotation Pipeline         :: NCBI eukaryotic genome annotation
+                                           pipeline
+            Annotation Software Version :: 8.3
+            Annotation Method           :: Best-placed RefSeq; Gnomon
+            Features Annotated          :: Gene; mRNA; CDS; ncRNA
+            ##Genome-Annotation-Data-END##
+FEATURES             Location/Qualifiers
+     source          1..2334
+                     /organism="Petromyzon marinus"
+                     /mol_type="genomic DNA"
+                     /isolate="kPetMar1"
+                     /db_xref="taxon:7757"
+                     /chromosome="51"
+                     /sex="male"
+                     /tissue_type="sperm"
+                     /dev_stage="adult"
+                     /geo_loc_name="USA: Great Lakes Fisheries Commission"
+                     /lat_lon="42.2821 N 83.74847 W"
+                     /collection_date="12-Jun-2018"
+                     /collected_by="Jeremiah Smith"
+     gene            1..2334
+                     /gene="LOC116953378"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /db_xref="GeneID:116953378"
+     mRNA            join(1..57,277..346,1168..1353,1968..2028,2234..2334)
+                     /gene="LOC116953378"
+                     /product="nuclear RNA export factor 1-like"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon. Supporting evidence
+                     includes similarity to: 100% coverage of the annotated
+                     genomic feature by RNAseq alignments, including 4 samples
+                     with support for all annotated introns"
+                     /transcript_id="XM_032973529.1"
+                     /db_xref="GeneID:116953378"
+     CDS             join(303..346,1168..1353,1968..2028,2234..2269)
+                     /gene="LOC116953378"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /codon_start=1
+                     /product="nuclear RNA export factor 1-like"
+                     /protein_id="XP_032829420.1"
+                     /db_xref="GeneID:116953378"
+                     /translation="MFWRVVQLVPTMDGRPSVASERMFIREALASEMPPAFASTTSAT
+                     SSSCPLTALTSSQQEIVNSFAEKSHMTPEWSQRCLERNNWDFSKAADDFIHLYEAGKI
+                     PGEAFR"
+ORIGIN      
+        1 ctctcacttt acaggatacc caggtcaact tcaccatcca tggcttcttc aaagagagtg
+       61 agtatttgca tagtcacatt caccatcagc ttcgtcatca gcagtagcat catcaacagc
+      121 atcactgaca ttgcatttaa ttacaccaga tgcattctgc actgcatgcc ataagcacca
+      181 cctcaccatt ctaattgatc ctgccatgcg gtttatgtta atggcgtggc tctctcttga
+      241 cgcccgtgca cctttgtcgt gtgtgtcgat cctcagccaa gaattgccaa gagtctgtga
+      301 agatgttttg gcgggtggtg caattggtgc caaccatgga cggcaggtga gtcacttgca
+      361 ccatgaccca acacatcata acaaccgccg ttcgccacta agtggcagtg atgtcaccac
+      421 ggcgcttgtg ccagcctatg tgcatgttga ggccacgcga agtgtcgaat gcccactggc
+      481 aggaggtcac ggggcagacc cacgtgctac gggtcgactg agatggctgg ccaatgcacc
+      541 acctgtgccc cctactatgc caacttgctg tgctttggcc acccagcgct ccgctcgttg
+      601 ttttgagcgt cactcctccc ccattgttgt tggagggcga ctgcctccaa ctacccagta
+      661 gcattcttaa cgagcctcct ccacagaggc cgattttaac acggctggta ccagtcatcg
+      721 gcaagtccac tcagatccac atcctcttgt accacatcac tccatctctt ctctagccca
+      781 ttccgcgccc gtttagcccc ctttatccag ccgaacaaaa gctgtttagg catgcggtgg
+      841 ctgggcatac gggctacatg acacatcata tacacacagc cacaaacaca caccatgttt
+      901 tcgcacacag acaatacgcg ctttcctgct tcgctttcct ctgctccctc tcccattcct
+      961 ttgcttcttc cttaacgagg ttgcatactc ttgattttcc agaaggcagt acagcaagtg
+     1021 tggactaatc tccatcttgt cttctgtatg ggatagagtg ttgacccctt gcccatgtgt
+     1081 gtttccttca ggtgctccat tagcttgctg tttaactaag taatgtgtta ttatttttat
+     1141 tgacctgctt gtgttgacac ccggcaggcc atctgtcgcg agtgagcgga tgttcatccg
+     1201 cgaagctctt gcaagtgaga tgccccctgc attcgcctca acaacatcag cgacgtccag
+     1261 cagctgcccg cttactgcgc tcacctcgtc ccagcaggag atagtcaatt cgttcgcaga
+     1321 aaaatcccac atgacaccgg agtggtcgca aaggtgggcg agagcacgtg ggaactgtct
+     1381 tacagccaca cacacgtgca cacacgcatg atgtcatgct tcattgcaag agtaatgaga
+     1441 cacagcccag caggagccat ttattctgcc aaacccttat aggggcacca gggtctttgg
+     1501 actcggactg ttatgtcctt catgcccctt cattcccccc tacccctttt gtccacagac
+     1561 agaggaaagc gtcagtcatt ttgtaaagat tattaaggag acaatgtatg cttgaggtgg
+     1621 cttactccgg tcccgagttt aaacgataat ttttggtatg tttcgacaaa ttttgtacaa
+     1681 acacatggcc ataaagtcga ctcgagtgag gggcgacttg acggtgcgtc tctgctgcgt
+     1741 tgaccccgtg acggcgctat tccaagcatg cggctcccat tgagaagcga gccaaacggc
+     1801 actgtgtaat ggggctgcac ggtcgattct caccgggagc tggcatgaac ccgtttcagg
+     1861 tggccatagg aatctggtcc acagcccagg cactagactt gcaagctgga ctgtggaaaa
+     1921 aaggcactga cgttctcttt gcctcctgtc cgcgctcgcc tccacagatg cctggagcgg
+     1981 aacaattggg atttctccaa agcggctgac gacttcatcc acctctacgt gagtaccgtg
+     2041 ccgcccacaa tcctgaccga cacacgtaat cgcaactgca ccggcgtgtt cacgttttgg
+     2101 cgaccgtcgc taatgatgcc gcttgtctcc ctctccactc tgttccctcc tctcctcatt
+     2161 ccctcatcgc aatcgctgct ccggttttgg ctgcggctcc tgcacggtcg ccaatcgtcg
+     2221 ttcccgtcgt caggaagcag ggaagattcc gggggaggcg tttcggtgat caggcgtcat
+     2281 ccagaaccag cgccccacca aatggaccct gaccacaaca tttatttttg tatc
+//
+

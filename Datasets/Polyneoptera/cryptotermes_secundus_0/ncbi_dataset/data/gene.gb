@@ -1,0 +1,546 @@
+LOCUS       NW_019726235           26657 bp    DNA     linear   CON 22-APR-2020
+DEFINITION  Cryptotermes secundus unplaced genomic scaffold, Csec_1.0
+            scaffold669, whole genome shotgun sequence.
+ACCESSION   NW_019726235 REGION: complement(52417..79073)
+VERSION     NW_019726235.1
+DBLINK      BioProject: PRJNA432597
+            BioSample: SAMN06690155
+            Assembly: GCF_002891405.2
+KEYWORDS    WGS; RefSeq.
+SOURCE      Cryptotermes secundus
+  ORGANISM  Cryptotermes secundus
+            Eukaryota; Metazoa; Ecdysozoa; Arthropoda; Hexapoda; Insecta;
+            Pterygota; Neoptera; Polyneoptera; Dictyoptera; Blattodea;
+            Blattoidea; Termitoidae; Kalotermitidae; Cryptotermitinae;
+            Cryptotermes.
+COMMENT     REFSEQ INFORMATION: The reference sequence is identical to
+            NEVH01008214.1.
+            Assembly name: Csec_1.0
+            The genomic sequence for this RefSeq record is from the
+            whole-genome assembly released by the Westfaelische
+            Wilhelms-University on 2018/01/17. The original whole-genome
+            shotgun project has the accession NEVH00000000.1.
+            
+            ##Genome-Assembly-Data-START##
+            Assembly Provider      :: Westfaelische Wilhelms-University
+            Assembly Date          :: 2013
+            Assembly Method        :: SOAPdenovo v. 2.04; gapcloser v. 1.10;
+                                      kgf v. 1.18
+            Assembly Name          :: Csec_1.0
+            Expected Final Version :: yes
+            Genome Coverage        :: 45.0x
+            Sequencing Technology  :: Illumina HiSeq
+            ##Genome-Assembly-Data-END##
+            
+            ##Genome-Annotation-Data-START##
+            Annotation Provider         :: NCBI
+            Annotation Status           :: Full annotation
+            Annotation Name             :: Cryptotermes secundus Annotation
+                                           Release 101
+            Annotation Version          :: 101
+            Annotation Pipeline         :: NCBI eukaryotic genome annotation
+                                           pipeline
+            Annotation Software Version :: 8.4
+            Annotation Method           :: Best-placed RefSeq; Gnomon
+            Features Annotated          :: Gene; mRNA; CDS; ncRNA
+            ##Genome-Annotation-Data-END##
+FEATURES             Location/Qualifiers
+     source          1..26657
+                     /organism="Cryptotermes secundus"
+                     /mol_type="genomic DNA"
+                     /isolation_source="Pool of workers"
+                     /db_xref="taxon:105785"
+                     /chromosome="Unknown"
+                     /tissue_type="whole body"
+                     /geo_loc_name="Australia"
+                     /collection_date="2012"
+     gene            1..26657
+                     /gene="LOC111864076"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /db_xref="GeneID:111864076"
+     mRNA            join(1..202,5008..5176,6074..6251,6384..6470,9201..9305,
+                     10455..10593,14397..14590,16208..16317,20653..20689,
+                     21633..21877,22123..22291,23150..23320,24491..24660,
+                     26367..26657)
+                     /gene="LOC111864076"
+                     /product="nuclear RNA export factor 1"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon. Supporting evidence
+                     includes similarity to: 5 Proteins, and 100% coverage of
+                     the annotated genomic feature by RNAseq alignments,
+                     including 23 samples with support for all annotated
+                     introns"
+                     /transcript_id="XM_023851063.1"
+                     /db_xref="GeneID:111864076"
+     CDS             join(139..202,5008..5176,6074..6251,6384..6470,9201..9305,
+                     10455..10593,14397..14590,16208..16317,20653..20689,
+                     21633..21877,22123..22291,23150..23320,24491..24660,
+                     26367..26466)
+                     /gene="LOC111864076"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /codon_start=1
+                     /product="nuclear RNA export factor 1"
+                     /protein_id="XP_023706831.1"
+                     /db_xref="GeneID:111864076"
+                     /translation="MPKRREVSRPWNSERWEGKYSEHDDRVNDAIRRVSFKPGSNHIG
+                     KHRRRRDVITLIRSQLDDDVDMSVQGSSGRSTRFNPYVERGRNQAGGGFGGGMNAGGR
+                     GSASRRRSGRRSPPASVHFNSKKFSESSTSWYKITIPHGGRYAKEYILKILLAHIAPT
+                     VFIPLNYEIRGIDSSFFVDDSEAAEKLDNADRKIITVKGFKLVIKVKPALPHVELNST
+                     LKEKIKAAMVKRYNADLKALDLSRFHTDPDLVDNYAVALFRPNMMLAVLDIIVENVPE
+                     LTALDLSDNKLYALDSLSVLPVKVPNLKVLHIGRNRIRDMNQLNCLESLRLEDIVLRG
+                     NPLCSKYQDKNLYVSEVRKRFPRVMKLDGADLSPPILFDVNEDQQLPKSKGSYLCSEE
+                     GMTIVRQFLEQYYSLYDSDNREPLVNAYHNDAMFSVTSAYPPGQSSTTSSKLVNYITD
+                     SRNLLRVKDSTRRQRVLYQGKMAIVACLSKLPKTQHDPHSFAVDLTLFMPQLISISVT
+                     GLFMERGLSKNQALRSFSRVFMIVPFGDGFCIVNEQLFVTNATDEQRKAAFQTQVPAV
+                     VPPPTPVVAPVAAATSPQSGLMDDQAKQQLAESFAAQSGMNVCWARKCLDETGWDFQR
+                     ATFIFTELNKQGTIPAEAFIK"
+ORIGIN      
+        1 ggcctcaagc cttagtgcgt ggaaggttgt agaagatacg gccgaagttt tgttggagtt
+       61 gtaagtgtag gaaagttgag ttaagacgaa gaagtttgct aaataaagtg tagacatttt
+      121 tgattttaaa ttaagataat gccaaagcgc cgtgaagtga gcaggccatg gaactcggaa
+      181 cgatgggaag gaaagtacag tggtaagtac tgtcttgtat tttttacttt tctatatcca
+      241 gtggttgtac cagtatggat caacagaata aattaaaatt gaattgaata agttaagctg
+      301 tatacatgaa atgcagccat tattgagcca cgtacgcacc agacgtattt gtatttagaa
+      361 tggggtttcc tcttacctca gacaagtgta ggctaagagc ctatacacat aatgttttaa
+      421 gaattggcgt gttatagctt catttcgcct gtaatctggg gctacactaa agcctctgtt
+      481 tcttaaccat aaacgatgca tccctactca tgtttgtggt gttagaaagg tttagagaat
+      541 tctgaaagaa aaaattgctt taacagaagt ttggttaagt tatatagcat aaattgttta
+      601 tttcgtagtg gcacttgtaa ccaatttgtt tcatccatcc agaagatatg tacgagtgaa
+      661 aacggtttcc acagctgcat ttctgtgaca gtgctaatat tttcttcttt aaaatgccga
+      721 aattctcttt catgtatttt gaaactcaac agtattcatc aaatccggtt tcatcaggtg
+      781 gctgagtaag gattattttc ttcataaatg atggtgactt acgaacatct tcccaggtgt
+      841 gatttttgtg taatgttatc catgacatta acttcagatc atgaagtgga aggatccatt
+      901 ctataatgta tttagttgtg ccataaatgt tgctgacatg aaagtcaaaa ctgatgtgat
+      961 gttatgagta cttcacctgc atcttccatc tcgatgagaa gaattgttac ttttgttgtc
+     1021 agctgtcacc aacaaggcac cagttatgca tttcacttct gttgctgaaa cagtcccttt
+     1081 tttcaagttc ctgtatgtga gcattaaaca tgtcagttga ttttatagaa aaattagaca
+     1141 cggaaagggt tttctacttt agagaagttg ttcagcatgg tagagaacac gatcatgttt
+     1201 tgatgtgatg ttccacatta ggaaagtgag cattaaacat ctcagttgat tttatagaaa
+     1261 aattagacac ggaaagggtt ttctactttg gagaagttgt tcagcatggt agagaacgcg
+     1321 atcatgtttt gatgtgatgt tccacattag caaagttaca aaaatccttt actgtttgaa
+     1381 cacatgcagt ataaacatgg gaatactgag atatctcgcc gacagtactc tctctgtcca
+     1441 ccagtccacc agtaaaccgt ctgctgctgt ctcttgtcta caaagctcat cacgcacaag
+     1501 gctacccatc tccagtactt taaactgtca agcgcttcga ccaccaggaa ctgcaactat
+     1561 cctgcagagc ttttcaaaaa caaaacacgt gtgaggcaac aaaaagaatg taccaccacc
+     1621 ataatcacat aatacagtga caacctgcat aactgaattt taacaaatta ttggttgtaa
+     1681 tatctcctac aaatttatga atgattttaa atccttgttt ttttatgtat gtgaagtttc
+     1741 ctgattaata ttttttttat ttattgctag tggggtggga ctaagtccgt tgtcctgtgg
+     1801 ccacttctgg cctattgtac cagccccaga tgataggtga gggtgattgt ggagcagttg
+     1861 gtggaatgaa cattggcagg ggaaaccgaa gtactcggag aaaacctgcc ccagcgccac
+     1921 tttgtccacc acaaatgcca cttgaccaga cccaggatcg aacccagact gccgcggtgg
+     1981 gaagccagcg actaaccgct tgagctatgg cggggcggcc ttcctgatta atatgtatac
+     2041 accctgagga tagtgagaca catatatata tatatatata cagtaaaact tggttatagc
+     2101 aacatcggtt tctgcgacac cttgtcnnnn nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn
+     2161 nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn
+     2221 nattgtctac ttaccctata gtgttcctgc ctaaacccag agaagtgcag tagcgaaaaa
+     2281 atggcaatga aaaggaaagt tttaagcatt gaagagaaag ttaaagtgat tcgtgaaata
+     2341 ttgtgtgtat tgtcagtgaa aagcgctgta atatgtcttt gatattacac atttgggcaa
+     2401 ttccacgtta atgttatgtt agtctgtact taactacgga tttcactaaa aaatgcaaca
+     2461 tttttaactc ggtttttggt agagttttac gtgactaaca taactactgt ggaagtgccc
+     2521 atttcggtta cgacactcgt ttataacgac actgttttta ggtccctttg atgacgttat
+     2581 aaccaagttc tactgtgtat atatatatat atataggtat taacagcata agaaataaac
+     2641 caggtataca ttgatgatga tttacatctg actctaatat aggtaatata tcagtaaaat
+     2701 taatggtatc aaaattggca gtgaagtgaa tgaaatggaa actgtgattt tggtgctttg
+     2761 ttactgaaca ggttagcata gaagtgaatt gtgttgactc ttgcttccaa ccttagctgg
+     2821 gacaccagcc accctaacgg aaggtttttc atgcttttcc tcagtccctt cataaaaatt
+     2881 ctgggttagt gtatcaagtc atggccagtt ctttccagat tcttgagtcc ctcctgttgt
+     2941 catgccattt gacaattttg ggtgggagtg tcgtaaagtg acccacagga aacttgacgc
+     3001 tttgttactg ggtttgcata ttgaataaaa gtattgtatc atagtgcatt gttgtgtgac
+     3061 attgttcagg tatggtagtg tgggaaaatt agcactaaac aaccaacctt ggatcagaga
+     3121 gtgagagggt gaaaagaggc tgctaggaac tatttcacgt ttctggcggg gaaactgatt
+     3181 ttacagtttt caaagatgaa agtagtaacg tgttatctga tgcacccttt ccatttattt
+     3241 ataactttaa ggcagttaat gcaagtcaca gcttactttg aataattgaa tattttgcta
+     3301 cctgatgtag gtcacaaact gaattctttt gtattcaacc cacaacagga tcactaatgc
+     3361 attactacta tttttaccta attcagtaaa tatgtaacta acctgtagta ctgtctggag
+     3421 atagggacta gctctatcta gtggccccaa ctgagtaggt tttatctgaa gacggggaca
+     3481 gagtccagtc ttcgaaatgt tgtgttttga aaaagaaaca ggatggtgtt tagatataga
+     3541 caagatgatg gataatgtcc acaaacataa tacttgtacc aatgtacaca caaactttta
+     3601 gatcttgctt tagtacttat attgaagaat tcatttgtct ggaatgtaat tctgtttagt
+     3661 ccaatgaaag tcaaccgatg tttcgaagga acatgtcacc gccatcccca gggttgaagc
+     3721 ttgctttgtt tgctgcatgc ttcatgtttg tatcttgctt gacttttcag ccctgaaaat
+     3781 ggagacaaca tattcctcta acgccgtccc ttctctttct tttcgttgtt gcccgttgtt
+     3841 gcccgttgct ccggccgctc ttctcctcct cgtagttgcc tcggctttct cttggttacc
+     3901 gctccgtcca ccttaccctt ttcttgttat ctgggttagg aagctattag gttggattta
+     3961 gtattatggt atgcatggat cttttctcag gtcgatgaca ggcctatctc tgaagacact
+     4021 tcaatgcaac aaaaccttgg ctacaccacc taggtttaat ttacttatta ttcctttctt
+     4081 gtcacaaaca ctgatatatc gtttttaatt gtacatttct cactattggc tgtattagca
+     4141 ctgacacagt gccgcctata ctggcgattc tatacagaca aaaacaagct agtacctcca
+     4201 ctctcgggga gtgcctcttt gttagtcctt ttactggctt ggcgtcgctc tgagagcctt
+     4261 ctcagaacca caccctacat gacatcattc cccactccag ctacaaaact gcacatacga
+     4321 aataatgcag tgctatcgtc acgtaggcac ctcccctcca aaacctcaca cattcaagtc
+     4381 cactggtgat cggttacacc tccaaaatat cagttgaatt ttagtggact gtgcagcatt
+     4441 atatcccaga aagcagaact ctttgtaacc agcacctcaa gtcatacttc acttgtcttt
+     4501 ctgtcatgag ctcttgatgt acccatctgt atattgctat gaagctatga agcgtgtggt
+     4561 cacataaaca caaacttctt catttcttgg aaaagaattg tgtgagatct gaataattga
+     4621 cagataccag gaaagttttg ctgcacattt attgtatgga aaattagaag gcacttaatc
+     4681 atgtgtaacc taggaaagtt ttaaggtatt ttaatggcta ttattgcttt tcttttacct
+     4741 cagatgaatg tggcatcctt acaaagagct gtaatatttg agattgaagt tttgttaata
+     4801 ttttgaaagt agaattcttt tggagaaagt tatattctgt ttcacaatga ttaaaaaaat
+     4861 cacagggtaa ttaaaacccg tttgaggttt tcttcatcat tatattaaaa tttaatgttc
+     4921 caaaagagat tatatacatt tggcatgtgg attgtccaag gccaatgtaa tatctatatg
+     4981 cacagtaaat ggtctcctgc tttacagagc atgatgaccg tgtcaatgat gctattcgga
+     5041 gggtatcttt taaacctgga agtaaccaca taggaaaaca tagaagaaga cgagatgtga
+     5101 tcacacttat ccgttcccaa cttgatgatg atgttgatat gagtgtgcaa ggctcaagtg
+     5161 gaagaagtac acggttgtaa gtactgtctt tttttgacat gtgagagaca taattgtttt
+     5221 ctaaggagaa gttaaagatt tatttctatt tttaattttt gttccatatt ctgaactgtc
+     5281 tctgtggtct agtggtcaga gttcgtggct acagatccag aggtcccggg ttcgattccc
+     5341 ggcgctacca gtttttctga gaagtagtgg gtatggaatg gggtccactg agcctcgtga
+     5401 ggataaaagt tggcactaac ttagctgaca agtgttggtc gcttggttgg tatagtttac
+     5461 ttgtggacta caggccacgg ggtttttttc ttttgttttg ttctgagtat gtagttttat
+     5521 ggcgattata ttcagttttt agctgtatct tagaatgcct tagtgccttt tggtgacagt
+     5581 gaaatcatgt ttttatgaac tgttgatttt tgcagaaagt cgcagctcca gagtattctc
+     5641 ctatgtctga aaacatcatt cccattacat taactgtgat tccaacaaag agtatggtct
+     5701 tggaggttat aatgtcagga ttttttaaat gctgtgtttc aaacatttaa aggcttttaa
+     5761 gaattcaggc tattgggcag tacacttgaa gtctaaatgc tatctcataa gttaaagaat
+     5821 atcattaata ttcatgaact gaattttctt ttatgcacaa ttgatgaaca ttttggcatg
+     5881 aaaataattt gataatccat ttaggactgg tcatataggg aatgctcagg tgggataatt
+     5941 cttcagcatg acagaaatca gcattgccaa gaaaggtgca tgaggtatta atgaagtaac
+     6001 agaataagac ttttagatat gttatccctt attttaaaaa ctggtaaaaa ttgcaccgtc
+     6061 ttgaattttt cagcaaccca tatgtcgaaa ggggtcggaa tcaggcagga ggaggttttg
+     6121 gtggtggtat gaatgcaggt ggcaggggat cagccagcag gaggagatca ggtcggcgca
+     6181 gtccacctgc atcagtccat ttcaactcaa aaaaattttc agagagctca acttcctggt
+     6241 acaaaataac agtaagtcac tcattgttgt atttgtaata tgcagttata atgttctaaa
+     6301 catgttattt ataatggaga tattaaaccc tgttagtttt tttagcacat tttgattaat
+     6361 atattggatg tgcttgcttt cagattcctc atggtggcag atatgctaaa gagtacatac
+     6421 tgaagatatt actggcccac attgcaccaa cagtgttcat tccactcaat gtaagttctt
+     6481 tgtcatttgc tcgatatgtt actgctaatc agtgtttcag tttacagggg aagtgggata
+     6541 gcacagtcgt tacggtgact aggctatgga ctggactgtg gaggactggg ttccattttt
+     6601 agtaggggca agagattctt ctcttctgtg tagcatccag actagctctg gggcccaaac
+     6661 agcctcccat acaatgaata tgaagagctg tttccttaga gtaaagtggc aggagcttga
+     6721 acctgaccac tcatctggct ctggtgctga ggctaagaaa ggtggaactc ccccatacat
+     6781 atcattgcat ggtgcttaat taattaaccc cagcgatgac tttatctttt accttattaa
+     6841 cagattgtag tgaaatccct atttaatgaa cctcttgggg agtggctttt gttgtacaaa
+     6901 ataaagattt atgcaaaatt tcatcaagag actgttcatc tcataaggct cactgtatac
+     6961 agttatataa gcagttcagg gaactgtttc tacacaaatg agtgcagtta tgtaaatcag
+     7021 tcatttgaaa ttcatgccta aaataattaa gaacatatga ggtaaattct gaatcatgtt
+     7081 ctgctgagaa tcaagccacc atgctgcaac aaggccgcgc catagctcaa gcggttagtt
+     7141 gctggcttcc cactgtggcg gcctgggttc gatcctgggt ctggtcaagt gtgatttgtg
+     7201 gcggaccaag tggacctggt gcgggttttc tccaagtact tctgtttccc ctgccaatct
+     7261 tcattccacc aaattctcca tcatcataat cacccggaac aggctacaat aggcgagtca
+     7321 gtggccgctg tgccgagtgg acccagttgg actccacccc cccactaagc gaataattag
+     7381 aataaaatgc tgcaacaagt ggcatgattt tggtgtgaat tctgtatgag atgtcactca
+     7441 ccagagctta tggttgtgct gtaacagttt ctggcagaga taaggcagga atgtcagttg
+     7501 aagggttttg tataatgctg tgtagtttgt tgaaagtcag ctgacatttt gaaggaacat
+     7561 gccaccccca tcttcaggat cgatgaataa gccaagcacg aaaccaatgt gaaaacattt
+     7621 ggcaagcagt aaataatacg tttatattga cttaaagtgg gaccagaaaa catatgcact
+     7681 aaatacagaa acactgaatt tttgatagat tctaaagggt tctgatagtg gtgtataacg
+     7741 ctcagaattg ctgaattttt tattttgtca attgtccgtt attctaaaat ctagagaaca
+     7801 cagtgtttta gaaactggat ctgttttcat cctctggtga ggaggtgaca cctactctct
+     7861 tgggtccctt agaatgagct aaccttgatc actgaatgac tggttagatg tcttccccct
+     7921 cacctgagga tggaagcaca tccaatttcc aaaatgttat gttctctggt ttttagaata
+     7981 cttgatgatg cacaaagtta aaaaaacccc agtaattctg aagactaaat tggggtttca
+     8041 ctgaatttat ttatttgtag tttatttaat gtccctgtca gtaattcaga ctatgtagtg
+     8101 tcgaaggtaa aaggtaaagc tatcactgtc acaggctgtg gaggcgcata aggttgtgag
+     8161 acgtcaaggc tcccacattt tttctaaaca gttggctcac agatggcggt gaggttgtca
+     8221 cccttatgca ctggccaccc tttacccccc aggaagattc ctggtactca tttctgttag
+     8281 aggttgagtt gacccagggc cacagtgcag ctggaaggat taggtaaatc catctcattg
+     8341 ggaatgaaac ccgtgacctt gtggcttgta gcatagtggc tcaaccaact atgctaccgc
+     8401 gtgtcccata taatgttgaa tggtaatgaa aaattaatta gaagaggcat ggaagaaagt
+     8461 ggtcatggca ttgtttcaga ttaactgttg catttgtttc gaagggacta aggaggacct
+     8521 gagaagatgc tggcaatgga gactgcttat ttcagtttag aattctcgct gcttatttta
+     8581 gtattgtttc ttttgattcc aatggtttga ggtcttgtct tatatgtata taagtttgcg
+     8641 ctggcaactt agatagcaga gctctttgag aacaggaact gactatatgg aaacactaaa
+     8701 aaatatttct aaaatattaa attctcattt tggttgtcgg taacatactg aattatgtac
+     8761 agtatcaaat gtaggtaaag ttttttgcgg tattgtacaa ttgtaactta tatgacttct
+     8821 gttaccgttt tcactggtta taattttaat ccaagataag ttttctgtta tggggtgtgt
+     8881 gacattattg tgggtttata catttttcaa aaaagtttgt agcattgtaa ctgattaaat
+     8941 accaaacatt gcttacattt ttgggatttt aggttgtgga ggtagtaatg acttcagatg
+     9001 gattacttgt ttgtgatttt tgtggtgaca gtatctgggt tatgtaatgt tgaatggtat
+     9061 gatgactgat gaataatgca tcggaaggga tttgggatga agcactttcc tggaaagttg
+     9121 ctggggggac agaggaaaag tgagaagcct caggatagcg gtgtaggatc tgatttgtta
+     9181 tgggcacttc tcttttgcag tatgaaattc gtggaataga ttcctcgttt tttgttgacg
+     9241 attcagaggc tgcagaaaag ttggacaatg ctgacaggaa gatcatcaca gtaaaaggat
+     9301 ttaaggtatg ttgtggggac agatgtatga atatctcagt tttggggatc aaatgaatgc
+     9361 atattttctt gtacatgttt gaattttgtg ctgatcatca aaactcattt tgttattcac
+     9421 ttacacgtgt taatgattcc atttatacat gataccaaag aaatgtatga attgtaatgg
+     9481 atgtgtcata taattctaca gatactgttc tttgatttcc tgaatgtggg ataaagtatc
+     9541 cctatttctt aagtatggtg gcagatgtga ttgacaagta tgatttgaag catcatcaca
+     9601 gaattcagtg actgtaagaa gtaccagcat taaattgtat cgaaagctat aagtcttgga
+     9661 tagctttgct ttcattttac agctttagat aaatgatttt aaaagcagtg ttattgaatt
+     9721 ttgggggaga ataacctctt tcaaattgat cttactctcc ctttacatat ggagcagttt
+     9781 atcatgtcac cagatagaac cccagcagat catcagtgtt ataattgagt gaaatctgca
+     9841 tttaatatta ctgtagcata gtataaaatg gaactttaaa ctggcaaagc tttaacccat
+     9901 agattcccga accctgtgat agagctgcat gctggaaatg gtaagactgc ttgcagtaaa
+     9961 tgctgttatg catagaaaag ccaaaagtac tttcgcgtgt tagtttaaaa ttgtaggaga
+    10021 tttaggtaat gttaaagctt atttttccct ctgaacatca cacttgctac catctgctgg
+    10081 cagaaacgct gtactaagta attataggtg aatgaggttt aacagtgaga tgtggatgtt
+    10141 cgactttaga aattgaattc aagactaaat tagggaaggt tttaacacag gaaatgttaa
+    10201 gtagagataa tccactgtag tgagattttc tgaagttgaa attaagttat tatgaattaa
+    10261 cttctgatct atgaatgccc tgaagataaa aaaacaactt cagtaagatt tttagatatt
+    10321 gccatatact gaagtgaatc tttcttgact gtgaatgttg tattgattat agcttatgcc
+    10381 tcatcactgt gagtttagtg taacaaatac atgtataaat cgttctaaac aattttgtct
+    10441 gtctgtttgc tcagctggtg ataaaagtaa agccggcgtt accacatgtg gagctcaatt
+    10501 ctaccctgaa ggaaaaaata aaggcagcaa tggtgaaacg ttataatgct gacctgaaag
+    10561 cccttgattt gtctcgcttc cacacagatc caggtgagag aatgcttatc tacactgtat
+    10621 gtgctgtgat atatcttaac aaaaacagtg gatcgaaaaa tccagctata cgttagttcc
+    10681 agatttagca gaaatccagt atataaaaat agtatactgt taatatatat attttttgtt
+    10741 ttgtttttat ttttcttgtg gggttagacc gagttcactt ggtactacag cctctgtttg
+    10801 gcctattgta ccagccccag atgatagatg tttgtggagc agtcggaatg catattggat
+    10861 ggggaaaccg aagtacttgg agaaaacctg ccccgttacg actttgtcca caacaaatcc
+    10921 cacatgatct gacccggaac ccaggccact ttagtgggaa gatggtgact agccacccaa
+    10981 cctgtggcac agccctatac tgttaataaa ctgccaaatg aagtaacgct gctggaaaat
+    11041 acaaagaaca aatttgatca tgactgttta gttcaaaaag tttttagtta tgttgtacat
+    11101 tgatggatct ctttcatgcg tggtcttacc tagttacttg agttaaagct tatgtacagc
+    11161 atctgttctt gaatgtaagt ggattctagt tacagttatg tgcaatataa tcatccctgg
+    11221 aaatccatca ttaggtcagt taattagaca catagttcat ttgtatagtt atcaacaagt
+    11281 cctgttcctt ttgtgtacct ttttttatgt tcttactaca gaaagtgtat tttatttcct
+    11341 tgcacaatgt gtgcatccct gcttttagac taattttgaa aaatattaaa tttcatatcc
+    11401 ccagctcaag ccacacattt gttgtgaaat aggtgtgaat gtgaataacc aatcatgtag
+    11461 tatgtgcctg ctcatccagc ttgtccctag atgtatctgt tatcagtttg aacaggcctg
+    11521 tgttgaggct ttggaagtaa tgaacataag cgtgtacact tgatcaactc gtgaaatagg
+    11581 gtacagggat ccaccagtgt ccacaggtgg tatccgggca tggatggagg gagaacccaa
+    11641 gggatatgta ctgtggggga cccataatca gtgctatatg accgcatttt gcagtagaag
+    11701 gggctgctga agagtgatag aacaagttag tcattatcaa ggcatatcac tttttatgaa
+    11761 atacacacag aatgtaatgt actggtcttt tttttttttg tgttaactag aaggtggttc
+    11821 aaatatgacc gggactgatt taaaaaaaaa acataattgc caaacactca cttgcacatg
+    11881 tcagtcttca acgtactccc cccccggagc caacacattt tttccaactt tctcgaagca
+    11941 tcctgatgcc cagaaaaaaa aaagacttgt ggttggtggc atatccacac ccgaacagtc
+    12001 tggatgacgt catccacaaa ccacatgctt ttcaagtctg atttgagcct tccgaagagg
+    12061 tagaaatcac ttggggccaa tttgggacta cggcagatgt gtcagaaggt tccatttcaa
+    12121 tttccgaagg gtttccattg ttgttttggc cgtatggggg cgtgcattgt cttgaaggaa
+    12181 ggctacccgc tttccacctg tcttctactt ggatcagttc ttttccttca cgtctgttgc
+    12241 caggaggtct gagtaagaag ctgaattgac tgttatggca tctgtcagaa agtctacatg
+    12301 gataaccccc tgccagtccc agaagaacgt tgccatcaat tttcctgctg aatggctcct
+    12361 ccgcgctctc ttggttttgg gagaactggt atgccgccac ttgcgtgatg actgctggga
+    12421 ctcgggaatg aagtagtgca cccacgtttc attggtggtc actatagact tcaaaaacgc
+    12481 atcaccttca tcttcaaact gctgtaggag ccaactgaca gcttgcatgt gcaccatttt
+    12541 ttcccattcg tcaaagtgcg tggtacccac cgtgcattca ccttgcgata gtgcaggtgg
+    12601 tatttcacga tgtcttctac actaccaaca ctgatggaca gcattgctcc aagctccttg
+    12661 atagtgatgc gcctattatc acgaataagt gcatctgcac gatcaatgtt tggcttggtg
+    12721 natttaagtc catgatttat ttaaaccgtc ttgcagtgca tacactcatc tatctccgtc
+    12781 tctcactcgc actacatgtt tcggcataat aatgccatct tcaggtgctt actcaatcca
+    12841 cgccaaacta gttcattgca tgcctcgtcc tcacactaaa ataaccaaaa tatatatcta
+    12901 tcatatacac tgacaaatgt caaacgttaa aaatattaaa attgttcagg attccacctc
+    12961 gctacgtcgc acctcactac gccagtcacg cccattctcc tctattggag caatccttca
+    13021 ctatcgtgtg tgtgttgtgt ttttgttgtg tcttgctcct gtgactgcgt gtgttatact
+    13081 gtataacagt acaacagtat aacacacgca gtcacaggag caagacacaa caaaaacaca
+    13141 acacacacac gatagtgaag gattgctcca atagaggaga atgggcgtga ctggcgtagt
+    13201 gaggtgcgac gtagcgaggt ggaatcctga acaattttaa tatttttaac gtttgacatt
+    13261 tgtcagtgta tatgatagat atatattttg gttattttag tgtgaggacg aggcatgcaa
+    13321 tgaactagtt tggcgtggat tgagtaagca cctgaagatg gcattattat gccgaaacat
+    13381 gtagtgcgag tgagagacgg agatagatga gtgtatgcac tgcaagacgg tttaaataaa
+    13441 tcatggactt aaatcagtgc aaaaggacgc taaaatataa cataaataaa attactgtgg
+    13501 atcatcagtg tgaatgttga cacagttaat catacactga tcattactct tgtgtgaact
+    13561 ggattatctt cctgtcaata aagaatccag tggcaggctg ttacgagcat ggtaatgatc
+    13621 cttggagttc cgaaaaaaat ggaattttgt aaaaaattta gcatctatta gcttctcaaa
+    13681 agggacattg ctgcatggtg ttatgtaatt tatcaaatca ggttcactac aactgcacta
+    13741 tgtaacataa tcaaagtcta tcagtagttt tgtagacaga caggcaaggg gtttatatca
+    13801 ggaccctctg ccagaagaac gaaagaccta ttgaaattaa acagatatca gttaaggtgg
+    13861 gttgtaggat tacttactgt atcctaaaag gacacctttt aaaactggga ctgacagatg
+    13921 acccaacctg tgaaaggtgt ctacaagaag atgaatcagt tgcatgtatc ctgcgcgatt
+    13981 gtgaggccat agcttgctta agatatcgcc acctgggtca gttcttcatg taaccaaatg
+    14041 actttatgac gcccccaaaa taaagtcctg catttcattg gaagtgtagg attaataaag
+    14101 ggttaatcca aaggggaagc acaataagtc attgaaggct gtagtgtgag ggccggattt
+    14161 tatgggccac ccctttcaca cctacacata catagatggg caggcaaatt gagaaataca
+    14221 gttttcatat tgtgtgttca ttttacccac tctctgagaa gagcgtgcag taaagaaggg
+    14281 tgtatcatgt aaatagagag gatgtcatat ttaacaggag cagagctgtg ccgttgtgct
+    14341 tagcattatg gacatgcgca gtgttactga atattaactt gaaattgtgt tttcagatct
+    14401 tgtggataat tatgccgtgg cattattcag acccaacatg atgttggcag ttttggatat
+    14461 cattgtggaa aatgttccgg agctgacagc acttgactta tctgacaata agctttatgc
+    14521 acttgacagc ctgagtgtgc ttcctgttaa agttccgaac ctcaaagtcc ttcacatcgg
+    14581 gagaaaccgg gtgagttgct gtattcagat tgattagtgc tgtatcattt tccagtttgt
+    14641 tacatgtgat tttctgcttc atgttgaagc atttttaagg taggtttttg cttccttttt
+    14701 acatactgtc accgttgaat gagtagctgt cttgttcagg agacccaagg ttcaaattgt
+    14761 gccctggaga ctggcagtcc tgattaaggt tttttgattt cctttagtcc tgacaggata
+    14821 atatcaggat agtacctcat taggccatta ccattccttc cacatccttt ccagttcatt
+    14881 atttactaat aattttttca ttctatactc tataatctgg ccaatagaaa attgcatgaa
+    14941 gtaaaagaaa aaatttgctt ccttttcaaa gagattgttg cattttcatg aatttggact
+    15001 gaaactgaga aaacttaaga attgcacaaa caacaccagt cttttacaag aaaagtggcc
+    15061 cagatgtcta tgatttgtat tgaggagata cttggttcaa gtcttggcca tgacacctaa
+    15121 tatcttgact gtagttttcg tgttttccca gagtccctcc aagtacctta aaattaggcc
+    15181 ttgaccactt ccttccacat tctttccaat tatccactgt ctagtcattc agaactatag
+    15241 actgagtccc tcacagtgtc attaaataag cgcttactaa aatagtattt tcatggtgcc
+    15301 tgatgttata acttccccaa aagtttcagt attagtaaga tatcagacta taaacatgca
+    15361 gctgatatgt agatctctat gcagctttct acattcgtca tttcatactc aaacatttta
+    15421 tgtagcctat agaaatatct tgggactcac agtagcatag ttggttgagg cactatgcta
+    15481 caagccagaa ggtcacggca tcaaatccca atgaggtgaa gttttcaatt tacctactcc
+    15541 ttccagctgc attgtggccc tgtggtcgac tcagcctcta acagaaatga ataccaggaa
+    15601 tattccctgg ggtaagggtg gccagtgcgt aaggctgaca acctcactgc catctgtgag
+    15661 cagattgtct agaaaatgtg ggaccctcaa tgtctcacaa ccctatgggc cttcatggcc
+    15721 tgttacagga atacctttac ttatttactt tagttttata gaaattactt gggggggcgg
+    15781 tgttgagggt aaatattgcc ataaaccttt ttgtgtatgt agattattat taaacaataa
+    15841 actggactac gatgcaggga tacaaatact ggtaccccgc ctcggcaatg gtggaaactg
+    15901 tcgaaaagta gtgtactgca atatggagat caagtggcaa tataaatggt ttgaaagtaa
+    15961 cttccttttt tttttttttc aatgacccat cagaacttac tttctggata accctcatgc
+    16021 atcttcacac agaaatagca taaattttaa acttttcatt catttagaat gaaaaatatg
+    16081 catctgtttt tcagtgactt tatgcatgaa atggtatgtg tcattttaga gagcatgatg
+    16141 gctatagatt agctttatgc aagttcagca ggcttctcag ttttagagtt ttatgcttta
+    16201 tttctagatt cgagacatga accagttgaa ctgtttagag agcctccgtc tggaagacat
+    16261 agtgctacgt gggaaccctt tgtgcagcaa atatcaggat aagaatttgt atgttaggta
+    16321 agactggatt tgtttaattg ctgtacatct caccagatgg ctggtggaat tgtcaaaaag
+    16381 gatggacctt gaagttaaag ttatgatatg gttacatatg cataaagcta tttgctgtgt
+    16441 aaccatccaa ctgcttagtc agagatgagg ccgctaactt aaagagactg agatacgata
+    16501 atgtgctgcc ttgttatggc tgtcacatcc ctgcattcga tgttgaataa tggattgtgg
+    16561 agcagtagtg gaattatgat tagtggggta aaaccaaaag tacctagaga aaaagcccct
+    16621 tcagttatgc ttcttccacc atgaatttca tatgaagttg ttgttgttgt tgttgttgtt
+    16681 gttgttggag agggtgggtt tccccatgca cttagaccag atattggtcc attgtgcatc
+    16741 cccctgtgat attataccag tctctatacc ctaccggtac tggtgcatgc catcagtccc
+    16801 gactcagcca gcgagttcag cctctactgg ctaagtggta tctcgatgct tcccccatct
+    16861 accagaggcg ttagagacta ctgttgggcg ggaaatgtcc tgaatttggc tcagaggtcc
+    16921 ccttgagaca tgaggttctt ttacgtgccg taaagctacg acacaggacc cacagcttaa
+    16981 agtccctccc ggaggacttg ttccctgaat ttttcctacc ttaaaaattg cacgacctcc
+    17041 accgggtttg aacgcgcata ccttgagtta cgaggtggga acgttacccc tagactacgg
+    17101 aggccgcttt catatgaagt tacttgggaa tgaacccaag gctctgcaaa aggaagcctt
+    17161 taatttactt tattgttttg taaatggttc caataccttg attttataac acagtatggt
+    17221 gcaaagaaaa taatgtggag aagccagatt ttaattatct gggctgtggc acagttcatg
+    17281 aacatgcatt atcagtgcaa aaaagtattg cctgactttt aggtgttcat tgatatgaga
+    17341 aattaaagaa ggtggaagat atttttaagt tcttgatttg ttttcagtag ggtaccacat
+    17401 tattagacag cctctattca acattccagt gcccatgcac agcctgatca gagatgcttg
+    17461 aagtgccatc tgttgataga atttctaaat atggactgtg tcctgtttga aggaatagta
+    17521 ttcttcatga aatgattagg ctcgctgtta ggtacattct tcacatggtg actgaggcag
+    17581 cctgtttgat caataggtat ggtgatgggt taatttattg catgctgaga tgttaagttg
+    17641 aacacaactt tgctggaaaa gaagtcaagt tgatgtaagt aatgataata tgttcccatg
+    17701 ttttattttt gagtactcag agaaatattc agaacctttt cgtcctatac ggaggccaca
+    17761 gaatgaaatc ccatggattg acttacacat gtctcttgtg ctgttacgta tctccctcca
+    17821 gcataataca ccactcgccc ttcagttttc aggccgttct gttgactcag ctgttgatag
+    17881 tgatcactgt cactagaaac agcagttcaa gctcgttcac atagaccaga tggagctggt
+    17941 gggaaccctt gagcaccgtc attccaacca atgatgggat ttctttccat gagctaggta
+    18001 tagttgtaaa gaagtgtgtt tggtatagaa gagaaaaata caaaccagaa actgtaatgg
+    18061 aattcagttt atgcacatgt gattgctctt tctctctctc tctcttctct ttctctttat
+    18121 ttgggggagg gggccaggga gtaagttcca tctctttcat gaattataat tccgtcattg
+    18181 agtactaagt acatggaagg taactatacc atttaatatc aaaactgaaa tttcagatgg
+    18241 tcattatgtc aaatattaca aaaattaaaa ttaaaaatgg acaagacatg agaagcctgt
+    18301 attcctgttc ttcacttatt catactaaag gttacagagt tctttgtttt atatttttgt
+    18361 tacacattta ctgatttttt aatgtattat actcagtgat gtagtatcaa atttatttta
+    18421 caaattcatc agttctgttc acatgcatgt ttgatgtttt tgacttgtta catcacattt
+    18481 ttgtttacaa atttcgtcct tgtgtgtatt tgtaagcaca gtttttaagt ctgccatgtt
+    18541 gtttcataca tgcaaagttt gccctattta ttaacagttt gcatatttcc actgcagctg
+    18601 tatttatgaa ttctgcaaaa taaataaaaa tatggagtca cagcattctt gaaaatctga
+    18661 taacagctca tctagtttaa ttataaatat attttatggc atgtttaaaa tgttaagatt
+    18721 cacaggatac attgatggtt tccagtgatt catgaatgaa agtaaatagt gatacatgcc
+    18781 cctaaaagca gaaccagcat gacggaaaaa tgttttcaac tccttgaaac ttcagtagat
+    18841 gctagctgcc ttatgtgtcc ttgcagatgc atttaaatgg taggaatttc ctagtattgc
+    18901 aatgtcattt ttagatcagt tctgatgaaa tgcatttatt ggtcacagaa agaccacaaa
+    18961 ggagcataag gtagccatct attgatgaca aaatcaaata ctgtctccat gtaagcaaac
+    19021 attaaaactt attggatggg ttggatatct ttgtaaacag aacatctgac catgtcttgg
+    19081 agacagtcaa aaatggttcc ttaagtgtaa aatgctgagt attggtactc ataaacattg
+    19141 gtatttctgc tgttttaaaa tgtttcttgt tgctaggtgg acagatcttg tagtccatat
+    19201 agtatgtttt gtgaaagaag caatagaaat taatgaaagg aaagacataa aagttttaaa
+    19261 ttggcaaggt gaaaagaaca ttacaaaatt agatttgtga gggaagaaat aaagttacaa
+    19321 atacatgcag attttaagtt ggtagcagca gaccttgaga tcttgggcaa tccccgatct
+    19381 acattcatat gatccgtgat attgtgcact gtatgtcatt gaagcatatt aggctcagca
+    19441 gtaaaataag actgagtgag aaactatcca gttatcatct ttacttctgc gtcatgaaca
+    19501 tacgtgaccc aggacggcga cggggttagt gaactaactc ccgctagcag gcaccattac
+    19561 cattaaccca gtgcatatat gaatatccat tgaccttctg agtgcactct tcatggacag
+    19621 ttgatggtaa gtaatgtatg attttgggaa gtgagagcaa ctttgaagga aaatatttaa
+    19681 atatattcaa acctactgga ttacaagatc tgacatttat tattgtagaa aagtggaaca
+    19741 ctgaaattgt tccatgcata atgaagtacc catataagta ataaattgga catcatattg
+    19801 gattcttatt tcacatggac ttttttcctt ctaaatttat caaatatata aaaaaggcaa
+    19861 ctccaagtga attttaacat ttttcaacct ctgtcagtac aaccatatat gattgaatgt
+    19921 tacatgtttt ggtgtgtcaa atagtacatg tgaaacaact ttggaaggca cgtattctgt
+    19981 ttcaggacac ttggaaaaca aatgtgcaca cttttttgtg tgtattattt gcagtatatc
+    20041 ttactcatat tgcttgaatt cctgtgaaca gctgatgttt tgcgtctaga ctaattagtc
+    20101 tgaagatcac acccaacttc ttttctaaaa caacttaaaa tgaagataat taaaaagcac
+    20161 aattttgtgt ttatttttat agtggtttct tatgaatatt acatatgatt ttcaggaatt
+    20221 gctttcttat agagatgtct caaattagat aaggaaattg ggttgccata aaccagaaag
+    20281 gcacaactgc gcttgttcag tttaggcgtt gcagtgtata ttcacagagt ttgtaatgga
+    20341 tggggcctga ggtactaacc tagccatgcc atgcatggaa gctaaatatt gaaggctttt
+    20401 tcatcacatg gtctgattta aacagaatga tgggaagcag atgaaattga tctaagttgc
+    20461 agaagatggc ttttgtgaaa gtcgttattt gtatatgacg attctctgat ataccaaatc
+    20521 actttatgtg agggttctgt tcatttcccc atgaagtacg ttatttggat tgtggtattt
+    20581 taatgttgtt gtgagatgtt tgcaggcgtc ttcttcggtg ccttgctaac tgtgatcaaa
+    20641 cctattttac agcgaagtga ggaagaggtt cccaagagtg atgaagctgg tgagtggtac
+    20701 agatttataa tattattttc tttcatgagt ggtatgtgta ttctttgctt gtttgtgaac
+    20761 taagagaaaa attgaaacaa gcagacacag tctgctttta ccggttctca cggtctcttc
+    20821 gcttgcagat tccttatatt ttttcttcta ccctgaagat ggaggcgata cgttcctccg
+    20881 aaacgtcggt taacaccaca tatacacggt gccaaatccc agaagactgc tttcttcata
+    20941 gtcaccgccg tgaaagcctc aaatcttaca atgaagaaat ccttttagaa gctaatcttt
+    21001 tagcattgtt caacctagat actctgttag aggaccacat tacactctcg atgttcttgc
+    21061 atgaccagtg ataaaagcag tgttcctttt ttgtggccct atagtatttg gagttggatg
+    21121 accctcatct ggtacaaagg ttaagtgtct gatcagtaca gtatgttggg gtgtgttaga
+    21181 ttttaaatta ttatattttg tgacaaaact gatatgatgt ttcaatcaga agaatttacg
+    21241 gtaacatcac agacaaggtg gaatggatga ataatcagca gacacatctc tttggcagtc
+    21301 agatacagaa tacttttgtt attgttattt gttgttgaag tgataggagg ctggaaataa
+    21361 ctgcataata aggaacttgt catccgtgct ctttgccatg tacaattgga gtgatacaaa
+    21421 gagaacacag gcaagggtat gcaggacaca tgcaagagaa gagaaatgca aacaaaattt
+    21481 tagttggaaa atctgaaaaa gaagatacca catgggagag ctaggcatag atagaagaat
+    21541 aatattacag tgaaactttt cctttctcag ataatttata aatgacatat tgatgtataa
+    21601 tgttagtctt atgtttcttg ttttatatga aggatggggc tgacctctct ccgccaatac
+    21661 tgtttgacgt gaatgaagat caacagttgc caaaaagcaa ggggagctac ttgtgttcag
+    21721 aagaaggcat gactatcgtg cgacagtttc tggaacagta ctacagtctg tatgacagtg
+    21781 ataacagaga acctttggtc aatgcgtacc ataatgatgc catgttctca gtcacatcag
+    21841 cctacccacc gggtcagagt tccactacct cttctaagta agttaataat tcaggatttt
+    21901 gtcatttcat acagttttaa aatatggtgt ttgaggtttc ttatggggat aaaattcata
+    21961 ttatggttta ccctgaagat ggaggcagca tgtggtatca ttacctggaa gaccacacca
+    22021 tcatgatagt ggtagcagta tatttcttca tggtgctgag aagcttctac cagattgcca
+    22081 ctatgaaatg ttttgactct cacaatttta tttgcattcc aggcttgtga attacatcac
+    22141 agatagtcgg aatctcctcc gtgtgaaaga tagcaccaga agacaaaggg ttttatacca
+    22201 gggaaaaatg gccattgtcg cttgtctttc caaactgccc aagacacagc atgaccctca
+    22261 ttcgtttgct gtcgacctca cactctttat ggtaagtttg ggacacaggt agatattgct
+    22321 tcataatata cacaagcata caggttgctg agtttagtgt ggaaataatg ccgaagaact
+    22381 cgaaaagtag tcagacaaga ttggaccttg ttgaaccctg tttgtaacta caaatgatcc
+    22441 atattcctgt atcacataga gatgaaaaaa aaacatgcat acatacagtc tgtagcctgg
+    22501 tataatatgt acatagtgcc caagaaataa gtgcagtaaa ttgaagggtt tttgctgtgg
+    22561 cccaaaagat tttaaaaaaa ttaaataact gtcagtctgg aaatacttta ataatgaact
+    22621 gaagctgttt gaaggtgctc ccagcagcag taggatactt cagaatcttg gttactatgt
+    22681 aacataaact agggacagtt ttgaatgaaa tgcgagttga aattggaaga tttgaatgac
+    22741 tgctttttgt ttatcactac cagtttcccc attcaataat gaaaacacac tgttattagc
+    22801 ctatgatagc attcattaat tttgcaactg cagactatgt ttttttttca cagatttggt
+    22861 gaaatagtag cagatgtatc agttttctat agaatgctcc ttgggagtct tagtaacaca
+    22921 gtttagcatg atacatctga agcaggagtc agcttggccc ccctttgcac ttcaggaact
+    22981 tgctttttgg gggttaggaa gaacatacac atgacacttc atgatgtgct tcaaaactgt
+    23041 gttatatttt agtacttaag tgcattagaa ataagttacg cacagtaatg agttaaccat
+    23101 ttttggtcca ttgtatttat atgcagtttt tgttgtggtt tcttgacagc cacagttgat
+    23161 ctcgatatca gtcacaggcc tatttatgga gcgtggactc tcgaagaacc aggccctgag
+    23221 gtcattcagc agggtattta tgatagtgcc ttttggtgat ggtttctgca tcgttaatga
+    23281 gcagctgttc gttacaaatg caaccgatga gcaaaggaag gtacgtatct ctctcaagca
+    23341 aatttgttat tagctaactg tggagcattg gtctcacaga acaccgtgag ttctgtatat
+    23401 ttctctatga aaaagtgtgt tgaaaatgcc agtttcggaa aggggggggg gcattattac
+    23461 aataacaatt tcaagcttac aggcaagaca aattattgcc aagtatggac ctcagtacct
+    23521 ggtgatatac atgaacatgc gccttttgta tccattaata ttctgcttgt gttttatcag
+    23581 aatcttcctc tcacttaaat taagatcttt gattacgtta cgatttgttt ccttcatgag
+    23641 aggagtccag aagagcagct tgaagttcca gcctctttat gcttttctaa tggaataaaa
+    23701 cactgaaatt gtacatgtac ttctgtgtgt gtgtaatttt tttaatccaa taacacggat
+    23761 aaattaaaag ccaagctttt ggttatttcc ctggttgttg gttagctgga tgccagcatt
+    23821 ttggcgttac ctgcctagca tgagtgtatt ttacactctc tgtactcatt ccaagcgata
+    23881 agataatggg aaagtggccc ctatgcttaa ttaagcactg tgccacgaat atgtatggga
+    23941 aagtgaccat gagtggaggt ggggtgtcag cttcatacca caaccacatc atcctcagga
+    24001 aaggaaccta tattaccttt aggataggag gctggctggg tgccagcgtc agtttggacg
+    24061 tgatggtgaa gagaaaagtc ttttgccata ctgagaatca atccctgctt gtctggcccg
+    24121 ttcccattag agttgctccc tttgaataaa gtactggaaa actgttcagc atatgaacga
+    24181 gcaataagta taaagcctgt aacgattctg aaccttaact ttccacgttt ttatacatga
+    24241 gaatgcatgt ggatggcatg tattcaggat acaggttaat gggtctctca gcttgcactg
+    24301 aatcagcttc tcttaacagc aagtgtatga agagtcagtg tttcttatct ctcttttaga
+    24361 aggtgtggaa ataacttcat aaacatgaca cttacatatt gccttcgtct tctcttaagt
+    24421 tcagctgcat acaaattctg tactgctgtc ttcttctttg gaaaggtctg atgtcgtatg
+    24481 ttctttgtag gcggcatttc aaacgcaagt gccagcagta gtgccaccac ctacccctgt
+    24541 ggttgcacca gtagcagctg cgacctctcc ccagtcagga ctcatggatg atcaagcaaa
+    24601 gcagcagttg gcagaaagtt ttgctgccca gtctgggatg aatgtttgtt gggcaagaaa
+    24661 gtaagtacgg aggtttcagc aatcgtcagt agtggaagtt catgtcagta cctgatattt
+    24721 ttaatattca gtatgctcag aagtaatcac atttaacatt ttgagggtgt tcacgtgtaa
+    24781 atgtgttttg atcgatgttt tatttgagac caccatagaa aaattgtgtc cttacatgct
+    24841 taatgttctc ttattttctg tttgtcagta atggataagc tgttttttca acagaaccaa
+    24901 tgtaggttgc atgctgtgtt tcccatctag acattgtctc agaccacaga tatcaaaatc
+    24961 atttggagca tgtccgagat atgtagtgaa gttctgttag tttgtggttt catttcattt
+    25021 tataatggaa cacttgctga cagtgacttt gttgaggatg aaaataaacg tggtggtgat
+    25081 agttacaaac cacatgccat gaaaactatt tggttatgaa tcctaatggt ttatttctgt
+    25141 gttgacaaga gcctaccact ggcctatctt gagcctgtta aatgcagtcc acaccctcac
+    25201 acccagataa tatccctttc ataccaatca tgctcttggg tctttgctgc atgtggaagt
+    25261 ggacattgtt gttcatttta gaggtatgtg cttccatctg tattcacggt tgaattgagt
+    25321 aggatgaact ttgaccctga agaaggagct agcatatacc tcagaaacgt tggcaacact
+    25381 ggccacattt acacagagca aagattcaag agtgtcttca agagggaact gtcagaaagt
+    25441 ctacattcta ttttaatgat ttgcccattt gtacctaaat cccctaatgg ccatttcctt
+    25501 ttgtatagat caggcatgtc aaactaaaat cacaatacaa aatcaaaatc aattctcaga
+    25561 atcacttttc ctgcagcctg ctaatttatg tctgcatgag acttcttgtc ttctggtctg
+    25621 ttggaaaatt gtctttacaa aaaatatttc tactaaaata ttaatattga ttttaatatc
+    25681 agttagctct aaaagttgag gagccgcatg tttgacacgg ctggtgtaga tagttttttc
+    25741 ttcagctgtg tctggaaact tcatatagac tggtgatagt ccttgaagtg tcggcatgtt
+    25801 agttgtttta cttggctttg ctcccccctt ccccaatata atccctaccc atgtgttgtt
+    25861 taatgtgtcc agtgatttaa attaacagat atttgtttgt catctgtaaa ttaaaagtaa
+    25921 aattattatc tgtctctatt cacgcatttt ctgttacaat atgtgtgtca gtaccttgca
+    25981 gacagtatgt gcagcatcac attttataaa attatcttca cgctgttact agttcccatt
+    26041 tttaagcaaa gttttcactt cacagaactt ttgcttaggc ccagatactt ttagtgacag
+    26101 cagtatcagt atacatcaag aatacatttt ccaaaacatt gtggataaaa acttgtgtca
+    26161 gatatagtta agatccaggt tttgttagaa ttgtaacttc tagacatttc cttattactg
+    26221 gaagaaatat tattatactc ttgtaaacat agcaatttgt tttcatactt ccatgtgatt
+    26281 tcctttgtgt caagagtaaa aaagaggaaa tatgagctaa cataacttcc tgagaactga
+    26341 agttaacttc catttttttt ttacaggtgc cttgatgaaa ctgggtggga ttttcaacga
+    26401 gccacgttca ttttcactga gctgaataaa caaggaacaa ttccagcaga agcatttatt
+    26461 aaatgagtat ttacatactt aattaagaga tcatatgtga tcctgataga aacacttttc
+    26521 agtgacttgt gttaccatca gtgtacctgt gaacattttc ttttcatctt catggtggtt
+    26581 gtgcgttcag tatcgtgtat ttaaatgaaa agattatatg tatatttgca agataaaact
+    26641 attttagtgg ctaaaga
+//
+

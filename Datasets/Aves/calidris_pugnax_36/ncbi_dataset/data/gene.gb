@@ -1,0 +1,146 @@
+LOCUS       NW_015090887            4080 bp    DNA     linear   CON 09-DEC-2015
+DEFINITION  Calidris pugnax isolate Ruff unplaced genomic scaffold, ASM143184v1
+            scaffold176, whole genome shotgun sequence.
+ACCESSION   NW_015090887 REGION: complement(7..4086)
+VERSION     NW_015090887.1
+DBLINK      BioProject: PRJNA305421
+            BioSample: SAMN03491621
+            Assembly: GCF_001431845.1
+KEYWORDS    WGS; RefSeq.
+SOURCE      Calidris pugnax (ruff)
+  ORGANISM  Calidris pugnax
+            Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi;
+            Archelosauria; Archosauria; Dinosauria; Saurischia; Theropoda;
+            Coelurosauria; Aves; Neognathae; Neoaves; Charadriiformes;
+            Scolopacidae; Calidris.
+COMMENT     REFSEQ INFORMATION: The reference sequence is identical to
+            KQ482205.1.
+            Assembly name: ASM143184v1
+            The genomic sequence for this RefSeq record is from the
+            whole-genome assembly released by the BGI on 2015/11/04. The
+            original whole-genome shotgun project has the accession
+            LDEH00000000.1.
+            
+            ##Genome-Assembly-Data-START##
+            Assembly Provider     :: BGI
+            Assembly Method       :: SOAPdenovo v. 2.04
+            Genome Coverage       :: 113x
+            Sequencing Technology :: Illumina Hiseq2000
+            ##Genome-Assembly-Data-END##
+            
+            ##Genome-Annotation-Data-START##
+            Annotation Provider         :: NCBI
+            Annotation Status           :: Full annotation
+            Annotation Version          :: Calidris pugnax Annotation Release
+                                           100
+            Annotation Pipeline         :: NCBI eukaryotic genome annotation
+                                           pipeline
+            Annotation Software Version :: 6.5
+            Annotation Method           :: Best-placed RefSeq; Gnomon
+            Features Annotated          :: Gene; mRNA; CDS; ncRNA
+            ##Genome-Annotation-Data-END##
+FEATURES             Location/Qualifiers
+     source          1..4080
+                     /organism="Calidris pugnax"
+                     /mol_type="genomic DNA"
+                     /isolate="Ruff"
+                     /db_xref="taxon:198806"
+                     /chromosome="Unknown"
+     gene            1..>4080
+                     /gene="NXF1"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /db_xref="GeneID:106891170"
+     mRNA            join(1..243,2804..2933,3583..3666,3792..3977,4062..>4080)
+                     /gene="NXF1"
+                     /product="nuclear RNA export factor 1"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon. Supporting evidence
+                     includes similarity to: 100% coverage of the annotated
+                     genomic feature by RNAseq alignments, including 9 samples
+                     with support for all annotated introns"
+                     /transcript_id="XM_014947503.1"
+                     /db_xref="GeneID:106891170"
+     CDS             join(17..243,2804..2933,3583..3666,3792..3977,4062..>4080)
+                     /gene="NXF1"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /codon_start=1
+                     /product="nuclear RNA export factor 1"
+                     /protein_id="XP_014802989.1"
+                     /db_xref="GeneID:106891170"
+                     /translation="MCVCVPPPQPEHDDRVGGRSFSGRRKKGRGPFRGKMYSEMNHRS
+                     RSRGGPGLRARLEEDDGDVPMSEAHDGPRNRYLPYGPRPNRSTNIHITVRRDVPTPER
+                     SGGTSREGGRRNWFKITIPYGKKYDKSWLLSSIQNLCSVPFTPVEFHYDHNRAQFYVE
+                     DATTASALKQVSRKITDRDNYKVVIIINSSAPPQSLQNELKPEEIEQLKLCMSKR"
+ORIGIN      
+        1 ggctgatgga ggtgccatgt gtgtgtgtgt ccccccccct caaccagaac acgatgaccg
+       61 cgtgggcggg cgaagctttt cggggcgcag gaagaaaggc cgcggcccgt tccgggggaa
+      121 gatgtacagc gagatgaacc atcgctcccg cagccgcggc ggccccggcc ttcgcgcccg
+      181 cctggaggaa gatgatggcg acgtccccat gagcgaggcc cacgacgggc cccgcaaccg
+      241 atagtgagtg ggtttggggg agatgttgag ttcttcaggg agatgttggg gtccccaggg
+      301 gagggagagg ggacagggac ctggggaagg ggacagggac ctggggaagg ggacagggac
+      361 ctggggaagg ggacagggac ctggggaagg ggacagggac ctggggaagg ggacagggac
+      421 ctggggaagg ggacagggac ctggggaagg ggacagggac ctggggaagg ggacagggac
+      481 ctggggaagg ggacagggac ctggggaagg ggacagggac ctggggaagg ggacagggac
+      541 ctggggaagg ggacagggac ctggggaagg ggacagggac ctggggaagg ggacagggac
+      601 ctggggaagg ggacagggac ctggggaagg ggacagggac ctggggaagg ggacagggac
+      661 ctggggaagg ggacagggac ctggggaagg ggacagggac ctggggaagg ggacagggac
+      721 ctggggaagg ggacagggac ctggggaagg ggacagggac ctggggaagg ggacagggac
+      781 ctggggaagg ggacagggac ctggggaagg ggacagggac ctggggaagg ggacagggac
+      841 ctggggaagg ggacagggac ctggggaagg ggacagggac ctggggaagg ggacagggac
+      901 ctggggaagg ggacagggac ctggggaagg ggacagggac ctgggaaggg gatggggggg
+      961 agaggacagg gatctgggga aggggacggg gacctggaga gaggggagaa ggaatgggaa
+     1021 gagggggaga ggggacaggg atttggggag agggaagaga ggagagggga caaagagagg
+     1081 ggtcagggac ctggagagag ggaagaagga acagaaagag ggacctgggc tgggagaaaa
+     1141 ggggaaaggg ataagaaaaa ggaactgggg agagggaccc aggtgctggg gggtggctga
+     1201 tggaggtgcc atgtgtgtgt gtgtcccccc ccctcaacca gaacacgatg accgcgtggg
+     1261 cgggcgaagc ttttcggggc gcaggaagaa aggccgcggc ccgttccggg ggaagatgta
+     1321 cagcgagatg aaccatcgct cccgcagccg cggcggcccc ggccttcgcg cccgcctgga
+     1381 ggaagatgat ggcgacgtcc ccatgagcga ggcccacgac gggccccgca accgatagtg
+     1441 agtgggtttg ggggagatgt tgagttcttc agggagatgt tggggtcccc aggggagggg
+     1501 agaaggggat ccctgggggc acgttgaggt ctccaaggac aggttgatgt ccccaggaca
+     1561 ggttggggtc cccaaggtgg ggacaagggg gtcctgggga taccttgagg tccccagggg
+     1621 taggttgggt tcctcaggga gatgttgagt tcttcaagga gatgttgggg tccccagggg
+     1681 aggggacaag atggtcccag gggacatgtt gaggtcccta agagcaggtt gatgtcccca
+     1741 aggtggtccc caagggcagg ttgggttccc cagggagatg ttgagttcct cggggagatg
+     1801 ttggggtccc caggggaggg gacaagggga tcccggggga ttcccaggga gatgttgggg
+     1861 tccccaaggt ggggagaagg gggtcctggg gatacattga ggtccccaag ggcgggttgg
+     1921 gttcctcagg gagatgttgg gttcctcagg gagatgttga gttcctcagg gagaggttgg
+     1981 ggtccccagg ggaggggaga agggggtccc tggggacatg ttgatgtccc caaggacagg
+     2041 ttgaggtccc caggacaggt tggggtcccc aaggtgggga caagatggtc cctgggggca
+     2101 cgttgaggtc cccaagggca ggatgggttc cccagggaga tgttgggtcc ccagggagat
+     2161 gttgagttct tcaaggagat gttggggtcc ccaggggagg ggacaagggg gttggttcct
+     2221 ggtggcacgt tgaggtcccc acggcccagt tggggttccc agggagatgt tggggtcccc
+     2281 aaggtgggga caagggggtt cctgagggca cattgaggtc cccaagggca ggttgggttc
+     2341 ctcagggaga tgttggggtc cccaggggag gggacaaggg ggttggttcc tggtggcacg
+     2401 ttgaggtccc cacggcccag ttggggttcc cagggagatg ttggggtccc caaggtgggg
+     2461 acaagggggt cctggggata tgttgaggtc cccaagggca ggttgggttc ctcagggaga
+     2521 tgttggggtc cccaggggag gggacaagat ggtcccaggg gacacgttga gatccccacg
+     2581 gcccagttgg ggttcctcag ggagatgttg ggttcctcag ggagatgttg agttcttcag
+     2641 ggagatgttg gtgtccccag gggaggggac aaggtgatcc ctggtgacac tttgaggtcc
+     2701 ctatggacca gttgagatcc tcagggagat gttggggtct ccaggggagg ggacaagggg
+     2761 acaaagaggt ccatggggcg ctctccatcc cggttctccc cagtttgccc tacgggccgc
+     2821 gacccaaccg ctcgaccaac atccacatca cggtgaggag agacgtcccc accccggagc
+     2881 gaagcggcgg caccagtcgc gagggggggc ggcggaactg gttcaagatc accgtgagta
+     2941 ggggggggga cacccccttc ccccctttcc cttccccctt ttctattttc ccttctcttt
+     3001 ttcactcttt tttctgcttt tttttctttc ccttcccgtt tccttccttt cgcttctttt
+     3061 ttttcctttt ttcgtttctt ttctcctctt tttcctttgt tctcttcttt ctctcctccc
+     3121 cctttttttt cctccccctt ttttttcctc tctccccttt ttcttcctct ctcccctttt
+     3181 tcttcctctc tccccttttt cttcctctct cccctttttc ttcctctctc ccctttttct
+     3241 tcctctctcc cctttttctt cctctctccc ctttttcttc ctctctcccc tttttcttcc
+     3301 tctctcccct ttttcttcct ctctcccctt tttcttcctc tctccccttt ttcttcctct
+     3361 ctcccctttt tcctcttctc tccnnnnnnn nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn
+     3421 nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn
+     3481 nnnnnntccc cacctgtgac ccgtgtggcg ggggggggat cacggggggg gggcacacat
+     3541 caaagacacc tcctttaacg ggggaaaaaa atcccttttt agatccccta cggaaaaaaa
+     3601 tacgacaaat cctggctcct gagctccatc cagaaccttt gcagcgtccc cttcaccccc
+     3661 gtcgaggtga gctgccccct tccccgtttt ggggggggtc gtgggggggt tccccctcca
+     3721 gcttttgggg aaatctcccc cccagaccct tcaattgtcc cccccccatt aatttatttt
+     3781 gccctcccca gttccactac gaccacaacc gggcccagtt ctacgtggaa gacgccacca
+     3841 ccgccagcgc cctcaaacag gtctcccgca aaatcaccga ccgcgataat tacaaagtgg
+     3901 tgataattat caactcctcc gcccccccac agtccctcca aaacgagctg aaacccgagg
+     3961 agatcgagca actcaaggtg agtgattttt ggggggcggg ggggacaccc tagaggaagc
+     4021 tcagagcctt catcctcctc ctcctcctcc tcccgtccca gctctgcatg agcaagagat
+//
+

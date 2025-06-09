@@ -1,0 +1,146 @@
+LOCUS       NW_009095311            3996 bp    DNA     linear   CON 06-OCT-2014
+DEFINITION  Pelecanus crispus isolate BGI_N334 unplaced genomic scaffold,
+            ASM68737v1 scaffold37926, whole genome shotgun sequence.
+ACCESSION   NW_009095311 REGION: complement(8..4003)
+VERSION     NW_009095311.1
+DBLINK      BioProject: PRJNA253833
+            BioSample: SAMN02339887
+            Assembly: GCF_000687375.1
+KEYWORDS    WGS; RefSeq.
+SOURCE      Pelecanus crispus (Dalmatian pelican)
+  ORGANISM  Pelecanus crispus
+            Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi;
+            Archelosauria; Archosauria; Dinosauria; Saurischia; Theropoda;
+            Coelurosauria; Aves; Neognathae; Neoaves; Aequornithes;
+            Pelecaniformes; Pelecanidae; Pelecanus.
+COMMENT     REFSEQ INFORMATION: The reference sequence is identical to
+            KK488726.1.
+            Assembly name: ASM68737v1
+            The genomic sequence for this RefSeq record is from the
+            whole-genome assembly released by the BGI on 2014/05/09. The
+            original whole-genome shotgun project has the accession
+            JJRG00000000.1.
+            
+            ##Genome-Assembly-Data-START##
+            Assembly Provider     :: BGI
+            Assembly Method       :: SOAPdenovo v. 1.6
+            Genome Coverage       :: 34x
+            Sequencing Technology :: Illumina HiSeq
+            ##Genome-Assembly-Data-END##
+            
+            ##Genome-Annotation-Data-START##
+            Annotation Provider         :: NCBI
+            Annotation Status           :: Full annotation
+            Annotation Version          :: Pelecanus crispus Annotation Release
+                                           100
+            Annotation Pipeline         :: NCBI eukaryotic genome annotation
+                                           pipeline
+            Annotation Software Version :: 6.1
+            Annotation Method           :: Best-placed RefSeq; Gnomon
+            Features Annotated          :: Gene; mRNA; CDS; ncRNA
+            ##Genome-Annotation-Data-END##
+FEATURES             Location/Qualifiers
+     source          1..3996
+                     /organism="Pelecanus crispus"
+                     /mol_type="genomic DNA"
+                     /isolate="BGI_N334"
+                     /db_xref="taxon:36300"
+                     /chromosome="Unknown"
+                     /sex="male"
+     gene            <1..>3996
+                     /gene="NXF1"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /db_xref="GeneID:104033431"
+     mRNA            join(<1..117,1579..1606,2157..2240,2393..2497,2712..2792,
+                     2878..2910,3852..>3996)
+                     /gene="NXF1"
+                     /product="nuclear RNA export factor 1"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon. Supporting evidence
+                     includes similarity to: 1 Protein"
+                     /transcript_id="XM_009486078.1"
+                     /db_xref="GeneID:104033431"
+     CDS             join(<1..117,1579..1606,2157..2240,2393..2497,2712..2792,
+                     2878..2910,3852..>3996)
+                     /gene="NXF1"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /codon_start=2
+                     /product="nuclear RNA export factor 1"
+                     /protein_id="XP_009484353.1"
+                     /db_xref="GeneID:104033431"
+                     /translation="LPYGPRPNRTTNIHITVRRDLPTPERGSSTSRAGGRRNRYYYRF
+                     WDYFIPYGKKYDKSWLLSSIQNLCSVPFTPVEFHYDHNRAQFYVEDATTASALKQVSR
+                     KITDRDNYKVVIIINSSAPPQSLQNELKPEEIEQLKLCMSKRYDGSQLKSDRELDKVK
+                     GLKLEELWLNGNPLCNAFRDQSTYIRSVLALGRPLGA"
+ORIGIN      
+        1 cttgccctac gggccgcggc caaaccgcac gaccaacatt cacatcacgg tcaggcggga
+       61 tcttcccacc cccgagcggg gcagcagcac cagccgggcc ggcgggcgca ggaaccggtt
+      121 tgaannnnnn nnnnagcggg gatagcggcc gttgtcaccc atttttccgc ggcacgggaa
+      181 cagggggtga cgatacgtct cttgtcgcgg cgcggggaca gcgagcgtgg ctgttgtcac
+      241 cccatcccca tcttacgaac gttgtgagga gcggccgagg gaattggggg tgttcagctt
+      301 ggggaaaagg agccggagga gagatgtcat cgctctctac agctgcctga aacgaggttg
+      361 tagcgaggtg ggggtcaggc tcttgtccca cgtgatggga cgagggtaaa cggcctcaag
+      421 ttgcaccagg agaggcttaa attggatatt taggaacaat ttgttcacct aaagggttgt
+      481 taaatgctgg aacacgctgc gcggggaagt ggcggagtca ccgtcgctgg aggcatttaa
+      541 aagacgcgta gacatggggc tgagtgacgc ggtttagcgt ggacgcggcc gcgttaacgg
+      601 ttggactcaa tgatcttaag ggtcttttcc agtctaaaaa ttctgtgatt cttttgcgtt
+      661 attattaacg ggatgaaacg taccgagtcc aaacgccggg ttctgcgtcc gggatggagt
+      721 aacgccaggc gcaaggataa attgggaggg aatctggggg tgccggttgg cagcacctca
+      781 acaggagcca gcagcgaggg cagcccgcac ccgggcggca tcaaacgcag cagagccaga
+      841 cagcgaaggg aggggattgt cccgccgcgt tcggcgttgg cgcggcctca cctcgagcac
+      901 cgtgggcccc gcggttttaa aaagggcgtt agggtgtttg aatgtgaact tgaacacaag
+      961 gagggcaatg aaactggtga agggctggga ggaacgcgct tgcgaggagc agctgaggag
+     1021 tctgggctgg tctagtttgg agaggaggag gctgcggggc gaccatgtcg tgctctgcgg
+     1081 cttcccgagg acgggatgcg ttgagctcgg ccacttcttc ggccatccag aagtaaatat
+     1141 tttaattctt ggaatcatag aatcatcgaa tcttttaggt tggaaaagac ctttaagatc
+     1201 atccagtcca accattaacc taacgttacc aagtccatca ctaaacgagt taagggtaga
+     1261 gcagcaattt catgtttcct ggcttggtgg ctgcattatt tataatgaaa gtaaaaacta
+     1321 agaatcatta aacttggaaa ggacctctaa gatcatcagc ccaaccatca acccaacacc
+     1381 cccatgccca ctaaaccacg tcccaaagtg ccacctctgc ctgttttttg aacccctcca
+     1441 gggctgggga ctcccccacc tctctgggca gccggttcca atgcttgact accctttcca
+     1501 tgaagaaatt tttcctaata tccaacctaa atgtcccctg gtgcagtttg agcccatttt
+     1561 ctctcatcct atcactagct actactatag gttttgggat tatttcgtat gtagtaacgt
+     1621 actacgctgc taaaaaaaga gccgtttgct acatgggaac gggatccagg gacagggcac
+     1681 gtgggaatgg ctcaaaaccg cgccagggaa gggtcagagc agatgtgaga aaggactttt
+     1741 gtaccgagag ggtgctcaga cgctggaaca ggcttcctgg agaggggatc tgtgcgccaa
+     1801 gcctggcagg gcagcagaga catttggata acgctcttaa cagcgcattt tagcttttac
+     1861 tcagcgctga aggggtcggg cagttgcaca agatggtcgt tgtaggtccc ttctagctga
+     1921 aatagtgtat ttgctgcctt ccctcccttt ttccctcgcc accttttctc ttcccgcctt
+     1981 ttctgttcct tttttcctgg gcgtacgcag aaggcagctg catcctgtcc agctgcgaca
+     2041 cgcacggcct gggcagggct gcggcaattc ctccacgacc agtcaagcag cgtgcgctgt
+     2101 tgccagccct gcccacgccc tgcctgcgcc ctgacgccgg gcaaattgtc tcttagatcc
+     2161 cgtatgggaa aaaatacgac aagtcgtggc tgctgagctc catccagaac ctttgcagcg
+     2221 ttcccttcac tcccgtcgag gtgagcgggg tccaggtgcc cgggttttgt ttcgcttccc
+     2281 attttgggga ggttgaggcg gtctggcagg ggggcatgtg cctcccagga ggctggctgt
+     2341 gctccagctc tgcgggagca gctgcccgga ccccaaccca tcctgttttc agttccacta
+     2401 cgaccacaac cgggctcagt tctacgtgga agatgccacc accgccagcg ctctcaagca
+     2461 ggtctcccgc aagatcaccg acagggacaa ctacaaggtc cgtggnnnnn nnnnnnnnnn
+     2521 nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn
+     2581 nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn
+     2641 ntccccgctc tgcgtgggtg cgtttgctgc cggcgtacgc tgcctcatag tcggctgcgc
+     2701 tctttttgta ggtggtgata attatcaact cgtcggctcc gcctcagtcc ctgcaaaacg
+     2761 agttgaaacc ggaggagatt gagcaactga aggtgagcgg ggtggccagc tgcgggctct
+     2821 gggcaaatgg ggaagaggca gagcctgctc gctctcatcc tcgttgcgtt gtcctagctc
+     2881 tgcatgagca agagatacga tggttcgcag nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn
+     2941 nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn
+     3001 nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn
+     3061 nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn
+     3121 nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn
+     3181 nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn
+     3241 nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn
+     3301 nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn
+     3361 nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn
+     3421 nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn
+     3481 nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn
+     3541 nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn
+     3601 nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn
+     3661 nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn
+     3721 nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn nnnnnnnngg gtgccaccct
+     3781 gaccccccgc ggctttcccg tatccccctc ccctccctgg cacctcaccc cctgctccca
+     3841 attccccgta gctgaaatca gatcgggagc tggacaaggt gaaggggctc aaactggagg
+     3901 agctttggct caacggaaac ccgctctgca acgctttccg ggaccagtcc acctacatca
+     3961 ggtcagtgtt agccttgggg cggcccttag gggccc
+//
+

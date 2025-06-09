@@ -1,0 +1,165 @@
+LOCUS       NW_019394833            2811 bp    DNA     linear   CON 02-JAN-2018
+DEFINITION  Orussus abietinus isolate OABI.00-Male unplaced genomic scaffold,
+            Oabi_2.0 scaffold655, whole genome shotgun sequence.
+ACCESSION   NW_019394833 REGION: complement(9931..12741)
+VERSION     NW_019394833.1
+DBLINK      BioProject: PRJNA282746
+            BioSample: SAMN02225314
+            Assembly: GCF_000612105.2
+KEYWORDS    WGS; RefSeq.
+SOURCE      Orussus abietinus
+  ORGANISM  Orussus abietinus
+            Eukaryota; Metazoa; Ecdysozoa; Arthropoda; Hexapoda; Insecta;
+            Pterygota; Neoptera; Endopterygota; Hymenoptera; Orussoidea;
+            Orussidae; Orussus.
+COMMENT     REFSEQ INFORMATION: The reference sequence is identical to
+            AZGP02000734.1.
+            Assembly name: Oabi_2.0
+            The genomic sequence for this RefSeq record is from the
+            whole-genome assembly released by The i5k Initiative on 2017/12/15.
+            The original whole-genome shotgun project has the accession
+            AZGP00000000.2.
+            
+            ##Genome-Assembly-Data-START##
+            Assembly Provider      :: The i5k Initiative
+            Assembly Date          :: APR-2016
+            Assembly Method        :: AllPaths v. 35218; ATLAS-link v. 1.0;
+                                      ATLAS-gapfill v. 2.2; redundans v. 0.12c
+            Assembly Name          :: Oabi_2.0
+            Expected Final Version :: no
+            Genome Coverage        :: 467.1x
+            Sequencing Technology  :: Illumina HiSeq
+            ##Genome-Assembly-Data-END##
+            
+            ##Genome-Annotation-Data-START##
+            Annotation Provider         :: NCBI
+            Annotation Status           :: Full annotation
+            Annotation Name             :: Orussus abietinus Annotation Release
+                                           101
+            Annotation Version          :: 101
+            Annotation Pipeline         :: NCBI eukaryotic genome annotation
+                                           pipeline
+            Annotation Software Version :: 8.0
+            Annotation Method           :: Best-placed RefSeq; Gnomon
+            Features Annotated          :: Gene; mRNA; CDS; ncRNA
+            ##Genome-Annotation-Data-END##
+FEATURES             Location/Qualifiers
+     source          1..2811
+                     /organism="Orussus abietinus"
+                     /mol_type="genomic DNA"
+                     /isolate="OABI.00-Male"
+                     /isolation_source="haploid male collected from an old tree
+                     in a forest"
+                     /db_xref="taxon:222816"
+                     /chromosome="Unknown"
+                     /sex="male"
+                     /tissue_type="whole organism"
+                     /dev_stage="adult"
+                     /geo_loc_name="Germany: Gross-Gerau, Hessen"
+                     /lat_lon="49.960617 N 8.542233 E"
+                     /altitude="103 m"
+                     /collection_date="23-Apr-2011"
+     gene            1..2811
+                     /gene="LOC105697774"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /db_xref="GeneID:105697774"
+     mRNA            join(1..141,242..437,510..696,778..1021,1106..1302,
+                     1431..1543,1618..1654,1728..1966,2054..2222,2296..2811)
+                     /gene="LOC105697774"
+                     /product="nuclear RNA export factor 1"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon. Supporting evidence
+                     includes similarity to: 2 Proteins, and 100% coverage of
+                     the annotated genomic feature by RNAseq alignments,
+                     including 3 samples with support for all annotated
+                     introns"
+                     /transcript_id="XM_012421417.1"
+                     /db_xref="GeneID:105697774"
+     CDS             join(54..141,242..437,510..696,778..1021,1106..1302,
+                     1431..1543,1618..1654,1728..1966,2054..2222,2296..2691)
+                     /gene="LOC105697774"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /codon_start=1
+                     /product="nuclear RNA export factor 1"
+                     /protein_id="XP_012276840.1"
+                     /db_xref="GeneID:105697774"
+                     /translation="MPKNVGKGYERYNRPVLQNDNSSDWKGNFGERTSLDNIACQLRK
+                     VSFKPTRGYKNRFTNAFTRIKEHFADDIEMSGSGKKQMYSRGGGGRERWMRCEKYRPL
+                     PHESDDEFVRKQGKLISNSMAWYNVIIPYGHKYKKEYIVQVLSDNITPETFIPIMYKV
+                     EDNFASFYVDDFKIADKLSSCSRKITAEDGFKLILKVKPALPISDINQQTKERIKLAM
+                     AKRFVEATNALDLSQFHRDPDLRDDIFCALSRTNILVTVLEIVAEHTPSLEALNLDNN
+                     KLRTVEMLGSILFRKLPSLKILHIGNNQIRLLRDIDSLRKLKLQELYLKGNPLCDKYN
+                     KRQSDYINDVRSRFPKLLKLDGELLPVSISFDVEDEDEIKLPPTQRTFTINNEARQIA
+                     TTFLQQYFTIFDSEDRQPLLNAYNEDAFFSLTISVPYAGVNRFSAYLPVNRNLFRVND
+                     SEKRNRLLKRGRLPIVTLISEFPKTQHYLNTFTMDLGVVTETMMNVTVTGLFKELSTE
+                     TKALRYFDLTFIIVPQGSGYCIRNEQLHIMDPSKAQERQLDKILSSFTAVEDKEQTVQ
+                     RERMTLELMQKTGMNLEWSHKCLSEVQWNFETALQTFKQFHEQGLVPSQAFVVSS"
+     gene            complement(2711..>2811)
+                     /gene="LOC105697773"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /db_xref="GeneID:105697773"
+     mRNA            complement(2711..>2811)
+                     /gene="LOC105697773"
+                     /product="ATP-dependent DNA helicase DDX11, transcript
+                     variant X1"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon. Supporting evidence
+                     includes similarity to: 3 Proteins, and 100% coverage of
+                     the annotated genomic feature by RNAseq alignments,
+                     including 3 samples with support for all annotated
+                     introns"
+                     /transcript_id="XM_012421414.2"
+                     /db_xref="GeneID:105697773"
+ORIGIN      
+        1 ttatcggcgt atgtagacaa gccgtttaaa atagatgaaa aatagtctac aacatgccaa
+       61 aaaatgttgg aaaaggttac gaacgataca atcgacctgt tttacagaat gataacagtt
+      121 cggactggaa aggaaacttt ggtatgttta aatgatttcg tctttcaaaa tttcttaaat
+      181 tctaaccttt aaacgtgttg tgttgtatct caattgctga tattattttt ttaaaacgaa
+      241 ggcgaaagaa catccctgga taatattgca tgtcaattaa gaaaagtgtc atttaagcca
+      301 acaaggggct acaagaatag gttcaccaat gcatttacta ggatcaagga acattttgca
+      361 gatgatatcg agatgtcagg ttctggtaaa aaacagatgt actcccgagg tggaggtggg
+      421 agagaaagat ggatgaggta tattacaaaa gaaatcctgt tacgtagtaa taattttaga
+      481 ggagcattaa ttgagtatta ttaatatagg tgtgaaaaat atagaccttt gccacatgaa
+      541 agcgacgacg aatttgttag gaagcaaggg aagctgatat cgaattctat ggcatggtat
+      601 aatgttatta ttccttatgg acataaatat aagaaggaat atatcgtgca agtgttgtcg
+      661 gataatatta caccagaaac atttattcca atcatggtat gttttatatt aaaaatgtgt
+      721 gcattatttg aatgttttaa acaatggcat tgaaagtact taaacatctt ttaatagtac
+      781 aaggtggaag ataactttgc tagtttctac gtggatgact ttaagatagc ggacaagtta
+      841 tcttcttgta gtcgtaaaat aacagcggag gatgggttta aactcatttt gaaagtaaaa
+      901 ccagctcttc caatatctga catcaatcaa cagacgaagg agagaattaa attggcaatg
+      961 gcaaaaagat ttgtagaagc cactaacgct ttggatcttt ctcagtttca tagagatcca
+     1021 ggtaagcatt gacgtcaagt gttcgcaatt gcaatacaaa gaaacatggg accctgttta
+     1081 cttattttgt cattcaatat ttcagactta cgggatgata tattttgtgc attgtcacgt
+     1141 acaaatatct tggtgacagt gttagaaatt gttgctgaac atactccttc cctggaagct
+     1201 ttaaatttag ataataataa acttcgaaca gtggaaatgc ttggatcgat actttttcga
+     1261 aagttaccat ctcttaaaat tcttcatata ggaaataatc aggtaaaatt tgtccttcat
+     1321 ttttctaata ttgattttat taaaattatt gtttataaaa attaaacaaa ccgttcaatg
+     1381 aataactttt ggttcacatt agtactttcc tgactttttt cattgtacag atacgactgt
+     1441 taagagacat agattctctg agaaagttga agctccagga gttatatctc aagggaaatc
+     1501 ctctctgtga taaatataac aagcgtcaaa gtgattacat taagtaagta tactattttg
+     1561 gttcaattaa tttaatgaat tctgttttta aaaactactc gaacgtttct tttccagtga
+     1621 tgtgcgatcg cggtttccaa aacttctgaa attggtaact attccaattt tttcagtaat
+     1681 ccttttttta tacgtagaat ctaaaattga aaatccttta ctttaaggat ggcgaattac
+     1741 taccagttag tatttcgttt gacgtagaag atgaagatga aatcaaacta ccacccactc
+     1801 aaaggacatt taccattaat aacgaggctc gtcaaatagc cacaacattt ctccaacagt
+     1861 atttcacaat cttcgacagt gaagatcggc aacctttatt aaatgcatac aatgaagacg
+     1921 ccttttttag tttgacgata tcagttcctt acgctggggt taacaggtac gaactttaat
+     1981 gattaattgt aactttctgc taagtcgtaa ggatttaatg ggaagcattt aaatatgtaa
+     2041 tctaattttg cagattctcc gcttacctac cagtaaatag gaatttgttt cgtgtgaacg
+     2101 attcagaaaa acgtaatcgc ttgttgaagc gtgggagatt acctattgtt acacttattt
+     2161 ctgagtttcc aaaaactcaa cattacttga atacatttac tatggattta ggagttgtaa
+     2221 cggtgcgttg tatcttggta ctgaatcgtg ttctcaatta caatatactg aattaatttt
+     2281 tttatatgtg tttaggagac catgatgaat gtcaccgtca ctggactttt caaagaattg
+     2341 agtacagaaa ctaaagccct tcgatacttc gacctaacat ttatcatcgt tccccaagga
+     2401 tcgggctatt gtatacgcaa tgaacagcta cacattatgg atccttcaaa agctcaagaa
+     2461 aggcaactgg ataaaatatt atccagcttt actgcagtcg aagacaagga acaaactgtg
+     2521 caacgagaac gtatgacatt agaattaatg caaaagactg gtatgaattt agaatggagt
+     2581 cataagtgcc taagtgaagt tcagtggaat ttcgaaactg cgttacaaac attcaaacaa
+     2641 tttcacgaac agggactagt gccatcgcaa gcattcgttg ttagcagtta agttaaaaag
+     2701 ttgtatataa tgtgatttac tataaagaat tattgtttca agtgatgtaa gactgtatgt
+     2761 acatataatt attgtaattc ctttgggaca aataaaatgt tccagaaccg a
+//
+

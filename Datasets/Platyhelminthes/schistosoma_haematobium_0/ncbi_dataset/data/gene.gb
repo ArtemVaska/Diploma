@@ -1,0 +1,251 @@
+LOCUS       NC_067196               6111 bp    DNA     linear   CON 18-OCT-2022
+DEFINITION  Schistosoma haematobium chromosome 1, whole genome shotgun
+            sequence.
+ACCESSION   NC_067196 REGION: 17012102..17018212
+VERSION     NC_067196.1
+DBLINK      BioProject: PRJNA273970
+            BioSample: SAMN11431408
+            Assembly: GCF_000699445.3
+KEYWORDS    WGS; RefSeq.
+SOURCE      Schistosoma haematobium
+  ORGANISM  Schistosoma haematobium
+            Eukaryota; Metazoa; Spiralia; Lophotrochozoa; Platyhelminthes;
+            Trematoda; Digenea; Strigeidida; Schistosomatoidea;
+            Schistosomatidae; Schistosoma.
+REFERENCE   1  (bases 1 to 6111)
+  AUTHORS   Stroehlein,A.J., Korhonen,P.K., Chong,T.M., Lim,Y.L., Chan,K.G.,
+            Webster,B., Rollinson,D., Brindley,P.J., Gasser,R.B. and Young,N.D.
+  TITLE     High-quality Schistosoma haematobium genome achieved by
+            single-molecule and long-range sequencing
+  JOURNAL   Gigascience 8 (9) (2019)
+   PUBMED   31494670
+REFERENCE   2  (bases 1 to 6111)
+  AUTHORS   Young,N.D., Jex,A.R., Li,B., Liu,S., Yang,L., Xiong,Z., Li,Y.,
+            Cantacessi,C., Hall,R.S., Xu,X., Chen,F., Wu,X., Zerlotini,A.,
+            Oliveira,G., Hofmann,A., Zhang,G., Fang,X., Kang,Y., Campbell,B.E.,
+            Loukas,A., Ranganathan,S., Rollinson,D., Rinaldi,G., Brindley,P.J.,
+            Yang,H., Wang,J., Wang,J. and Gasser,R.B.
+  TITLE     Whole-genome sequence of Schistosoma haematobium
+  JOURNAL   Nat. Genet. 44 (2), 221-225 (2012)
+   PUBMED   22246508
+  REMARK    Publication Status: Online-Only
+REFERENCE   3  (bases 1 to 6111)
+  AUTHORS   Stroehlein,A.J.
+  TITLE     Chromosome-level genome assembly for S. haematobium
+  JOURNAL   Unpublished
+REFERENCE   4  (bases 1 to 6111)
+  CONSRTM   NCBI Genome Project
+  TITLE     Direct Submission
+  JOURNAL   Submitted (18-OCT-2022) National Center for Biotechnology
+            Information, NIH, Bethesda, MD 20894, USA
+REFERENCE   5  (bases 1 to 6111)
+  AUTHORS   Stroehlein,A.J.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (04-JUN-2021) Parasite Genetics & Genomics, Faculty of
+            Veterinary and Agricultural Sciences, The University of Melbourne,
+            Cnr Flemington Rd & Park Dr, Parkville, VIC 3010, Australia
+REFERENCE   6  (bases 1 to 6111)
+  AUTHORS   Young,N.D., Jex,A.R., Li,B., Liu,S., Yang,L., Xiong,Z., Li,Y.,
+            Cantacessi,C., Hall,R.S., Xu,X., Chen,F., Wu,X., Zerlotini,A.,
+            Oliveira,G., Hofmann,A., Zhang,G., Fang,X., Kang,Y., Campbell,B.E.,
+            Loukas,A., Ranganathan,S., Rollinson,D., Rinaldi,G., Brindley,P.J.,
+            Yang,H., Wang,J., Wang,J. and Gasser,R.B.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (28-APR-2012) 2nd Office Building, Beijing Genomics
+            Institute, Beishan Road, Yantian, Shenzhen, Guangdong 518083,
+            P.R.China
+COMMENT     PROVISIONAL REFSEQ: This record has not yet been subject to final
+            NCBI review. The reference sequence is identical to CM039143.
+            
+            ##Genome-Assembly-Data-START##
+            Assembly Date          :: MAR-2021
+            Assembly Method        :: Canu v. 1.9; Medaka v. 1.0.3;
+                                      purge_haplotigs v. 1.1.1; Platanus-allee
+                                      v. 2.0.2; HiRise v. 2.0.5; pilon v. 1.23;
+                                      3D-DNA v. 180922; Juicebox Assembly Tools
+                                      v. 1.22; TGS-GapCloser v. 1.0.3; HyPo v.
+                                      1.0.3
+            Assembly Name          :: UoM_Shae.V3
+            Genome Representation  :: Full
+            Expected Final Version :: Yes
+            Genome Coverage        :: 130.0x
+            Sequencing Technology  :: Illumina; Oxford Nanopore; PacBio; Hi-C
+            ##Genome-Assembly-Data-END##
+            
+            ##Genome-Annotation-Data-START##
+            Annotation Provider :: INSDC submitter
+            Annotation Status   :: Full annotation
+            Annotation Pipeline :: Eukaryotic Annotation Propagation Pipeline
+            ##Genome-Annotation-Data-END##
+FEATURES             Location/Qualifiers
+     source          1..6111
+                     /organism="Schistosoma haematobium"
+                     /mol_type="genomic DNA"
+                     /isolation_source="20 whole worms (paired) and a single
+                     pair of adult worms (i.e. male and female in copula)"
+                     /host="Mesocricetus auratus"
+                     /db_xref="taxon:6185"
+                     /chromosome="1"
+                     /sex="pooled male and female"
+                     /dev_stage="adult"
+                     /geo_loc_name="Egypt"
+                     /collection_date="2010-02-23/2014-10-10"
+     gene            1..6111
+                     /gene="NXF1_1"
+                     /locus_tag="MS3_00003780"
+                     /db_xref="GeneID:75577141"
+     mRNA            join(1..76,109..2063,2096..2317,4744..6111)
+                     /gene="NXF1_1"
+                     /locus_tag="MS3_00003780"
+                     /product="Nuclear RNA export factor"
+                     /transcript_id="XM_051211643.1"
+                     /db_xref="GeneID:75577141"
+     mRNA            join(7..76,109..376,1538..2063,2096..2317,4744..6111)
+                     /gene="NXF1_1"
+                     /locus_tag="MS3_00003780"
+                     /product="Nuclear RNA export factor, variant 2"
+                     /transcript_id="XM_051211644.1"
+                     /db_xref="GeneID:75577141"
+     CDS             join(46..76,109..376,1538..2063,2096..2317,4744..5013)
+                     /gene="NXF1_1"
+                     /locus_tag="MS3_00003780"
+                     /note="EggNog:ENOG410VBSU;
+                     COG:A"
+                     /codon_start=1
+                     /product="Nuclear RNA export factor, variant 2"
+                     /protein_id="XP_051073275.1"
+                     /db_xref="GeneID:75577141"
+                     /db_xref="InterPro:IPR005637"
+                     /db_xref="InterPro:IPR009060"
+                     /db_xref="InterPro:IPR030217"
+                     /db_xref="PFAM:PF03943"
+                     /translation="MKKRRGFKKKEFADELFVEHEGECNLTDANILRVEHVSSKIKRR
+                     NRKKTLKKFEKNQFLNSCDEYLASKSHVLPKVLPETLHQPCSNPEILNFLSVFVNNYI
+                     DVFDVKQLRRKLSEFYDPSAYLTFQIAPYVCQSSLDKCSDKSYRPKYRPLWATYERFA
+                     VNSLPGGFPLPSWAWFAIKEESMPRRLRGPSLPKQDRKLLKSLKGYQMGHIQRLVSVT
+                     RSASSAPDRLIANIPPPPIARMECRGGDQVLGLLCRLPNLVHVRSDRYSHLDVIWVEL
+                     PLVCVRYSCIAAEPVPQDTRPSDLEGISDQLLNIAPHGSYAIRSVCRMLILHQSGKIL
+                     QEDWCVTPLPSSHLQECSLVITEAVSNFMTPKTSTLVSTFEAGGIPDDAVRSKLVDEL
+                     STATGMNKAYSLQCLTECQFDIDSALHSFQKVHEAGLLPAEAFSLI"
+     CDS             join(1785..2063,2096..2317,4744..5013)
+                     /gene="NXF1_1"
+                     /locus_tag="MS3_00003780"
+                     /note="EggNog:ENOG410VBSU;
+                     COG:A"
+                     /codon_start=1
+                     /product="Nuclear RNA export factor"
+                     /protein_id="XP_051073274.1"
+                     /db_xref="GeneID:75577141"
+                     /db_xref="InterPro:IPR005637"
+                     /db_xref="InterPro:IPR009060"
+                     /db_xref="PFAM:PF03943"
+                     /translation="MPRRLRGPSLPKQDRKLLKSLKGYQMGHIQRLVSVTRSASSAPD
+                     RLIANIPPPPIARMECRGGDQVLGLLCRLPNLVHVRSDRYSHLDVIWVELPLVCVRYS
+                     CIAAEPVPQDTRPSDLEGISDQLLNIAPHGSYAIRSVCRMLILHQSGKILQEDWCVTP
+                     LPSSHLQECSLVITEAVSNFMTPKTSTLVSTFEAGGIPDDAVRSKLVDELSTATGMNK
+                     AYSLQCLTECQFDIDSALHSFQKVHEAGLLPAEAFSLI"
+ORIGIN      
+        1 attgagcgcc agctacggaa tttcttaaga ttaagcgcgt gattcatgaa gaaacggcgt
+       61 gggttcaaaa agaagggtag agtatagtca tcacgctcat ttttaaagaa ttcgcagatg
+      121 agttatttgt cgaacatgaa ggtgaatgta atttgactga tgccaacata ctacgagtgg
+      181 agcacgttag ttcaaagatt aagcggcgca atcgcaagaa gacgctaaag aaatttgaaa
+      241 aaaatcagtt cctcaatagc tgtgacgaat atttagcttc aaaatcccat gttctcccta
+      301 aggtccttcc agaaacgttg caccaaccat gtagcaaccc tgaaatttta aatttcctaa
+      361 gtgtctttgt aaacaagtaa gagattttac tgtgctcatg gtacgctgac attaggacga
+      421 gacgaacctt tgtttcgaac taagtggatg aacattccgt tgttcgtaat gtgccatgag
+      481 atagagctta tatagtagat taattggtgt ctaagttcta tcactttttt gtagtatact
+      541 ttgagaatag ttatttgttc ttgtcctccc tttctcctgt tctaaactga tatggagtca
+      601 tagaggtgag ttaggtgaga caatgattta tggacgacct ttgagcgacg tcaggttgac
+      661 gtgtctacct aataaccaga gtcaaatgag ggtgaggaat taaaattatg atacacagtt
+      721 gatgattaag tttagaaatt agatttaagg ttttcatcac gaactgacat catctataac
+      781 gccaaaactc cgaatgaatg agtgaaattc gcgccaaaat ccaggatgct atctttcacg
+      841 tgattggttt gtccgtagat tatagtttcg ctgagttatt tggacaaggt cttttgcatt
+      901 tatttaactc agctgaatgg cactaagatc taatggctaa tgtaggtgat gtgttttctt
+      961 aataggcaac ctgtgctatc tttttggtgc atttagatat gctcatgtac gagggctcta
+     1021 caatgctatg tgtgtgctgg ttcttgtggt gtgatcgtgt aggggctcgg atatgtttaa
+     1081 atttattcgt tgacaagacg aggagtgtcc atcaataatg ttcacttcct gtctttaaga
+     1141 cacccctcat gttcagtgcc tgcaatagag ttgatctgca aaccatgacg taaattattg
+     1201 tcaatttgtc gtgtagcaat gtgtaaattc atataaaata cttccagata tctggactgt
+     1261 tttgtggatt gacttggtta acaactttca ttgtgcttaa ttactgtttt ataccaactt
+     1321 agacctcaat ctagattcct ttgtcataac atgttattcc taatcaatag ttgtatggta
+     1381 atacaaaata tgtaattagc agtgcctgtc ttatttctat tcacattaac tcgcaactac
+     1441 aattaaacct aaattgtcta aacaaatagg gttcagttaa aacttatcag taaagtcacc
+     1501 ctttaataca tacgttgtcg ggttctatac ttttcagcta catcgatgta tttgacgtca
+     1561 aacagctacg aagaaaacta tcggagttct atgacccttc tgcataccta acattccaga
+     1621 tagctcctta tgtctgtcag tcgtcattgg ataaatgttc tgataaaagt tacagaccaa
+     1681 agtatcgacc cctttgggcc acttatgaac gtttcgctgt taacagtttg cccggcgggt
+     1741 tccctcttcc atcatgggcc tggttcgcta ttaaggagga gtccatgcct cgaagattaa
+     1801 gaggccctag tttacctaaa caggatagga aacttctcaa atcattgaaa ggatatcaaa
+     1861 tgggacacat acaaagattg gtatcagtta cacgctcagc ttctagcgct cctgatcgct
+     1921 tgatagcgaa cattccaccc ccaccaatag cgcgaatgga gtgtcgtgga ggtgatcagg
+     1981 ttctgggctt gctttgtcgt ttacccaacc ttgtacatgt gagaagtgac aggtactcac
+     2041 atttggatgt aatttgggtg gaagtaggtg aatacactaa atctgatttt tttagttacc
+     2101 tttggtttgt gtgcgatact catgtattgc agctgaaccg gtgccacagg atacacgccc
+     2161 cagcgacttg gaaggcattt cagatcaact gctaaacatt gctcctcatg gtagctatgc
+     2221 catccgttcg gtttgtcgaa tgctaatatt gcatcaaagt ggtaaaattc ttcaggaaga
+     2281 ttggtgcgtt actccattgc caagttcaca tttacaggtg agctacataa tcctagtcct
+     2341 cttgctttat aagtacactg atgcctcaat tttgattggt caagtttcac atgtggctgt
+     2401 aacttcattt gattaaactc tttcctaaaa ttatctggct gttgctttcc cagatgagta
+     2461 tatgtggagc taattcccaa cttcttgaca gtattttttt catttttagg gacaagatag
+     2521 tgtgcaaata gtttgtgtta tttcgaacac tttcattttt cagattgtag ttattaccta
+     2581 tttaatattt ttttagtgaa agtctaaccg tttgataatc gtaatttaat tgatattaac
+     2641 aaggtgtagt gctcggtgct gtaaagaaag acaatactta gagatgatat ttgtcaaatc
+     2701 tgaatgagcg ttattgtcaa gtctctaata ctatgggtat tttatccaaa catttctgct
+     2761 ggtttattat tttattttga tcctagtaat ccgcaagcac aacacacaga ggcatttgac
+     2821 tcttgtcaag cttgcaacat tgatatctgg ctgtttgagt caaactgcta aatgcaattt
+     2881 gatatagagg ccgagatata ttttcttcaa taaaatcatt acttacaaaa ttaaactgag
+     2941 cgtatcagtg taacatcacc gggtaagtaa tagtgaagtt agacgcaggg tattagggaa
+     3001 tgatggtaaa tcagttgatg aggttatgaa tcttcatcga ctgagatggt tgggccacgt
+     3061 gttacgtatg cttgaacacc gattaccacg atgtgcaatg ctatccggta ttggaaatgg
+     3121 ttggaagaaa gttaggggcg gccaaaccaa aacgtggcat cagtgcttga agtcactaac
+     3181 ttctagtctg agccatgttg gtagatgcag actacttggt tggggtccgc gtgactatcg
+     3241 taaccaatgg ttggagactc ttggtgacat ggctcagaat cgatcacaat ggcgtcggtg
+     3301 tatacactcc ctgtcttccc ttaaactaag agattaaaat tgcttcatat ctttctttct
+     3361 acgaaccaat tctttcttct tgtactatat ctctatatgc aatctttctc ttacatatta
+     3421 ttacctttga cctaaccact gctatgaatc cggtgttcat cttgttgtgc tgacgcggta
+     3481 tggcaacctg gaccgatgca catatgtgcc tggtcctacg ttgtagctga ctgactgact
+     3541 atcagtgtaa caccgttatc ttgtgggttc gaaacatgct tcaatttgtt gtgggtaatt
+     3601 gggtaatatt tgctttattc acataaatgt atctccaagt tgtggcacgc gagcgtaagc
+     3661 ctaatcagtt acggtaagcc tccagtgtag ctaagatata aagaattttt cgtaactgtt
+     3721 aaagccatca catgatgttt ggttctttga acttttatct taccacttta atattatgtc
+     3781 gatatttcaa acagagattt atcagccttt taatattgta ctcagtccgt cattcacaac
+     3841 gtagaacctg taggtatgcc atacgcatta gcacagtgag atgaaactct tggaccaaat
+     3901 cccagattag ttaaagtaaa aactgtatca gtggtaatag tagatattag acattgaaga
+     3961 tacgactcgt gaagaaaata taaattgttg aaataaaggc agaatatggc gaagacaagg
+     4021 aagggatgca cctgctccaa tccaaacagt tctgagccat gtcattcaaa gactaactat
+     4081 tagttaagac aaccatgcat accacaacta gaaaatctac acctattaac atgactaagt
+     4141 tcacggactg acgccatgtt ttggttttgc cgcccctagt ttccttctaa cctactccac
+     4201 cagaaaacgt cttccatcga ggtaggcggt ggatgggcat atgtaacacg ttccgaccac
+     4261 ctcagttgat gaagatttac tacttcatca atcgatttgc catccttacc tagtatccta
+     4321 ttcctaactc gggtattagc tacaccgtga tctcaagata cacgagcaat gcttcgtaga
+     4381 cacctatgac cgaatactag taacctacga atatcctctc tttaaatggc cgtgtttcac
+     4441 atcaattcaa ccgagatttc gtcagatact agacgatcag cactgatgtg actccgaaga
+     4501 taagtaagac ggtcaatgag ttcaactact ttacttccta tcattaatcc aggcgacgac
+     4561 gcaagccaat cctgaagcaa cattttacac tatcccaaac atgcttgcat ttttgcttac
+     4621 tactgtacta gatcctatta atcgtacttt acattagaga gattgaaaag cttctcttca
+     4681 tctctaacta tttttgtata tataacttac ccataaaatt catattgaat tattattttt
+     4741 caggagtgtt cactagttat cacagaggct gtgtcaaatt ttatgactcc aaaaacatct
+     4801 acgctagtat caactttcga agcaggtggt ataccggacg acgctgttcg ttcaaaattg
+     4861 gttgatgagc tttccactgc aactggaatg aataaagctt attctttaca gtgtttaact
+     4921 gagtgccaat ttgatataga ttctgcatta cactcatttc aaaaagtaca tgaagccgga
+     4981 cttttacccg ccgaagcatt ttcactgatt tgactattca cattgtttta gcgttgtatt
+     5041 tttggaattt ttcccacaga ttttgtaaat atatttttac tttactttca acacgtcggg
+     5101 attcagttta ttgcgtaaat gagtttagat cctgtccaac tgggcttggt attcggacca
+     5161 aactttctgt acccctacgt tgtagctgga gtgtcagaaa tagcaaatag agtattaagt
+     5221 gtttgtgatc gtatataata gtggttcact aataagcaac taaactacca atgggccgca
+     5281 ccgtttgcat caaacaatta caagccatct cagcttgtgt ccagtattta tgttattttc
+     5341 gaacatctta tttgtaacat tgtgaggatg ggtatcctta agagtctata aacaagcgca
+     5401 ttgatcagac caagctggac ccaaaaagca acaagtttca aaggtattat tgttcatgca
+     5461 aagcttagac aataagatgg tattaggatc ttaacaagaa gcgtttttaa cagcccatga
+     5521 agacctattt ccaaatttcg ctatcctgac tgcttgagat aaacgtagca tatctaagtc
+     5581 agcttcatcc atatgacatt acttagcaac gttacgttgt acacaattac ccatggtcct
+     5641 ccccgaattt acgaacacca ttctccatgg ttactgaaaa gacctcggtg gtttctcatt
+     5701 cggtgagttc ttcaagttaa ataaaatcat ccgaataata tatactgtcc tattcaattt
+     5761 cctgggtaat ttacgtattc atccgttgca tgttgttaag actcagcatt tatctaaact
+     5821 aatgggatcg tttttaaaaa gtttgagcaa tttgtttcat atcttcgtgt agcagtttag
+     5881 cccgtacttt cacatctcat tgaataaact agtgattcac agatgaactg ctaatctttc
+     5941 tccacgtctt tttgctgtga cagtagttgt ttgtattcgt ctctttattt tcacagaaca
+     6001 gttgattctc taactttcat acctttagtt ttacaatttg tcagtgttgt catgatctgt
+     6061 cctgaattgt caaataatac acatgaacaa tatgagtatt ctttttcgca c
+//
+

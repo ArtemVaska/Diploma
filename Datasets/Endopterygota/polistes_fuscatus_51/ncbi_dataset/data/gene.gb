@@ -1,0 +1,165 @@
+LOCUS       NW_025113101            4013 bp    DNA     linear   CON 10-SEP-2021
+DEFINITION  Polistes fuscatus isolate 324 unplaced genomic scaffold,
+            CU_Pfus_HIC Scaffold24, whole genome shotgun sequence.
+ACCESSION   NW_025113101 REGION: complement(1924322..1928334)
+VERSION     NW_025113101.1
+DBLINK      BioProject: PRJNA761675
+            BioSample: SAMN09724720
+            Assembly: GCF_010416935.1
+KEYWORDS    WGS; RefSeq.
+SOURCE      Polistes fuscatus (common paper wasp)
+  ORGANISM  Polistes fuscatus
+            Eukaryota; Metazoa; Ecdysozoa; Arthropoda; Hexapoda; Insecta;
+            Pterygota; Neoptera; Endopterygota; Hymenoptera; Apocrita;
+            Aculeata; Vespoidea; Vespidae; Polistinae; Polistini; Polistes.
+REFERENCE   1  (bases 1 to 4013)
+  AUTHORS   Miller,S.E., Legan,A.W., Henshaw,M.T., Ostevik,K.L., Samuk,K.,
+            Uy,F.M.K. and Sheehan,M.J.
+  TITLE     Evolutionary dynamics of recent selection on cognitive abilities
+  JOURNAL   Proc Natl Acad Sci U S A 117 (6), 3045-3052 (2020)
+   PUBMED   31980529
+COMMENT     REFSEQ INFORMATION: The reference sequence is identical to
+            QUOI01000024.1.
+            Assembly name: CU_Pfus_HIC
+            The genomic sequence for this RefSeq record is from the
+            whole-genome assembly released by the Cornell University on
+            2020/02/11. The original whole-genome shotgun project has the
+            accession QUOI00000000.1.
+            
+            ##Genome-Assembly-Data-START##
+            Assembly Provider      :: Cornell University
+            Assembly Method        :: JUL-2018 v. JUL-2018
+            Assembly Name          :: CU_Pfus_HIC
+            Genome Representation  :: Full
+            Expected Final Version :: Yes
+            Genome Coverage        :: 110x
+            Sequencing Technology  :: PacBio Sequel
+            ##Genome-Assembly-Data-END##
+            
+            ##Genome-Annotation-Data-START##
+            Annotation Provider         :: NCBI
+            Annotation Status           :: Full annotation
+            Annotation Name             :: Polistes fuscatus Annotation Release
+                                           100
+            Annotation Version          :: 100
+            Annotation Pipeline         :: NCBI eukaryotic genome annotation
+                                           pipeline
+            Annotation Software Version :: 9.0
+            Annotation Method           :: Best-placed RefSeq; Gnomon
+            Features Annotated          :: Gene; mRNA; CDS; ncRNA
+            ##Genome-Annotation-Data-END##
+FEATURES             Location/Qualifiers
+     source          1..4013
+                     /organism="Polistes fuscatus"
+                     /mol_type="genomic DNA"
+                     /isolate="324"
+                     /db_xref="taxon:30207"
+                     /chromosome="Unknown"
+                     /sex="male"
+                     /tissue_type="whole body"
+                     /geo_loc_name="USA: MD"
+                     /collection_date="04-Aug-2015"
+                     /note="wild caught"
+     gene            1..4013
+                     /gene="LOC122518281"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /db_xref="GeneID:122518281"
+     mRNA            join(1..266,564..880,1159..1245,1308..1551,1624..1817,
+                     1898..2010,2411..2447,2534..2766,2919..3087,3179..4013)
+                     /gene="LOC122518281"
+                     /product="nuclear RNA export factor 1-like"
+                     /experiment="COORDINATES: polyA evidence [ECO:0006239]"
+                     /transcript_id="XM_043637137.1"
+                     /db_xref="GeneID:122518281"
+     CDS             join(188..266,564..880,1159..1245,1308..1551,1624..1817,
+                     1898..2010,2411..2447,2534..2766,2919..3087,3179..3637)
+                     /gene="LOC122518281"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /codon_start=1
+                     /product="nuclear RNA export factor 1-like"
+                     /protein_id="XP_043493072.1"
+                     /db_xref="GeneID:122518281"
+                     /translation="MPKRPAKATWDNRGGRVNNTEDKHYFGHDDRHVRRDGRYASRPR
+                     VSFKQQPRPSRNMRIAREIFVEAFKDDDSPMGVNSNNNNNNNRQVVVRGRGRGLSRGR
+                     NSPLPPRGFRGGILPRPPLSLGEANWYKIIVPYGQQYTKDYIINNLLSYIAPETFVPI
+                     MYKTMGSEAVFYVDDHKTANALLACDRKITTTDGFKLQVRVKPGFPHCEINDKLKEQL
+                     KQAMVKRYFQENNALDLSKFHQDPDLVADYFCALFRPVMLMTVLDIVAEYIPNLEALN
+                     LDGNKLNLIERLNVLHKKFPKLKILYIGDNKIREMHHLDVVKDLKLEELKLAGNPVCN
+                     KYKSRQSEYVSDVRRRFPKLLRLDGVDLPRPILFDVMDDASKIPPTQRIFTSNAKAQE
+                     IASQFLQQYFLVYDSGNRQPLLDAYNEHASFSLTVNTAYNANKLNSYVGENRNLFRVN
+                     DANRRQKLLKQGKLPVVSHISEMTKTKHFLNTFTMDISLVTERMMFVTVTGLFKELTK
+                     EEHVRYFNRTFIIVPQGTGYCICNEQLHISNTTETQRKLILNNTDKESEEPMAEEPMA
+                     EEPSISKTSNSAAEGTVPELSETVKQQMIVTLSQQTNMNLEWSLKCLREVEWNYENAL
+                     SAFQEFFKRGLIPSEAFSK"
+ORIGIN      
+        1 atttccccta gtggtgcatc gatgtattac ctgtacagtc gttcttagaa cggtcattgc
+       61 agtttgtacg cttgattggt tggtcgttgt ttcttcatca ggtgatcgta ataatttcta
+      121 acctagtgca tcaaaagggc aaagttttat acttttgagt ttataaagta tattaaatat
+      181 tcccgaaatg cctaaaagac ctgctaaagc tacttgggat aatcgtggtg gtcgagtgaa
+      241 taatactgag gataaacatt actttggtaa agtatcattt atgatctaac tacgctttac
+      301 aacgcttgtg aattcagaac aaagacaact tattctcgat atcttattca ttgtttgcat
+      361 ttgtttccat ttatatatat agaaataatt tttaatatat tattttttaa tatactttat
+      421 ctaaaaataa tttttttaca ttattccgta aaattaattt ttttcgaatt tttcattttt
+      481 ttttcttgta aagatagtag aaatctaata gctgtaacaa atatcgaaag ctagaaaaag
+      541 aatatattct ttttatgatt caggacacga tgatagacac gtgagacggg atgggagata
+      601 tgcttctcga cctcgtgtat cattcaaaca acaaccaagg ccctctagaa atatgagaat
+      661 agcgagagaa atatttgtag aggcttttaa agacgacgat tctccgatgg gagttaattc
+      721 taataacaat aacaacaata acagacaagt tgttgttaga ggtagaggca gaggtttatc
+      781 gaggggaaga aacagccctt tgccacccag aggttttcga ggtggcatac ttcctagacc
+      841 accactctcc cttggagaag ctaattggta taaaatcatt gtaagtatca gtatacgata
+      901 caatatacac atacatttat attgtgccag attaattttc tgtgactttc tgtttaactc
+      961 ttttaattct tgataacgat acattctcgc attcattttt tctaatgatt ttatagaaat
+     1021 attattgcta cgatattcaa ctaatattta aatacatttg tcattaacac taaacatagc
+     1081 tttatgtata cctattttta ccacgctatg atagaaatgc aagacacaat atagtaacaa
+     1141 atatatattt ctctttaggt gccatatgga cagcagtata caaaagatta cataataaac
+     1201 aatcttttga gttatattgc tcctgagact ttcgttccca taatggtaag tattacttaa
+     1261 tatttcacat attttcacat aatttattta atactaattt tttacagtac aagactatgg
+     1321 gatccgaagc tgtgttttat gtagatgatc ataaaactgc aaatgcactt cttgcctgtg
+     1381 atcgaaaaat aacaaccaca gatggtttta aacttcaagt tagagttaaa ccaggttttc
+     1441 ctcattgtga aattaatgat aaattaaaag aacaactgaa gcaagctatg gtaaaacgat
+     1501 attttcaaga aaacaatgca ttagacttgt caaagtttca tcaagatcca ggtatgaata
+     1561 aatctttaca gaaagataaa tattattaaa ataaaaaaaa ttaattatat ttttatatta
+     1621 cagatcttgt tgctgattat ttctgtgcat tatttcgacc agttatgtta atgaccgtat
+     1681 tggacattgt cgcagaatat atccctaact tggaggcatt aaatttagat ggaaacaaat
+     1741 tgaacttaat tgaaagactc aacgtccttc acaaaaagtt tcctaaattg aaaatattgt
+     1801 acataggcga caataaggta attacatatt ttcttttttt tataagtttc acaaggaaaa
+     1861 aatactatgt attattcata aattttctta tttctagata agagaaatgc atcatttgga
+     1921 cgttgtcaag gatctcaagc tagaagaatt aaaattagct ggtaatccag tatgcaacaa
+     1981 gtataaatcc cgacagagtg aatatgttag gtaatgtatg gttgaagtat taacattgtc
+     2041 gttcaaacca gaaatttatc taaaatgatt gatatgcgcg tacgctcgtt ttatctttta
+     2101 tttgtcacat ttattttatg ttttttttta tattcagact tattaattat atgtttagat
+     2161 ttcatgctgt tctttatttc tcatttattt ttatttttaa tttaatttca ttacatattc
+     2221 aaaactgtat aaatattcaa caatacttct aatgttttct aacgtaagtt tgcattaatt
+     2281 catgagcata taaagatagt aagtttctat tatatttaat attagattct gaataataag
+     2341 gcacatgttt ttaatttttc ttattaatgc ggagcccccg ggcttctatc ttttctttcc
+     2401 cttaaaacag cgatgtgcgg aggaggttcc ctaaactcct gagactggta agatatagtt
+     2461 tcaaattaac aactaaatta actgctattt aatatattta agaaagccta agtatgtatg
+     2521 atttatttta caggatggag tagatctacc acgtccaatc ttatttgatg ttatggatga
+     2581 tgcatcaaaa atacctccta cccaacgcat attcacttca aatgctaaag ctcaagaaat
+     2641 agccagtcaa tttctgcaac aatattttct ggtttacgat agtggcaatc gtcaaccatt
+     2701 attggatgct tataatgaac acgcgtcctt cagtttgact gtaaatactg cttataatgc
+     2761 caacaagtaa gtcaatattt ctaaatctgg ttttataatt tattcaatgc atgtttaatt
+     2821 acgattttag catataatca aattttaatt aatctctttc tctctttctc tctctgtctt
+     2881 tttttttttt tttttttctt tttttctttt tcttccagat taaactctta tgttggggaa
+     2941 aatagaaatt tatttagagt aaatgatgct aacagaagac aaaaactatt aaaacaagga
+     3001 aaattgcctg tagtgtcaca tatttctgaa atgacaaaaa ctaaacattt tttaaataca
+     3061 tttacgatgg atattagtct agttactgta agtatcttat tttcatataa aaatgaaatt
+     3121 ttaaatatat atatattaac tttattatct tattctaatt aactttgtaa ttttacagga
+     3181 aagaatgatg tttgtcacag taactggact gttcaaagag ctaactaaag aagaacatgt
+     3241 ccgatacttt aatagaactt ttattatagt acctcaagga actggatatt gtatttgtaa
+     3301 tgaacaatta catatcagta acacaactga aacgcaacga aagctcatat tgaacaatac
+     3361 cgataaagaa tcagaagaac caatggctga agaaccaatg gctgaagaac catcaatatc
+     3421 aaaaacatca aactctgctg ctgaaggaac agttccggaa ttgtcggaaa ctgtaaaaca
+     3481 acaaatgatt gtgacattga gccagcaaac aaatatgaat ctggaatgga gtttaaaatg
+     3541 cctcagagaa gttgaatgga attatgaaaa tgctttatcc gcttttcaag aattctttaa
+     3601 gcgtggtcta ataccatcgg aagcatttag taagtaaatt ttaatattat tagaaagttt
+     3661 aaaagatatt ccagatttgt tttgtttgtt gtaaattatc tctcttaatt tcaataaggt
+     3721 gctgacgttt tggatattca taacattttt gaaaaatatt gtaattcata aaacaaacag
+     3781 aacaacaaat gttttaaatt tattattctt aaatggaatg tttatccaaa aaatttgtaa
+     3841 ttaaatatta tggcaaagta gaatatagta tctaaagtag ttttaagttc atattctata
+     3901 tcatagaata gtgttgactt tttttaatta cacggtagtg ctagtggaag taaaaagtta
+     3961 ccaaggaaaa aataaaatta acagtgagaa taaagattaa ttcgctccat gaa
+//
+

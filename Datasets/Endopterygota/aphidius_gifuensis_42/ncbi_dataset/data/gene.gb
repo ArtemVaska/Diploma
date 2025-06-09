@@ -1,0 +1,153 @@
+LOCUS       NC_057790               3729 bp    DNA     linear   CON 06-OCT-2021
+DEFINITION  Aphidius gifuensis isolate YNYX2018 linkage group LG3,
+            ASM1490517v1, whole genome shotgun sequence.
+ACCESSION   NC_057790 REGION: complement(27176323..27180051)
+VERSION     NC_057790.1
+DBLINK      BioProject: PRJNA764230
+            BioSample: SAMN14446980
+            Assembly: GCF_014905175.1
+KEYWORDS    WGS; RefSeq.
+SOURCE      Aphidius gifuensis
+  ORGANISM  Aphidius gifuensis
+            Eukaryota; Metazoa; Ecdysozoa; Arthropoda; Hexapoda; Insecta;
+            Pterygota; Neoptera; Endopterygota; Hymenoptera; Apocrita;
+            Ichneumonoidea; Braconidae; Aphidiinae; Aphidius.
+COMMENT     REFSEQ INFORMATION: The reference sequence is identical to
+            CM026523.1.
+            Assembly name: ASM1490517v1
+            The genomic sequence for this RefSeq record is from the
+            whole-genome assembly released by the CAU on 2020/10/21. The
+            original whole-genome shotgun project has the accession
+            JACMRX000000000.1.
+            
+            ##Genome-Assembly-Data-START##
+            Assembly Provider      :: CAU
+            Assembly Method        :: Smartdenovo v. JUL-2019; Canu v. JUL-2019
+            Genome Representation  :: Full
+            Expected Final Version :: No
+            Genome Coverage        :: 69.0x
+            Sequencing Technology  :: Oxford Nanopore GridION
+            ##Genome-Assembly-Data-END##
+            
+            ##Genome-Annotation-Data-START##
+            Annotation Provider         :: NCBI
+            Annotation Status           :: Full annotation
+            Annotation Name             :: Aphidius gifuensis Annotation
+                                           Release 100
+            Annotation Version          :: 100
+            Annotation Pipeline         :: NCBI eukaryotic genome annotation
+                                           pipeline
+            Annotation Software Version :: 9.0
+            Annotation Method           :: Best-placed RefSeq; Gnomon
+            Features Annotated          :: Gene; mRNA; CDS; ncRNA
+            ##Genome-Annotation-Data-END##
+FEATURES             Location/Qualifiers
+     source          1..3729
+                     /organism="Aphidius gifuensis"
+                     /mol_type="genomic DNA"
+                     /isolate="YNYX2018"
+                     /host="Myzus persicae"
+                     /db_xref="taxon:684658"
+                     /tissue_type="adults"
+                     /geo_loc_name="China: Yunnan"
+                     /collection_date="2018"
+                     /linkage_group="LG3"
+     gene            1..3729
+                     /gene="LOC122853433"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /db_xref="GeneID:122853433"
+     mRNA            join(1..399,515..816,899..1423,1491..1603,1844..1880,
+                     1962..2197,2285..2453,2549..3729)
+                     /gene="LOC122853433"
+                     /product="nuclear RNA export factor 1-like"
+                     /experiment="COORDINATES: polyA evidence [ECO:0006239]"
+                     /transcript_id="XM_044153907.1"
+                     /db_xref="GeneID:122853433"
+     CDS             join(330..399,515..816,899..1423,1491..1603,1844..1880,
+                     1962..2197,2285..2453,2549..2986)
+                     /gene="LOC122853433"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /codon_start=1
+                     /product="nuclear RNA export factor 1-like"
+                     /protein_id="XP_044009842.1"
+                     /db_xref="GeneID:122853433"
+                     /translation="MPKKSSKGQPWVSSRRSDDKHYFDHDDRDGRRIDNDSHFNGSRP
+                     RVSFKNVTKSNKKGIKNVGLAALKSLLDGDDVAMLPTTNGNNVSRIIGYRGRGRGGSG
+                     GYVNNRSRVDAPLREGYCYKIHIPYGKKYDKPTLVGLLHNSIQPDVFVPIMYKECEHD
+                     VIFYIDDFKVAKKLLSFDRKITTPDGFKIIIKVTQQSPPSKIDDVTKNRIRLAMEKRY
+                     SSVLNALDLSAFHHDCDLVSEYYFPLNRNNVLTEVLDIVGAVLPTLGALKLDKNNFGS
+                     IHKLSILGAKFANLKILHIGDNKITSLAQLEAVKELKLNELKLTGNPVCLRYKDRHEN
+                     YVGDLRKIFPKLMKLDNIDLPPPILFDGVDDEVKFPETKTSFAVSLEAHTTATQFLKL
+                     YYECFDGESRQPLADAYNESASFSITVSSISSQMYKFGRYHEDNRDMMRTKDPIKRRR
+                     LLKQGKASIITYISSLPKTKHCLNSFTLDVTLDTGNMIMMTTTGLFKELNTKDEFIRY
+                     FSRTFIIVRQGAGWCIKNEQLSLSHPTPKQEKNIFKAIVAESTTPQQQQQQQQQVPST
+                     STPVELTTEMKQQMVIALSAATNMKLDWSEKCLIEQNWNYPNALSVFQEFFKLGQIPQ
+                     DAFNK"
+ORIGIN      
+        1 gagagagtca taatccgcca ttttaatttc gtgttacact gaattcacag taatccgtaa
+       61 ttttttatta taacaaaata aagtaattac atttattcgt gtatgcatta catccataaa
+      121 cgtcacaata attattaatt atttatttat actaacagtg aattggtgtt taaattttat
+      181 taaaaagttg acaaagacgt attttaacac gaggcattat cttgctacag cccttgttgc
+      241 ttattatcaa caatttattg ataaaaaaaa aaacaacaac aaattgaata ataataataa
+      301 taattgcttg tagcagataa acattaaaaa tgcctaaaaa atcaagtaaa ggacaaccat
+      361 gggtcagttc aaggagatct gatgataagc attatttcgg taagcataac ctatttattt
+      421 ttttattttc caacaacaac cttgagcata cctatatgtt tattcttttt ttaactaatg
+      481 ccacgtattc atatttgtaa aatttattat ctagatcatg atgatcgtga tggaagacga
+      541 attgacaatg atagtcattt taatggaagt agacctagag tgtcatttaa aaacgtcacc
+      601 aagagcaata aaaaaggaat taaaaatgtt ggattagcag cactaaagtc tcttcttgat
+      661 ggtgatgatg ttgcaatgct accaacaacc aatggcaata atgtcagcag gataattgga
+      721 tatcgaggaa gaggacgtgg tggtagtggt ggttatgtca acaacagatc tcgtgttgat
+      781 gcacctcttc gtgagggtta ttgctataaa attcatgtaa gattatttac ttgacttaat
+      841 tatttattat tgttttaaca actggtatct tgatgcttta tttatttatt tattttagat
+      901 accgtatggt aaaaaatatg ataaaccaac acttgttgga cttcttcaca attcaataca
+      961 gccagatgtt tttgtgccaa taatgtacaa agaatgtgaa catgatgtta tattttacat
+     1021 tgatgatttt aaagttgcta aaaaattatt atcatttgat cgtaaaataa caacaccaga
+     1081 tggttttaaa attattatta aagtaactca acaaagtcca ccatctaaaa ttgatgatgt
+     1141 caccaaaaat agaataaggc tagcaatgga aaaaagatat tcatctgtat taaatgcact
+     1201 tgatttatca gcatttcatc atgactgtga tctcgtatca gaatattatt ttcctcttaa
+     1261 tcgtaataat gtattaactg aagtattgga tattgttggt gctgttttgc caacattggg
+     1321 tgcattaaag ttggataaaa ataattttgg aagtattcat aaactgagta ttcttggagc
+     1381 aaagtttgca aacttgaaaa ttttacatat tggtgataac aaagtaagtc aatgataatt
+     1441 gatatttttg ttttgattag aaattactgt tttcattgaa tattttttag ataacttcgt
+     1501 tggctcaact tgaagctgtc aaggaactta aactgaatga actcaaattg actggaaatc
+     1561 cagtttgttt acgttacaaa gatcgtcatg aaaattatgt tgggtaatat ttaatttatt
+     1621 attgtttttt aatcattgca tttgtttatt tacaggggat agatcgaaat attttttttt
+     1681 cctttttttt ctcttttcat tgctgcaatc taaaggaaaa aaaaaaagtc atggatgttg
+     1741 ttgattgata tatccccttt aaattaatta agtatattat ttttgttttt cttacaacta
+     1801 acttggagct tccgtgcttc tggattttgt ttctccatca cagtgatttg cggaaaatat
+     1861 tcccaaaact aatgaaattg gtgagtttaa ttattttttt tttttgtatt tatttccttg
+     1921 gaaaaatata tattaattgt tgttgttgtt tttttcttaa ggataatata gatttaccac
+     1981 ctccaatatt atttgatgga gttgacgatg aagtcaaatt tcctgagaca aaaacaagct
+     2041 ttgctgtttc acttgaagct catacaactg caacacaatt tttaaaactt tattacgaat
+     2101 gtttcgatgg tgaatcacgt caaccactgg cagatgccta caatgaatct gccagtttta
+     2161 gtattactgt atcatcaata tcttcacaaa tgtacaagta attactcttt tctaaaaata
+     2221 caaaatattt atttacctat ttttaatttc aattaataaa atgttgtgat aatttaaatt
+     2281 atagatttgg tagatatcat gaagacaatc gtgacatgat gcgaacaaaa gatccaataa
+     2341 aaagaagaag attattgaaa caaggcaaag cttcaatcat cacttacatt tcgtcattac
+     2401 caaaaaccaa acattgttta aacagtttta ctcttgatgt tactcttgat actgtaagtt
+     2461 gaaatttaat ttatttacac ctatattttt atccagcttt ttcttcttct tctttcaaca
+     2521 ataataataa taattttttg ttattcaggg aaatatgatt atgatgacaa caaccggctt
+     2581 atttaaagaa ttaaatacta aagatgaatt tataagatac ttcagtcgca catttataat
+     2641 tgttagacaa ggtgctggat ggtgtatcaa aaacgagcaa ttaagtttat cacatccaac
+     2701 accaaaacaa gaaaaaaata tattcaaagc aattgttgct gaatcaacaa caccacaaca
+     2761 acaacaacaa caacaacaac aagtaccatc aacgtcaaca cctgttgaac ttacaacaga
+     2821 aatgaaacaa caaatggtca tcgccctcag tgcagcaact aacatgaaat tagattggag
+     2881 tgaaaaatgt ttaattgaac aaaattggaa ctatcccaat gctcttagtg tatttcaaga
+     2941 attttttaaa cttggtcaaa ttcctcaaga tgcatttaac aagtagatat aatattaatt
+     3001 attttttaat ctagaaaaac ttgatttttt attttaattt taattttttc gtttaaacaa
+     3061 aaaaaaagca tgaaacattt ttgactttaa aaataaaata acaaaaatga aatttttgtt
+     3121 ttatataatt attggataat gttccaatta atattgtaca aaagaaaaaa gttaaattca
+     3181 agtttcatgc tttgtgtata tagaacaact atcataattt atcaatttaa attactcata
+     3241 gaaaaaaaag ttgctcggca atgcaatctt tgataaaatc attttacttt gaaaaaatta
+     3301 ttgtcagata atttaattag gaaatttatc attttgacat attgaatctt ggatgtgcgt
+     3361 tcaaagtatc aatttaaaat attttttttt catcttaaaa tgatatactt tagctagata
+     3421 aatttatgct tgatacttga actcacagcc aattgatcca acatgtattt tttattaaca
+     3481 ttgatactat ttttattata tttttttttt tttttttttt tcaatgagaa tgaatatctt
+     3541 aataattatt atttattcat tcttaattaa taattttttt agatattttt caacgatcat
+     3601 aatttaaaaa gaaaaaatac ttgcaaaata gaaaaaagaa aaacagacta aataattttt
+     3661 ctaacaaaaa aaaaatattg gcattttgga aatgattttc gaattaaaat tcatgatcgc
+     3721 gttttgatt
+//
+
