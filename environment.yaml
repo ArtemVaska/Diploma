@@ -1,5 +1,6 @@
 name: diploma
 channels:
+  - bioconda
   - conda-forge
 dependencies:
   - _libgcc_mutex=0.1=conda_forge
@@ -13,13 +14,14 @@ dependencies:
   - attrs=24.2.0=pyh71513ae_0
   - babel=2.14.0=pyhd8ed1ab_0
   - beautifulsoup4=4.12.3=pyha770c72_0
+  - biopython=1.85=py312h66e93f0_1
   - bleach=6.1.0=pyhd8ed1ab_0
   - brotli-python=1.1.0=py312h2ec8cdc_2
   - bzip2=1.0.8=h4bc722e_7
-  - ca-certificates=2024.8.30=hbcca054_0
+  - ca-certificates=2025.4.26=hbd8a1cb_0
   - cached-property=1.5.2=hd8ed1ab_1
   - cached_property=1.5.2=pyha770c72_1
-  - certifi=2024.8.30=pyhd8ed1ab_0
+  - certifi=2025.4.26=pyhd8ed1ab_0
   - cffi=1.17.1=py312h06ac9bb_0
   - charset-normalizer=3.3.2=pyhd8ed1ab_0
   - comm=0.2.2=pyhd8ed1ab_0
@@ -30,6 +32,9 @@ dependencies:
   - exceptiongroup=1.2.2=pyhd8ed1ab_0
   - executing=2.1.0=pyhd8ed1ab_0
   - fqdn=1.5.1=pyhd8ed1ab_0
+  - ghostscript=10.04.0=h5888daf_0
+  - gmp=6.3.0=hac33072_2
+  - gsl=2.7=he838d99_0
   - h11=0.14.0=pyhd8ed1ab_0
   - h2=4.1.0=pyhd8ed1ab_0
   - hpack=4.0.0=pyh9f0ad1d_0
@@ -42,6 +47,7 @@ dependencies:
   - importlib_resources=6.4.5=pyhd8ed1ab_0
   - ipykernel=6.29.5=pyh3099207_0
   - ipython=8.27.0=pyh707e725_0
+  - iqtree=2.4.0=h503566f_0
   - isoduration=20.11.0=pyhd8ed1ab_0
   - jedi=0.19.1=pyhd8ed1ab_0
   - jinja2=3.1.4=pyhd8ed1ab_0
@@ -62,13 +68,20 @@ dependencies:
   - keyutils=1.6.1=h166bdaf_0
   - krb5=1.21.3=h659f571_0
   - ld_impl_linux-64=2.43=h712a8e2_1
+  - libblas=3.9.0=24_linux64_openblas
+  - libcblas=3.9.0=24_linux64_openblas
   - libedit=3.1.20191231=he28a2e2_2
   - libexpat=2.6.3=h5888daf_0
   - libffi=3.4.2=h7f98852_5
   - libgcc=14.1.0=h77fa898_1
   - libgcc-ng=14.1.0=h69a702a_1
+  - libgfortran=14.1.0=h69a702a_1
+  - libgfortran-ng=14.1.0=h69a702a_1
+  - libgfortran5=14.1.0=hc5f4f2c_1
   - libgomp=14.1.0=h77fa898_1
+  - liblapack=3.9.0=24_linux64_openblas
   - libnsl=2.0.1=hd590300_0
+  - libopenblas=0.3.27=pthreads_hac2b453_1
   - libsodium=1.0.20=h4ab18f5_0
   - libsqlite=3.46.1=hadc24fc_0
   - libstdcxx=14.1.0=hc0a3c3a_1
@@ -78,18 +91,24 @@ dependencies:
   - libzlib=1.3.1=h4ab18f5_1
   - markupsafe=2.1.5=py312h66e93f0_1
   - matplotlib-inline=0.1.7=pyhd8ed1ab_0
+  - maxentscan=0_2004.04.21=pl5321hdfd78af_4
   - mistune=3.0.2=pyhd8ed1ab_0
+  - mpfr=4.2.1=h90cbb55_3
   - nbclient=0.10.0=pyhd8ed1ab_0
   - nbconvert-core=7.16.4=pyhd8ed1ab_1
   - nbformat=5.10.4=pyhd8ed1ab_0
+  - ncbi-datasets-cli=18.0.2=ha770c72_0
   - ncurses=6.5=he02047a_1
   - nest-asyncio=1.6.0=pyhd8ed1ab_0
+  - notebook=7.2.2=pyhd8ed1ab_0
   - notebook-shim=0.2.4=pyhd8ed1ab_0
-  - openssl=3.3.2=hb9d3cd8_0
+  - numpy=2.1.2=py312h58c1407_0
+  - openssl=3.5.0=h7b32b05_1
   - overrides=7.7.0=pyhd8ed1ab_0
   - packaging=24.1=pyhd8ed1ab_0
   - pandocfilters=1.5.0=pyhd8ed1ab_0
   - parso=0.8.4=pyhd8ed1ab_0
+  - perl=5.32.1=7_hd590300_perl5
   - pexpect=4.9.0=pyhd8ed1ab_0
   - pickleshare=0.7.5=py_1003
   - pip=24.2=pyh8b19718_1
@@ -105,6 +124,7 @@ dependencies:
   - pysocks=1.7.1=pyha2e5f31_6
   - python=3.12.6=hc5c86c4_1_cpython
   - python-dateutil=2.9.0=pyhd8ed1ab_0
+  - python-dotenv=1.1.0=pyh29332c3_1
   - python-fastjsonschema=2.20.0=pyhd8ed1ab_0
   - python-json-logger=2.0.7=pyhd8ed1ab_0
   - python_abi=3.12=5_cp312
@@ -133,7 +153,6 @@ dependencies:
   - typing-extensions=4.12.2=hd8ed1ab_0
   - typing_extensions=4.12.2=pyha770c72_0
   - typing_utils=0.1.0=pyhd8ed1ab_0
-  - tzdata=2024a=h8827d51_1
   - uri-template=1.3.0=pyhd8ed1ab_0
   - urllib3=2.2.3=pyhd8ed1ab_0
   - wcwidth=0.2.13=pyhd8ed1ab_0
@@ -148,9 +167,44 @@ dependencies:
   - zstandard=0.23.0=py312hef9b889_1
   - zstd=1.5.6=ha6fb4c9_0
   - pip:
+      - appdirs==1.4.4
+      - blinker==1.9.0
+      - chardet==5.2.0
+      - click==8.2.1
+      - contourpy==1.3.2
+      - cssselect2==0.8.0
+      - cycler==0.12.1
+      - cython==3.1.0
+      - dash==3.0.4
+      - flask==3.0.3
+      - fonttools==4.58.0
+      - forgi==2.2.3
+      - future==1.0.0
       - ipywidgets==8.1.5
+      - itsdangerous==2.2.0
+      - joblib==1.4.2
       - jupyter==1.1.1
       - jupyter-console==6.6.3
       - jupyterlab-widgets==3.0.13
-      - notebook==7.2.2
+      - kiwisolver==1.4.8
+      - logging-exceptions==0.1.9
+      - lxml==5.4.0
+      - matplotlib==3.10.3
+      - narwhals==1.41.0
+      - networkx==3.4.2
+      - pandas==2.2.3
+      - pillow==11.2.1
+      - plotly==6.1.2
+      - pyparsing==3.2.3
+      - reportlab==4.4.1
+      - retrying==1.3.4
+      - scikit-learn==1.5.2
+      - scipy==1.14.1
+      - seaborn==0.13.2
+      - svglib==1.5.1
+      - threadpoolctl==3.5.0
+      - tzdata==2024.2
+      - viennarna==2.7.0
+      - werkzeug==3.0.6
       - widgetsnbextension==4.0.13
+prefix: /home/artemvaska/mamba/envs/diploma
